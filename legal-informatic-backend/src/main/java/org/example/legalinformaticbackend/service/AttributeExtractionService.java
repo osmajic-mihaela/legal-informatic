@@ -14,7 +14,9 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -40,9 +42,9 @@ public class AttributeExtractionService {
             retVal.put("Kubna drvna masa", extractWoodVolume(caseStr));
             retVal.put("Svestan", extractAwareness(caseStr));
             retVal.put("Osuđen", isConvicted(caseStr));
+            retVal.put("Broj stabala", extractNumberOfTrees(caseStr));
             //BROJ STABLA
             //VRSTA STABLA
-            //MASA STABLA
             //Kazna dani
             //Uslovna
             //Kazna evri
@@ -261,5 +263,67 @@ public class AttributeExtractionService {
         return "unknown";
     }
 
+    //U K114/19 i K116/19 dve vrste stabla su u pitanju, pa se navodi br za svaku vrstu, ne izvlaci tu drugu
+    private String extractNumberOfTrees(String caseStr) {
+        Pattern pattern1 = Pattern.compile("oborio\\s*(u\\s*državnoj\\s*šumi\\s*)?(\\d+|jedno)");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+
+        if (matcher1.find()) {
+            String br = matcher1.group(2);
+            if (br.equals("jedno")) {
+                return "1";
+            } else {
+                return br;
+            }
+        }
+
+        return "unknown";
+
+    }
+
+    
+
+
+
+    /*
+
+    POKUSAJ RESAVANJA EKSTRAKCIJE BROJA STABALA PRESUDA SA 2 VRSTE DRVETA
+
+    private String extractNumberOfTrees2(String caseStr) {
+        Pattern pattern1 = Pattern.compile("oborio\\s*(u\\s*državnoj\\s*šumi\\s*)?(\\d+|jedno)");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+
+        if(matcher1.find()){
+            return getAllMatchedPatternsForWoodVolume(matcher1,2);
+        }
+
+        Pattern pattern2 = Pattern.compile("(\\d+|jedno)\\s*([\\)\\(a-zčćđšžA-ZŽĐŠČĆ]*\\s*)stabl(?:o|a)");
+        Matcher matcher2 = pattern2.matcher(caseStr);
+
+        if(matcher2.find()){
+            return getAllMatchedPatternsForWoodVolume(matcher2,1);
+        }
+
+        return  "unknown";
+    }
+
+    private String getAllMatchedPatternsForNumberOfTrees(Matcher matcher, int group){
+        List<String> resultList = new ArrayList<>();
+        while (matcher.find()) {
+            String br = matcher.group(group);
+            if (br.equals("jedno")) {
+                resultList.add("1");
+            } else {
+                resultList.add(br);
+            }
+        }
+
+        if(resultList.size() == 1){
+            return resultList.get(0);
+        }
+
+        return String.join(",", resultList);
+
+    }*/
 
 }
