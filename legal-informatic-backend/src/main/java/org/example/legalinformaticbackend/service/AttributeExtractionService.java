@@ -37,6 +37,7 @@ public class AttributeExtractionService {
             retVal.put("Optuženi", extractDefendantInitials(caseStr));
             retVal.put("Šumska svojina", extractForestProperty(caseStr));
             retVal.put("Novčana šteta", extractFinancialDamage(caseStr));
+            retVal.put("Kubna drvna masa", extractWoodVolume(caseStr));
             retVal.put("Svestan", extractAwareness(caseStr));
             retVal.put("Osuđen", isConvicted(caseStr));
             //BROJ STABLA
@@ -165,7 +166,7 @@ public class AttributeExtractionService {
     }
 
     //radi za sve
-    public String extractCourtReporterName(String caseStr) throws IOException {
+    private String extractCourtReporterName(String caseStr) throws IOException {
         Pattern pattern = Pattern.compile("[zZ]apisničar(?:a|om|em)?\\s+([A-ZŽĐŠČĆ][a-zčćđšžA-ZŽĐŠČĆ]+(?:\\s+[A-ZŽĐŠČĆ][a-zčćđšžA-ZŽĐŠČĆ]+)?)(,)?\\s*(kao)?\\s*(zapisničara)?");
         Matcher matcher = pattern.matcher(caseStr);
 
@@ -185,7 +186,7 @@ public class AttributeExtractionService {
     }
 
     //radi za sve
-    public String extractFinancialDamage(String caseStr) throws IOException {
+    private String extractFinancialDamage(String caseStr) throws IOException {
         Pattern pattern1 = Pattern.compile("((kaznu|penzije)\\s*u\\s*iznosu\\s*od)\\s*(\\d{1,7}(?:\\.\\d{3,6})*(?:,\\d{2,5})?)\\s*(?:eura|€)");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
@@ -198,9 +199,12 @@ public class AttributeExtractionService {
         Matcher matcher2 = pattern2.matcher(caseStr);
 
         if (matcher2.find()) {
-            return matcher2.group(2);
+            //String s =  matcher2.group(2).replace(".", "");
+            //return Double.parseDouble(s.replace(',', '.'));
+            return matcher2.group(2).replace(".", "").replace(',', '.');
         }
 
+        //return 0.0;
         return "unknown";
 
     }
@@ -241,6 +245,21 @@ public class AttributeExtractionService {
         return "Ne";
     }
 
+    //radi za sve
+    private String extractWoodVolume(String caseStr) {
+        //Pattern pattern1 = Pattern.compile("u\\s*ukupnoj\\s*(koli[čc]ini|(bruto|kubnoj)\\s*masi)\\s*(od\\s*)?(\\d+\\,\\d+)");
+        Pattern pattern1 = Pattern.compile("(koli[čc]ini|mas(?:i|e))\\s*(od\\s*)?(\\d+\\,\\d+)");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+
+        if (matcher1.find()) {
+            String numberStr = matcher1.group(3);
+            //return Double.parseDouble(numberStr.replace(',', '.'));
+            return numberStr.replace(',', '.');
+        }
+        //return 0.0;
+
+        return "unknown";
+    }
 
 
 }
