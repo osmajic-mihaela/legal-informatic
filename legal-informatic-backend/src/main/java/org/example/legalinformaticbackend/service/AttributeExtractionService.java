@@ -43,14 +43,26 @@ public class AttributeExtractionService {
             retVal.put("Svestan", extractAwareness(caseStr));
             retVal.put("Osuđen", isConvicted(caseStr));
             retVal.put("Broj stabala", extractNumberOfTrees(caseStr));
-            //BROJ STABLA
-            //VRSTA STABLA
-            //Kazna dani
-            //Uslovna
-            //Kazna evri
-            //Vremenski rok za placanje
-            //zamena ako ne plati
-            //citirani clanovi zakona
+            retVal.put("Vrsta drveta", extractTreeType(caseStr));
+            //retVal.put("Članovi zakona", extractTreeType(caseStr));
+
+            if(retVal.get("Osuđen").equals("Da")){
+                retVal.put("Uslovna", isConditionalSentence(caseStr));
+                //retVal.put("Zatvorska kazna", isConvicted(caseStr));
+                retVal.put("Novčana kazna", extractFinancialSentence(caseStr));
+
+
+            }else{
+                retVal.put("Uslovna", "");
+                retVal.put("Zatvorska kazna", "");
+                retVal.put("Novčana kazna",  "");
+            }
+
+
+
+            //Vremenski rok za placanje?
+            //zamena ako ne plati?
+
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -281,7 +293,38 @@ public class AttributeExtractionService {
 
     }
 
-    
+    // K114/19 i K116/19
+    private String extractTreeType(String caseStr) throws IOException {
+
+        Pattern pattern = Pattern.compile("([a-zčćđšžA-ZŽĐŠČĆ]+)\\s*stab(a)?l(a|o)");
+        Matcher matcher = pattern.matcher(caseStr);
+
+        if (matcher.find()) {
+            String type = matcher.group(1);
+            if(!type.contains("buk") && !type.contains("hra") && !type.contains("smr") && !type.contains("čam") && !type.contains("grab")){
+                Pattern pattern1 = Pattern.compile("stab(a)?l(a|o)\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)");
+                Matcher matcher1 = pattern1.matcher(caseStr);
+                if (matcher1.find()) {
+                    return matcher1.group(3);
+                }
+            }
+            return type;
+        }
+        return "unknown";
+    }
+
+    private String isConditionalSentence(String caseStr) {
+        Pattern pattern = Pattern.compile("USLOVNU\\s*OSUDU");
+        Matcher matcher = pattern.matcher(caseStr);
+
+        if (matcher.find()) {
+            return "Da";
+        }
+        return "Ne";
+    }
+
+
+
 
 
 
