@@ -1,0 +1,246 @@
+package org.example.legalinformaticbackend.service;
+
+import lombok.RequiredArgsConstructor;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.util.PDFTextStripper;
+import org.example.legalinformaticbackend.model.LegalCase;
+import org.example.legalinformaticbackend.repository.LegalCaseRepository;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+@Service
+@RequiredArgsConstructor
+public class AttributeExtractionService {
+    private final LegalCaseRepository legalCaseRepository;
+    private final ResourceLoader resourceLoader;
+
+    public Map attributeExtraction(String caseNumber){
+        Map<String, String> retVal = new HashMap<>();
+
+        try {
+            String caseStr = this.readPDF(caseNumber);
+            retVal.put("Broj slučaja", extractCaseNumber(caseStr));
+            retVal.put("Sud", extractCourt(caseStr));
+            retVal.put("Sudija", extractJudgeName(caseStr));
+            retVal.put("Zapisničar", extractCourtReporterName(caseStr));
+            retVal.put("Optuženi", extractDefendantInitials(caseStr));
+            retVal.put("Šumska svojina", extractForestProperty(caseStr));
+            retVal.put("Novčana šteta", extractFinancialDamage(caseStr));
+            retVal.put("Svestan", extractAwareness(caseStr));
+            retVal.put("Osuđen", isConvicted(caseStr));
+            //BROJ STABLA
+            //VRSTA STABLA
+            //MASA STABLA
+            //Kazna dani
+            //Uslovna
+            //Kazna evri
+            //Vremenski rok za placanje
+            //zamena ako ne plati
+            //citirani clanovi zakona
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        return retVal;
+    }
+
+
+    private String readPDF(String caseNumber) throws IOException {
+        Resource resource = resourceLoader.getResource("classpath:cases/" + caseNumber + ".pdf");
+        Path path = Paths.get(resource.getURI());
+        File file = new File(path.toString());
+        PDDocument document = PDDocument.load(file);
+        PDFTextStripper stripper = new PDFTextStripper();
+        String text = stripper.getText(document);
+        document.close();
+        return text;
+    }
+
+
+    //radi za sve slucajeve
+    private String extractCaseNumber(String caseStr) throws IOException {
+
+        Pattern pattern = Pattern.compile("^[kK]\\.\\s?([Bb]r\\.\\s?)?[0-9]{1,4}/[0-9]{2}\\s");
+        Matcher matcher = pattern.matcher(caseStr);
+        String ret = " ";
+        if (matcher.find()) {
+            ret = matcher.group();
+        } else {
+            Pattern pattern2 = Pattern.compile("\\s[kK]\\.\\s?([Bb]r\\.\\s?)?[0-9]{1,4}/[0-9]{2}\\s");
+            Matcher matcher2 = pattern2.matcher(caseStr);
+            if (matcher2.find()) {
+                ret = matcher2.group();
+            }
+        }
+        return ret.trim();
+    }
+
+
+    //radi za sve slucajeve
+    private String extractCourt(String caseStr) throws IOException {
+        Pattern pattern = Pattern.compile("\\s((U IME CRNE GORE)|(U IME NARODA))\\s*[A-ZŽĐŠČĆa-zžđšćčć]+ ((SUD U)|(sud u)) [A-ZŽĐŠČĆa-zžđšćčć]+");
+        Matcher matcher = pattern.matcher(caseStr);
+        String ret = "unknown";
+        if (matcher.find()) {
+            ret = matcher.group();
+
+            Pattern pattern2 = Pattern.compile("\\s[A-ZŽĐŠČĆa-zžđšćčć]+ ((SUD U)|(sud u)) [A-ZŽĐŠČĆa-zžđšćčć]+");
+            Matcher matcher2 = pattern2.matcher(ret);
+            if (matcher2.find()) {
+                ret = matcher2.group();
+            }
+        }
+        return ret.trim();
+    }
+
+    //radi za sve slucajeve
+    public String extractJudgeName(String caseStr) throws IOException {
+        Pattern pattern1 = Pattern.compile("(?:prvostepeni krivični sud)?\\s*(?:sudija|sudiji|sudiji pojedincu|sudija pojedincu|sudija pojedinac)\\s+([A-ZČĆĐŠŽ][a-zčćđšž]+(?:\\s+[A-ZČĆĐŠŽ][a-zčćđšž]+)*\\s*[A-ZČĆĐŠŽ][a-zčćđšž]+(?:\\s*-?\\s*[A-ZČĆĐŠŽ][a-zčćđšž]+)?)");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+        String name = "unknown";
+        if (matcher1.find()) {
+            name = matcher1.group(1);
+            name = name.trim().replaceAll("[-,]", "");
+            return name;
+        }
+
+
+        Pattern pattern2 = Pattern.compile("\\b([A-ZČĆĐŠŽ][a-zčćđšž]+(?:\\s+[A-ZČĆĐŠŽ][a-zčćđšž]+)*\\s*[A-ZČĆĐŠŽ][a-zčćđšž]+(?:\\s*-?\\s*[A-ZČĆĐŠŽ][a-zčćđšž]+)?)");
+        Matcher matcher2 = pattern2.matcher(caseStr);
+
+        if (matcher2.find()) {
+            name = matcher2.group(1);
+            name = name.trim().replaceAll("[-,]", "");
+            return name;
+        }
+
+        return name;
+    }
+
+    //radi za sve, sredi izlaz
+    private String extractDefendantInitials(String caseStr) throws IOException {
+        Pattern pattern1 = Pattern.compile("\\b([A-ZŽĐŠČĆ]\\.[A-ZŽĐŠČĆ]\\.)(?=\\s|$)");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+
+        if (matcher1.find()) {
+            return removeWhitespace(removeLowercase(matcher1.group()));
+        }
+
+        Pattern pattern2 = Pattern.compile("(?:okrivljenog|optuženog)\\s+([A-ZŽĐŠČĆ]\\.\\s?[A-ZŽĐŠČĆ](?:\\.[a-zčćđšžA-ZŽĐŠČĆ])?)\\b");
+        Matcher matcher2 = pattern2.matcher(caseStr);
+
+        if (matcher2.find()) {
+            return removeWhitespace(removeLowercase(matcher2.group(1)));
+        }
+
+        Pattern pattern3 = Pattern.compile("\\b([A-ZŽĐŠČĆ]\\.[a-zčćđšžA-ZŽĐŠČĆ]?\\s?[A-Z]\\.[a-zčćđšžA-ZŽĐŠČĆ]?\\.?)\\b");
+        Matcher matcher3 = pattern3.matcher(caseStr);
+
+        if (matcher3.find()) {
+            return removeWhitespace(removeLowercase(matcher3.group(1)));
+        }
+
+
+        return "unknown";
+    }
+
+    private static String removeLowercase(String text) {
+        return text.replaceAll("[a-z]", "");
+    }
+
+    private static String removeWhitespace(String text) {
+        return text.replaceAll(" ", "");
+    }
+
+    //radi za sve
+    public String extractCourtReporterName(String caseStr) throws IOException {
+        Pattern pattern = Pattern.compile("[zZ]apisničar(?:a|om|em)?\\s+([A-ZŽĐŠČĆ][a-zčćđšžA-ZŽĐŠČĆ]+(?:\\s+[A-ZŽĐŠČĆ][a-zčćđšžA-ZŽĐŠČĆ]+)?)(,)?\\s*(kao)?\\s*(zapisničara)?");
+        Matcher matcher = pattern.matcher(caseStr);
+
+        if (matcher.find()) {
+            return matcher.group(1).replace("\r\n", " ").replace("\n", " ").trim();
+        }
+
+        Pattern pattern2 = Pattern.compile("([A-ZŽĐŠČĆ][a-zčćđšžA-ZŽĐŠČĆ]+(?:\\s+[A-ZŽĐŠČĆ][a-zčćđšžA-ZŽĐŠČĆ]+)?)(,\\s+)?(kao)?\\s+zapisničara(,)?");
+        Matcher matcher2 = pattern2.matcher(caseStr);
+
+        if (matcher2.find()) {
+            return matcher2.group(1).replace("\r\n", " ").replace("\n", " ").trim();
+        }
+
+        return "unknown";
+
+    }
+
+    //radi za sve
+    public String extractFinancialDamage(String caseStr) throws IOException {
+        Pattern pattern1 = Pattern.compile("((kaznu|penzije)\\s*u\\s*iznosu\\s*od)\\s*(\\d{1,7}(?:\\.\\d{3,6})*(?:,\\d{2,5})?)\\s*(?:eura|€)");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+
+        if (matcher1.find()) {
+            caseStr = matcher1.replaceAll("");
+        }
+
+
+        Pattern pattern2 = Pattern.compile("(iznosu\\s*od)\\s*(\\d{1,7}(?:\\.\\d{3,6})*(?:,\\d{2,5})?)\\s*(?:eura|€)");
+        Matcher matcher2 = pattern2.matcher(caseStr);
+
+        if (matcher2.find()) {
+            return matcher2.group(2);
+        }
+
+        return "unknown";
+
+    }
+
+    //radi za sve slucajeve
+    private String extractForestProperty(String caseStr) throws IOException {
+
+        Pattern pattern = Pattern.compile("((privatnoj\\s*šumi)|(vlasništvo\\s*oštećenih))");
+        Matcher matcher = pattern.matcher(caseStr);
+
+        if (matcher.find()) {
+            return "Privatna";
+        }
+        return "Državna";
+    }
+
+    //radi za sve slucajeve
+    private String extractAwareness(String caseStr) throws IOException {
+
+        Pattern pattern = Pattern.compile("svjestan\\s*(zabranjenosti\\s*)?svog\\s*djela");
+        Matcher matcher = pattern.matcher(caseStr);
+
+        if (matcher.find()) {
+            return "Da";
+        }
+        return "Ne";
+    }
+
+    //radi za sve slucajeve
+    private String isConvicted(String caseStr) throws IOException {
+
+        Pattern pattern = Pattern.compile("[kK]\\s*[rR]\\s*[iI]\\s*[vV]\\s*[jJ]\\s*[eE]");
+        Matcher matcher = pattern.matcher(caseStr);
+
+        if (matcher.find()) {
+            return "Da";
+        }
+        return "Ne";
+    }
+
+
+
+}
