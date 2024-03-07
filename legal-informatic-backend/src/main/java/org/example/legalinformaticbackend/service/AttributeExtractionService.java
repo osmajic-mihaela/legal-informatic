@@ -45,6 +45,7 @@ public class AttributeExtractionService {
             retVal.put("Osuđen", isConvicted(caseStr));
             retVal.put("Broj stabala", extractNumberOfTrees(caseStr));
             retVal.put("Vrsta drveta", extractTreeType(caseStr));
+            retVal.put("Razlog presude", extractReasonForProsecution(caseStr));
             //retVal.put("Članovi zakona", extractTreeType(caseStr));
 
             if(retVal.get("Osuđen").equals("Da")){
@@ -384,6 +385,25 @@ public class AttributeExtractionService {
 
         return "unknown";
 
+    }
+
+
+    //radi za sve, da li treba i deo u vezi clana??
+    private String extractReasonForProsecution(String caseStr) {
+
+        Pattern pattern1 = Pattern.compile("izvršio\\s*krivično\\s*djelo\\s*((šumska)?\\s*kra[djđ]+a|pusto[šs]enje\\s*šuma)\\s*iz\\s*čl(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*st\\s*(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*(u\\s*vezi\\s*st\\s*(\\.)?\\s*(\\d+))?");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+
+        if (matcher1.find()) {
+            String clan = matcher1.group(4);
+            String stav = matcher1.group(7);
+
+            //return Double.parseDouble(numberStr.replace(',', '.'));
+            return clan+" "+stav;
+        }
+        //return 0.0;
+
+        return "unknown";
     }
 
 
