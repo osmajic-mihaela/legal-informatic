@@ -51,12 +51,14 @@ public class AttributeExtractionService {
                 retVal.put("Uslovna", isConditionalSentence(caseStr));
                 retVal.put("Zatvorska kazna", extractPrisonSentence(caseStr));
                 retVal.put("Novčana kazna", extractFinancialSentence(caseStr));
+                retVal.put("Kazna rada u javnom interesu", extractComunityServiceSentence(caseStr));
 
 
             }else{
                 retVal.put("Uslovna", "");
                 retVal.put("Zatvorska kazna", "");
                 retVal.put("Novčana kazna",  "");
+                retVal.put("Kazna rada u javnom interesu", "");
             }
 
 
@@ -353,7 +355,23 @@ public class AttributeExtractionService {
     }
 
     private String extractPrisonSentence(String caseStr) {
-        Pattern pattern1 = Pattern.compile("kaznu\\s*zatvora\\s*(u\\s*trajanju)?\\s*od\\s*(\\d+)\\s*(?:\\(\\s*[a-zčćđšžA-ZŽĐŠČĆ]+\\s*\\))?\\s*(?:\\/\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)\\s*\\/)?\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)");
+        Pattern pattern1 = Pattern.compile("kaznu\\s*zatvora\\s*(u\\s*trajanju)?\\s*od\\s*(\\d+)\\s*(?:\\(\\s*[a-zčćđšžA-ZŽĐŠČĆ\\s*]+\\s*\\))?\\s*(?:\\/\\s*([a-zčćđšžA-ZŽĐŠČĆ\\s*]+)\\s*\\/)?\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+
+        if (matcher1.find()) {
+            String numberStr = matcher1.group(2);
+            String periodStr = matcher1.group(4);
+            //return Double.parseDouble(numberStr.replace(',', '.'));
+            return numberStr+" "+periodStr;
+        }
+        //return 0.0;
+
+        return "unknown";
+
+    }
+
+    private String extractComunityServiceSentence(String caseStr) {
+        Pattern pattern1 = Pattern.compile("kaznu\\s*rada\\s*u\\s*javnom\\s*interesu\\s*(u\\s*trajanju)?\\s*od\\s*(\\d+)\\s*(?:\\(\\s*[a-zčćđšžA-ZŽĐŠČĆ\\s*]+\\s*\\))?\\s*(?:\\/\\s*([a-zčćđšžA-ZŽĐŠČĆ\\s*]+)\\s*\\/)?\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
         if (matcher1.find()) {
