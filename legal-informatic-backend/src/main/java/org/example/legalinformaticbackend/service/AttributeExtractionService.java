@@ -238,7 +238,7 @@ public class AttributeExtractionService {
     //radi za sve slucajeve
     private String isConvicted(String caseStr) throws IOException {
 
-        Pattern pattern = Pattern.compile("[kK]\\s*[rR]\\s*[iI]\\s*[vV]\\s*[jJ]\\s*[eE]");
+        Pattern pattern = Pattern.compile("[kK]\\s*[rR]\\s*[iI]\\s*[vV]\\s*([iI]\\s*)?([jJ]\\s*[eE]|[Ss]\\s*[Uu])");
         Matcher matcher = pattern.matcher(caseStr);
 
         if (matcher.find()) {
@@ -265,17 +265,31 @@ public class AttributeExtractionService {
 
     //U K114/19 i K116/19 dve vrste stabla su u pitanju, pa se navodi br za svaku vrstu, ne izvlaci tu drugu
     private String extractNumberOfTrees(String caseStr) {
-        Pattern pattern1 = Pattern.compile("oborio\\s*(u\\s*državnoj\\s*šumi\\s*)?(\\d+|jedno)");
+        Pattern pattern1 = Pattern.compile("obori(o|li)\\s*(u\\s*državnoj\\s*šumi\\s*|ukupno\\s*)?(\\d+|jedno)");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
         if (matcher1.find()) {
-            String br = matcher1.group(2);
+            String br = matcher1.group(3);
             if (br.equals("jedno")) {
                 return "1";
             } else {
                 return br;
             }
         }
+
+        Pattern pattern2 = Pattern.compile("(\\d+|jedno)\\s*stab(a)?l(a|o)");
+        Matcher matcher2 = pattern2.matcher(caseStr);
+
+        if (matcher2.find()) {
+            String br = matcher2.group(1);
+            if (br.equals("jedno")) {
+                return "1";
+            } else {
+                return br;
+            }
+        }
+
+
 
         return "unknown";
 
@@ -287,19 +301,22 @@ public class AttributeExtractionService {
         Pattern pattern = Pattern.compile("([a-zčćđšžA-ZŽĐŠČĆ]+)\\s*stab(a)?l(a|o)");
         Matcher matcher = pattern.matcher(caseStr);
 
-        if (matcher.find()) {
+        while (matcher.find()) {
             String type = matcher.group(1);
-            if(!type.contains("buk") && !type.contains("hra") && !type.contains("smr") && !type.contains("čam") && !type.contains("grab")){
+            if(!type.contains("buk") && !type.contains("hrast") && !type.contains("smr") && !type.contains("čam") && !type.contains("grab") && !type.contains("topol")){
                 Pattern pattern1 = Pattern.compile("stab(a)?l(a|o)\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)");
                 Matcher matcher1 = pattern1.matcher(caseStr);
                 while (matcher1.find()) {
                     String type1  = matcher1.group(3);
-                    if(type1.contains("buk") || type1.contains("hra") || type1.contains("smr") || type1.contains("čam") || type1.contains("grab")){
+                    if(type1.contains("buk") || type1.contains("hrast") || type1.contains("smr") || type1.contains("čam") || type1.contains("grab") || type1.contains("topol")){
                         return type1;
                     }
                 }
             }
-            return type;
+            if(type.contains("bukv") || type.contains("hrast") || type.contains("smr") || type.contains("čam") || type.contains("grab") || type.contains("topol")) {
+
+                return type;
+            }
         }
         return "unknown";
     }
@@ -320,7 +337,7 @@ public class AttributeExtractionService {
         Pattern pattern1 = Pattern.compile("nov[cč]anu\\s*kaznu\\s*u\\s*iznosu\\s*od\\s*(\\d+\\,\\d+)");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
-        Pattern pattern2 = Pattern.compile("[kK]\\s*[rR]\\s*[iI]\\s*[vV]\\s*[jJ]\\s*[eE]");
+        Pattern pattern2 = Pattern.compile("[kK]\\s*[rR]\\s*[iI]\\s*[vV]\\s*([iI]\\s*)?([jJ]\\s*[eE]|[Ss]\\s*[Uu])");
         Matcher matcher2 = pattern2.matcher(caseStr);
         int startIndex2 = 0;
         if(matcher2.find()){
@@ -343,13 +360,23 @@ public class AttributeExtractionService {
     }
 
     private String extractPrisonSentence(String caseStr) {
-        Pattern pattern1 = Pattern.compile("kaznu\\s*zatvora\\s*(u\\s*trajanju)?\\s*od\\s*(\\d+)\\s*(?:\\(\\s*[a-zčćđšžA-ZŽĐŠČĆ\\s*]+\\s*\\))?\\s*(?:\\/\\s*([a-zčćđšžA-ZŽĐŠČĆ\\s*]+)\\s*\\/)?\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)");
+        Pattern pattern1 = Pattern.compile("kazn(u|e)\\s*zatvora\\s*(u\\s*trajanju)?\\s*od\\s*(po)?\\s*(\\d+)\\s*(?:\\(\\s*[a-zčćđšžA-ZŽĐŠČĆ\\s*]+\\s*\\))?\\s*(?:\\/\\s*([a-zčćđšžA-ZŽĐŠČĆ\\s*]+)\\s*\\/)?\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
-        if (matcher1.find()) {
-            String numberStr = matcher1.group(2);
-            String periodStr = matcher1.group(4);
-            return numberStr+" "+periodStr;
+        Pattern pattern2 = Pattern.compile("[kK]\\s*[rR]\\s*[iI]\\s*[vV]\\s*([iI]\\s*)?([jJ]\\s*[eE]|[Ss]\\s*[Uu])");
+        Matcher matcher2 = pattern2.matcher(caseStr);
+        int startIndex2 = 0;
+        if(matcher2.find()){
+            startIndex2 = matcher2.start();
+        }
+
+        while (matcher1.find()) {
+            int startIndex1 = matcher1.start();
+            if (startIndex1 > startIndex2) {
+                String numberStr = matcher1.group(4);
+                String periodStr = matcher1.group(6);
+                return numberStr + " " + periodStr;
+            }
         }
 
         return "unknown";
@@ -380,6 +407,16 @@ public class AttributeExtractionService {
         if (matcher1.find()) {
             String clan = matcher1.group(4);
             String stav = matcher1.group(7);
+
+            return clan+" "+stav;
+        }
+
+        Pattern pattern2 = Pattern.compile("izvrši(o|li)\\s*krivično\\s*djelo\\s*((šumska)?\\s*kra[djđ]+a|pusto[šs]enje\\s*šuma)\\s*iz\\s*čl(ana)?\\s*(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*st(av|ava)\\s*(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*(u\\s*vezi\\s*st\\s*(\\.)?\\s*(\\d+))?");
+        Matcher matcher2 = pattern2.matcher(caseStr);
+
+        if (matcher2.find()) {
+            String clan = matcher2.group(6);
+            String stav = matcher2.group(10);
 
             return clan+" "+stav;
         }
