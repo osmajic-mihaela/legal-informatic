@@ -1,23 +1,18 @@
 package org.example.legalinformaticbackend.service;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 import lombok.RequiredArgsConstructor;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.util.PDFTextStripper;
-import org.example.legalinformaticbackend.model.LegalCase;
 import org.example.legalinformaticbackend.repository.LegalCaseRepository;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -43,10 +38,10 @@ public class AttributeExtractionService {
             retVal.put("Kubna drvna masa", extractWoodVolume(caseStr));
             retVal.put("Svestan", extractAwareness(caseStr));
             retVal.put("Osuđen", isConvicted(caseStr));
-            retVal.put("Broj stabala", extractNumberOfTrees(caseStr));
-            retVal.put("Vrsta drveta", extractTreeType(caseStr));
-            retVal.put("Razlog presude", extractReasonForProsecution(caseStr));
-            //retVal.put("Članovi zakona", extractTreeType(caseStr));
+            retVal.put("Broj stabala", extractNumberOfTrees(caseStr)); //Ne radi za 2 vrste stabala
+            retVal.put("Vrsta drveta", extractTreeType(caseStr)); //Ne radi za 2 vrste stabala
+            retVal.put("Razlog presude", extractReasonForProsecution(caseStr)); //Da li treba u vezi clana?
+            //retVal.put("Citirani članovi zakona", extractCitedArticles(caseStr));
 
             if(retVal.get("Osuđen").equals("Da")){
                 retVal.put("Uslovna", isConditionalSentence(caseStr));
@@ -75,7 +70,6 @@ public class AttributeExtractionService {
         return retVal;
     }
 
-
     private String readPDF(String caseNumber) throws IOException {
         Resource resource = resourceLoader.getResource("classpath:cases/" + caseNumber + ".pdf");
         Path path = Paths.get(resource.getURI());
@@ -91,35 +85,25 @@ public class AttributeExtractionService {
     //radi za sve slucajeve
     private String extractCaseNumber(String caseStr) throws IOException {
 
-        Pattern pattern = Pattern.compile("^[kK]\\.\\s?([Bb]r\\.\\s?)?[0-9]{1,4}/[0-9]{2}\\s");
+        Pattern pattern = Pattern.compile("([Kk])\\.\\s*([Bb]r\\.\\s*)?(\\d+/\\d+)");
         Matcher matcher = pattern.matcher(caseStr);
-        String ret = " ";
+        String ret = "unknown";
         if (matcher.find()) {
-            ret = matcher.group();
-        } else {
-            Pattern pattern2 = Pattern.compile("\\s[kK]\\.\\s?([Bb]r\\.\\s?)?[0-9]{1,4}/[0-9]{2}\\s");
-            Matcher matcher2 = pattern2.matcher(caseStr);
-            if (matcher2.find()) {
-                ret = matcher2.group();
-            }
+            ret =matcher.group(1)+" "+matcher.group(3);
         }
+
         return ret.trim();
     }
 
 
     //radi za sve slucajeve
     private String extractCourt(String caseStr) throws IOException {
-        Pattern pattern = Pattern.compile("\\s((U IME CRNE GORE)|(U IME NARODA))\\s*[A-ZŽĐŠČĆa-zžđšćčć]+ ((SUD U)|(sud u)) [A-ZŽĐŠČĆa-zžđšćčć]+");
+        //Pattern pattern = Pattern.compile("\\s((U IME CRNE GORE)|(U IME NARODA))\\s*[A-ZŽĐŠČĆa-zžđšćčć]+\\s*((SUD\\s*U)|(sud\\s*u))\\s*[A-ZŽĐŠČĆa-zžđšćčć]+");
+        Pattern pattern = Pattern.compile("(U\\s*I\\s*M\\s*E\\s*C\\s*R\\s*N\\s*E\\s*G\\s*O\\s*R\\s*E|U\\s*I\\s*M\\s*E\\s*N\\s*A\\s*R\\s*O\\s*D\\s*A)\\s*([A-ZŽĐŠČĆa-zžđšćčć]+\\s*((SUD\\s*U)|(sud\\s*u))\\s*[A-ZŽĐŠČĆa-zžđšćčć]+)");
         Matcher matcher = pattern.matcher(caseStr);
         String ret = "unknown";
         if (matcher.find()) {
-            ret = matcher.group();
-
-            Pattern pattern2 = Pattern.compile("\\s[A-ZŽĐŠČĆa-zžđšćčć]+ ((SUD U)|(sud u)) [A-ZŽĐŠČĆa-zžđšćčć]+");
-            Matcher matcher2 = pattern2.matcher(ret);
-            if (matcher2.find()) {
-                ret = matcher2.group();
-            }
+            ret = matcher.group(2);
         }
         return ret.trim();
     }
@@ -308,8 +292,11 @@ public class AttributeExtractionService {
             if(!type.contains("buk") && !type.contains("hra") && !type.contains("smr") && !type.contains("čam") && !type.contains("grab")){
                 Pattern pattern1 = Pattern.compile("stab(a)?l(a|o)\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)");
                 Matcher matcher1 = pattern1.matcher(caseStr);
-                if (matcher1.find()) {
-                    return matcher1.group(3);
+                while (matcher1.find()) {
+                    String type1  = matcher1.group(3);
+                    if(type1.contains("buk") || type1.contains("hra") || type1.contains("smr") || type1.contains("čam") || type1.contains("grab")){
+                        return type1;
+                    }
                 }
             }
             return type;
@@ -319,7 +306,7 @@ public class AttributeExtractionService {
 
     //radi za sve
     private String isConditionalSentence(String caseStr) {
-        Pattern pattern = Pattern.compile("USLOVNU\\s*OSUDU");
+        Pattern pattern = Pattern.compile("U\\s*S\\s*L\\s*O\\s*V\\s*N\\s*U\\s*O\\s*S\\s*U\\s*D\\s*U");
         Matcher matcher = pattern.matcher(caseStr);
 
         if (matcher.find()) {
@@ -362,10 +349,8 @@ public class AttributeExtractionService {
         if (matcher1.find()) {
             String numberStr = matcher1.group(2);
             String periodStr = matcher1.group(4);
-            //return Double.parseDouble(numberStr.replace(',', '.'));
             return numberStr+" "+periodStr;
         }
-        //return 0.0;
 
         return "unknown";
 
@@ -378,10 +363,8 @@ public class AttributeExtractionService {
         if (matcher1.find()) {
             String numberStr = matcher1.group(2);
             String periodStr = matcher1.group(4);
-            //return Double.parseDouble(numberStr.replace(',', '.'));
             return numberStr+" "+periodStr;
         }
-        //return 0.0;
 
         return "unknown";
 
@@ -398,16 +381,25 @@ public class AttributeExtractionService {
             String clan = matcher1.group(4);
             String stav = matcher1.group(7);
 
-            //return Double.parseDouble(numberStr.replace(',', '.'));
             return clan+" "+stav;
         }
-        //return 0.0;
 
         return "unknown";
     }
 
+    private String extractCitedArticles(String caseStr) {
+        Pattern pattern1 = Pattern.compile("");
+        Matcher matcher1 = pattern1.matcher(caseStr);
 
+        if (matcher1.find()) {
+            String clan = matcher1.group(4);
+            String stav = matcher1.group(7);
 
+            return clan+" "+stav;
+        }
+
+        return "unknown";
+    }
 
 
     /*
