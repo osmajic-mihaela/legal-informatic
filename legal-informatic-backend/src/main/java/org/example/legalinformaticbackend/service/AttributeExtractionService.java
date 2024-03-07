@@ -49,7 +49,7 @@ public class AttributeExtractionService {
 
             if(retVal.get("Osuđen").equals("Da")){
                 retVal.put("Uslovna", isConditionalSentence(caseStr));
-                //retVal.put("Zatvorska kazna", isConvicted(caseStr));
+                retVal.put("Zatvorska kazna", extractPrisonSentence(caseStr));
                 retVal.put("Novčana kazna", extractFinancialSentence(caseStr));
 
 
@@ -345,6 +345,22 @@ public class AttributeExtractionService {
                 return numberStr.replace(',', '.');
             }
 
+        }
+        //return 0.0;
+
+        return "unknown";
+
+    }
+
+    private String extractPrisonSentence(String caseStr) {
+        Pattern pattern1 = Pattern.compile("kaznu\\s*zatvora\\s*(u\\s*trajanju)?\\s*od\\s*(\\d+)\\s*(?:\\(\\s*[a-zčćđšžA-ZŽĐŠČĆ]+\\s*\\))?\\s*(?:\\/\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)\\s*\\/)?\\s*([a-zčćđšžA-ZŽĐŠČĆ]+)");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+
+        if (matcher1.find()) {
+            String numberStr = matcher1.group(2);
+            String periodStr = matcher1.group(4);
+            //return Double.parseDouble(numberStr.replace(',', '.'));
+            return numberStr+" "+periodStr;
         }
         //return 0.0;
 
