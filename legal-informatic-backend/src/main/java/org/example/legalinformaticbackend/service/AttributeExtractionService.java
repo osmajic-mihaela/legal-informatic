@@ -1,5 +1,6 @@
 package org.example.legalinformaticbackend.service;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import lombok.RequiredArgsConstructor;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.util.PDFTextStripper;
@@ -313,6 +314,7 @@ public class AttributeExtractionService {
         return "unknown";
     }
 
+    //radi za sve
     private String isConditionalSentence(String caseStr) {
         Pattern pattern = Pattern.compile("USLOVNU\\s*OSUDU");
         Matcher matcher = pattern.matcher(caseStr);
@@ -323,6 +325,32 @@ public class AttributeExtractionService {
         return "Ne";
     }
 
+    //radi za sve
+    private String extractFinancialSentence(String caseStr) {
+        Pattern pattern1 = Pattern.compile("nov[cč]anu\\s*kaznu\\s*u\\s*iznosu\\s*od\\s*(\\d+\\,\\d+)");
+        Matcher matcher1 = pattern1.matcher(caseStr);
+
+        Pattern pattern2 = Pattern.compile("[kK]\\s*[rR]\\s*[iI]\\s*[vV]\\s*[jJ]\\s*[eE]");
+        Matcher matcher2 = pattern2.matcher(caseStr);
+        int startIndex2 = 0;
+        if(matcher2.find()){
+            startIndex2 = matcher2.start();
+        }
+
+        while (matcher1.find()) {
+            int startIndex1 = matcher1.start();
+            if(startIndex1 > startIndex2){
+                String numberStr = matcher1.group(1);
+                //return Double.parseDouble(numberStr.replace(',', '.'));
+                return numberStr.replace(',', '.');
+            }
+
+        }
+        //return 0.0;
+
+        return "unknown";
+
+    }
 
 
 
