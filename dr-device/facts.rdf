@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+        xmlns:lc="http://informatika.ftn.uns.ac.rs/legal-case.rdf#">
+    <lc:case rdf:about="http://informatika.ftn.uns.ac.rs/legal-case.rdf#case01">
+       <lc:defendant>John</lc:defendant>
+        <lc:name>case 01</lc:name>
+	<lc:is_entity>legal_entity</lc:is_entity>
+	<lc:placed_on_market_rezani_duvan>no</lc:placed_on_market_rezani_duvan>
+	<lc:has_done_wholesale_distribution>no</lc:has_done_wholesale_distribution>
+	<lc:has_wholesale_distribution_permit>no</lc:has_wholesale_distribution_permit>
+	<lc:has_done_retail_distribution>yes</lc:has_done_retail_distribution>
+	<lc:has_retail_distribution_permit>yes</lc:has_retail_distribution_permit>
+	<lc:organized_reseller_network>yes</lc:organized_reseller_network>
+        <lc:profit rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40000</lc:profit>
+    </lc:case>
+</rdf:RDF>
