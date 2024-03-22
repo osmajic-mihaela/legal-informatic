@@ -1,6 +1,7 @@
 package org.example.legalinformaticbackend.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.example.legalinformaticbackend.model.DbEntity;
 import org.example.legalinformaticbackend.service.AttributeExtractionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -53,17 +54,41 @@ public class LegalCaseController {
                 .body(Files.readAllBytes(path));
     }
 
-    @GetMapping("/extract-cases-attributes-from-pdf")
-    public ResponseEntity<?> extractCasesAttributesFromPdf() throws IOException {
+    @GetMapping("/extract-cases-attributes-from-pdf1")
+    public ResponseEntity<?> extractCasesAttributesFromPdf1() throws IOException {
         Resource[] resources = resourceResolver.getResources("classpath:cases/*.pdf");
-        List<Map> ret = new ArrayList<>();
+        List<DbEntity> ret = new ArrayList<>();
 
         for(Resource resource : resources){
             String filePath = resource.getURI().toString();
             int lastSlashIndex = filePath.lastIndexOf('/');
             int lastDotIndex = filePath.lastIndexOf('.');
             String caseNmbr = filePath.substring(lastSlashIndex + 1, lastDotIndex);
-            Map<String, String> retVal = attributeExtractionService.attributeExtraction(caseNmbr);
+            DbEntity retVal = attributeExtractionService.attributeExtraction(caseNmbr);
+            ret.add(retVal);
+        }
+
+
+        return ResponseEntity.ok(ret);
+    }
+
+    @GetMapping("/extract-case-attributes-from-pdf1/{caseNumber}")
+    public ResponseEntity<?> extractCaseAttributesFromPdf1(@PathVariable String caseNumber) throws IOException {
+        DbEntity retVal = attributeExtractionService.attributeExtraction(caseNumber);
+        return ResponseEntity.ok(retVal);
+    }
+
+    @GetMapping("/extract-cases-attributes-from-pdf")
+    public ResponseEntity<?> extractCasesAttributesFromPdf() throws IOException {
+        Resource[] resources = resourceResolver.getResources("classpath:cases/*.pdf");
+        List<DbEntity> ret = new ArrayList<>();
+
+        for(Resource resource : resources){
+            String filePath = resource.getURI().toString();
+            int lastSlashIndex = filePath.lastIndexOf('/');
+            int lastDotIndex = filePath.lastIndexOf('.');
+            String caseNmbr = filePath.substring(lastSlashIndex + 1, lastDotIndex);
+            DbEntity retVal = attributeExtractionService.attributeExtraction(caseNmbr);
             ret.add(retVal);
         }
 
@@ -73,9 +98,10 @@ public class LegalCaseController {
 
     @GetMapping("/extract-case-attributes-from-pdf/{caseNumber}")
     public ResponseEntity<?> extractCaseAttributesFromPdf(@PathVariable String caseNumber) throws IOException {
-        Map<String, String> retVal = attributeExtractionService.attributeExtraction(caseNumber);
+        DbEntity retVal = attributeExtractionService.attributeExtraction(caseNumber);
         return ResponseEntity.ok(retVal);
     }
+
 
     //Novi slucaj, csv, baza?
     //Preporuka odluke, funkcija slicnosti

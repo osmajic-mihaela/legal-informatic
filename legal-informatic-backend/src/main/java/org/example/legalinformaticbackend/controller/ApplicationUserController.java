@@ -16,7 +16,7 @@ public class ApplicationUserController {
 
     private final ApplicationUserService userService;
 
-    @PostMapping("/register")
+    /*@PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody ApplicationUserDTO newUser) {
         ApplicationUser createdUser = userService.register(newUser);
         if (createdUser != null) return new ResponseEntity(createdUser.getFullName(), HttpStatus.OK);
@@ -28,6 +28,6 @@ public class ApplicationUserController {
         ApplicationUser user = userService.login(loginDto);
         if (user != null) return new ResponseEntity(user, HttpStatus.OK);
         else return new ResponseEntity(HttpStatus.BAD_REQUEST);
-    }
+    }*/
 
 }
