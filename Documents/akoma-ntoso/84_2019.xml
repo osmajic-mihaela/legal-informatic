@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Kolašinu
+					</FRBRauthor>
+					<FRBRdate date="2020-06-16">
+						2020-06-16
+					</FRBRdate>
+					<FRBRtitle>
+						K 84/2019
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="osk" href="/ontology/organization/OsnovniSud.Kolasin" showAs="Osnovni sud u Kolašinu" />
+				<TLCOrganization eId="odtk" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Kolasin" showAs="Osnovno državno tužilaštvo Kolašin" />
+
+				<TLCPerson eId="apopovic" href="/ontology/person/apopovic" showAs="Arsen Popović," />
+				<TLCPerson eId="ljmrdak" href="/ontology/person/ljmrdak" showAs="Ljiljana Mrdak" />
+				<TLCPerson eId="rr" href="/ontology/person/rr" showAs="R.R." />	
+				<TLCPerson eId="arr" href="/ontology/person/arr" showAs="R.R." />	
+				<TLCPerson eId="vojislavr" href="/ontology/person/vojislavr" showAs="Vojislav R." />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="osk" refersTo="#osk">
+					Osnovni sud u Kolašinu
+				</organization>
+				kao prvostepeni krivični, po predsjedniku suda 
+				<party id="apopovic" refersTo="#apopovic" as="#judge">
+					Arsenu Popoviću kao sudiji pojedincu
+				</party>
+				, uz učešće zapisničara 
+				<party id="ljmrdak" refersTo="#ljmrdak" as="#clerk">
+					Mrdak Ljiljane
+				</party>
+				, u krivičnom predmetu protiv okrivljenog 
+				<party id="rr" refersTo="#rr" as="#defendant">
+					R.R.
+				</party>
+				, K., zbog krivičnog djela pustošenje šuma iz
+				<ref href="/krivicni#art_323">
+					čl.323 st.1 Krivičnog zakonika
+				</ref>
+				,  po optužnom predlogu
+				<organization id="odtk" refersTo="#odtk">
+					 ODT iz Kolašina
+				</organization>
+				 Kt.br.87/19 od 08.11.2019 godine, nakon održanog glavnog javnog pretresa dana 16.06.2020 godine u prisustvu tužioca 
+				<organization id="odtk" refersTo="#odtbp">
+					ODT iz Kolašina
+				</organization>
+				<party id="vojislavr" refersTo="#vojislavr" as="#plaintiff">
+					 R. Vojislava
+				</party>
+				, okrivljenog
+				<party id="rr" refersTo="#rr" as="#defendant">
+					R.R.
+				</party>
+				i njegovog branioca
+				<party id="arr" refersTo="#arr" as="#lawyer">
+					adv. R.R.
+				</party>
+				, donio je i javno objavio, - P R E S U D U Okrivljeni:
+				<party id="rr" refersTo="#rr" as="#defendant">
+					R.R.
+				</party>
+				, JMBG …, od oca D.i majke M. rodj. Š., rodjen . godine u K., gdje je i nastanjen - P., državljanin Crne Gore, nezaposlen, razveden, otac troje djece, pismen, završio osnovnu školu, lošeg imovnog stanja, osudjR. presudom
+				<organization id="osbp" refersTo="#osbp">
+					Osnovnog suda u Kolašinu
+				</organization>
+				  na novčanu kaznu i uslovnu osudu u predmetu K.br.83/18 zbog krivičnog djela iz 
+				<ref href="/krivicni#art_324">
+					čl.324 Krivičnog zakonika
+				</ref>
+				. Kriv je Zato što je : Dana 22.08.2019 godine, u mjestu R. - Opština Kolašin, svjestan svog djela čije izvršenje je htio a znajući da je isto zabranjeno, u šumi vlasništvo Države Crne Gore u odjeljenju 53 C u gazdinskoj jedinici R. R. - R., kojom gazduje R. za R. - PJ Kolašin, protivno odredbi
+				<ref href="/suma#art_46">
+					čl.46 Zakona o šumama
+				</ref>
+				prouzrokovao požar u šumi i na šumskom zemljištu u površini 1178 m2, koji požar je predstavljao opasnost za širi šumski kompleks, kojom prilikom je oštećeno 10 R.h stabala i 2 stabla topole, ukupne drvne mase 3,41 m3, - čime je izvršio krivično djelo pustošenje šuma iz
+				<ref href="/krivicni#art_323">
+					čl. 323.st.1 Krivičnog zakonika
+				</ref>
+				,
+			</p>
+			<conclusions>
+				<p>
+					Pa
+					<organization id="osk" refersTo="#osk">
+						sud 
+					</organization>
+					okrivljenog primjenom citirane zakonske odredbe i
+					<ref href="/krivicni#art_2">
+						čl.2
+					</ref>
+					,
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_34">
+						čl.34
+					</ref>
+					,
+					<ref href="/krivicni#art_41">
+						čl.41
+					</ref>
+					i
+					<ref href="/krivicni#art_42">
+						čl.42 Krivičnog zakonika
+					</ref>
+					, te
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					i
+					<ref href="/postupak#art_374">
+						čl.374 ZKP-a
+					</ref>
+					,  O S U Đ U J E Na kaznu rada u javnom interesu u trajanju od 60 (šesdeset) časova, koja kazna će se izvršiti za vrijeme od 2 (dva) mjeseca. Ukoliko okrivljeni ne bude vršio rad u javnom interesu, ova kazna će se zamijeniti kaznom zatvora tako što će se za svakih započetih 60 (šesdeset) časova rada u javnom interesu zamijeniti kaznom zatvora u trajanju od jednog mjeseca. Obavezuje se okrivljeni na plaćanje troškova krivičnog postupka u iznosu od 125,50 €, te na plaćanje sudskog paušala u iznosu od 30,00 €, uplatom na žiro-račun br.832-196-94 koji se vodi na ime
+					<organization id="osk" refersTo="#osk">
+						Osnovnog suda Kolašin
+					</organization>
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>
