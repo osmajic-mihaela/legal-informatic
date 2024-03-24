@@ -41,11 +41,11 @@
 					Osnovni sud u Pljevljima
 				</organization>
 				, po
-				<party id="mcupic" refersTo="#mcupic" as="#judge">
+				<party id="ljpopovic" refersTo="#ljpopovic" as="#judge">
 					sudiji Ljiljani Popović
 				</party>
 				, uz sudjelovanje
-				<party id="olipovina" refersTo="#olipovina" as="#clerk">
+				<party id="mkrvavac" refersTo="#mkrvavac" as="#clerk">
 					zapisničara Krvavac Mirjane
 				</party>
 				, u krivičnom predmetu protiv okrivljenog

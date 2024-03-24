@@ -26,7 +26,7 @@
 				<TLCPerson eId="ljpopovic" href="/ontology/person/ljpopovic" showAs="Ljiljana Popović" />
 				<TLCPerson eId="mkrvavac" href="/ontology/person/mkrvavac" showAs="Mirjana Krvavac" />
 				<TLCPerson eId="tn" href="/ontology/person/tn" showAs="T. N." />	
-				<TLCPerson eId="bg" href="/ontology/person/bg" showAs="Božidarka Gačević" />
+				<TLCPerson eId="bgacevic" href="/ontology/person/bgacevic" showAs="Božidarka Gačević" />
 
 				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
 				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
@@ -41,11 +41,11 @@
 					Osnovni sud u Pljevljima
 				</organization>
 				, po
-				<party id="mcupic" refersTo="#mcupic" as="#judge">
+				<party id="ljpopovic" refersTo="#ljpopovic" as="#judge">
 					sudiji Ljiljani Popović
 				</party>
 				, uz sudjelovanje
-				<party id="olipovina" refersTo="#olipovina" as="#clerk">
+				<party id="mkrvavac" refersTo="#mkrvavac" as="#clerk">
 					zapisničara Krvavac Mirjane
 				</party>
 				, u krivičnom predmetu protiv okrivljenog
@@ -64,7 +64,7 @@
 				<organization id="odt" refersTo="#odt">
 					Osnovnom državnom tužilaštvu u Pljevljima 
 				</organization>
-				<party id="bg" refersTo="#bg" as="#plaintiff">
+				<party id="bgacevic" refersTo="#bgacevic" as="#plaintiff">
 					Gačević Božidarke
 				</party>
 				i okrivljenog
