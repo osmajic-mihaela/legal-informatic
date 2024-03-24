@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Pljevljima
+					</FRBRauthor>
+					<FRBRdate date="2012-12-17">
+						2012-12-17
+					</FRBRdate>
+					<FRBRtitle>
+						K 114/2019
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Pljevlja" showAs="Osnovni sud u Pljevljima" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Pljevlja" showAs="Osnovno državno tužilaštvo Pljevlja" />
+
+				<TLCPerson eId="ljpopovic" href="/ontology/person/ljpopovic" showAs="Ljiljana Popović" />
+				<TLCPerson eId="mkrvavac" href="/ontology/person/mkrvavac" showAs="Mirjana Krvavac" />
+				<TLCPerson eId="bv" href="/ontology/person/bv" showAs="B. V." />	
+				<TLCPerson eId="om" href="/ontology/person/om" showAs="O. M." />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					Osnovni sud u Pljevljima
+				</organization>
+				, po
+				<party id="mcupic" refersTo="#mcupic" as="#judge">
+					sudiji Ljiljani Popović
+				</party>
+				, uz sudjelovanje
+				<party id="olipovina" refersTo="#olipovina" as="#clerk">
+					zapisničara Krvavac Mirjane
+				</party>
+				, u krivičnom predmetu protiv okrivljenog
+				<party id="bv" refersTo="#bv" as="#defendant">
+					B. V. 
+				</party>
+				z P.zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_323">
+					čl. 324. st. 1. Krivičnog zakonika Crne Gore
+				</ref>
+				po optužnom predlogu
+				<organization id="odt" refersTo="#odt">
+					ODT Pljevlja
+				</organization>
+				 Kt.br.200/19 od 18.10.2019.godne nakon održanog glavnog i javnog pretresa u prisustvu savjetnika u
+				<organization id="odt" refersTo="#odt">
+					Osnovnom državnom tužilaštvu u Pljevljima
+				</organization>
+				<party id="om" refersTo="#om" as="#plaintiff">
+					O. M.
+				</party>
+				i okrivljenog
+				<party id="bv" refersTo="#bv" as="#defendant">
+					B. V. 
+				</party>
+				.,dana 17.12.2019. godine,donio je i javno objavio P R E S U D U Prema okrivljenom
+				<party id="bv" refersTo="#bv" as="#defendant">
+					B. V. 
+				</party>
+				JMBG ... od oca P. i majke D. rođene M., rođen dana ...godine u mjestu V., opština P. sa prebivalištem u mjestu V., opština Pljevlja, državljanin CG, udovac, otac četvoro punoljetne djece, penzioner, pismen, završio srednju trgovačku školu, govori srpskim jezikom, razumije crnogorski jezik, srednjeg imovnog stanja, nevodi se krivični postupak za drugo krivično djelo, neosuđivan. 
+			</p>
+			<conclusions>
+				<p>
+					Na osnovu
+					<ref href="/postupak#art_372">
+						čl.372 st.1 tačka 1 ZKP-a 
+					</ref>
+					OPTUŽBA SE ODBIJA Da je : Početkom septembra mjeseca 2019.godine u selu V.u državnoj šumi GJ K.R. u odelenju br.74 opština P., svjestan svog djela čije je izvršenje htio i znajući da je njegovo djelo zabranjeno, radi krađe oborio 4 (četiri) stabla graba prečnika na panju: 26 cm, 32 cm, 30 cm, 34 cm i 3 (tri) stabla hrasta prečnika na panju: 26 cm, 28 cm i 30 cm, ukupne neto drvne mase 1,87 m3 na koji način je pričinio štetu Upravi za šume PJ P. u iznosu od 41,04 €,- čime bi izvršio krivično djelo šumska krađa iz
+					<ref href="/suma#art_324">
+						čl.324 st.2 
+					</ref>
+					u vezi
+					<ref href="/suma#art_324">
+						čl.324 st.1  Krivičnog zakonika Crne Gore
+					</ref>
+					, Usled odustanka
+					<party id="om" refersTo="#om" as="#plaintiff">
+						Osnovnog državnog tužioca
+					</party>
+					od krivičnog gonjenja. Troškovi krivičnog postupka padaju na teret budžetskih sredstava. Oštećeni se radi ostvarivanja imovinsko pravnog zahtjeva upućuje na parnicu.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>
