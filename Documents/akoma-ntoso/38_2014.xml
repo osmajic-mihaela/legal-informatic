@@ -26,7 +26,7 @@
 				<TLCOrganization eId="ost" href="/ontology/organization/OpstinskiSud.Titograd" showAs="Opštinski sud u Titogradu" />
 				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Cetinje" showAs="Osnovno državno tužilaštvo" />
 
-				<TLCPerson eId="mcupic" href="/ontology/person/mcupic" showAs="Marija Ćupić," />
+				<TLCPerson eId="mcupic" href="/ontology/person/mcupic" showAs="Marija Ćupić" />
 				<TLCPerson eId="amartinovic" href="/ontology/person/amartinovic" showAs="Aleksandra Martinović" />
 				<TLCPerson eId="kd" href="/ontology/person/kd" showAs="K.D." />	
 				<TLCPerson eId="kn" href="/ontology/person/kn" showAs="K.N." />	

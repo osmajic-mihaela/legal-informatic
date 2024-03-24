@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Cetinju
+					</FRBRauthor>
+					<FRBRdate date="2012-05-23">
+						2012-05-23
+					</FRBRdate>
+					<FRBRtitle>
+						K 90/2012
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Cetinje" showAs="Osnovni sud u Cetinju" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Cetinje" showAs="Osnovno državno tužilaštvo iz Cetinja" />
+
+				<TLCPerson eId="mcupic" href="/ontology/person/mcupic" showAs="Marija Ćupić" />
+				<TLCPerson eId="olipovina" href="/ontology/person/olipovina" showAs="Olga Lipovina" />
+				<TLCPerson eId="mb" href="/ontology/person/mb" showAs="M. B." />	
+				<TLCPerson eId="pk" href="/ontology/person/pk" showAs="P. K." />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					OSNOVNI SUD U CETINJU
+				</organization>
+				, kao prvostepeni krivični, po
+				<party id="mcupic" refersTo="#mcupic" as="#judge">
+					sudiji Mariji Ćupić
+				</party>
+				, kao sudiji pojedincu, uz učešće
+				<party id="olipovina" refersTo="#olipovina" as="#clerk">
+					Lipovina Olge
+				</party>
+				, kao zapisničara, u krivičnom predmetu protiv okrivljenih
+				<party id="mb" refersTo="#mb" as="#defendant">
+					M. B. 
+				</party>
+				iz Cetinja, zbog krivičnog djela, pustošenje šuma iz
+				<ref href="/krivicni#art_323">
+					čl. 323. st. 2.
+				</ref>
+				u vezi 
+				<ref href="/krivicni#art_323">
+					člana 323 st. 1. Krivičnog zakonika
+				</ref>
+				, a po optužnom predlogu 
+				<organization id="odt" refersTo="#odt">
+					ODT-a u Cetinju
+				</organization>
+				Kt.br.487/09 od 03.06.2011.godine, nakon održanog glavnog i javnog pretresa dana 23.05.2012.godine, u prisustvu zamjenika 
+				<organization id="odt" refersTo="#odt">
+					ODT-a 
+				</organization>
+				<party id="pk" refersTo="#pk" as="#plaintiff">
+					P. K.
+				</party>
+				okr. 
+				<party id="mb" refersTo="#mb" as="#defendant">
+					M. B. 
+				</party>
+				P R E S U D U Okr. 
+				<party id="mb" refersTo="#mb" as="#defendant">
+					M. B. zv. "B."
+				</party>
+				, od oca S. i majke M. rodjene M. rodjen 19.11.19...godine u Cetinju, gdje i prebiva ul. BCJ bb., državljanin Crne Gore, nezaposlen, neoženjen, pismen sa završenom Srednjom školom vojsku nije služio, lošeg imovnog stanja, neosudjivan Kriv je: Zato što je: Neutvrdjenog dana u vremenskom periodu od 02.10. do 02. 11. 2009.godine, u nacionalnom parku L., u mjestu zv. Duge njive, opština Cetinje, protivno
+				<ref href="/suma#art_28">
+					čl. 28. st. 1.
+				</ref>
+				i
+				<ref href="/suma#art_339">
+					čl. 37. st. 5. Zakona o šumama
+				</ref>
+				, bez prethodno izvršenog odabiranja, obilježavanja i evidentiranja stabala za sječu, kao i bez prethodno izvršene kontrole inspektora šumarske struke, izvršio pustošenje šume, na način što je oborio 34 stabala bukovog drveta u ukupnoj neto količini od 0,79 m3, novčane vrijednosti od 22,40 eura, u šumi vlasništvo ošt. M. Č. iz Cetinja, na kojem mjestu nije dozvoljeno pustošenje šuma, kojom prilikom je sebi pribavio protivpravnu imovinsku korist u iznosu od 22,40 eura, a ošt. M. Č. i Javnom preduzeću za N.p.CG za isti iznos nanio štetu. - čime je izvršio krivično djelo pustošenje šuma iz
+				<ref href="/krivicni#art_323">
+					čl. 323. st. 2.
+				</ref>
+				u vezi 
+				<ref href="/krivicni#art_323">
+					člana 323 st. 1. Krivičnog zakonika
+				</ref>
+				.
+			</p>
+			<conclusions>
+				<p>
+					Pa mu
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+						primjenom citiranog zakonskog propisa, te primjenom
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_5">
+						čl.5
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_42">
+						čl.42
+					</ref>
+					,
+					<ref href="/krivicni#art_52">
+						čl.52
+					</ref>
+					,
+					<ref href="/krivicni#art_53">
+						čl.53
+					</ref>
+					i
+					<ref href="/krivicni#art_54">
+						čl.54 KZ-a
+					</ref>
+					,
+					<ref href="/postupak#art_226">
+						čl.226
+					</ref>
+					,
+					<ref href="/postupak#art_227">
+						čl.227
+					</ref>
+					,
+					<ref href="/postupak#art_228">
+						čl.228
+					</ref>
+					,
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					,
+					<ref href="/postupak#art_239">
+						čl.239
+					</ref>
+					i
+					<ref href="/postupak#art_374">
+						čl.374, ZKP-a
+					</ref>
+					izriče U S L O V N U O S U D U Kojom okrivljenom utvrđuje kaznu zatvora u trajanju od 3 mjeseca i istovremeno određuje da se navedena kazna neće izvršiti ukoliko okrivljeni u vremenskom periodu od jedne godine od dana pravosnažnosti presude ne počini novo krivično djelo. Dužan je okrivljeni da na ime troškova krivičnog postupka uplati iznos od 192,50 eura,te na ime paušala iznos od 30,00 eura u roku od 15 dana po pravosnažnosti presude pod prijetnjom prinudnog izvršenja. Oštećenim se dosuđuje imovinskopravni zahtjev u cjelosti - od po 11,20 eura.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>
