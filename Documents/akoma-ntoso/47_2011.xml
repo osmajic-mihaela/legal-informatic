@@ -23,7 +23,7 @@
 				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Berane" showAs="Osnovni sud u Beranama" />
 				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Berane" showAs="Osnovno državno tužilaštvo u Beranama" />
 
-				<TLCPerson eId="aculafic" href="/ontology/person/aculafic" showAs="Aleksandar Ćulafić," />
+				<TLCPerson eId="aculafic" href="/ontology/person/aculafic" showAs="Aleksandar Ćulafić" />
 				<TLCPerson eId="mlekic" href="/ontology/person/mlekic" showAs="Mirosav Lekić" />
 				<TLCPerson eId="kd" href="/ontology/person/kd" showAs="K. D." />	
 				<TLCPerson eId="ak" href="/ontology/person/ak" showAs="A.K." />
