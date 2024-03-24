@@ -1,16 +1,19 @@
 package org.example.legalinformaticbackend.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 
-@Entity
+import lombok.*;
+
+import jakarta.persistence.*;
+
+@Entity(name="LegalCase")
 @Table(name = "legal_case")
-@Data
+@Getter
+@Setter
 @EqualsAndHashCode(callSuper = true)
 public class LegalCase extends DbEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "case_number")
     private String caseNumber;
@@ -66,6 +69,6 @@ public class LegalCase extends DbEntity {
     @Column(name = "community_sentence")
     private String communitySentence;
 
-    @Column(name = "cited_articles")
+    @Column(name = "cited_articles", length = 1000)
     private String citedArticles;
 }

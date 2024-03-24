@@ -84,7 +84,6 @@ public class AttributeExtractionService {
             legalCase.setTreeType(extractTreeType(caseStr));
             legalCase.setReasonForProsecution(extractReasonForProsecution(caseStr));
 
-            //za boolean vrednosti
             if (legalCase.getConvicted()) {
                 legalCase.setConditionalSentence(isConditionalSentence(caseStr));
                 legalCase.setPrisonSentence(extractPrisonSentence(caseStr));
@@ -101,7 +100,7 @@ public class AttributeExtractionService {
 
 
 
-
+        legalCaseRepository.save(legalCase);
         return legalCase;
     }
 
