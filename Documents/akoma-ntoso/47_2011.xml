@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Beranama
+					</FRBRauthor>
+					<FRBRdate date="2011-04-16">
+						2011-04-16
+					</FRBRdate>
+					<FRBRtitle>
+						K 47/2011
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Berane" showAs="Osnovni sud u Beranama" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Berane" showAs="Osnovno državno tužilaštvo u Beranama" />
+
+				<TLCPerson eId="aculafic" href="/ontology/person/aculafic" showAs="Aleksandar Ćulafić," />
+				<TLCPerson eId="mlekic" href="/ontology/person/mlekic" showAs="Mirosav Lekić" />
+				<TLCPerson eId="kd" href="/ontology/person/kd" showAs="K. D." />	
+				<TLCPerson eId="ak" href="/ontology/person/ak" showAs="A.K." />
+				<TLCPerson eId="dp" href="/ontology/person/dp" showAs="D. P." />
+				<TLCPerson eId="sc" href="/ontology/person/sc" showAs="S. Ć." />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					Osnovni sud u Beranama
+				</organization>
+				, kao prvostepeni krivični sud,
+				<party id="aculafic" refersTo="#aculafic" as="#judge">
+					sudija Aleksandar Ćulafić
+				</party>
+				, sa zapisničarem 
+				<party id="mlekic" refersTo="#mlekic" as="#clerk">
+					Mirosavom Lekić
+				</party>
+				, u postupku po optužnom predlogu
+				<organization id="odt" refersTo="#odt">
+					Osnovnog državnog tužilaštva u Beranama
+				</organization>
+				 Kt.br. 329/2010 od 21.09.2010. godine, protiv okrivljenog
+				<party id="kd" refersTo="#kd" as="#defendant">
+					K. D.
+				</party>
+				iz sela..., opština Berane, zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika Crne Gore
+				</ref>
+				, nakon održanog usmenog, javnog i glavnog pretresa u prisustvu okrivljenog i njegovog branioca
+				<party id="ak" refersTo="#ak" as="#lawyer">
+					adv. pripravnika A. K.
+				</party>
+				koja postupa po zamjeničkom punomoćju
+				<party id="dp" refersTo="#dp" as="#lawyer">
+					adv. D. P
+				</party>
+				, i punomoćnika oštećene Uprave za šume Pljevlja PJ Berane,
+				<party id="sc" refersTo="#sc" as="#plaintiff">
+					S. Ć.
+				</party>
+				, a u odsustvu
+				<organization id="odt" refersTo="#odt">
+					ODT-a u Beranama
+				</organization>
+				, dana 16.03.2011. godine, donio je i javno objavio P R E S U D U Okrivljeni 
+				<party id="kd" refersTo="#kd" as="#defendant">
+					K. D.
+				</party>
+				, od oca R. i majke M., rođene L., rođenog ... godine u Beranama, sa prebivalištem u selu Goražde, opština Berane, državljanin Crne Gore, završio SSS, nezaposlen, siromašnog imovnog stanja, neosuđivan. Kriv je - što je: - dana 25.04.2010. godine, u državnoj šumi kojom gazduje Uprava za šume Pljevlja PJ Berane, u mjestu zv. "Đurenica", opština Berane, radi krađe oborio 38 bukovih stabala, u ukupnoj količini od 2,32 m3, čime je pričinio štetu oštećenoj Upravi za šume Pljevlja PJ Berane u iznosu od 43,43 eura. - čime je izvršio krivično djelo šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika
+				</ref>
+				,
+			</p>
+			<conclusions>
+				<p>
+					Pa mu 
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					 primjenom citiranog zakonskog propisa i 
+					<ref href="/krivicni#art_2">
+						čl.2
+					</ref>
+					,
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_5">
+						čl.5
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_36">
+						čl.36
+					</ref>
+					,
+					<ref href="/krivicni#art_39">
+						čl.39 st. 1
+					</ref>
+					,
+					<ref href="/krivicni#art_42">
+						čl.42
+					</ref>
+					,
+					<ref href="/krivicni#art_52">
+						čl.52
+					</ref>
+					,
+					<ref href="/krivicni#art_53">
+						čl.53
+					</ref>
+					i
+					<ref href="/krivicni#art_54">
+						čl.54 Krivičnog zakonika
+					</ref>
+					i 
+					<ref href="/postupak#art_199">
+						čl.199
+					</ref>
+					,
+					<ref href="/postupak#art_212">
+						čl.212 st. 2
+					</ref>
+					i
+					<ref href="/postupak#art_364">
+						čl.364 ZKP-a
+					</ref>
+					izriče USLOVNU OSUDU Kojom mu utvrđuje kaznu zatvora od 3 (tri) mjeseca, i istovremeno određuje da se kazna neće izvršiti ukoliko okrivljeni u roku od jedne godine ne izvrši drugo krivično djelo, kao glavnu kaznu, i osuđuje - na novčanu kaznu u iznosu od 200,00 € (dvije stotine eura) kao sporednu kaznu, koju kaznu je dužan da plati, u roku od 3 (tri) mjeseca, po pravosnažnosti presude na žiro račun br. 832-150-38
+					<ref href="/postupak#art_374">
+						čl.374 Zakonika o krivičnom postupku
+					</ref>
+					O S U Đ U J E Na kaznu zatvora u trajanju od 60 (šezdeset) dana, koja kazna će se izvršiti tako što će je okrivljeni izdržavati u prostorijama u kojima stanuje, koje prostorije okrivljeni ne smije napuštati, osim u slučajevima propisanim zakonom kojim se uređuje izvršenje krivičnih sankcija, a ukoliko okrivljeni jednom u trajanju preko šest časova ili dva puta u trajanju do šest časova samovoljno napusti prostorije u kojima stanuje, sud će odrediti da ostatak kazne zatvora izdrži u Zavodu za izvršenje krivičnih sankcija i izriče mu novčanu kaznu u iznosu od 200,00 (dvije stotine) eura koju je okrivljeni dužan da plati u roku od dva mjeseca od dana pravosnažnosti presude na račun budžeta Crne Gore, a ukoliko novčanu kaznu ne plati u navedenom roku, ista će se zamijeniti kaznom zatvora, tako što će se za svakih započetih 25,00 eura (dvadesetpet eura) novčane kazne odrediti jedan dan zatvora, s tim da kazna zatvora ne može biti duža od šest mjeseci. Dosuđuje se Crnoj Gori - Upravi za šume imovinsko pravni zahtjev, te se obavezuje okrivljeni da u budžet Crne Gore uplati iznos od 60,12 eura u roku od 15 dana od dana pravosnažnosti ove presude. Dužan je okrivljeni da na ime troškova krivičnog postupka u budžet Crne Gore uplati iznos od 30,00 eura na ime sudskog paušala u roku od 15 dana od dana pravosnažnosti presude.
+					<organization id="os" refersTo="#os">
+					Osnovnog suda Berane
+					</organization>
+					. Ako osuđeni ne plati novčanu kaznu u određenom roku,
+					<organization id="os" refersTo="#os">
+					sud
+					</organization>
+					će novčanu kaznu zamijeniti kaznom zatvora, tako što će za svakih započetih 25,00 € novčane kazne odrediti jedan dan zatvora, a ako osuđeni plati samo dio novčane kazne, sud će ostatak kazne srazmjerno zamijeniti kaznom zatvora, pa ako osuđeni isplati ostatak novčane kazne, izvršenje kazne zatvora će se obustaviti. Okrivljeni se obavezuje da na ime paušala plati ovom sudu iznos od 20,00 €, na žiro račun br. 832-150-38
+					<organization id="os" refersTo="#os">
+					Osnovnog suda Berane
+					</organization>
+					, u roku od 15 dana po pravosnažnosti presude, pod prijetnjom posledica prinudnog izvršenja. Okrivljeni
+					<party id="kd" refersTo="#kd" as="#defendant">
+					K. D.
+				</party>
+				, se obavezuje da oštećenoj Upravi za šume Pljevlja PJ Berane, na ime naknade štete plati iznos od 43,43 €, u roku od 15 dana po pravosnažnosti presude, pod prijetnjom posledica prinudnog izvršenja.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>
