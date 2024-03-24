@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Bijelom Polju
+					</FRBRauthor>
+					<FRBRdate date="2012-10-24">
+						2012-10-24
+					</FRBRdate>
+					<FRBRtitle>
+						K 166/2012
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="osbp" href="/ontology/organization/OsnovniSud.BijeloBolje" showAs="Osnovni sud u Bijelom Polju" />
+				<TLCOrganization eId="odtbp" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.BijeloPolje" showAs="Osnovno državno tužilaštvo iz Bijelog Polja" />
+
+				<TLCPerson eId="dmrdak" href="/ontology/person/dmrdak" showAs="Dragan Mrdak" />
+				<TLCPerson eId="kljesnjak" href="/ontology/person/kljesnjak" showAs="Koviljka Lješnjak" />
+				<TLCPerson eId="mn" href="/ontology/person/mn" showAs="M.N." />	
+				<TLCPerson eId="cperovic" href="/ontology/person/cperovic" showAs="Cmiljana Perović" />
+				<TLCPerson eId="ab" href="/ontology/person/ab" showAs="A. B." />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="osbp" refersTo="#osbp">
+					Osnovni sud u Bijelom Polju
+				</organization>
+				prvostepeni krivični, sudija pojedinac
+				<party id="dmrdak" refersTo="#dmrdak" as="#judge">
+					Dragan Mrdak
+				</party>
+				, uz učešće nameštenika suda 
+				<party id="dboskovic" refersTo="#dboskovic" as="#clerk">
+					 Koviljke Lješnjak zapisničara
+				</party>
+				, u predmetu protiv okrivljenog
+				<party id="mn" refersTo="#mn" as="#defendant">
+					M.N.a
+				</party>
+				 iz Bijelog Polja, zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					 čl. 324. st.2.
+				</ref>
+				u vezi
+				<ref href="/krivicni#art_324">
+					 čl. 324. st.1. Krivičnog zakonika
+				</ref>
+				, po optužnom predlogu
+				<organization id="odtbp" refersTo="#odtbp">
+					u ODT-a iz Bijelog Polja 
+				</organization>
+					Kt. br. 536/11-2 od 25.04.2012 godine, nakon održanog usmenog glavnog i javnog pretresa u prisustvu zamjenice 
+				<organization id="odtbp" refersTo="#odtbp">
+					ODT-a iz Bijelog Polja
+				</organization>
+				<party id="cperovic" refersTo="#cperovic" as="#plaintiff">
+					 Perović Cmiljane
+				</party>
+				, okrivljenog
+				<party id="mn" refersTo="#mn" as="#defendant">
+					M.N.a
+				</party>
+				i njegovog branioca
+				<party id="ab" refersTo="#ab" as="#defendant">
+					A. B.LJa
+				</party>
+				u odsustvu punomoćnika oštećene U. za Š. P.a, dana 24. 10. 2012 godine, donio je i javno objavio: PESUDU Prema okrivljenom:
+				<party id="mn" refersTo="#mn" as="#defendant">
+					M.N.U
+				</party>
+				JMBG ...., od oca J. i majke M., rođene M., rođen .. godine u Bijelom Polju, sa prebivalištem u mjestu rođenja, naselje R., državljanin CG, oženjen, otac dvoje djece, pismen, sa završenom srednjom stručnom spremom, srednjeg imovnog stanja, osuđivan presudom
+				<organization id="osbp" refersTo="#osbp">
+					Osnovnog suda u Bijelom Polju
+				</organization>
+				K. br. 533/00 od 18.12.2000 godine, zbog krivičnog djela iz
+				<ref href="/krivicni#art_133">
+					 čl. 133 st.3. KZ 
+				</ref>
+				na 3 (tri) mjeseca zatvora uslovno za jednu godinu,
+			</p>
+			<conclusions>
+				<p>
+					Na osnovu 
+					<ref href="/postupak#art_372">
+						čl. 372 st. 1 tač. 1 Zakonika o krivičnom postupku,
+					</ref>
+					ODBIJA SE OPTUŽBA Da je: '' Neutvrđenog dana u novembru mjesecu 2011 godine u državnoj šumi u mjestu zv. ''Vitkove Staje'', opština Bijelo Polje, radi krađe oborio 7 (sedam) smrčevih stabala u bruto drvnoj masi od 7,46 m3, i na taj način pričinio štetu oštećenoj U. za Š. P.a Područna jedinica Bijelo Polje, u iznosu od 866,25 €, - čime bi izvršio krivično djelo šumska krađa iz
+					<ref href="/krivicni#art_324">
+						čl. 324. st.2. 
+					</ref>
+					u vezi
+					<ref href="/krivicni#art_324">
+						čl. 324. st.1. Krivičnog zakonika
+					</ref>
+					.- zbog odustanka 
+					<party id="cperovic" refersTo="#cperovic" as="#plaintiff">
+						Osnovnog državnog tužioca iz Bijelog Polja
+					</party>
+					od optužbe prije završetka glavnog pretresa. Troškovi postupka padaju na teret budžeta CG.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>
