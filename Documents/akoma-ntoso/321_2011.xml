@@ -24,7 +24,7 @@
 				<TLCOrganization eId="odtbp" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.BijeloPolje" showAs="Osnovno državno tužilaštvo iz Bijelog Polja" />
 
 				<TLCPerson eId="iadamovic" href="/ontology/person/iadamovic" showAs="Ivan Adamović" />
-				<TLCPerson eId="dboskovic" href="/ontology/person/dboskovic" showAs="Draginja 	" />
+				<TLCPerson eId="dboskovic" href="/ontology/person/dboskovic" showAs="Draginja Bošković" />
 				<TLCPerson eId="rs" href="/ontology/person/rs" showAs="R. Š." />	
 				<TLCPerson eId="vscepanovic" href="/ontology/person/dzvrko" showAs="Vesna Šćepanović" />
 				<TLCPerson eId="dr" href="/ontology/person/dr" showAs="Đ. R." />
