@@ -23,7 +23,7 @@
 				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Berane" showAs="Osnovni sud u Beranama" />
 				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Berane" showAs="Osnovno državno tužilaštvo u Beranama" />
 
-				<TLCPerson eId="akenjic" href="/ontology/person/akenjic" showAs="Ana Kenjić - Đukić," />
+				<TLCPerson eId="akenjic" href="/ontology/person/akenjic" showAs="Ana Kenjić - Đukić" />
 				<TLCPerson eId="mobadovic" href="/ontology/person/mobadovic" showAs="Marina Obadović" />
 				<TLCPerson eId="dr" href="/ontology/person/dr" showAs="D. R." />	
 				<TLCPerson eId="mmagdelinic" href="/ontology/person/mmagdelinic" showAs="Miladin Magdelinić" />

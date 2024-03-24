@@ -23,7 +23,7 @@
 				<TLCOrganization eId="osk" href="/ontology/organization/OsnovniSud.Kolasin" showAs="Osnovni sud u Kolašinu" />
 				<TLCOrganization eId="odtk" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Kolasin" showAs="Osnovno državno tužilaštvo Kolašin" />
 
-				<TLCPerson eId="apopovic" href="/ontology/person/apopovic" showAs="Arsen Popović," />
+				<TLCPerson eId="apopovic" href="/ontology/person/apopovic" showAs="Arsen Popović" />
 				<TLCPerson eId="ljmrdak" href="/ontology/person/ljmrdak" showAs="Ljiljana Mrdak" />
 				<TLCPerson eId="rr" href="/ontology/person/rr" showAs="R.R." />	
 				<TLCPerson eId="arr" href="/ontology/person/arr" showAs="R.R." />	

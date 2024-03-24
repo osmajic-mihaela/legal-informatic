@@ -23,7 +23,7 @@
 				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Rozaje" showAs="Osnovni sud u Rožajama" />
 				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Rozaje" showAs="Osnovno državno tužilaštvo" />
 
-				<TLCPerson eId="mrajkovic" href="/ontology/person/mrajkovic" showAs="Milan Rajković," />
+				<TLCPerson eId="mrajkovic" href="/ontology/person/mrajkovic" showAs="Milan Rajković" />
 				<TLCPerson eId="shadzic" href="/ontology/person/shadzic" showAs="Sajma Hadžić" />
 				<TLCPerson eId="rm" href="/ontology/person/rm" showAs="R.M." />	
 				<TLCPerson eId="idosljak" href="/ontology/person/idosljak" showAs="Ivan Došljak" />
