@@ -1,6 +1,8 @@
 package org.example.legalinformaticbackend.model;
 
 
+import es.ucm.fdi.gaia.jcolibri.cbrcore.Attribute;
+import es.ucm.fdi.gaia.jcolibri.cbrcore.CaseComponent;
 import lombok.*;
 
 import jakarta.persistence.*;
@@ -10,7 +12,7 @@ import jakarta.persistence.*;
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)
-public class LegalCase extends DbEntity {
+public class LegalCase extends DbEntity implements CaseComponent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -71,4 +73,35 @@ public class LegalCase extends DbEntity {
 
     @Column(name = "cited_articles", length = 1000)
     private String citedArticles;
+
+    @Override
+    public Attribute getIdAttribute() {
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return "LegalCase{" +
+                "id=" + id +
+                ", caseNumber='" + caseNumber + '\'' +
+                ", court='" + court + '\'' +
+                ", judge='" + judge + '\'' +
+                ", courtReporter='" + courtReporter + '\'' +
+                ", defendant='" + defendant + '\'' +
+                ", protectedSurface=" + protectedSurface +
+                ", forestProperty='" + forestProperty + '\'' +
+                ", financialDamage=" + financialDamage +
+                ", woodVolume=" + woodVolume +
+                ", awareness=" + awareness +
+                ", convicted=" + convicted +
+                ", numberOfTrees=" + numberOfTrees +
+                ", treeType='" + treeType + '\'' +
+                ", reasonForProsecution='" + reasonForProsecution + '\'' +
+                ", conditionalSentence=" + conditionalSentence +
+                ", prisonSentence='" + prisonSentence + '\'' +
+                ", financialSentence=" + financialSentence +
+                ", communitySentence='" + communitySentence + '\'' +
+                ", citedArticles='" + citedArticles + '\'' +
+                '}';
+    }
 }
