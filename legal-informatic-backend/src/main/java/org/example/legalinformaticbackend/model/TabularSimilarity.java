@@ -9,9 +9,9 @@ import java.util.List;
 
 public class TabularSimilarity implements LocalSimilarityFunction {
     private double matrix[][];
-    List<String> categories;
+    List<Object> categories;
 
-    public TabularSimilarity(List<String> categories) {
+    public TabularSimilarity(List<Object> categories) {
         this.categories = categories;
         int n = categories.size();
         matrix = new double[n][n];
@@ -19,11 +19,11 @@ public class TabularSimilarity implements LocalSimilarityFunction {
             matrix[i][i] = 1;
     }
 
-    public void setSimilarity(String value1, String value2, double sim) {
+    public void setSimilarity(Object value1, Object value2, double sim) {
         setSimilarity(value1, value2, sim, sim);
     }
 
-    private void setSimilarity(String value1, String value2, double sim1, double sim2) {
+    private void setSimilarity(Object value1, Object value2, double sim1, double sim2) {
         int index1 = categories.indexOf(value1);
         int index2 = categories.indexOf(value2);
         if (index1 != -1 && index2 != -1) {
@@ -32,23 +32,42 @@ public class TabularSimilarity implements LocalSimilarityFunction {
         }
     }
 
+
+    public double getSimilarity(Object value1, Object value2) {
+        int index1 = categories.indexOf(value1);
+        int index2 = categories.indexOf(value2);
+        if (index1 != -1 && index2 != -1) {
+            return matrix[index1][index2];
+        }
+        return 0.0;
+    }
+
+    public List<Object> getValues() {
+        return categories;
+    }
+
+
     @Override
     public double compute(Object value1, Object value2) throws NoApplicableSimilarityFunctionException {
         if (value1 instanceof String && value2 instanceof String)
-            return compute((String)value1, (String)value2);
+            return compute((String) value1, (String) value2);
         if (value1 instanceof List && value2 instanceof List)
-            return compute((List)value1, (List)value2);
+            return compute((List<?>) value1, (List<?>) value2);
+        if (value1 instanceof Boolean && value2 instanceof Boolean)
+            return compute((Boolean) value1, (Boolean) value2);
+        //if (value1 instanceof Double && value2 instanceof Double)
+        //    return compute((Double) value1, (Double) value2);
+        //if (value1 instanceof Integer && value2 instanceof Integer)
+        //    return compute((Integer) value1, (Integer) value2);
         return 0;
     }
 
+    public double compute(Boolean bool1, Boolean bool2) {
+        return getSimilarity(bool1, bool2);
+    }
+
     public double compute(String str1, String str2) {
-        int index1 = categories.indexOf(str1);
-        int index2 = categories.indexOf(str2);
-        if (index1 != -1 && index2 != -1)
-            return matrix[index1][index2];
-        if (str1 != null && str1.equals(str2))
-            return 1;
-        return 0;
+        return getSimilarity(str1, str2);
     }
 
     public double compute(List<String> list1, List<String> list2) {
@@ -77,8 +96,12 @@ public class TabularSimilarity implements LocalSimilarityFunction {
             return true;
         if (value1 instanceof List && value2 instanceof List)
             return true;
+        if (value1 instanceof Boolean && value2 instanceof Boolean)
+            return true;
         return false;
     }
+
+
 
 
 }
