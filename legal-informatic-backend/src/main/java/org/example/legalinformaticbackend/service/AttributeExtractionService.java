@@ -6,6 +6,7 @@ import org.apache.pdfbox.util.PDFTextStripper;
 import org.example.legalinformaticbackend.model.DbEntity;
 import org.example.legalinformaticbackend.model.LegalCase;
 import org.example.legalinformaticbackend.repository.LegalCaseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.modelmapper.ModelMapper;
 
 @Service
 @RequiredArgsConstructor
@@ -83,6 +85,7 @@ public class AttributeExtractionService {
             legalCase.setNumberOfTrees(extractNumberOfTrees(caseStr));
             legalCase.setTreeType(extractTreeType(caseStr));
             legalCase.setReasonForProsecution(extractReasonForProsecution(caseStr));
+            legalCase.setCitedArticles(extractCitedArticles(caseStr));
 
             if (legalCase.getConvicted()) {
                 legalCase.setConditionalSentence(isConditionalSentence(caseStr));
@@ -90,6 +93,11 @@ public class AttributeExtractionService {
                 legalCase.setFinancialSentence(extractFinancialSentence(caseStr));
                 legalCase.setCommunitySentence(extractComunityServiceSentence(caseStr));
                 legalCase.setCitedArticles(extractCitedArticles(caseStr));
+            }else{
+                legalCase.setConditionalSentence(Boolean.FALSE);
+                legalCase.setPrisonSentence("0");
+                legalCase.setFinancialSentence(0.0);
+                legalCase.setCommunitySentence("0");
             }
 
 
@@ -422,7 +430,7 @@ public class AttributeExtractionService {
             }
         }
 
-        return "unknown";
+        return "0";
 
     }
 
@@ -437,7 +445,7 @@ public class AttributeExtractionService {
             return numberStr+" "+periodStr;
         }
 
-        return "unknown";
+        return "0";
 
     }
 
@@ -468,7 +476,7 @@ public class AttributeExtractionService {
         return "unknown";
     }
 
-    // za 90/12 ne izvuce, mozda brka nesto
+    // za 90/12. 47/11. 261/12 ne izvuce, mozda brka nesto
     private String extractCitedArticles(String caseStr) {
         Pattern pattern = Pattern.compile("\\s[Čč]l([.,]|(an))?\\s*[0-9]{1,3}(\\s*st[.,]\\s*[0-9]{1,3})?(\\s+u\\s+vezi\\s((st[.,]\\s*)|(stava\\s+))[0-9]{1,3})?(((,\\s*)|(\\s+i\\s+))([Čč]l([.,]|(an))?)?\\s*[0-9]{1,3}(\\s*st[.,]\\s*[0-9]{1,3})?)*\\s+((Krivičnog\\s+zakonika(\\s+Crne\\s+Gore)?)|(KZ\\s*CG)|(Zakonika\\s+o\\s+krivičnom\\s+postupku)|(ZKP-a)|(Zakona\\s+o\\s+duvanu))");
         Matcher matcher = pattern.matcher(caseStr);
