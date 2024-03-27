@@ -41,7 +41,21 @@ public class CbrService {
         simConfig = configureKNN();
     }
 
-    public void cycle(CBRQuery query) throws ExecutionException {
+    public List<String> recommend(CBRQuery query){
+        try {
+            configure();
+            preCycle();
+            List<String> retVal = getCycle(query);
+            postCycle();
+            return  retVal;
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        }
+
+
+    }
+
+    private void cycle(CBRQuery query) throws ExecutionException {
         Collection<RetrievalResult> eval = NNScoringMethod.evaluateSimilarity(_caseBase.getCases(), query, simConfig);
         eval = SelectCases.selectTopKRR(eval, 5);
         System.out.println("Retrieved cases:");
@@ -49,7 +63,7 @@ public class CbrService {
             System.out.println(nse.get_case().getDescription() + " -> " + nse.getEval());
     }
 
-    public List<String> getCycle(CBRQuery query) throws ExecutionException {
+    private List<String> getCycle(CBRQuery query) throws ExecutionException {
         Collection<RetrievalResult> eval = NNScoringMethod.evaluateSimilarity(_caseBase.getCases(), query, simConfig);
         eval = SelectCases.selectTopKRR(eval, 5);
         List<String> retVal = new ArrayList<>();
@@ -58,11 +72,11 @@ public class CbrService {
         return  retVal;
     }
 
-    public void postCycle() throws ExecutionException {
+    private void postCycle() throws ExecutionException {
 
     }
 
-    public CBRCaseBase preCycle() throws ExecutionException {
+    private CBRCaseBase preCycle() throws ExecutionException {
         _caseBase.init(_connector);
         java.util.Collection<CBRCase> cases = _caseBase.getCases();
         return _caseBase;

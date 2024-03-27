@@ -9,6 +9,7 @@ import org.example.legalinformaticbackend.model.LegalCase;
 import org.example.legalinformaticbackend.dto.LegalCaseDTO;
 import org.example.legalinformaticbackend.service.AttributeExtractionService;
 import org.example.legalinformaticbackend.service.CbrService;
+import org.example.legalinformaticbackend.service.LegalCaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -27,6 +28,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/case")
+@CrossOrigin(origins = "http://localhost:4200")
 public class LegalCaseController {
 
     @Autowired
@@ -43,6 +45,9 @@ public class LegalCaseController {
 
     @Autowired
     CbrService cbrService;
+
+    @Autowired
+    LegalCaseService legalCaseService;
 
 
     @GetMapping("/cases-pdf")
@@ -103,22 +108,17 @@ public class LegalCaseController {
     @PostMapping("/recommend-case-solution")
     public ResponseEntity<?> recommendCaseSolution(@RequestBody LegalCaseDTO caseDTO) {
         LegalCase legalCase = mapperService.mapToLegalCase(caseDTO);
-        List<String> retVal = null;
-        try {
-            cbrService.configure();
-            cbrService.preCycle();
+        CBRQuery query = new CBRQuery();
+        query.setDescription((CaseComponent) legalCase);
+        List<String> retVal = cbrService.recommend(query);
 
-            CBRQuery query = new CBRQuery();
-            query.setDescription((CaseComponent) legalCase);
+        return ResponseEntity.ok(retVal);
+    }
 
-            retVal = cbrService.getCycle(query);
-            cbrService.postCycle();
-
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @PostMapping("/add-new-case")
+    public ResponseEntity<?> addNewCase(@RequestBody LegalCaseDTO caseDTO) {
+        LegalCase legalCase = mapperService.mapToLegalCase(caseDTO);
+        LegalCase retVal = legalCaseService.addNewCase(legalCase);
 
         return ResponseEntity.ok(retVal);
     }

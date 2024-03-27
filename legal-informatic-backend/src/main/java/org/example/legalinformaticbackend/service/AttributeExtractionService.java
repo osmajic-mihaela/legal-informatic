@@ -28,7 +28,7 @@ public class AttributeExtractionService {
     private final ResourceLoader resourceLoader;
 
 
-
+    // u vezi clana?
     //Vremenski rok za placanje?
     //Zamena ako ne plati?
     public DbEntity attributeExtraction(String caseNumber){
@@ -37,38 +37,6 @@ public class AttributeExtractionService {
 
         try {
             String caseStr = this.readPDF(caseNumber);
-
-            /*retVal.put("Broj slučaja",extractCaseNumber(caseStr) );
-            retVal.put("Sud", extractCourt(caseStr));
-            retVal.put("Sudija", extractJudgeName(caseStr));
-            retVal.put("Zapisničar", extractCourtReporterName(caseStr));
-            retVal.put("Optuženi", extractDefendantInitials(caseStr));
-            retVal.put("Zaštićena površina", extractProtectedSurface(caseStr));
-
-            retVal.put("Šumska svojina", extractForestProperty(caseStr));
-            retVal.put("Novčana šteta", extractFinancialDamage(caseStr));
-            retVal.put("Kubna drvna masa", extractWoodVolume(caseStr));
-            retVal.put("Svestan", extractAwareness(caseStr));
-            retVal.put("Osuđen", isConvicted(caseStr));
-            retVal.put("Broj stabala", extractNumberOfTrees(caseStr)); //Ne radi za 2 vrste stabala
-            retVal.put("Vrsta drveta", extractTreeType(caseStr)); //Ne radi za 2 vrste stabala
-            retVal.put("Razlog presude", extractReasonForProsecution(caseStr)); //Da li treba u vezi clana?
-
-
-            if(retVal.get("Osuđen").equals("Da")){
-                retVal.put("Uslovna", isConditionalSentence(caseStr));
-                retVal.put("Zatvorska kazna", extractPrisonSentence(caseStr));
-                retVal.put("Novčana kazna", extractFinancialSentence(caseStr));
-                retVal.put("Kazna rada u javnom interesu", extractComunityServiceSentence(caseStr));
-                retVal.put("Citirani članovi zakona", extractCitedArticles(caseStr));
-
-            }else{
-                retVal.put("Uslovna", "");
-                retVal.put("Zatvorska kazna", "");
-                retVal.put("Novčana kazna",  "");
-                retVal.put("Kazna rada u javnom interesu", "");
-                retVal.put("Citirani članovi zakona", "");
-            }*/
 
             legalCase.setCaseNumber(extractCaseNumber(caseStr));
             legalCase.setCourt(extractCourt(caseStr));
@@ -453,6 +421,7 @@ public class AttributeExtractionService {
     //radi za sve, da li treba i deo u vezi clana??
     private String extractReasonForProsecution(String caseStr) {
 
+        String retVal = "unknown";
         Pattern pattern1 = Pattern.compile("izvršio\\s*krivično\\s*djelo\\s*((šumska)?\\s*kra[djđ]+a|pusto[šs]enje\\s*šuma)\\s*iz\\s*čl(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*st\\s*(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*(u\\s*vezi\\s*st\\s*(\\.)?\\s*(\\d+))?");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
@@ -460,7 +429,8 @@ public class AttributeExtractionService {
             String clan = matcher1.group(4);
             String stav = matcher1.group(7);
 
-            return clan+" "+stav;
+            retVal = "čl. "+clan+" st. "+stav;
+            return  retVal;
         }
 
         Pattern pattern2 = Pattern.compile("izvrši(o|li)\\s*krivično\\s*djelo\\s*((šumska)?\\s*kra[djđ]+a|pusto[šs]enje\\s*šuma)\\s*iz\\s*čl(ana)?\\s*(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*st(av|ava)?\\s*(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*(,)?\\s*(u\\s*vezi\\s*st\\s*(\\.)?\\s*(\\d+))?");
@@ -470,10 +440,11 @@ public class AttributeExtractionService {
             String clan = matcher2.group(6);
             String stav = matcher2.group(10);
 
-            return clan+" "+stav;
+            retVal = "čl. "+clan+" st. "+stav;
+            return  retVal;
         }
 
-        return "unknown";
+        return retVal;
     }
 
     // za 90/12. 47/11. 261/12 ne izvuce, mozda brka nesto
