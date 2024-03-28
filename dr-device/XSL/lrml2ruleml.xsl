@@ -17,7 +17,7 @@
         <RuleML>
             <xsl:attribute name="proof">proof.ruleml</xsl:attribute>
             <xsl:attribute name="rdf_export">export.rdf</xsl:attribute>
-            <xsl:attribute name="rdf_export_classes">placed_on_market_rezani_duvan_individual placed_on_market_rezani_duvan_legal_entity placed_on_market_rezani_duvan_legal_entity_responsible_individual to_pay_min_cl6_ind to_pay_max_cl6_ind to_confiscate_cl6_ind to_pay_min_cl6_le to_pay_max_cl6_le to_confiscate_cl6_le to_prohibit_min_cl6_le to_prohibit_max_cl6_le to_pay_min_cl6_le_ri to_pay_max_cl6_le_ri to_confiscate_cl6_le_ri to_prohibit_min_cl6_le_ri to_prohibit_max_cl6_le_ri unauthorized_wholesale_distribution unauthorized_retail_distribution unauthorized_tobacco_distribution_lv1 unauthorized_tobacco_distribution_lv2n unauthorized_tobacco_distribution_lv2p unauthorized_tobacco_distribution_lv3 to_imprison_min_nt_lv1 to_imprison_max_nt_lv1 to_confiscate_nt_lv1 to_imprison_min_nt_lv2n to_imprison_max_nt_lv2n to_confiscate_nt_lv2n to_imprison_min_nt_lv2p to_imprison_max_nt_lv2p to_confiscate_nt_lv2p to_imprison_min_nt_lv3 to_imprison_max_nt_lv3 to_confiscate_nt_lv3</xsl:attribute>
+            <xsl:attribute name="rdf_export_classes">has_deforested_forest has_desolated_forest in_prohibited_land defendant_desolated_forest in_special_forest defendant_desolated_special_forest defendant_stole_forest defendant_stole_forest_level_2 defendant_has_intention_to_steal_forest to_pay imprisonment</xsl:attribute>
             <xsl:attribute name="rdf_import">&quot;facts.rdf&quot;</xsl:attribute>
             <xsl:apply-templates select="lrml:Statements"/>
         </RuleML>

@@ -1,821 +1,463 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lrml:LegalRuleML xmlns:lrml="http://docs.oasis-open.org/legalruleml/ns/v1.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legalruleml/ns/v1.0/ xsd-compact/lrml-compact.xsd" xmlns:ruleml="http://ruleml.org/spec">
 	<lrml:Statements>
-		<!--CLAN 6-->
-		<lrml:PrescriptiveStatement key="cl6_ind">
-			<ruleml:Rule key=":rule61" closure="universal" strength="defeasible">
+
+		<!-- Prescriptive statements -->
+		<!-- Krivicni zakonik clan 323 tacka 1 -->
+		<lrml:PrescriptiveStatement key="ps1_kz_cl_323_t_1">
+			<ruleml:Rule key=":rl_kz_cl_323_t_1" closure="universal" strength="defeasible">
 				<ruleml:if>
-					<ruleml:And>	
 						<ruleml:Atom>
-							<ruleml:Rel iri="lc:is_entity"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">individual</ruleml:Data>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:placed_on_market_rezani_duvan"/>
+							<ruleml:Rel iri="lc:deforestation" />
 							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
 							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
 						</ruleml:Atom>
-					</ruleml:And>
-				</ruleml:if>
-				<ruleml:then>
-					<ruleml:Atom>
-						<ruleml:Rel>placed_on_market_rezani_duvan_individual</ruleml:Rel>
-						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-					</ruleml:Atom>
-				</ruleml:then>
-			</ruleml:Rule>
-		</lrml:PrescriptiveStatement>
-		<lrml:PrescriptiveStatement key="cl6_le">
-			<ruleml:Rule key=":rule62" closure="universal" strength="defeasible">
-				<ruleml:if>
-					<ruleml:And>	
+
+						<!-- I.e. park, treeline -->
 						<ruleml:Atom>
-							<ruleml:Rel iri="lc:is_entity"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">legal_entity</ruleml:Data>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:placed_on_market_rezani_duvan"/>
+							<ruleml:Rel iri="lc:prohibited_land" />
 							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
 							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
 						</ruleml:Atom>
-					</ruleml:And>
 				</ruleml:if>
+
 				<ruleml:then>
 					<ruleml:Atom>
-						<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity</ruleml:Rel>
-						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-					</ruleml:Atom>
-				</ruleml:then>
-			</ruleml:Rule>
-		</lrml:PrescriptiveStatement>
-		<lrml:PrescriptiveStatement key="cl6_le_ri">
-			<ruleml:Rule key=":rule63" closure="universal" strength="defeasible">
-				<ruleml:if>
-					<ruleml:And>	
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:is_entity"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">legal_entity_responsible_individual</ruleml:Data>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:placed_on_market_rezani_duvan"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
-						</ruleml:Atom>
-					</ruleml:And>
-				</ruleml:if>
-				<ruleml:then>
-					<ruleml:Atom>
-						<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity_responsible_individual</ruleml:Rel>
+						<ruleml:Rel>has_deforested_forest</ruleml:Rel>
 						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
 					</ruleml:Atom>
 				</ruleml:then>
 			</ruleml:Rule>
 		</lrml:PrescriptiveStatement>
 
-		<!--CLAN 12-->
-		<lrml:PrescriptiveStatement key="cl12">
-			<ruleml:Rule key=":rule12" closure="universal" strength="defeasible">
+		<lrml:PrescriptiveStatement key="ps2_kz_cl_323_t_1">
+			<ruleml:Rule key=":r2_kz_cl_323_t_1" closure="universal" strength="defeasible">
 				<ruleml:if>
-					<ruleml:And>	
 						<ruleml:Atom>
-							<ruleml:Rel iri="lc:has_done_wholesale_distribution"/>
+							<ruleml:Rel iri="lc:desolation" />
 							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
 							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
 						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:has_wholesale_distribution_permit"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
-						</ruleml:Atom>
-					</ruleml:And>
 				</ruleml:if>
+
 				<ruleml:then>
 					<ruleml:Atom>
-						<ruleml:Rel>unauthorized_wholesale_distribution</ruleml:Rel>
+						<ruleml:Rel>has_desolated_forest</ruleml:Rel>
 						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
 					</ruleml:Atom>
-				</ruleml:then>
-			</ruleml:Rule>
-		</lrml:PrescriptiveStatement>
-		<!--CLAN 14-->
-		<lrml:PrescriptiveStatement key="cl14">
-			<ruleml:Rule key=":rule14" closure="universal" strength="defeasible">
-				<ruleml:if>
-					<ruleml:And>	
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:has_done_retail_distribution"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:has_retail_distribution_permit"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
-						</ruleml:Atom>
-					</ruleml:And>
-				</ruleml:if>
-				<ruleml:then>
-					<ruleml:Atom>
-						<ruleml:Rel>unauthorized_retail_distribution</ruleml:Rel>
-						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-					</ruleml:Atom>
-				</ruleml:then>
-			</ruleml:Rule>
-		</lrml:PrescriptiveStatement>
-		<!--CLAN 284 kz - nedozvoljena trgovina-->
-		<lrml:PrescriptiveStatement key="nt_lv1">
-			<ruleml:Rule key=":rulent1" closure="universal" strength="defeasible">
-				<ruleml:if>
-					<ruleml:And>
-						<ruleml:Or>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_individual</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity_responsible_individual</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>unauthorized_retail_distribution</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>unauthorized_wholesale_distribution</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-						</ruleml:Or>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:organized_reseller_network"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">no</ruleml:Data>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:hasMadeProfit"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Var type="hasProfit">Profit</ruleml:Var>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Expr>
-								<ruleml:Fun>&lt;</ruleml:Fun>
-								<ruleml:Var>Profit</ruleml:Var>
-								<ruleml:Ind>3000</ruleml:Ind>
-							</ruleml:Expr>
-						</ruleml:Atom>
-					</ruleml:And>
-				</ruleml:if>
-				<ruleml:then>
-					<ruleml:Atom>
-						<ruleml:Rel>unauthorized_tobacco_distribution_lv1</ruleml:Rel>
-						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-					</ruleml:Atom>
-				</ruleml:then>
-			</ruleml:Rule>
-		</lrml:PrescriptiveStatement>
-		<lrml:PrescriptiveStatement key="nt_lv2n">
-			<ruleml:Rule key=":rulent2" closure="universal" strength="defeasible">
-				<ruleml:if>
-					<ruleml:And>
-						<ruleml:Or>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_individual</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity_responsible_individual</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>unauthorized_retail_distribution</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>unauthorized_wholesale_distribution</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-						</ruleml:Or>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:hasMadeProfit"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Var type="hasProfit">Profit</ruleml:Var>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Expr>
-								<ruleml:Fun>&lt;</ruleml:Fun>
-								<ruleml:Var>Profit</ruleml:Var>
-								<ruleml:Ind>3000</ruleml:Ind>
-							</ruleml:Expr>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:organized_reseller_network"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
-						</ruleml:Atom>
-					</ruleml:And>
-				</ruleml:if>
-				<ruleml:then>
-					<ruleml:Atom>
-						<ruleml:Rel>unauthorized_tobacco_distribution_lv2n</ruleml:Rel>
-						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-					</ruleml:Atom>
-				</ruleml:then>
-			</ruleml:Rule>
-		</lrml:PrescriptiveStatement>
-		<lrml:PrescriptiveStatement key="nt_lv2p">
-			<ruleml:Rule key=":rulent3" closure="universal" strength="defeasible">
-				<ruleml:if>
-					<ruleml:And>
-						<ruleml:Or>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_individual</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity_responsible_individual</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>unauthorized_retail_distribution</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>unauthorized_wholesale_distribution</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-						</ruleml:Or>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:hasMadeProfit"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Var type="hasProfit">Profit</ruleml:Var>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Expr>
-								<ruleml:Fun>&gt;</ruleml:Fun>
-								<ruleml:Var>Profit</ruleml:Var>
-								<ruleml:Ind>3000</ruleml:Ind>
-							</ruleml:Expr>
-						</ruleml:Atom>
-					</ruleml:And>
-				</ruleml:if>
-				<ruleml:then>
-					<ruleml:Atom>
-						<ruleml:Rel>unauthorized_tobacco_distribution_lv2p</ruleml:Rel>
-						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-					</ruleml:Atom>
-				</ruleml:then>
-			</ruleml:Rule>
-		</lrml:PrescriptiveStatement>
-		<lrml:PrescriptiveStatement key="nt_lv3">
-			<ruleml:Rule key=":rulent4" closure="universal" strength="defeasible">
-				<ruleml:if>
-					<ruleml:And>
-						<ruleml:Or>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_individual</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>placed_on_market_rezani_duvan_legal_entity_responsible_individual</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>unauthorized_retail_distribution</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-							<ruleml:Atom>
-								<ruleml:Rel>unauthorized_wholesale_distribution</ruleml:Rel>
-								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-							</ruleml:Atom>
-						</ruleml:Or>
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:hasMadeProfit"/>
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Var type="hasProfit">Profit</ruleml:Var>
-						</ruleml:Atom>
-						<ruleml:Atom>
-							<ruleml:Expr>
-								<ruleml:Fun>&gt;</ruleml:Fun>
-								<ruleml:Var>Profit</ruleml:Var>
-								<ruleml:Ind>30000</ruleml:Ind>
-							</ruleml:Expr>
-						</ruleml:Atom>
-					</ruleml:And>
-				</ruleml:if>
-				<ruleml:then>
-					<ruleml:Atom>
-						<ruleml:Rel>unauthorized_tobacco_distribution_lv3</ruleml:Rel>
-						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-					</ruleml:Atom>
-				</ruleml:then>
-			</ruleml:Rule>
-		</lrml:PrescriptiveStatement>
-		<lrml:PrescriptiveStatement key="nt_lv3_over_lv2p">
-			<ruleml:Rule key=":rulent5" closure="universal" strength="defeasible">
-				<ruleml:if>
-					<ruleml:And>
-						<ruleml:Atom>
-							<ruleml:Rel>unauthorized_tobacco_distribution_lv3</ruleml:Rel>
-							<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-						</ruleml:Atom>
-					</ruleml:And>
-				</ruleml:if>
-				<ruleml:then>
-					<ruleml:Negation>
-						<ruleml:Atom>
-							<ruleml:Rel>unauthorized_tobacco_distribution_lv2p</ruleml:Rel>
-							<ruleml:Var type=":defendant">Defendant</ruleml:Var>
-						</ruleml:Atom>
-					</ruleml:Negation>
 				</ruleml:then>
 			</ruleml:Rule>
 		</lrml:PrescriptiveStatement>
 
-		<!--CLAN 6-->
-		<!--individual-->
-		<lrml:PenaltyStatement key="pen_cl6_ind_min">
+		<lrml:PrescriptiveStatement key="ps3_kz_cl_323_t_1">
+			<ruleml:Rule key=":r3_kz_cl_323_t_1" closure="universal" strength="defeasible">
+				<ruleml:if>
+						<!-- I.e. park, treeline -->
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:prohibited_land" />
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+						</ruleml:Atom>
+				</ruleml:if>
+
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>in_prohibited_land</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<lrml:PrescriptiveStatement key="ps4_kz_cl_323_t_1">
+			<ruleml:Rule key=":r4_kz_cl_323_t_1" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Or>
+							<ruleml:Atom>
+								<ruleml:Rel>has_deforested_forest</ruleml:Rel>
+								<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+
+							<ruleml:Atom>
+								<ruleml:Rel>has_desolated_forest</ruleml:Rel>
+								<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+						</ruleml:Or>
+
+						<ruleml:Atom>
+							<ruleml:Rel>in_prohibited_land</ruleml:Rel>
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>defendant_desolated_forest</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!-- Krivicni zakonik clan 323 tacka 2 -->
+		<lrml:PrescriptiveStatement key="ps1_kz_cl_323_t_2">
+			<ruleml:Rule key=":r1_kz_cl_323_t_2" closure="universal" strength="defeasible">
+				<ruleml:if>
+						<!-- I.e. national park -->
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:special_forest" />
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+						</ruleml:Atom>
+				</ruleml:if>
+
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>in_special_forest</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<lrml:PrescriptiveStatement key="ps2_kz_cl_323_t_2">
+			<ruleml:Rule key=":r2_kz_cl_323_t_2" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Atom>
+							<ruleml:Rel>defendant_desolated_forest</ruleml:Rel>
+							<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+						</ruleml:Atom>
+
+						<ruleml:Atom>
+							<ruleml:Rel>in_special_forest</ruleml:Rel>
+							<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+				
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>defendant_desolated_special_forest</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!-- Krivicni zakonik clan 324 tacka 1 -->
+		<lrml:PrescriptiveStatement key="ps1_kz_cl_324_t_1">
+			<ruleml:Rule key=":r1_kz_cl_324_t_1" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Atom>
+							<ruleml:Rel>in_prohibited_land</ruleml:Rel>
+							<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+						</ruleml:Atom>
+
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:cut_more_than_1_m3" />
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+				
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>defendant_stole_forest</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!-- Krivicni zakonik clan 324 tacka 2 -->
+		<lrml:PrescriptiveStatement key="ps1_kz_cl_324_t_2">
+			<ruleml:Rule key=":r1_kz_cl_324_t_2" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Atom>
+							<ruleml:Rel>defendant_stole_forest</ruleml:Rel>
+							<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+						</ruleml:Atom>
+
+						<ruleml:Or>
+							<ruleml:Atom>
+								<ruleml:Rel iri="lc:intention_to_sell" />
+								<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+								<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+							</ruleml:Atom>
+
+							<ruleml:Atom>
+								<ruleml:Rel iri="lc:cut_more_than_5_m3" />
+								<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+								<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+							</ruleml:Atom>
+
+							<ruleml:Atom>
+								<ruleml:Rel>in_special_forest</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+						</ruleml:Or>
+					</ruleml:And>
+				</ruleml:if>
+
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>defendant_stole_forest_level_2</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+		<!-- Krivicni zakonik clan 324 tacka 3 -->
+		<lrml:PrescriptiveStatement key="ps1_kz_cl_324_t_3">
+			<ruleml:Rule key=":r1_kz_cl_324_t_3" closure="universal" strength="defeasible">
+				<ruleml:if>
+					<ruleml:And>
+						<ruleml:Or>
+							<ruleml:Atom>
+								<ruleml:Rel>in_prohibited_land</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+
+							<ruleml:Atom>
+								<ruleml:Rel>in_special_forest</ruleml:Rel>
+								<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+							</ruleml:Atom>
+						</ruleml:Or>
+
+						<ruleml:Atom>
+							<ruleml:Rel iri="lc:had_intention" />
+							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
+						</ruleml:Atom>
+					</ruleml:And>
+				</ruleml:if>
+
+				<ruleml:then>
+					<ruleml:Atom>
+						<ruleml:Rel>defendant_has_intention_to_steal_forest</ruleml:Rel>
+						<ruleml:Var type=":defendant">Defendant</ruleml:Var>
+					</ruleml:Atom>
+				</ruleml:then>
+			</ruleml:Rule>
+		</lrml:PrescriptiveStatement>
+
+
+		<!-- Penalty statements -->
+		<!-- Krivicni zakonik clan 323 tacka 1 -->
+		<lrml:PenaltyStatement key="pen_kz_cl_323_t_1_payment">
 			<lrml:SuborderList>
 				<lrml:Obligation>
 						<ruleml:Atom>
-							<ruleml:Rel iri=":to_pay_min_cl6_ind"/>
+							<ruleml:Rel iri=":to_pay"/>
 							<ruleml:Var>Money</ruleml:Var>
-							<ruleml:Ind>50</ruleml:Ind>
+							<ruleml:Ind>200</ruleml:Ind>
 						</ruleml:Atom>
 				</lrml:Obligation>
 			</lrml:SuborderList>
 		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="pen_cl6_ind_max">
+
+		<lrml:PenaltyStatement key="pen_kz_cl_323_t_1_max_imprisonment">
 			<lrml:SuborderList>
 				<lrml:Obligation>
 						<ruleml:Atom>
-							<ruleml:Rel iri=":to_pay_max_cl6_ind"/>
-							<ruleml:Var>Money</ruleml:Var>
-							<ruleml:Ind>1000</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="confiscation_cl6_ind">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_confiscate_cl6_ind"/>
-							<ruleml:Var>Goods</ruleml:Var>
-							<ruleml:Ind>1</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<!--legal entity-->
-		<lrml:PenaltyStatement key="pen_cl6_le_min">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_pay_min_cl6_le"/>
-							<ruleml:Var>Money</ruleml:Var>
-							<ruleml:Ind>10000</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="pen_cl6_le_max">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_pay_max_cl6_le"/>
-							<ruleml:Var>Money</ruleml:Var>
-							<ruleml:Ind>20000</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="confiscation_cl6_le">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_confiscate_cl6_le"/>
-							<ruleml:Var>Goods</ruleml:Var>
-							<ruleml:Ind>1</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="prohibition_min_cl6_le">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_prohibit_min_cl6_le"/>
-							<ruleml:Var>Months</ruleml:Var>
-							<ruleml:Ind>0</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="prohibition_max_cl6_le">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_prohibit_max_cl6_le"/>
+							<ruleml:Rel iri=":imprisonment"/>
 							<ruleml:Var>Months</ruleml:Var>
 							<ruleml:Ind>12</ruleml:Ind>
 						</ruleml:Atom>
 				</lrml:Obligation>
 			</lrml:SuborderList>
 		</lrml:PenaltyStatement>
-		<!--legal entity - responsible individual-->
-		<lrml:PenaltyStatement key="pen_cl6_le_ri_min">
+
+		<!-- Krivicni zakonik clan 323 tacka 2 -->
+		<lrml:PenaltyStatement key="pen_kz_cl_323_t_2_min_imprisonment">
 			<lrml:SuborderList>
 				<lrml:Obligation>
 						<ruleml:Atom>
-							<ruleml:Rel iri=":to_pay_min_cl6_le_ri"/>
-							<ruleml:Var>Money</ruleml:Var>
-							<ruleml:Ind>1000</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="pen_cl6_le_ri_max">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_pay_max_cl6_le_ri"/>
-							<ruleml:Var>Money</ruleml:Var>
-							<ruleml:Ind>2000</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="confiscation_cl6_le_ri">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_confiscate_cl6_le_ri"/>
-							<ruleml:Var>Goods</ruleml:Var>
-							<ruleml:Ind>1</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="prohibition_min_cl6_le_ri">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_prohibit_min_cl6_le_ri"/>
-							<ruleml:Var>Months</ruleml:Var>
-							<ruleml:Ind>0</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="prohibition_max_cl6_le_ri">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_prohibit_max_cl6_le_ri"/>
-							<ruleml:Var>Months</ruleml:Var>
-							<ruleml:Ind>12</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		
-		<!--CLAN 284 kz - nedozvoljena trgovina -->
-		<!--lv1-->
-		<lrml:PenaltyStatement key="imprisonment_min_nt_lv1">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_imprison_min_nt_lv1"/>
+							<ruleml:Rel iri=":imprisonment"/>
 							<ruleml:Var>Months</ruleml:Var>
 							<ruleml:Ind>3</ruleml:Ind>
 						</ruleml:Atom>
 				</lrml:Obligation>
 			</lrml:SuborderList>
 		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="imprisonment_max_nt_lv1">
+
+		<lrml:PenaltyStatement key="pen_kz_cl_323_t_2_max_imprisonment">
 			<lrml:SuborderList>
 				<lrml:Obligation>
 						<ruleml:Atom>
-							<ruleml:Rel iri=":to_imprison_max_nt_lv1"/>
+							<ruleml:Rel iri=":imprisonment"/>
 							<ruleml:Var>Months</ruleml:Var>
 							<ruleml:Ind>36</ruleml:Ind>
 						</ruleml:Atom>
 				</lrml:Obligation>
 			</lrml:SuborderList>
 		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="confiscation_nt_lv1">
+
+		<!-- Krivicni zakonik clan 324 tacka 1 -->
+		<lrml:PenaltyStatement key="pen_kz_cl_324_t_1_payment">
 			<lrml:SuborderList>
 				<lrml:Obligation>
 						<ruleml:Atom>
-							<ruleml:Rel iri=":to_confiscate_nt_lv1"/>
-							<ruleml:Var>Goods</ruleml:Var>
-							<ruleml:Ind>1</ruleml:Ind>
+							<ruleml:Rel iri=":to_pay"/>
+							<ruleml:Var>Money</ruleml:Var>
+							<ruleml:Ind>200</ruleml:Ind>
 						</ruleml:Atom>
 				</lrml:Obligation>
 			</lrml:SuborderList>
 		</lrml:PenaltyStatement>
-		<!--lv2n-->
-		<lrml:PenaltyStatement key="imprisonment_min_nt_lv2n">
+
+		<lrml:PenaltyStatement key="pen_kz_cl_324_t_1_max_imprisonment">
 			<lrml:SuborderList>
 				<lrml:Obligation>
 						<ruleml:Atom>
-							<ruleml:Rel iri=":to_imprison_min_nt_lv2n"/>
-							<ruleml:Var>Months</ruleml:Var>
-							<ruleml:Ind>6</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="imprisonment_max_nt_lv2n">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_imprison_max_nt_lv2n"/>
-							<ruleml:Var>Months</ruleml:Var>
-							<ruleml:Ind>60</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="confiscation_nt_lv2n">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_confiscate_nt_lv2n"/>
-							<ruleml:Var>Goods</ruleml:Var>
-							<ruleml:Ind>1</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<!--lv2p-->
-		<lrml:PenaltyStatement key="imprisonment_min_nt_lv2p">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_imprison_min_nt_lv2p"/>
-							<ruleml:Var>Months</ruleml:Var>
-							<ruleml:Ind>6</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="imprisonment_max_nt_lv2p">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_imprison_max_nt_lv2p"/>
-							<ruleml:Var>Months</ruleml:Var>
-							<ruleml:Ind>60</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="confiscation_nt_lv2p">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_confiscate_nt_lv2p"/>
-							<ruleml:Var>Goods</ruleml:Var>
-							<ruleml:Ind>1</ruleml:Ind>
-						</ruleml:Atom>
-				</lrml:Obligation>
-			</lrml:SuborderList>
-		</lrml:PenaltyStatement>
-		<!--lv3-->
-		<lrml:PenaltyStatement key="imprisonment_min_nt_lv3">
-			<lrml:SuborderList>
-				<lrml:Obligation>
-						<ruleml:Atom>
-							<ruleml:Rel iri=":to_imprison_min_nt_lv3"/>
+							<ruleml:Rel iri=":imprisonment"/>
 							<ruleml:Var>Months</ruleml:Var>
 							<ruleml:Ind>12</ruleml:Ind>
 						</ruleml:Atom>
 				</lrml:Obligation>
 			</lrml:SuborderList>
 		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="imprisonment_max_nt_lv3">
+
+		<!-- Krivicni zakonik clan 324 tacka 2 -->
+		<lrml:PenaltyStatement key="pen_kz_cl_324_t_2_min_imprisonment">
 			<lrml:SuborderList>
 				<lrml:Obligation>
 						<ruleml:Atom>
-							<ruleml:Rel iri=":to_imprison_max_nt_lv3"/>
+							<ruleml:Rel iri=":imprisonment"/>
 							<ruleml:Var>Months</ruleml:Var>
-							<ruleml:Ind>72</ruleml:Ind>
+							<ruleml:Ind>3</ruleml:Ind>
 						</ruleml:Atom>
 				</lrml:Obligation>
 			</lrml:SuborderList>
 		</lrml:PenaltyStatement>
-		<lrml:PenaltyStatement key="confiscation_nt_lv3">
+
+		<lrml:PenaltyStatement key="pen_kz_cl_324_t_2_max_imprisonment">
 			<lrml:SuborderList>
 				<lrml:Obligation>
 						<ruleml:Atom>
-							<ruleml:Rel iri=":to_confiscate_nt_lv3"/>
-							<ruleml:Var>Goods</ruleml:Var>
-							<ruleml:Ind>1</ruleml:Ind>
+							<ruleml:Rel iri=":imprisonment"/>
+							<ruleml:Var>Months</ruleml:Var>
+							<ruleml:Ind>36</ruleml:Ind>
 						</ruleml:Atom>
 				</lrml:Obligation>
 			</lrml:SuborderList>
 		</lrml:PenaltyStatement>
-		
 
-		<!--CLAN 6-->
-		<!--individual-->
-		<lrml:ReparationStatement>
+		<lrml:PenaltyStatement key="pen_kz_cl_324_t_2_payment">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+						<ruleml:Atom>
+							<ruleml:Rel iri=":to_pay"/>
+							<ruleml:Var>Money</ruleml:Var>
+							<ruleml:Ind>200</ruleml:Ind>
+						</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+		<!-- Krivicni zakonik clan 324 tacka 3 -->
+		<lrml:PenaltyStatement key="pen_kz_cl_324_t_3_payment">
+			<lrml:SuborderList>
+				<lrml:Obligation>
+						<ruleml:Atom>
+							<ruleml:Rel iri=":to_pay"/>
+							<ruleml:Var>Money</ruleml:Var>
+							<ruleml:Ind>100</ruleml:Ind>
+						</ruleml:Atom>
+				</lrml:Obligation>
+			</lrml:SuborderList>
+		</lrml:PenaltyStatement>
+
+
+		<!-- Reparation statements -->
+		<!-- Krivicni zakonik clan 323 tacka 1 -->
+		<lrml:ReparationStatement key="rs1_kz_cl_323_t_1">
 			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#pen_cl6_ind_min"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_ind"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#pen_cl6_ind_max"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_ind"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#confiscation_cl6_ind"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_ind"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<!--legal entity-->
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#pen_cl6_le_min"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#pen_cl6_le_max"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#confiscation_cl6_le"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#prohibition_min_cl6_le"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#prohibition_max_cl6_le"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<!--legal entity - responsible individual-->
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#pen_cl6_le_ri_min"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le_ri"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#pen_cl6_le_ri_max"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le_ri"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#confiscation_cl6_le_ri"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le_ri"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#prohibition_min_cl6_le_ri"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le_ri"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#prohibition_max_cl6_le_ri"/>
-				<lrml:toPrescriptiveStatement keyref="#cl6_le_ri"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		
-		<!--CLAN 284 kz - nedozvoljena trgovina-->
-		<!--lv1-->
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#imprisonment_min_nt_lv1"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv1"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#imprisonment_max_nt_lv1"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv1"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#confiscation_nt_lv1"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv1"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<!--lv2n-->
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#imprisonment_min_nt_lv2n"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv2n"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#imprisonment_max_nt_lv2n"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv2n"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#confiscation_nt_lv2n"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv2n"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<!--lv2p-->
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#imprisonment_min_nt_lv2p"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv2p"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#imprisonment_max_nt_lv2p"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv2p"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#confiscation_nt_lv2p"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv2p"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<!--lv3-->
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#imprisonment_min_nt_lv3"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv3"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#imprisonment_max_nt_lv3"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv3"/>
-			</lrml:Reparation>
-		</lrml:ReparationStatement>
-		<lrml:ReparationStatement>
-			<lrml:Reparation>
-				<lrml:appliesPenalty keyref="#confiscation_nt_lv3"/>
-				<lrml:toPrescriptiveStatement keyref="#nt_lv3"/>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_323_t_1_payment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps4_kz_cl_323_t_1"/>
 			</lrml:Reparation>
 		</lrml:ReparationStatement>
 
-		
-		<!--CLAN 284 kz - nedozvoljena trgovina-->
+		<lrml:ReparationStatement key="rs2_kz_cl_323_t_1">
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_323_t_1_max_imprisonment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps4_kz_cl_323_t_1"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!-- Krivicni zakonik clan 323 tacka 2 -->
+		<lrml:ReparationStatement key="rs1_kz_cl_323_t_2">
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_323_t_2_min_imprisonment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps2_kz_cl_323_t_2"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<lrml:ReparationStatement key="rs2_kz_cl_323_t_2">
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_323_t_2_max_imprisonment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps2_kz_cl_323_t_2"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!-- Krivicni zakonik clan 324 tacka 1 -->
+		<lrml:ReparationStatement key="rs1_kz_cl_324_t_1">
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_324_t_1_payment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps1_kz_cl_324_t_1"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<lrml:ReparationStatement key="rs2_kz_cl_324_t_1">
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_324_t_1_max_imprisonment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps1_kz_cl_324_t_1"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!-- Krivicni zakonik clan 324 tacka 2 -->
+		<lrml:ReparationStatement key="rs1_kz_cl_324_t_2">
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_324_t_2_min_imprisonment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps1_kz_cl_324_t_2"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<lrml:ReparationStatement key="rs2_kz_cl_324_t_2">
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_324_t_2_max_imprisonment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps1_kz_cl_324_t_2"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<lrml:ReparationStatement key="rs1_kz_cl_324_t_2">
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_324_t_2_payment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps1_kz_cl_324_t_2"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+		<!-- Krivicni zakonik clan 324 tacka 3 -->
+		<lrml:ReparationStatement key="rs1_kz_cl_324_t_3">
+			<lrml:Reparation>
+				<lrml:appliesPenalty keyref="#pen_kz_cl_324_t_3_payment"/>
+				<lrml:toPrescriptiveStatement keyref="#ps1_kz_cl_324_t_3"/>
+			</lrml:Reparation>
+		</lrml:ReparationStatement>
+
+
+		<!-- Override statements sto ne radi?? -->
+		<!-- Krivicni zakonik clan 323 tacka 2 > tacka 1 -->
 		<lrml:OverrideStatement>
-			<lrml:Override under="#nt_lv1" over="#nt_lv2p"/>
+			<lrml:Override under="#ps4_kz_cl_323_t_1" over="#ps2_kz_cl_323_t_2"/>
 		</lrml:OverrideStatement>
-		<lrml:OverrideStatement>
-			<lrml:Override under="#nt_lv1" over="#nt_lv2n"/>
-		</lrml:OverrideStatement>
-		<lrml:OverrideStatement>
-			<lrml:Override under="#nt_lv2n" over="#nt_lv2p"/>
-		</lrml:OverrideStatement>
-		<lrml:OverrideStatement>
-			<lrml:Override under="#nt_lv1" over="#nt_lv3"/>
-		</lrml:OverrideStatement>
-		<lrml:OverrideStatement>
-			<lrml:Override under="#nt_lv2n" over="#nt_lv3"/>
-		</lrml:OverrideStatement>
-		<lrml:OverrideStatement>
-			<lrml:Override under="#nt_lv2p" over="#nt_lv3"/>
-		</lrml:OverrideStatement>
+
 	</lrml:Statements>
 </lrml:LegalRuleML>
