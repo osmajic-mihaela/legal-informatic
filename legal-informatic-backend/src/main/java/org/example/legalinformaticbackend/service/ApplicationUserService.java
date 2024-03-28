@@ -14,7 +14,7 @@ public class ApplicationUserService {
 
     private final ApplicationUserRepository userRepository;
 
-    public ApplicationUser register(ApplicationUserDTO newUser) {
+    /*public ApplicationUser register(ApplicationUserDTO newUser) {
         if ((this.getByEmail(newUser.email) == null)) {
             ApplicationUser user = createUser(newUser);
             userRepository.save(user);
@@ -45,7 +45,7 @@ public class ApplicationUserService {
         if (loggedUser != null && loggedUser.getPassword() == user.getPassword()) {
             return loggedUser;
         } else return null;
-    }
+    }*/
 
 
 }

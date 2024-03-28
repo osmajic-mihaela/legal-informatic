@@ -1,22 +1,18 @@
 package org.example.legalinformaticbackend.repository;
 
-
 import org.example.legalinformaticbackend.model.DbEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
+import java.util.List;
 import java.util.Optional;
 
 @NoRepositoryBean
 public interface DbEntityRepository<T extends DbEntity> extends JpaRepository<T, Long> {
+    <S extends T> S save(S entity);
 
-    default T get(Long id) {
-        Optional<T> optionalEntity = findById(id);
-        return optionalEntity.orElse(null);
-    }
+    Optional<T> findById(Long id);
+    List<T> findAll();
 
-    default boolean exists(Long id) {
-        return get(id) != null;
-    }
-
+    void deleteById(Long id);
 }

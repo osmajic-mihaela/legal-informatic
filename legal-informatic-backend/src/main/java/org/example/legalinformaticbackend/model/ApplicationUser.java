@@ -1,16 +1,19 @@
 package org.example.legalinformaticbackend.model;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import lombok.Getter;
-import lombok.Setter;
-import org.example.legalinformaticbackend.repository.DbEntityRepository;
+import lombok.*;
 
+import jakarta.persistence.*;
+
+@Entity(name="ApplicationUser")
+@Table(name = "application_user")
 @Getter
 @Setter
-@Entity
 public class ApplicationUser extends DbEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "firstName", nullable = false)
     private String firstName;
@@ -21,11 +24,11 @@ public class ApplicationUser extends DbEntity {
     @Column(name = "password", nullable = false)
     private String password;
 
+
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
     public String getFullName() {
         return (firstName + " " + lastName).trim();
     }
-
 }

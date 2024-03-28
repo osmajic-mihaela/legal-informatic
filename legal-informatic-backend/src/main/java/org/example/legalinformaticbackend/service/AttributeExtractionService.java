@@ -3,7 +3,10 @@ package org.example.legalinformaticbackend.service;
 import lombok.RequiredArgsConstructor;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.util.PDFTextStripper;
+import org.example.legalinformaticbackend.model.DbEntity;
+import org.example.legalinformaticbackend.model.LegalCase;
 import org.example.legalinformaticbackend.repository.LegalCaseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
@@ -16,6 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.modelmapper.ModelMapper;
 
 @Service
 @RequiredArgsConstructor
@@ -24,52 +28,56 @@ public class AttributeExtractionService {
     private final ResourceLoader resourceLoader;
 
 
-
+    // u vezi clana?
     //Vremenski rok za placanje?
     //Zamena ako ne plati?
-    public Map attributeExtraction(String caseNumber){
+    public DbEntity attributeExtraction(String caseNumber){
         Map<String, String> retVal = new HashMap<>();
+        LegalCase legalCase = new LegalCase();
 
         try {
             String caseStr = this.readPDF(caseNumber);
-            retVal.put("Broj slučaja", extractCaseNumber(caseStr));
-            retVal.put("Sud", extractCourt(caseStr));
-            retVal.put("Sudija", extractJudgeName(caseStr));
-            retVal.put("Zapisničar", extractCourtReporterName(caseStr));
-            retVal.put("Optuženi", extractDefendantInitials(caseStr));
-            retVal.put("Zaštićena površina", extractProtectedSurface(caseStr));
 
-            retVal.put("Šumska svojina", extractForestProperty(caseStr));
-            retVal.put("Novčana šteta", extractFinancialDamage(caseStr));
-            retVal.put("Kubna drvna masa", extractWoodVolume(caseStr));
-            retVal.put("Svestan", extractAwareness(caseStr));
-            retVal.put("Osuđen", isConvicted(caseStr));
-            retVal.put("Broj stabala", extractNumberOfTrees(caseStr)); //Ne radi za 2 vrste stabala
-            retVal.put("Vrsta drveta", extractTreeType(caseStr)); //Ne radi za 2 vrste stabala
-            retVal.put("Razlog presude", extractReasonForProsecution(caseStr)); //Da li treba u vezi clana?
+            legalCase.setCaseNumber(extractCaseNumber(caseStr));
+            legalCase.setCourt(extractCourt(caseStr));
+            legalCase.setJudge(extractJudgeName(caseStr));
+            legalCase.setCourtReporter(extractCourtReporterName(caseStr));
+            legalCase.setDefendant(extractDefendantInitials(caseStr));
+            legalCase.setProtectedSurface(extractProtectedSurface(caseStr));
 
+            legalCase.setForestProperty(extractForestProperty(caseStr));
+            legalCase.setFinancialDamage(extractFinancialDamage(caseStr));
+            legalCase.setWoodVolume(extractWoodVolume(caseStr));
+            legalCase.setAwareness(extractAwareness(caseStr));
+            legalCase.setConvicted(isConvicted(caseStr));
+            legalCase.setNumberOfTrees(extractNumberOfTrees(caseStr));
+            legalCase.setTreeType(extractTreeType(caseStr));
+            legalCase.setReasonForProsecution(extractReasonForProsecution(caseStr));
+            legalCase.setCitedArticles(extractCitedArticles(caseStr));
 
-            if(retVal.get("Osuđen").equals("Da")){
-                retVal.put("Uslovna", isConditionalSentence(caseStr));
-                retVal.put("Zatvorska kazna", extractPrisonSentence(caseStr));
-                retVal.put("Novčana kazna", extractFinancialSentence(caseStr));
-                retVal.put("Kazna rada u javnom interesu", extractComunityServiceSentence(caseStr));
-                retVal.put("Citirani članovi zakona", extractCitedArticles(caseStr));
-
+            if (legalCase.getConvicted()) {
+                legalCase.setConditionalSentence(isConditionalSentence(caseStr));
+                legalCase.setPrisonSentence(extractPrisonSentence(caseStr));
+                legalCase.setFinancialSentence(extractFinancialSentence(caseStr));
+                legalCase.setCommunitySentence(extractComunityServiceSentence(caseStr));
+                legalCase.setCitedArticles(extractCitedArticles(caseStr));
             }else{
-                retVal.put("Uslovna", "");
-                retVal.put("Zatvorska kazna", "");
-                retVal.put("Novčana kazna",  "");
-                retVal.put("Kazna rada u javnom interesu", "");
-                retVal.put("Citirani članovi zakona", "");
+                legalCase.setConditionalSentence(Boolean.FALSE);
+                legalCase.setPrisonSentence("0");
+                legalCase.setFinancialSentence(0.0);
+                legalCase.setCommunitySentence("0");
             }
+
 
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
 
-        return retVal;
+
+
+        legalCaseRepository.save(legalCase);
+        return legalCase;
     }
 
 
@@ -191,7 +199,7 @@ public class AttributeExtractionService {
     }
 
     //radi za sve
-    private String extractFinancialDamage(String caseStr) throws IOException {
+    private Double extractFinancialDamage(String caseStr) throws IOException {
         Pattern pattern1 = Pattern.compile("((kaznu|penzije)\\s*u\\s*iznosu\\s*od)\\s*(\\d{1,7}(?:\\.\\d{3,6})*(?:,\\d{2,5})?)\\s*(?:eura|€)");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
@@ -204,13 +212,13 @@ public class AttributeExtractionService {
         Matcher matcher2 = pattern2.matcher(caseStr);
 
         if (matcher2.find()) {
-            //String s =  matcher2.group(2).replace(".", "");
-            //return Double.parseDouble(s.replace(',', '.'));
-            return matcher2.group(2).replace(".", "").replace(',', '.');
+            String s =  matcher2.group(2).replace(".", "");
+            return Double.parseDouble(s.replace(',', '.'));
+            //return matcher2.group(2).replace(".", "").replace(',', '.');
         }
 
-        //return 0.0;
-        return "unknown";
+        return 0.0;
+        //return "unknown";
 
     }
 
@@ -227,63 +235,63 @@ public class AttributeExtractionService {
     }
 
     //radi za sve slucajeve
-    private String extractAwareness(String caseStr) throws IOException {
+    private Boolean extractAwareness(String caseStr) throws IOException {
 
         Pattern pattern = Pattern.compile("svjestan\\s*(zabranjenosti\\s*)?svog\\s*djela");
         Matcher matcher = pattern.matcher(caseStr);
 
         if (matcher.find()) {
-            return "Da";
+            return Boolean.TRUE;
         }
 
         Pattern pattern2 = Pattern.compile("svjesno\\s*i\\s*voljno");
         Matcher matcher2 = pattern2.matcher(caseStr);
 
         if (matcher2.find()) {
-            return "Da";
+            return Boolean.TRUE;
         }
-        return "Ne";
+        return Boolean.FALSE;
     }
 
     //radi za sve slucajeve
-    private String isConvicted(String caseStr) throws IOException {
+    private Boolean isConvicted(String caseStr) throws IOException {
 
         Pattern pattern = Pattern.compile("[kK]\\s*[rR]\\s*[iI]\\s*[vV]\\s*([iI]\\s*)?([jJ]\\s*[eE]|[Ss]\\s*[Uu])");
         Matcher matcher = pattern.matcher(caseStr);
 
         if (matcher.find()) {
-            return "Da";
+            return Boolean.TRUE;
         }
-        return "Ne";
+        return Boolean.FALSE;
     }
 
     //radi za sve
-    private String extractWoodVolume(String caseStr) {
+    private Double extractWoodVolume(String caseStr) {
         //Pattern pattern1 = Pattern.compile("u\\s*ukupnoj\\s*(koli[čc]ini|(bruto|kubnoj)\\s*masi)\\s*(od\\s*)?(\\d+\\,\\d+)");
         Pattern pattern1 = Pattern.compile("(koli[čc]ini|mas(?:i|e))\\s*(od\\s*)?(\\d+\\,\\d+)");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
         if (matcher1.find()) {
             String numberStr = matcher1.group(3);
-            //return Double.parseDouble(numberStr.replace(',', '.'));
-            return numberStr.replace(',', '.');
+            return Double.parseDouble(numberStr.replace(',', '.'));
+            //return numberStr.replace(',', '.');
         }
-        //return 0.0;
+        return 0.0;
 
-        return "unknown";
+        //return "unknown";
     }
 
     //U K114/19 i K116/19 dve vrste stabla su u pitanju, pa se navodi br za svaku vrstu, ne izvlaci tu drugu
-    private String extractNumberOfTrees(String caseStr) {
+    private Integer extractNumberOfTrees(String caseStr) {
         Pattern pattern1 = Pattern.compile("obori(o|li)\\s*(u\\s*državnoj\\s*šumi\\s*|ukupno\\s*)?(\\d+|jedno)");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
         if (matcher1.find()) {
             String br = matcher1.group(3);
             if (br.equals("jedno")) {
-                return "1";
+                return 1;
             } else {
-                return br;
+                return Integer.parseInt( br);
             }
         }
 
@@ -293,15 +301,15 @@ public class AttributeExtractionService {
         if (matcher2.find()) {
             String br = matcher2.group(1);
             if (br.equals("jedno")) {
-                return "1";
+                return 1;
             } else {
-                return br;
+                return Integer.parseInt( br);
             }
         }
 
 
 
-        return "unknown";
+        return 0;
 
     }
 
@@ -332,18 +340,18 @@ public class AttributeExtractionService {
     }
 
     //radi za sve
-    private String isConditionalSentence(String caseStr) {
+    private Boolean isConditionalSentence(String caseStr) {
         Pattern pattern = Pattern.compile("U\\s*S\\s*L\\s*O\\s*V\\s*N\\s*U\\s*O\\s*S\\s*U\\s*D\\s*U");
         Matcher matcher = pattern.matcher(caseStr);
 
         if (matcher.find()) {
-            return "Da";
+            return Boolean.TRUE;
         }
-        return "Ne";
+        return Boolean.FALSE;
     }
 
     //radi za sve
-    private String extractFinancialSentence(String caseStr) {
+    private Double extractFinancialSentence(String caseStr) {
         Pattern pattern1 = Pattern.compile("nov[cč]anu\\s*kaznu\\s*u\\s*iznosu\\s*od\\s*(\\d+\\,\\d+)");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
@@ -358,14 +366,14 @@ public class AttributeExtractionService {
             int startIndex1 = matcher1.start();
             if(startIndex1 > startIndex2){
                 String numberStr = matcher1.group(1);
-                //return Double.parseDouble(numberStr.replace(',', '.'));
-                return numberStr.replace(',', '.');
+                return Double.parseDouble(numberStr.replace(',', '.'));
+                //return numberStr.replace(',', '.');
             }
 
         }
-        //return 0.0;
+        return 0.0;
 
-        return "unknown";
+        //return "unknown";
 
     }
 
@@ -390,7 +398,7 @@ public class AttributeExtractionService {
             }
         }
 
-        return "unknown";
+        return "0";
 
     }
 
@@ -405,7 +413,7 @@ public class AttributeExtractionService {
             return numberStr+" "+periodStr;
         }
 
-        return "unknown";
+        return "0";
 
     }
 
@@ -413,6 +421,7 @@ public class AttributeExtractionService {
     //radi za sve, da li treba i deo u vezi clana??
     private String extractReasonForProsecution(String caseStr) {
 
+        String retVal = "unknown";
         Pattern pattern1 = Pattern.compile("izvršio\\s*krivično\\s*djelo\\s*((šumska)?\\s*kra[djđ]+a|pusto[šs]enje\\s*šuma)\\s*iz\\s*čl(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*st\\s*(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*(u\\s*vezi\\s*st\\s*(\\.)?\\s*(\\d+))?");
         Matcher matcher1 = pattern1.matcher(caseStr);
 
@@ -420,7 +429,8 @@ public class AttributeExtractionService {
             String clan = matcher1.group(4);
             String stav = matcher1.group(7);
 
-            return clan+" "+stav;
+            retVal = "čl. "+clan+" st. "+stav;
+            return  retVal;
         }
 
         Pattern pattern2 = Pattern.compile("izvrši(o|li)\\s*krivično\\s*djelo\\s*((šumska)?\\s*kra[djđ]+a|pusto[šs]enje\\s*šuma)\\s*iz\\s*čl(ana)?\\s*(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*st(av|ava)?\\s*(\\.)?\\s*(\\d+)\\s*(\\.)?\\s*(,)?\\s*(u\\s*vezi\\s*st\\s*(\\.)?\\s*(\\d+))?");
@@ -430,13 +440,14 @@ public class AttributeExtractionService {
             String clan = matcher2.group(6);
             String stav = matcher2.group(10);
 
-            return clan+" "+stav;
+            retVal = "čl. "+clan+" st. "+stav;
+            return  retVal;
         }
 
-        return "unknown";
+        return retVal;
     }
 
-    // za 90/12 ne izvuce, mozda brka nesto
+    // za 90/12. 47/11. 261/12 ne izvuce, mozda brka nesto
     private String extractCitedArticles(String caseStr) {
         Pattern pattern = Pattern.compile("\\s[Čč]l([.,]|(an))?\\s*[0-9]{1,3}(\\s*st[.,]\\s*[0-9]{1,3})?(\\s+u\\s+vezi\\s((st[.,]\\s*)|(stava\\s+))[0-9]{1,3})?(((,\\s*)|(\\s+i\\s+))([Čč]l([.,]|(an))?)?\\s*[0-9]{1,3}(\\s*st[.,]\\s*[0-9]{1,3})?)*\\s+((Krivičnog\\s+zakonika(\\s+Crne\\s+Gore)?)|(KZ\\s*CG)|(Zakonika\\s+o\\s+krivičnom\\s+postupku)|(ZKP-a)|(Zakona\\s+o\\s+duvanu))");
         Matcher matcher = pattern.matcher(caseStr);
@@ -448,28 +459,28 @@ public class AttributeExtractionService {
     }
 
     //radi za sve
-    private String extractProtectedSurface(String caseStr) {
+    private Boolean extractProtectedSurface(String caseStr) {
         Pattern pattern = Pattern.compile("u\\s*nacionalnom\\s*parku");
         Matcher matcher = pattern.matcher(caseStr);
 
         if (matcher.find()) {
-            return "Da";
+            return Boolean.TRUE;
         }
 
         Pattern pattern2 = Pattern.compile("u\\s*zaštitnoj\\s*šumi");
         Matcher matcher2 = pattern2.matcher(caseStr);
 
         if (matcher2.find()) {
-            return "Da";
+            return Boolean.TRUE;
         }
 
         Pattern pattern3 = Pattern.compile("u\\s*šumi\\s*sa\\s*posebnom\\s*namjenom");
         Matcher matcher3 = pattern3.matcher(caseStr);
 
         if (matcher3.find()) {
-            return "Da";
+            return Boolean.TRUE;
         }
-        return "Ne";
+        return Boolean.FALSE;
     }
 
 
