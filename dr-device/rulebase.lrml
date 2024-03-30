@@ -12,13 +12,6 @@
 							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
 							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
 						</ruleml:Atom>
-
-						<!-- I.e. park, treeline -->
-						<ruleml:Atom>
-							<ruleml:Rel iri="lc:prohibited_land" />
-							<ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
-							<ruleml:Data xsi:type="xs:string">yes</ruleml:Data>
-						</ruleml:Atom>
 				</ruleml:if>
 
 				<ruleml:then>
