@@ -165,8 +165,8 @@ public class DrDeviceLegalCaseService {
         ArrayList<String> imprisonments = this.findExportedAttribute(rdfContent, "imprisonment");
         ArrayList<Integer> imprisonmentValues = new ArrayList<Integer>();
 
-        for(String paymentBlock: payments) {
-            imprisonmentValues.add(this.getRDFValueForAttribute(paymentBlock));
+        for(String imprisonmentsBlock: imprisonments) {
+            imprisonmentValues.add(this.getRDFValueForAttribute(imprisonmentsBlock));
         }
 
         Integer minPrisonTime = Collections.min(imprisonmentValues);
@@ -174,7 +174,7 @@ public class DrDeviceLegalCaseService {
 
         indictment.append("Defendant to pay: ").append(toPay.toString()).append("\n");
         indictment.append("Defendant minimum prison time: ").append(minPrisonTime.toString()).append("\n");
-        indictment.append("Defendant minimum prison time: ").append(maxPrisonTime.toString()).append("\n");
+        indictment.append("Defendant maximum prison time: ").append(maxPrisonTime.toString()).append("\n");
 
         return indictment.toString();
     }
