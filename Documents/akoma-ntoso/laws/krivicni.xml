@@ -37,6 +37,83 @@
 			<heading>
 				Krivični zakonik Crne Gore
 			</heading>
+			<chapter eId="chp_1">
+				<num>
+					I.
+				</num>
+				<heading>
+					OSNOVNE ODREDBE
+				</heading>
+				<section eId="chp_1_sec_1">
+					<article eId="art_1">
+						<heading>
+							Osnov i granice krivičnopravne prinude
+						</heading>
+						<num>
+							Član 1
+						</num>
+						<paragraph eId="art_1_para_1">
+							<content eId="art_1_para_1_content">
+								<p>
+									Zaštita čovjeka i drugih osnovnih društvenih vrijednosti predstavlja osnov i granice za određivanje krivičnih djela, propisivanje krivičnih sankcija i njihovu primjenu, u mjeri u kojoj je to nužno za suzbijanje tih djela.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_2">
+						<heading>
+							Zakonitost u određivanju krivičnih djela i propisivanju krivičnih sankcija
+						</heading>
+						<num>
+							Član 2
+						</num>
+						<paragraph eId="art_2_para_1">
+							<content eId="art_2_para_1_content">
+								<p>
+									Kazna ili druga krivična sankcija može se izreći samo za djelo koje je, prije nego što je učinjeno, bilo zakonom određeno kao krivično djelo i za koje je bila zakonom propisana kazna.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_3">
+						<heading>
+							Nema kazne bez krivice
+						</heading>
+						<num>
+							Član 3
+						</num>
+						<paragraph eId="art_3_para_1">
+							<content eId="art_3_para_1_content">
+								<p>
+									Kazna i mjere upozorenja mogu se izreći samo učiniocu koji je kriv za učinjeno krivično djelo.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_4">
+						<heading>
+							Krivične sankcije i njihova opšta svrha
+						</heading>
+						<num>
+							Član 4
+						</num>
+						<paragraph eId="art_4_para_1">
+							<content eId="art_4_para_1_content">
+								<p>
+									Krivične sankcije su: kazne, mjere upozorenja, mjere bezbjednosti i vaspitne mjere.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_4_para_2">
+							<content eId="art_4_para_2_content">
+								<p>
+									Opšta svrha propisivanja i izricanja krivičnih sankcija je suzbijanje djela kojima se povređuju ili ugrožavaju vrijednosti zaštićene krivičnim zakonodavstvom.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+				</section>
+			</chapter>
 			<chapter eId="chp_25">
 				<num>
 					XXV.
