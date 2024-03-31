@@ -8,14 +8,14 @@
         <lc:name>case 01</lc:name>
         <lc:defendant>John</lc:defendant>
 
-        <lc:deforestation>no</lc:deforestation>
-        <lc:desolation>no</lc:desolation>
+        <lc:deforestation>yes</lc:deforestation>
+        <lc:desolation>yes</lc:desolation>
         <lc:prohibited_land>yes</lc:prohibited_land>
-        <lc:special_forest>no</lc:special_forest>
-        <lc:cut_more_than_1_m3>yes</lc:cut_more_than_1_m3>
-        <lc:intention_to_sell>yes</lc:intention_to_sell>
-        <lc:cut_more_than_5_m3>yes</lc:cut_more_than_5_m3>
-        <lc:had_intention>yes</lc:had_intention>
+        <lc:special_forest>yes</lc:special_forest>
+        <lc:cut_more_than_1_m3>no</lc:cut_more_than_1_m3>
+        <lc:intention_to_sell>no</lc:intention_to_sell>
+        <lc:cut_more_than_5_m3>no</lc:cut_more_than_5_m3>
+        <lc:had_intention>no</lc:had_intention>
     </lc:case>
 
 </rdf:RDF>
