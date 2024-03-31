@@ -24,7 +24,11 @@ const routes: Routes = [
     component: AkomaNtosoLawComponent,
   },
   {
-    path: 'akoma-ntoso-cases',
+    path: 'cases',
+    component: AkomaNtosoCasesComponent,
+  },
+  {
+    path: 'cases/**',
     component: AkomaNtosoCasesComponent,
   },
   {

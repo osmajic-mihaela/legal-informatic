@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
+import { ILegalCase } from 'src/app/model/LegalCase';
 import { AkomaNtosoService } from 'src/app/service/AkomaNtosoService';
 
 @Component({
@@ -11,20 +13,19 @@ import { AkomaNtosoService } from 'src/app/service/AkomaNtosoService';
 export class AkomaNtosoCasesComponent {
   public xmlDocument: Document = new Document();
   public xmlHtml: SafeHtml | undefined;
-  public judgements: String[] = [];
+  public cases: String[] = [];
   public currentFile: String = '';
-  public attributes: Map<String, String> = new Map();
+  public caseMetadata$ = new BehaviorSubject<ILegalCase|undefined>(undefined);
 
   constructor(
     private akomaNtosoService: AkomaNtosoService,
     private sanitizer: DomSanitizer,
-    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.akomaNtosoService.getCases().subscribe((data) => {
-      this.judgements = data;
-      this.currentFile = this.judgements[0];
+      this.cases = data;
+      this.currentFile = this.cases[0];
       this.refreshCaseFile();
     });
   }
@@ -42,7 +43,12 @@ export class AkomaNtosoCasesComponent {
         );
       });
     this.akomaNtosoService.getCaseAttributes(this.currentFile.split('.')[0]).subscribe((response: any) => {
-      console.log(response);
+      if (response?.communitySentence !== undefined){
+        if (response.communitySentence == "0"){
+          response.communitySentence = "-";
+        }
+      }
+      this.caseMetadata$.next(response);
     });
   }
 

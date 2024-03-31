@@ -1,31 +1,171 @@
 <div class="page-container">
-  <div class="column cases-section">
-    <h1>Presude</h1>
-    <mat-list>
-      <mat-list-item
-        *ngFor="let judgement of judgements"
-        (click)="openCaseFile(judgement)"
-        [ngClass]="{ selected: currentFile == judgement }"
-      >
-        <mat-icon matListItemIcon>work</mat-icon>
-        <div matListItemTitle>{{ judgement.split('.')[0] }}</div>
-      </mat-list-item>
-    </mat-list>
+  <div class="column left-column">
+    <div class="cases-section">
+      <h1>Presude</h1>
+      <mat-list class="cases-list">
+        <mat-list-item
+          *ngFor="let case of cases"
+          (click)="openCaseFile(case)"
+          [ngClass]="{ selected: currentFile == case }"
+        >
+          <mat-icon matListItemIcon>work</mat-icon>
+          <div matListItemTitle>{{ case.split('.')[0] }}</div>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="table-container">
+      <div *ngIf="caseMetadata$ | async as caseMetadata">
+        <table>
+          <tr>
+            <td>
+              Broj slučaja
+            </td>
+            <td>
+              {{ caseMetadata?.caseNumber != undefined ? caseMetadata?.caseNumber : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sud
+            </td>
+            <td>
+              {{ caseMetadata?.court != undefined ? caseMetadata?.court : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sudija
+            </td>
+            <td>
+              {{ caseMetadata?.judge != undefined ? caseMetadata?.judge : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Zapisničar
+            </td>
+            <td>
+              {{ caseMetadata?.courtReporter != undefined ? caseMetadata?.courtReporter : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Okrivljeni
+            </td>
+            <td>
+              {{ caseMetadata?.defendant != undefined ? caseMetadata?.defendant : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Zaštićena površina
+            </td>
+            <td>
+              {{ caseMetadata?.protectedSurface != undefined ? (caseMetadata?.protectedSurface  | appBoolToDaOrNe) : "-"}}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Svojstvo šume
+            </td>
+            <td>
+              {{ caseMetadata?.forestProperty != undefined ? caseMetadata?.forestProperty : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Finansijska šteta
+            </td>
+            <td>
+              {{ caseMetadata?.financialDamage != undefined ? caseMetadata?.financialDamage + " €": "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Svesnost optuženog
+            </td>
+            <td>
+              {{ caseMetadata?.awareness != undefined ? (caseMetadata?.awareness | appBoolToDaOrNe)  : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Prethodno optuživan
+            </td>
+            <td>
+              {{ caseMetadata?.convicted != undefined ? (caseMetadata?.convicted | appBoolToDaOrNe) : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Broj stabala
+            </td>
+            <td>
+              {{ caseMetadata?.numberOfTrees != undefined ? caseMetadata?.numberOfTrees : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Vrsta drveta
+            </td>
+            <td>
+              {{ caseMetadata?.treeType != undefined ? caseMetadata?.treeType : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Optužen za
+            </td>
+            <td>
+              {{ caseMetadata?.reasonForProsecution != undefined ? caseMetadata?.reasonForProsecution : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Uslovna kazna
+            </td>
+            <td>
+              {{ caseMetadata?.conditionalSentence != undefined ? (caseMetadata?.conditionalSentence | appBoolToDaOrNe) : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Kazna zatvora
+            </td>
+            <td>
+              {{ caseMetadata?.prisonSentence != undefined ? (caseMetadata?.prisonSentence | appBoolToDaOrNe) : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Novčana kazna
+            </td>
+            <td>
+              {{ caseMetadata?.financialSentence != undefined ? caseMetadata?.financialSentence + " €" : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+             Rad u javnom interesu
+            </td>
+            <td>
+              {{ caseMetadata?.communitySentence != undefined ? caseMetadata?.communitySentence : "-" }}
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Citirani članovi
+            </td>
+            <td>
+              {{ caseMetadata?.citedArticles != undefined ? caseMetadata?.citedArticles : "-" }}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
   <div class="column">
     <div [innerHtml]="xmlHtml" class="case-section"></div>
-    <mat-divider></mat-divider>
-    <div class="table-container">
-      <table class="table">
-        <tr>
-          <th>Naziv atributa</th>
-          <th>Atribut</th>
-        </tr>
-        <tr *ngFor="let attribute of attributes | keyvalue">
-          <td>{{ attribute.key }}</td>
-          <td>{{ attribute.value }}</td>
-        </tr>
-      </table>
-    </div>
   </div>
 </div>

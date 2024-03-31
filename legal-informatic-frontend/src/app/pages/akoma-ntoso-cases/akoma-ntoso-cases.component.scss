@@ -6,6 +6,12 @@
 }
 .column {
   overflow: none;
+  height: 85vh;
+  flex: 10;
+}
+.left-column {
+  width: 500px !important;
+  flex: 4;
 }
 .documents-section {
   overflow-y: none;
@@ -14,13 +20,12 @@
 .cases-section {
   overflow-y: scroll;
   padding: 5px;
-  max-height: 85vh;
-  width: 80%;
+  height: 45vh;
 }
 .case-section {
   overflow-y: scroll;
   padding: 5px;
-  max-height: 60vh;
+  max-height: 85vh;
   width: 100%;
 }
 
@@ -46,5 +51,19 @@ mat-list-item {
   }
 }
 .table-container {
-  height: 25vh;
+  height: 40vh;
+  overflow-y: scroll;
+  table{
+    border: 1px solid gray;
+  }
+  td{
+    border: 1px solid gray;
+    padding: 5px;
+    width: 230px;
+  }
+
+  td:nth-child(odd){
+    text-align: end;
+    width: 180px;
+  }
 }
