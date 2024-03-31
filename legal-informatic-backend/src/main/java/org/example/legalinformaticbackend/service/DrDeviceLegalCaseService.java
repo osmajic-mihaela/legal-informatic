@@ -21,7 +21,7 @@ public class DrDeviceLegalCaseService {
     private final DrDeviceLegalCaseRepository repository;
 
     private final String backendDirPath = System.getProperty("user.dir");
-    private final String drDevicePath = Paths.get(backendDirPath, "dr-device").toString();
+    private final String drDevicePath = Paths.get(backendDirPath, "..", "dr-device").toString();
 
     private final String startBatPath = Paths.get(drDevicePath, "start.bat").toString();
     private final String cleanBatPath = Paths.get(drDevicePath, "clean.bat").toString();
@@ -44,8 +44,14 @@ public class DrDeviceLegalCaseService {
 
     private void runProcess(String processPath) {
         try{
-            Process p = Runtime.getRuntime().exec(new String[] {processPath});
-            p.waitFor();
+            ProcessBuilder pb = new ProcessBuilder(processPath);
+            pb.redirectOutput(ProcessBuilder.Redirect.INHERIT);
+            pb.redirectError(ProcessBuilder.Redirect.INHERIT);
+            pb.directory(new File(processPath).getParentFile());
+
+            Process p = pb.start();
+            int exitCode = p.waitFor();
+            System.out.println("Script exited with code " + exitCode);
         }
         catch (IOException | InterruptedException e) {
             e.printStackTrace();
@@ -80,16 +86,16 @@ public class DrDeviceLegalCaseService {
     }
 
     private String getRDFBody(DrDeviceLegalCase legalCase) {
-        return this.makeRDFTag("name", legalCase.getDefendant()) +
-                this.makeRDFTag("case", legalCase.getCaseNumber()) +
-                this.makeRDFTag("deforestation", legalCase.getDeforestation()) +
-                this.makeRDFTag("desolation", legalCase.getDesolation()) +
-                this.makeRDFTag("prohibited_land", legalCase.getProhibited_land()) +
-                this.makeRDFTag("special_forest", legalCase.getSpecial_forest()) +
-                this.makeRDFTag("cut_more_than_1_m3", legalCase.getWoodVolume() > 1) +
-                this.makeRDFTag("intention_to_sell", legalCase.getIntention_to_sell()) +
-                this.makeRDFTag("cut_more_than_5_m3", legalCase.getWoodVolume() > 5) +
-                this.makeRDFTag("had_intention", legalCase.getHad_intention());
+        return this.makeRDFTag("defendant", legalCase.getDefendant()) +
+                this.makeRDFTag("name", "case " + legalCase.getCaseNumber()) +
+                this.makeRDFTag("deforestation", legalCase.getDeforestation() ? "yes": "no") +
+                this.makeRDFTag("desolation", legalCase.getDesolation() ? "yes": "no") +
+                this.makeRDFTag("prohibited_land", legalCase.getProhibited_land() ? "yes": "no") +
+                this.makeRDFTag("special_forest", legalCase.getSpecial_forest() ? "yes": "no") +
+                this.makeRDFTag("cut_more_than_1_m3", legalCase.getWoodVolume() > 1 ? "yes": "no") +
+                this.makeRDFTag("intention_to_sell", legalCase.getIntention_to_sell() ? "yes": "no") +
+                this.makeRDFTag("cut_more_than_5_m3", legalCase.getWoodVolume() > 5 ? "yes": "no") +
+                this.makeRDFTag("had_intention", legalCase.getHad_intention() ? "yes": "no");
     }
 
     public void writeFactsRDF(DrDeviceLegalCase legalCase) {
@@ -110,7 +116,7 @@ public class DrDeviceLegalCaseService {
     // if it isn't empty the defendant is defeasibly-proven-positive for that attr
     // for to_pay and imprisonment just check how much (to pay is in euro, imprisonment is in months always)
     private ArrayList<String> findExportedAttribute(String rdfContent, String attribute) {
-        Pattern pattern = Pattern.compile("<export:" + attribute + ".*>(\s+.*\s+)+</export:" + attribute + ">");
+        Pattern pattern = Pattern.compile("<export:" + attribute + ".*>(\\s+.*\\s+)+<\\/export:" + attribute + ">");
         Matcher matcher = pattern.matcher(rdfContent);
 
         ArrayList<String> retval = new ArrayList<String>();
@@ -124,10 +130,14 @@ public class DrDeviceLegalCaseService {
 
     // if all charges are empty skip this method
     private Integer getRDFValueForAttribute(String rdfContent) {
-        Pattern pattern = Pattern.compile("<export:value>\\d+</export:value>");
+        Pattern pattern = Pattern.compile("<export:value>(\\d+)<\\/export:value>");
         Matcher matcher = pattern.matcher(rdfContent);
 
-        return Integer.valueOf(matcher.group());
+        while(matcher.find()) {
+            return Integer.valueOf(matcher.group(1));
+        }
+
+        return 0;
     }
 
     public String parseExportRDF() throws IOException {
@@ -155,8 +165,10 @@ public class DrDeviceLegalCaseService {
         ArrayList<String> payments = this.findExportedAttribute(rdfContent, "to_pay");
         ArrayList<Integer> paymentValues = new ArrayList<Integer>();
 
-        for(String paymentBlock: payments) {
-            paymentValues.add(this.getRDFValueForAttribute(paymentBlock));
+        if(!payments.isEmpty()) {
+            for(String paymentBlock: payments) {
+                paymentValues.add(this.getRDFValueForAttribute(paymentBlock));
+            }
         }
 
         Integer toPay = Collections.max(paymentValues);
@@ -165,12 +177,21 @@ public class DrDeviceLegalCaseService {
         ArrayList<String> imprisonments = this.findExportedAttribute(rdfContent, "imprisonment");
         ArrayList<Integer> imprisonmentValues = new ArrayList<Integer>();
 
-        for(String imprisonmentsBlock: imprisonments) {
-            imprisonmentValues.add(this.getRDFValueForAttribute(imprisonmentsBlock));
+        if(!imprisonments.isEmpty()) {
+            for(String imprisonmentsBlock: imprisonments) {
+                imprisonmentValues.add(this.getRDFValueForAttribute(imprisonmentsBlock));
+            }
         }
 
-        Integer minPrisonTime = Collections.min(imprisonmentValues);
-        Integer maxPrisonTime = Collections.max(imprisonmentValues);
+        Integer minPrisonTime = 0;
+        Integer maxPrisonTime = 0;
+        if(imprisonmentValues.size() == 1) {
+            minPrisonTime = 0;
+        }
+        else {
+            minPrisonTime = Collections.min(imprisonmentValues);
+        }
+        maxPrisonTime = Collections.max(imprisonmentValues);
 
         indictment.append("Defendant to pay: ").append(toPay.toString()).append("\n");
         indictment.append("Defendant minimum prison time: ").append(minPrisonTime.toString()).append("\n");
