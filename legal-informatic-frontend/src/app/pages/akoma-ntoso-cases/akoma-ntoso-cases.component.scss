@@ -1,0 +1,50 @@
+.page-container {
+  height: 85vh;
+  overflow: none;
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  overflow: none;
+}
+.documents-section {
+  overflow-y: none;
+  border-bottom: 1px rgb(179, 179, 179) solid;
+}
+.cases-section {
+  overflow-y: scroll;
+  padding: 5px;
+  max-height: 85vh;
+  width: 80%;
+}
+.case-section {
+  overflow-y: scroll;
+  padding: 5px;
+  max-height: 60vh;
+  width: 100%;
+}
+
+mat-list-item {
+  cursor: pointer !important;
+  transition: all 0.3s;
+  margin-bottom: 5px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.671);
+    border-radius: 20px !important;
+  }
+}
+
+.selected {
+  background-color: #82839e;
+  border-radius: 20px !important;
+  color: white !important;
+
+  &:hover {
+    background-color: #82839e;
+    border-radius: 20px !important;
+  }
+}
+.table-container {
+  height: 25vh;
+}

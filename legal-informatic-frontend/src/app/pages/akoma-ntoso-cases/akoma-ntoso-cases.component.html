@@ -1,0 +1,31 @@
+<div class="page-container">
+  <div class="column cases-section">
+    <h1>Presude</h1>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let judgement of judgements"
+        (click)="openCaseFile(judgement)"
+        [ngClass]="{ selected: currentFile == judgement }"
+      >
+        <mat-icon matListItemIcon>work</mat-icon>
+        <div matListItemTitle>{{ judgement.split('.')[0] }}</div>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="column">
+    <div [innerHtml]="xmlHtml" class="case-section"></div>
+    <mat-divider></mat-divider>
+    <div class="table-container">
+      <table class="table">
+        <tr>
+          <th>Naziv atributa</th>
+          <th>Atribut</th>
+        </tr>
+        <tr *ngFor="let attribute of attributes | keyvalue">
+          <td>{{ attribute.key }}</td>
+          <td>{{ attribute.value }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
