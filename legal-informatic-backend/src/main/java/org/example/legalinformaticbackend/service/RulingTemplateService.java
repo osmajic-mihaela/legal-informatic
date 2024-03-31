@@ -1,8 +1,12 @@
 package org.example.legalinformaticbackend.service;
 
+import lombok.RequiredArgsConstructor;
 import org.example.legalinformaticbackend.model.DrDeviceLegalCase;
 import org.example.legalinformaticbackend.model.LegalCase;
+import org.springframework.stereotype.Service;
 
+@Service
+@RequiredArgsConstructor
 public class RulingTemplateService {
     private String makeHTMLHeader() {
         return "<html>\n<body>";
