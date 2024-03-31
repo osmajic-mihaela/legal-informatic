@@ -80,6 +80,47 @@ public class AttributeExtractionService {
         return legalCase;
     }
 
+    public DbEntity attributePreview(String caseNumber){
+        Map<String, String> retVal = new HashMap<>();
+        LegalCase legalCase = new LegalCase();
+
+        try {
+            String caseStr = this.readPDF(caseNumber);
+
+            legalCase.setCaseNumber(extractCaseNumber(caseStr));
+            legalCase.setCourt(extractCourt(caseStr));
+            legalCase.setJudge(extractJudgeName(caseStr));
+            legalCase.setCourtReporter(extractCourtReporterName(caseStr));
+            legalCase.setDefendant(extractDefendantInitials(caseStr));
+            legalCase.setProtectedSurface(extractProtectedSurface(caseStr));
+
+            legalCase.setForestProperty(extractForestProperty(caseStr));
+            legalCase.setFinancialDamage(extractFinancialDamage(caseStr));
+            legalCase.setWoodVolume(extractWoodVolume(caseStr));
+            legalCase.setAwareness(extractAwareness(caseStr));
+            legalCase.setConvicted(isConvicted(caseStr));
+            legalCase.setNumberOfTrees(extractNumberOfTrees(caseStr));
+            legalCase.setTreeType(extractTreeType(caseStr));
+            legalCase.setReasonForProsecution(extractReasonForProsecution(caseStr));
+            legalCase.setCitedArticles(extractCitedArticles(caseStr));
+
+            if (legalCase.getConvicted()) {
+                legalCase.setConditionalSentence(isConditionalSentence(caseStr));
+                legalCase.setPrisonSentence(extractPrisonSentence(caseStr));
+                legalCase.setFinancialSentence(extractFinancialSentence(caseStr));
+                legalCase.setCommunitySentence(extractComunityServiceSentence(caseStr));
+                legalCase.setCitedArticles(extractCitedArticles(caseStr));
+            }else{
+                legalCase.setConditionalSentence(Boolean.FALSE);
+                legalCase.setPrisonSentence("0");
+                legalCase.setFinancialSentence(0.0);
+                legalCase.setCommunitySentence("0");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return legalCase;
+    }
 
     private String readPDF(String caseNumber) throws IOException {
         Resource resource = resourceLoader.getResource("classpath:cases/" + caseNumber + ".pdf");

@@ -19,9 +19,13 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatInputModule} from "@angular/material/input";
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
+import { AkomaNtosoCasesComponent } from './pages/akoma-ntoso-cases/akoma-ntoso-cases.component';
+import { AkomaNtosoLawComponent } from './pages/akoma-ntoso-law/akoma-ntoso-law.component';
+import { MatListModule } from '@angular/material/list';
+import { BoolToDaOrNePipe } from './pipes/bool-to-da-or-ne.pipe';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NotFoundComponent, NewCaseComponent],
+  declarations: [AppComponent, HomeComponent, NotFoundComponent, NewCaseComponent, AkomaNtosoCasesComponent, AkomaNtosoLawComponent, BoolToDaOrNePipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,9 +41,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatProgressSpinnerModule,
     MatInputModule,
     FormsModule,
-    HttpClientModule
-
-
+    HttpClientModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],

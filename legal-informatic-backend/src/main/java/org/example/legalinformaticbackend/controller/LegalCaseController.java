@@ -88,6 +88,16 @@ public class LegalCaseController {
 
         return ResponseEntity.ok(ret);
     }
+    @GetMapping("/preview-case-attributes/{caseName}")
+    public ResponseEntity<?> previewCaseAttributes(@PathVariable String caseName) throws IOException {
+        Resource resource = resourceResolver.getResource("classpath:cases/" + caseName + ".pdf");
+
+        String filePath = resource.getURI().toString();
+        int lastSlashIndex = filePath.lastIndexOf('/');
+        int lastDotIndex = filePath.lastIndexOf('.');
+        String caseNmbr = filePath.substring(lastSlashIndex + 1, lastDotIndex);
+        return ResponseEntity.ok(attributeExtractionService.attributePreview(caseNmbr));
+    }
 
     @GetMapping("/extract-case-attributes-from-pdf/{caseNumber}")
     public ResponseEntity<?> extractCaseAttributesFromPdf(@PathVariable String caseNumber) throws IOException {
@@ -97,12 +107,23 @@ public class LegalCaseController {
 
     @GetMapping("/cases-akoma-ntoso")
     public ResponseEntity<?> getCasesAkomaNtoso() throws IOException {
-        return null;
+        List<String> retVal = new ArrayList<>();
+        Resource[] resources = resourceResolver.getResources("classpath:akoma-ntoso/cases/*.html");
+        for (Resource res: resources) {
+            retVal.add(res.getFilename());
+        }
+        return ResponseEntity.ok()
+                .body(retVal);
     }
 
     @GetMapping("/cases-akoma-ntoso/{caseName}")
     public ResponseEntity<?> getCaseAkomaNtoso(@PathVariable String caseName) throws IOException {
-        return null;
+        Resource resource = resourceLoader.getResource("classpath:akoma-ntoso/cases/" + caseName);
+        Path path = Paths.get(resource.getURI());
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.APPLICATION_XHTML_XML)
+                .body(Files.readAllBytes(path));
     }
 
     @PostMapping("/recommend-case-solution")
