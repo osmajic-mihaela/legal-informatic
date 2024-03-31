@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd">
+	<act id="suma" name="Zakon o šumama">
+		<meta>
+			<identification source="#palmirani">
+				<FRBRWork>
+					<FRBRthis value="/akn/suma/!main" />
+					<FRBRuri value="/suma" />
+					<FRBRdate date="2021-03-31" name="Generation" />
+					<FRBRauthor href="#congress" as="#author" />
+					<FRBRcountry value="cg" />
+					<FRBRnumber value="3/20" />
+					<FRBRname value="zakonSume" />
+					<FRBRprescriptive value="true" />
+					<FRBRauthoritative value="true" />
+				</FRBRWork>
+				<FRBRExpression>
+					<FRBRdate date="2010-12-17" name="Generation" />
+					<FRBRauthor href="#palmirani" as="#editor" />
+					<FRBRlanguage language="cg" />
+				</FRBRExpression>
+				<FRBRManifestation>
+					<FRBRdate date="2010-12-17" name="Generation" />
+					<FRBRauthor href="#palmirani" as="#editor" />
+					<FRBRformat value="xml" />
+				</FRBRManifestation>
+			</identification>
+			<publication name="sl" date="2010-12-17" showAs="Službeni list Crne Gore" number="74/2010" />
+			<classification source="#palmirani">
+				<keyword value="suma" showAs="suma" dictionary="CG" />
+			</classification>
+			<references>
+				<TLCOrganization eId="sl" href="/akn/rs/ontology/organization/sg" showAs="Službeni list Crne Gore" />
+			</references>
+		</meta>
+		<body>
+			<heading>
+				Zakon o šumama
+			</heading>
+			<chapter eId="chp_1">
+				<num>I.</num>
+				<heading>OSNOVNE ODREDBE</heading>
+				<section eId="chp_1_sec_1">
+					<article eId="art_1">
+            <heading>Predmet</heading>
+						<num>Član 1</num>
+						<paragraph eId="art_1_para_1">
+              <content eId="art_1_para_1_content">
+                <p>Ovim zakonom uređuje se uzgoj, zaštita, očuvanje i unaprjeđenje šuma, planiranje, način i uslovi korišćenja šuma, izgradnja i održavanje šumskih puteva, monitoring šuma, kao i druga pitanja od značaja za šume, šumsko zemljište i šumarstvo.</p>
+              </content>
+						</paragraph>
+						<paragraph eId="art_1_para_2">
+              <content eId="art_1_para_2_content">
+                <p>Ovaj zakon primjenjuje se i na zaštitu, očuvanje i korišćenje šumskog drveća koje se nalazi van šume i šumskog zemljišta (u daljem tekstu: drveće van šume).</p>
+              </content>
+						</paragraph>
+					</article>
+          <article eId="art_2">
+            <heading>Opšti interes</heading>
+            <num>Član 2</num>
+            <paragraph eId="art_2_para_1">
+              <intro eId="art_2_para_1_intro">
+								<p>Šume i šumska zemljišta, kao dobra od opšteg interesa, uživaju posebnu zaštitu, koja se ostvaruje:</p>
+							</intro>
+              <point eId="art_2_para_1_point_1">
+                <content eId="art_2_para_1_point_1_content">
+                  <p>- trajnim očuvanjem i unaprjeđivanjem šuma i šumskih zemljišta i njihovih funkcija;</p>
+                </content>
+              </point>
+              <point eId="art_2_para_1_point_2">
+                <content eId="art_2_para_1_point_2_content">
+                  <p>- održivim i multifunkcionalnim gazdovanjem šumama;</p>
+                </content>
+              </point>
+              <point eId="art_2_para_1_point_3">
+                <content eId="art_2_para_1_point_3_content">
+                  <p>- očuvanjem i unaprjeđivanjem biološke i pejzažne raznovrsnosti šuma, kao i kvaliteta njihove životne sredine.</p>
+                </content>
+              </point>
+            </paragraph>
+          </article>
+          <article eId="art_3">
+            <heading>Definicija šuma, šumskog zemljišta, drveća van šume i goleti</heading>
+            <num>Član 3</num>
+            <paragraph eId="art_3_para_1">
+              <content eId="art_3_para_1_content">
+                <p>Šumom, u smislu ovog zakona, smatra se zemljište veće od 50 ari, koje je obraslo šumskim drvećem čiji je sklop krošanja iznad 10% površine zemljišta i visine dominantnih stabala iznad 5 m, odnosno drvećem koje je sposobno da u doba fiziološke zrelosti dostigne tu visinu.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_3_para_2">
+              <intro eId="art_3_para_2_intro">
+                <p>Šumskim zemljištem, u smislu ovog zakona, smatra se zemljište veće od 50 ari, koje je obraslo šumskim drvećem:</p>
+              </intro>
+              <point eId="art_3_para_2_point_1">
+                <content eId="art_3_para_2_point_1_content">
+                  <p>- visine iznad 5 m, odnosno drvećem koje je u doba fiziološke zrelosti sposobno da dostigne tu visinu i čiji je sklop krošanja 5-10% površine zemljišta;</p>
+                </content>
+              </point>
+              <point eId="art_3_para_2_point_2">
+                <content eId="art_3_para_2_point_2_content">
+                  <p>- koje nije sposobno da dostigne visinu iznad 5 m, odnosno koje je pokriveno kombinacijom drveća i niske šumske vegetacije, ako je obraslost veća od 10% površine zemljišta.</p>
+                </content>
+              </point>
+            </paragraph>
+            <paragraph eId="art_3_para_3">
+              <content eId="art_3_para_3_content">
+                <p>
+                  Goleti su obešumljena, potpuno gola ili zemljišta slabo obrasla šumskim drvećem, koja ne ispunjavaju uslove iz st. 
+                  <ref href="/suma#art_3_para_1">
+                    1
+                  </ref>
+                  i
+                  <ref href="/suma#art_3_para_2">
+                    2
+                  </ref>
+                  ovog člana.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_3_para_4">
+              <content eId="art_3_para_4_content">
+                <p>Šumom, odnosno šumskim zemljištem ne smatraju se: drvoredi i parkovi u naseljenim mjestima, šumski rasadnici, sjemenske plantaže i plantaže brzorastućih vrsta drveća na poljoprivrednom zemljištu.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_3_para_5">
+              <content eId="art_3_para_5_content">
+                <p>
+                  Drvećem van šume smatraju se pojedinačna stabla ili grupe stabala na zemljištu koja ne ispunjavaju uslove iz st. 
+                  <ref href="/suma#art_3_para_1">
+                    1
+                  </ref>
+                  i
+                  <ref href="/suma#art_3_para_2">
+                    2
+                  </ref>
+                  ovog člana.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_3_para_6">
+              <content eId="art_3_para_6_content">
+                <p>
+                  Listu šumskog drveća, odnosno ostale šumske vegetacije iz st. 
+                  <ref href="/suma#art_3_para_1">
+                    1
+                  </ref>
+                  ,
+                  <ref href="/suma#art_3_para_2">
+                    2
+                  </ref>
+                  i
+                  <ref href="/suma#art_3_para_3">
+                    3
+                  </ref>
+                  ovog člana utvrđuje organ državne uprave nadležan za šume (u daljem tekstu: Ministarstvo).
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_3_para_7">
+              <content eId="art_3_para_7_content">
+                <p>U slučaju sumnje ili spora da li se radi o šumi, šumskom zemljištu, drveću van šume ili goleti, odlučuje organ uprave nadležan za upravljanje i gazdovanje šumama (u daljem tekstu: nadležni organ uprave).</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_4">
+            <heading>Značenje izraza</heading>
+						<num>Član 4</num>
+            <paragraph eId="art_4_para_1">
+              <intro eId="art_4_para_1_intro">
+                <p>Pojedini izrazi upotrijebljeni u ovom zakonu imaju sljedeće značenje:</p>
+              </intro>
+              <point eId="art_4_para_1_point_1">
+                <num>1)</num>
+                <content eId="art_4_para_1_point_1_content">
+                  <p>korišćenje šuma je korišćenje drvnih šumskih proizvoda;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_2">
+                <num>2)</num>
+                <content eId="art_4_para_1_point_2_content">
+                  <p>održiv način gazdovanja šumama je obezbjeđivanje prirodnog načina obnavljanja i prirodne selekcije, podsticanje mješovite strukture sastojina koje su prilagođene stanišnim uslovima, obezbjeđivanje očuvanja trajne proizvodne sposobnosti šuma i unaprjeđenja šumskog fonda u pogledu kvantiteta i kvaliteta i povećavanja prinosa šuma, unaprjeđivanje vitalnosti i ekološke stabilnosti šuma, obezbjeđivanje očuvanja biološke raznovrsnosti šuma, šumskog zemljišta i vodnog režima, kao i drugih povoljnih uticaja koje ima šuma na životnu sredinu i ljude;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_3">
+                <num>3)</num>
+                <content eId="art_4_para_1_point_3_content">
+                  <p>multifunkcionalni način gazdovanja šumama je korišćenje šuma na održiv način u skladu sa proizvodnim, ekološkim i socijalnim funkcijama šuma;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_4">
+                <num>4)</num>
+                <content eId="art_4_para_1_point_4_content">
+                  <p>šumska infrastruktura su šumski putevi i mostovi, šumske vlake i objekti u šumama koji su u funkciji gazdovanja šumama;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_5">
+                <num>5)</num>
+                <content eId="art_4_para_1_point_5_content">
+                  <p>šumski putevi su izgrađena šumska saobraćajna infrastruktura koja je namijenjena prevozu šumskih sortimenata, odnosno gazdovanju šumama;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_6">
+                <num>6)</num>
+                <content eId="art_4_para_1_point_6_content">
+                  <p>šumska vlaka je izgrađena šumska infrastruktura namijenjena privlačenju i izvlačenju drvnih sortimenata do puta;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_7">
+                <num>7)</num>
+                <content eId="art_4_para_1_point_7_content">
+                  <p>sastojina je dio šume sa karakterističnim staništem i načinom nastanka, strukturom drveća po vrstama, starosti, razvojnim stadijumima i visinama, kao i načinom uzgoja, po čemu se jasno razlikuje od drugih sastojina;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_8">
+                <num>8)</num>
+                <content eId="art_4_para_1_point_8_content">
+                  <p>plantaža brzorastućih vrsta drveća je vještački podignuta sastojina sa ophodnjom kraćom od 40 godina;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_9">
+                <num>9)</num>
+                <content eId="art_4_para_1_point_9_content">
+                  <p>šumski proizvodi su drvni i nedrvni;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_10">
+                <num>10)</num>
+                <content eId="art_4_para_1_point_10_content">
+                  <p>drvni proizvodi su drvna biomasa, granje, kora i korijenje;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_11">
+                <num>11)</num>
+                <content eId="art_4_para_1_point_11_content">
+                  <p>nedrvni proizvodi su cvjetovi, sjeme, plodovi, smola, četine i lišće šumskog drveća i grmlje; trava, mahovina, paprat, šušanj, treset i humus; ljekovito, aromatično i jestivo bilje; šumsko voće i gljive;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_12">
+                <num>12)</num>
+                <content eId="art_4_para_1_point_12_content">
+                  <p>zaštita šuma je preduzimanje mjera za uspostavljanje šumskog reda (nakon sječe) i sprječavanje štetnih uticaja (biotičkih, abiotičkih i požara) na šume, kao i uklanjanje oštećenih i oboljelih stabala;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_13">
+                <num>13)</num>
+                <content eId="art_4_para_1_point_13_content">
+                  <p>sanitarna sječa je sječa kojom se uklanjaju oštećena, oboljela i suva stabla u cilju sprječavanja širenja štetnih uticaja;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_14">
+                <num>14)</num>
+                <content eId="art_4_para_1_point_14_content">
+                  <p>degradirana šuma je šuma koja je znatno izgubila kvalitet, vitalnost i sposobnost priraštanja i prirodnog obnavljanja;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_15">
+                <num>15)</num>
+                <content eId="art_4_para_1_point_15_content">
+                  <p>sanacija degradirane šume, odnosno sastojine je njena obnova sadnjom;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_16">
+                <num>16)</num>
+                <content eId="art_4_para_1_point_16_content">
+                  <p>njega šuma je sprovođenje uzgojnih mjera sječe i radova u šumskoj sastojini;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_17">
+                <num>17)</num>
+                <content eId="art_4_para_1_point_17_content">
+                  <p>obnova šuma je proces osnivanja novih sastojina na mjestu postojećih zrelih sastojina prirodnim podmlađivanjem ili popunjavanjem prirodnog podmlatka sadnjom;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_18">
+                <num>18)</num>
+                <content eId="art_4_para_1_point_18_content">
+                  <p>konverzija šuma je proces prevođenja niskih, odnosno izdanačkih šuma u visoke šume direktnim (sadnjom) ili indirektnim putem (njegom odnosno prirodnom obnovom);</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_19">
+                <num>19)</num>
+                <content eId="art_4_para_1_point_19_content">
+                  <p>biološka raznovrsnost je raznovrsnost živih organizama svih ekosistema, kao i raznovrsnost u okviru vrste, između vrsta i njihovih životnih zajednica;</p>
+                </content>
+              </point>
+              <point eId="art_4_para_1_point_20">
+                <num>20)</num>
+                <content eId="art_4_para_1_point_20_content">
+                  <p>biološka ravnoteža je optimalno stanje šuma, odnosno šumskog ekosistema u pogledu njegovog sastava, strukture i funkcije, kao i razvoja biljnih, životinjskih i drugih vrsta.</p>
+                </content>
+              </point>
+            </paragraph>
+          </article>
+				</section>
+			</chapter>
+      <chapter eId="chp_2">
+				<num>II.</num>
+				<heading>PRAVA I OBAVEZE VLASNIKA ŠUMA</heading>
+				<section eId="chp_2_sec_1">
+					<article eId="art_5">
+            <heading>Prava i obaveze vlasnika šuma</heading>
+            <num>Član 5</num>
+            <paragraph eId="art_5_para_1">
+              <content eId="art_5_para_1_content">
+                <p>Šume i šumsko zemljište, kao dobro od opšteg interesa, koriste se na način i pod uslovima utvrđenim zakonom.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_5_para_2">
+              <content eId="art_5_para_2_content">
+                <p>Šume, šumska zemljišta i drveće van šume mogu se koristiti samo na način kojim se obezbjeđuje njihova privredna, ekološka i socijalna funkcija u skladu sa zakonom.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_6">
+            <heading>Pravni režim korišćenja šuma</heading>
+            <num>Član 6</num>
+            <paragraph eId="art_6_para_1">
+              <content eId="art_6_para_1_content">
+                <p>Šumom, šumskim zemljištem, drvećem van šume i goletima u privatnoj svojini upravljaju i gazduju njihovi vlasnici u skladu sa zakonom.</p>
+              </content> 
+            </paragraph>
+            <paragraph eId="art_6_para_2">
+              <content eId="art_6_para_2_content">
+                <p>Šumom, šumskim zemljištem, drvećem van šume i goletima u državnoj svojini upravlja i gazduje nadležni organ uprave u skladu sa zakonom.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_6_para_3">
+              <content eId="art_6_para_3_content">
+                <p>
+                  Upravljanje iz stava 
+                  <ref href="/suma#art_6_para_2">
+                    2
+                  </ref>
+                  ovog člana obuhvata pripremu i odlučivanje u pogledu gazdovanja šumama i šumskim zemljištem u državnoj svojini, kao i monitoring i kontrolu nad gazdovanjem šumama u skladu sa zakonom.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_6_para_4">
+              <content eId="art_6_para_4_content">
+                <p>
+                  Gazdovanje šumama iz st. 
+                  <ref href="/suma#art_6_para_1">
+                      1
+                  </ref>
+                  i
+                  <ref href="/suma#art_6_para_2">
+                      2
+                  </ref>
+                  ovog člana obuhvata pošumljavanje, odnosno podizanje novih šuma, uzgoj (njegu, obnovu i konverziju) šuma, zaštitu, očuvanje i sanaciju šuma, korišćenje šuma (sječu, izradu, privlačenje, izvoz, iznošenje i druge vidove transporta drvnih sortimenata), korišćenje nedrvnih šumskih proizvoda, izgradnju i održavanje šumske infrastrukture, promet i prodaju šumskih proizvoda, kao i održavanje i unaprjeđivanje funkcija šuma.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_6_para_5">
+              <content eId="art_6_para_5_content">
+                <p>Šumom i šumskim zemljištem, kao ekosistemom, upravlja se i gazduje na održiv i multifunkcionalni način u skladu sa kriterijumima i indikatorima koje utvrđuje Ministarstvo.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_7">
+            <heading>Otuđivanje šuma i šumskog zemljišta u državnoj svojini</heading>
+            <num>Član 7</num>
+            <paragraph eId="art_7_para_1">
+              <intro eId="art_7_para_1_intro">
+                <p>Šuma, odnosno šumsko zemljište u državnoj svojini može se otuđiti samo na osnovu odluke Vlade, u slučaju ako se:</p>
+              </intro>
+              <point eId="art_7_para_1_point_1">
+                <content eId="art_7_para_1_point_1_content">
+                  <p>- nalazi na području koje je prostornim planom predviđeno za promjenu namjene zbog izgradnje objekata od javnog interesa;</p>
+                </content>
+              </point>
+              <point eId="art_7_para_1_point_2">
+                <content eId="art_7_para_1_point_2_content">
+                  <p>- radi o zamjeni parcela šuma, odnosno šumskog zemljišta u državnoj svojini sa privatnim u cilju objedinjavanja šume, odnosno šumskog zemljišta u državnoj svojini, pod uslovom da se vrijednost državnih šuma, odnosno šumskog zemljišta ne smanji.</p>
+                </content>
+              </point>
+            </paragraph>
+          </article>
+          <article eId="art_8">
+            <heading>Pravo službenosti</heading>
+            <num>Član 8</num>
+            <paragraph eId="art_8_para_1">
+              <content eId="art_8_para_1_content">
+                <p>Vlasnik, odnosno držalac zemljišta dužan je da omogući vlasniku ili korisniku šume ili šumskog zemljišta nesmetan pristup preko svog zemljišta, odnosno zemljišta kojeg koristi do šume, radi sječe i izvoza šumskih sortimenata.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_8_para_2">
+              <content eId="art_8_para_2_content">
+                <p>
+                  Za pristup iz stava 
+                  <ref href="/suma#art_8_para_1">
+                    1
+                  </ref>
+                  ovog člana vlasnik, odnosno korisnik šume dužan je da plati naknadu.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_8_para_3">
+              <content eId="art_8_para_3_content">
+                <p>
+                  Međusobna prava i obaveze iz stava 
+                  <ref href="/suma#art_8_para_1">
+                    1
+                  </ref>
+                  ovog člana utvrđuju se ugovorom.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_8_para_3">
+              <content eId="art_8_para_3_content">
+                <p>Ukoliko vlasnik, odnosno korisnik šume i vlasnik, odnosno držalac zemljišta ne postignu sporazum o vremenu, načinu i naknadi za korišćenje zemljišta, odlučuje nadležni sud.</p>
+              </content>
+            </paragraph>
+          </article>
+				</section>
+			</chapter>
+      <chapter eId="chp_3">
+				<num>III.</num>
+				<heading>INVENTURA ŠUMA I PLANIRANjE</heading>
+				<section eId="chp_3_sec_1">
+					<article eId="art_9">
+            <heading>Nacionalna inventura šuma</heading>
+            <num>Član 9</num>
+            <paragraph eId="art_9_para_1">
+              <content eId="art_9_para_1_content">
+                <p>Nacionalna inventura šuma vrši se periodično prikupljanjem podataka o stanju i promjenama na šumama i šumskom zemljištu.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_9_para_2">
+              <content eId="art_9_para_2_content">
+                <p>Nacionalna inventura šuma obavlja se radi izrade planskih dokumenata u šumarstvu i razmjene informacija u skladu sa zakonom.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_9_para_3">
+              <content eId="art_9_para_3_content">
+                <p>Nacionalnom inventurom šuma obuhvataju se šume i šumska zemljišta na teritoriji Crne Gore u odnosu na površine, tipove i strukturu šuma, drvne zalihe, prirast, izvršene sječe, biološku raznovrsnost i drugi podaci o šumama u skladu sa međunarodnim standardima.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_9_para_4">
+              <content eId="art_9_para_4_content">
+                <p>Nacionalnu inventuru šuma vrši nadležni organ uprave, po pravilu, svakih 10 godina.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_9_para_5">
+              <content eId="art_9_para_5_content">
+                <p>
+                  Način i metodologija vršenja nacionalne inventure šuma i bliži podaci iz stava 
+                  <ref href="/suma#art_9_para_3">
+                    3
+                  </ref>
+                  ovog člana utvrđuju se propisom Ministarstva.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_9_para_6">
+              <content eId="art_9_para_6_content">
+                <p>Ministarstvo na osnovu izvršene nacionalne inventure šuma sačinjava izvještaj o inventuri šuma koji dostavlja Vladi Crne Gore (u daljem tekstu: Vlada), najkasnije šest mjeseci po završetku nacionalne inventure šuma.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_9_para_7">
+              <content eId="art_9_para_7_content">
+                <p>
+                  Stručnu osnovu za izvještaj iz stava 
+                  <ref href="/suma#art_9_para_6">
+                    6
+                  </ref>
+                  ovog člana priprema nadležni organ uprave.
+                </p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_10">
+            <heading>Planski dokumenti u šumarstvu</heading>
+            <num>Član 10</num>
+            <paragraph eId="art_10_para_1">
+              <intro eId="art_10_para_1_intro">
+                <p>Planski dokumenti u šumarstvu su:</p>
+              </intro>
+              <point eId="art_10_para_1_point_1">
+                <num>1)</num>
+                <content eId="art_10_para_1_point_1_content">
+                  <p>nacionalna šumarska politika;</p>
+                </content>
+              </point>
+              <point eId="art_10_para_1_point_2">
+                <num>2)</num>
+                <content eId="art_10_para_1_point_2_content">
+                  <p>strategija sa planom razvoja šuma i šumarstva (u daljem tekstu: strategija);</p>
+                </content>
+              </point>
+              <point eId="art_10_para_1_point_3">
+                <num>3)</num>
+                <content eId="art_10_para_1_point_3_content">
+                  <p>plan razvoja šuma za šumsko područje (u daljem tekstu: plan razvoja šuma);</p>
+                </content>
+              </point>
+              <point eId="art_10_para_1_point_4">
+                <num>4)</num>
+                <content eId="art_10_para_1_point_4_content">
+                  <p>program gazdovanja šumama za gazdinsku jedinicu (u daljem tekstu: program gazdovanja šumama).</p>
+                </content>
+              </point>
+            </paragraph>
+            <paragraph eId="art_10_para_2">
+              <content eId="art_10_para_2_content">
+                <p>Za sprječavanje bespravnih aktivnosti u šumama Vlada može donijeti akcioni plan na period do pet godina u skladu sa zakonom.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_11">
+            <heading>Nacionalna šumarska politika</heading>
+            <num>Član 11</num>
+            <paragraph eId="art_11_para_1">
+              <content eId="art_11_para_1_content">
+                <p>Nacionalnom šumarskom politikom definišu se pravci razvoja i održivog gazdovanja šumama.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_11_para_2">
+             <content eId="art_11_para_2_content">
+                <p>Nacionalna šumarska politika i prostorni plan Crne Gore moraju biti usklađeni.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_11_para_3">
+              <content eId="art_11_para_3_content">
+                <p>Nacionalnu šumarsku politiku donosi Skupština Crne Gore, na period od 10 godina.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_11_para_4">
+              <content eId="art_11_para_4_content">
+                <p>Nacionalna šumarska politika bliže se razrađuje i sprovodi strategijom, planom razvoja šuma i programom gazdovanja šumama.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_12">
+            <heading>Strategija</heading>
+            <num>Član 12</num>
+            <paragraph eId="art_12_para_1">
+              <content eId="art_12_para_1_content">
+                <p>Strategijom se utvrđuju ciljevi i smjernice za razvoj šuma i šumarstva, u skladu sa nacionalnom šumarskom politikom, mjere za unaprjeđenje šuma, kao i orijentaciona finansijska sredstva za sprovođenje strategije i način njihovog obezbjeđivanja.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_12_para_2">
+              <content eId="art_12_para_2_content">
+                <p>Strategiju donosi Vlada, na period do 10 godina.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_13">
+            <heading>Plan razvoja šuma</heading>
+            <num>Član 13</num>
+            <paragraph eId="art_13_para_1">
+              <content eId="art_13_para_1_content">
+                <p>Planom razvoja šuma bliže se razrađuju ciljevi i smjernice gazdovanja šumama za šumsko područje utvrđeni strategijom i određuju gazdinske jedinice za to područje.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_13_para_2">
+              <content eId="art_13_para_2_content">
+                <p>Plan razvoja šuma sastoji se od tekstualnog i kartografskog prikaza.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_13_para_3">
+              <content eId="art_13_para_3_content">
+                <p>Tekstualni dio, naročito, sadrži: analizu stanja šuma i šumskog zemljišta, vrednovanje funkcija i namjenu šuma, ciljeve, kao i opšte smjernice i mjere za zaštitu, očuvanje, unaprjeđenje i korišćenje šuma.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_13_para_4">
+              <content eId="art_13_para_4_content">
+                <p>Plan razvoja šuma, uz prethodno pribavljeno mišljenje organa državne uprave nadležnih za zaštitu životne sredine i turizam i jedinice lokalne samouprave čije područje je obuhvaćeno planom, donosi Vlada, na period od 10 godina.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_14">
+            <heading>Program gazdovanja šumama</heading>
+            <num>Član 14</num>
+            <paragraph eId="art_14_para_1">
+              <content eId="art_14_para_1_content">
+                <p>Program gazdovanja šumama izrađuje se za gazdinsku jedinicu i njime se obuhvataju šume u državnoj i privatnoj svojini.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_14_para_2">
+              <content eId="art_14_para_2_content">
+                <p>Program gazdovanja šumama sastoji se od tekstualnog i kartografskog prikaza.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_14_para_3">
+              <intro eId="art_14_para_3_intro">
+                <p>Tekstualni dio, naročito, sadrži:</p>
+              </intro>
+              <point eId="art_14_para_3_point_1">
+                <content eId="art_14_para_3_point_1_content">
+                  <p>- podatke o stanju šuma;</p>
+                </content>
+              </point>
+              <point eId="art_14_para_3_point_2">
+                <content eId="art_14_para_3_point_2_content">
+                  <p>- analizu gazdovanja u prethodnom periodu;</p>
+                </content>
+              </point>
+              <point eId="art_14_para_3_point_3">
+                <content eId="art_14_para_3_point_3_content">
+                  <p>- ciljeve i smjernice za održivo upravljanje i gazdovanje i mjere za realizaciju programa.</p>
+                </content>
+              </point>
+            </paragraph>              
+            <paragraph eId="art_14_para_4">
+              <point eId="art_14_para_1_point_7">
+                <content eId="art_14_para_1_point_7_content">
+                  <p>Program gazdovanja šumama donosi nadležni organ uprave, uz saglasnost Ministarstva, po prethodno pribavljenom mišljenju organa državne uprave nadležnog za zaštitu životne sredine i udruženja vlasnika šuma koje su obuhvaćene programom gazdovanja šumama.</p>
+                </content>
+              </point>
+            </paragraph>              
+            <paragraph eId="art_14_para_5">
+              <content eId="art_14_para_5_content">
+                <p>Program gazdovanja šumama donosi se na period od 10 godina u skladu sa strategijom i planom razvoja šuma.</p>
+              </content>
+            </paragraph>              
+            <paragraph eId="art_14_para_6">
+              <content eId="art_14_para_6_content">
+                <p>
+                  Ukoliko se program gazdovanja šumama ne donese do isteka roka iz stava 
+                  <ref href="/suma#art_14_para_5">
+                    5
+                  </ref>
+                  ovog člana, šumama se može gazdovati na osnovu programa donesenog za prethodni period najduže godinu dana, uz saglasnost Ministarstva.
+                </p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_15">
+            <heading>Izvođački projekat</heading>
+            <num>Član 15</num>
+            <paragraph eId="art_15_para_1">
+              <content eId="art_15_para_1_content">
+                <p>Izvođački projekat se izrađuje za period od godinu dana u skladu sa programom gazdovanja šumama, na osnovu utvrđenog stanja šuma i izvršenog odabiranja, obilježavanja i evidentiranja stabala na terenu.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_15_para_2">
+              <content eId="art_15_para_2_content">
+                <p>Izvođački projekat, naročito, sadrži: mjere uzgoja, zaštite i korišćenja šuma i plan izgradnje šumske infrastrukture u okviru odjeljenja ili odsjeka za državne šume, odnosno za posjede ili parcele za šume u privatnoj svojini, sa uslovima, načinom sprovođenja i rokovima za izvršenje tih mjera.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_15_para_3">
+              <content eId="art_15_para_3_content">
+                <p>Izvođački projekat za šume u državnoj, odnosno za šume u privatnoj svojini izrađuje i donosi nadležni organ uprave.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_15_para_4">
+              <content eId="art_15_para_4_content">
+                <p>Izvođački projekat za šume u privatnoj svojini izrađuje se i donosi u obliku orijentacionog plana.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_15_para_5">
+              <content eId="art_15_para_5_content">
+                <p>
+                  Izvođački projekat iz st. 
+                  <ref href="/suma#art_15_para_1">
+                    1
+                  </ref>
+                  ,
+                  <ref href="/suma#art_15_para_2">
+                    2
+                  </ref>
+                  i
+                  <ref href="/suma#art_15_para_3">
+                    3
+                  </ref>
+                  ovog člana donosi se najkasnije do 15. decembra tekuće za narednu godinu.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_15_para_6">
+              <content eId="art_15_para_6_content">
+                <p>Nadležni organ uprave dužan je da u postupku izrade izvođačkog projekta ostvari saradnju sa korisnicima, odnosno vlasnicima šuma.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_15_para_7">
+              <content eId="art_15_para_7_content">
+                <p>
+                  Izvođački projekat iz stava 
+                  <ref href="/suma#art_15_para_4">
+                    4
+                  </ref>
+                  ovog člana je osnova za programsko budžetsko sufinansiranje šumskih radova privatnim vlasnicima šuma u skladu sa ovim zakonom.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_15_para_8">
+              <content eId="art_15_para_8_content">
+                <p>Sufinansiranje radova i mjera u privatnim šumama iz budžeta Crne Gore vrši se u skladu sa izvođačkim projektom na osnovu godišnjeg programa gazdovanja šumama.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_16">
+            <heading>Učešće javnosti u postupku donošenja planskih dokumenata u šumarstvu</heading>
+            <num>Član 16</num>
+            <paragraph eId="art_16_para_1">
+              <content eId="art_16_para_1_content">
+                <p>
+                  Nadležni organ uprave dužan je da objavi nacrte planskih dokumenata iz člana 
+                  <ref href="/suma#art_10">
+                    10
+                  </ref>
+                  stav 
+                  <ref href="/suma#art_10_para_1">
+                    1
+                  </ref>
+                  tač.
+                  <ref href="/suma#art_10_para_1_point_1">
+                    1
+                  </ref>
+                  , 
+                  <ref href="/suma#art_10_para_1_point_2">
+                    2
+                  </ref>
+                  i
+                  <ref href="/suma#art_10_para_1_point_3">
+                    3
+                  </ref>
+                  ovog zakona na svojoj internet stranici i obavijesti javnost o vremenu i mjestu održavanja javne rasprave i načinu dostavljanja mišljenja na planske dokumente.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_16_para_2">
+              <content eId="art_16_para_2_content">
+                <p>Obavještenje o vremenu i mjestu održavanja javne rasprave objavljuje se i u najmanje jednom dnevnom štampanom mediju koji se distribuira na cijeloj teritoriji Crne Gore.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_16_para_3">
+              <content eId="art_16_para_3_content">
+                <p>Javna rasprava traje najmanje 15 dana od dana objavljivanja nacrta planskih dokumenata.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_16_para_4">
+              <content eId="art_16_para_4_content">
+                <p>Javnu raspravu iz stava 1 ovog člana sprovodi nadležni organ uprave i sačinjava izvještaj o učešću lica, organa i organizacija na javnoj raspravi i rezultatima javne rasprave.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_17">
+            <heading>Izvještaj sa javne rasprave</heading>
+            <num>Član 17</num>
+            <paragraph eId="art_17_para_1">
+              <content eId="art_17_para_1_content">
+                <p>
+                  Izvještaj sa javne rasprave o nacrtu planskih dokumenata u šumarstvu sačinjava se u roku od 15 dana od dana završetka javne rasprave i, pored podataka iz člana 
+                  <ref href="/suma#art_16">
+                    16
+                  </ref>
+                  stav 
+                  <ref href="/suma#art_16_para_4">
+                    4
+                  </ref>
+                  ovog zakona, sadrži obrazloženje o prihvaćenim i neprihvaćenim sugestijama datim u postupku javne rasprave i dostavljenim mišljenjima.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_17_para_2">
+              <content eId="art_17_para_2_content">
+                <p>
+                  Izvještaj iz stava 
+                  <ref href="/suma#art_17_para_1">
+                    1
+                  </ref>
+                  ovog člana objavljuje se na internet stranici nadležnog organa uprave.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_17_para_3">
+              <content eId="art_17_para_3_content">
+                <p>
+                  Izvještaj iz stava 
+                  <ref href="/suma#art_17_para_1">
+                    1
+                  </ref>
+                  ovog člana je sastavni dio predloga planskog dokumenta.
+                </p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_18">
+            <heading>Usklađivanje i revizija strategije</heading>
+            <num>Član 18</num>
+            <paragraph eId="art_18_para_1">
+              <content eId="art_18_para_1_content">
+                <p>Strategija se usklađuje sa Prostornim planom Crne Gore i drugim strateškim dokumentima i reviduje u skladu sa promjenama i novim potrebama šuma i šumarstva.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_19">
+            <heading>Sprovođenje strategije</heading>
+            <num>Član 19</num>
+            <paragraph eId="art_19_para_1">
+              <content eId="art_19_para_1_content">
+                <p>
+                  Strategija se sprovodi na osnovu planskih dokumenata iz člana 
+                  <ref href="/suma#art_10">
+                    10
+                  </ref>
+                  stav 
+                  <ref href="/suma#art_10_para_1">
+                    1
+                  </ref>
+                  tač.
+                  <ref href="/suma#art_10_para_1_point_3">
+                    3
+                  </ref>
+                  i
+                  <ref href="/suma#art_10_para_1_point_4">
+                    4
+                  </ref>
+                  ovog zakona i godišnjeg programa gazdovanja šumama.
+                </p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_20">
+            <heading>Šumska područja</heading>
+            <num>Član 20</num>
+            <paragraph eId="art_20_para_1">
+              <content eId="art_20_para_1_content">
+                <p>U cilju racionalnog planiranja, održivog razvoja i gazdovanja šumama i šumskim zemljištima ustanovljavaju se šumska područja.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_20_para_2">
+              <content eId="art_20_para_2_content">
+                <p>Šumsko područje obuhvata sve šume, šumska zemljišta i goleti u granicama najmanje jedne jedinice lokalne samouprave.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_20_para_3">
+              <content eId="art_20_para_3_content">
+                <p>Šumska područja, na predlog Ministarstva, određuje Vlada.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_20_para_4">
+              <content eId="art_20_para_4_content">
+                <p>Šumska područja prostorno se dijele na gazdinske jedinice, bez obzira na vlasništvo šuma.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_21">
+            <heading>Gazdinske jedinice</heading>
+            <num>Član 21</num>
+            <paragraph eId="art_21_para_1">
+              <content eId="art_21_para_1_content">
+                <p>Površina gazdinske jedinice, po pravilu, obuhvata od 1.000 do 5.000 ha, u skladu sa prirodnim uslovima i reljefom terena, funkcijama i namjenom šuma, organizacionim potrebama, intenzitetom i ciljevima gazdovanja, kao i vlasničkom strukturom šuma.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_21_para_2">
+              <content eId="art_21_para_2_content">
+                <p>Gazdinske jedinice se dijele na manje prostorne jedinice: odjeljenja i odsjeke u državnoj svojini, a u privatnoj svojini na posjed, odnosno parcelu.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_21_para_3">
+              <content eId="art_21_para_3_content">
+                <p>Gazdinske jedinice određuju se planom razvoja šuma.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_22">
+            <heading>Izmjena planskih dokumenata u šumarstvu i način njihovog čuvanja</heading>
+            <num>Član 22</num>
+            <paragraph eId="art_22_para_1">
+              <content eId="art_22_para_1_content">
+                <p>Ukoliko se u periodu sprovođenja planskih dokumenata u šumarstvu bitno izmijene uslovi na kojima se zasnivaju planski dokumenti pristupa se njihovoj izmjeni, na način i po postupku propisanom za njihovo donošenje.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_22_para_2">
+              <content eId="art_22_para_2_content">
+                <p>
+                  Planski dokumenti iz člana 
+                  <ref href="/suma#art_10">
+                    10
+                  </ref>
+                  stav 
+                  <ref href="/suma#art_10_para_1">
+                    1
+                  </ref>
+                  ovog zakona izrađuju se najkasnije šest mjeseci prije isteka perioda za koji je donesen važeći planski dokument.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_22_para_3">
+              <content eId="art_22_para_3_content">
+                <p>
+                  Planska dokumentacija iz člana 
+                  <ref href="/suma#art_10">
+                    10
+                  </ref>
+                  ovog zakona čuva se trajno, u skladu sa zakonom.
+                </p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_23">
+            <heading>Izvještavanje o realizaciji planova</heading>
+            <num>Član 23</num>
+            <paragraph eId="art_23_para_1">
+              <content eId="art_23_para_1_content">
+                <p>Nadležni organ uprave dužan je da sačini izvještaj o realizaciji planskih dokumenata iz člana 
+                  <ref href="/suma#art_10">
+                    10
+                  </ref>
+                  stav
+                   <ref href="/suma#art_10_para_1">
+                    1
+                  </ref>
+                  ovog zakona i najkasnije do 31. marta tekuće za prethodnu godinu dostavi Ministarstvu.
+                </p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_23_para_2">
+              <content eId="art_23_para_2_content">
+                <p>
+                  Izvještaj iz stava 
+                  <ref href="/suma#art_23_para_1">
+                    1
+                  </ref>
+                  ovog člana Ministarstvo je dužno da dostavi Vladi do 30. aprila.
+                </p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_24">
+            <heading>Član 24</heading>
+            <paragraph eId="art_24_para_1">
+              <content eId="art_24_para_1_content">
+                <p>Propis o uslovima za formiranje šumskog područja, gazdinskih jedinica i nižih prostornih jedinica, načinu obilježavanja granica, bližem sadržaju i načinu izrade planova razvoja, programa gazdovanja šumama, izvođačkog projekta i godišnjeg programa gazdovanja šumama donosi Ministarstvo.</p>
+              </content>
+            </paragraph>
+          </article>
+          <article eId="art_25">
+            <heading>Informacioni sistem</heading>
+            <num>Član 25</num>
+            <paragraph eId="art_25_para_1">
+              <content eId="art_25_para_1_content">
+                <p>Radi obezbjeđenja neophodnih podataka i informacija o šumama, šumskim zemljištima i goletima uspostavlja se informacioni sistem za šume i šumarstvo Crne Gore (u daljem tekstu: informacioni sistem).</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_25_para_2">
+              <content eId="art_25_para_2_content">
+                <p>Informacioni sistem vodi nadležni organ uprave u elektronskoj formi.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_25_para_3">
+              <content eId="art_25_para_3_content">
+                <p>U informacioni sistem naročito se upisuju podaci o stanju i promjenama u ekosistemu šuma, podaci prikupljeni inventurom šuma, mreži šumske infrastrukture, izvršenim radovima u šumama i vlasnicima i korisnicima šuma.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_25_para_4">
+              <content eId="art_25_para_4_content">
+                <p>Pristup informacionom sistemu imaju Ministarstvo i organ državne uprave nadležan za informaciono društvo.</p>
+              </content>
+            </paragraph>
+            <paragraph eId="art_25_para_5">
+              <content eId="art_25_para_5_content">
+                <p>Bliža sadržina podataka koji se unose u informacioni sistem i način održavanja i korišćenja informacionog sistema utvrđuje se propisom koji donosi Ministarstvo, uz saglasnost organa državne uprave nadležnog za informaciono društvo.</p>
+              </content>
+            </paragraph>
+          </article>
+				</section>
+			</chapter>
+		</body>
+	</act>
+</akomaNtoso>

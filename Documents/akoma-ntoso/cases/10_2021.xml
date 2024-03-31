@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Rožajama
+					</FRBRauthor>
+					<FRBRdate date="2021-04-23">
+						2021-04-23
+					</FRBRdate>
+					<FRBRtitle>
+						K 10/2021
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Rozaje" showAs="Osnovni sud u Rožajama" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Rozaje" showAs="Osnovno državno tužilaštvo" />
+
+				<TLCPerson eId="mrajkovic" href="/ontology/person/mrajkovic" showAs="Milan Rajković" />
+				<TLCPerson eId="shadzic" href="/ontology/person/shadzic" showAs="Sajma Hadžić" />
+				<TLCPerson eId="rm" href="/ontology/person/rm" showAs="R.M." />	
+				<TLCPerson eId="idosljak" href="/ontology/person/idosljak" showAs="Ivan Došljak" />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					Osnovni sud u Rožajama
+				</organization>
+				, 
+				<party id="mrajkovic" refersTo="#mrajkovic" as="#judge">
+					sudija Milan Rajković
+				</party>
+				, uz učešće zapisničara 
+				<party id="shadzic" refersTo="#shadzic" as="#clerk">
+					Sajme Hadžić
+				</party>
+				, u krivičnom predmetu okrivljenog 
+				<party id="rm" refersTo="#rm" as="#defendant">
+					R.M.
+				</party>
+				, zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika Crne Gore
+				</ref>
+				, odlučujući po optužnom predlogu
+				<organization id="odt" refersTo="#odt">
+					Osnovnog državnog tužilaštva iz Rožaja
+				</organization>
+				, Kt.br.8/21 od 29.01.2021. godine, nakon glavnog i javnog pretresa održanog dana 19.04.2021. godine, u prisustvu državnog tužioca 
+				<organization id="odt" refersTo="#odt">
+					Odt-a u Rožajama 
+				</organization>
+				<party id="idosljak" refersTo="#idosljak" as="#plaintiff">
+					Ivana Došljaka
+				</party>
+				, i okrivljenog, dana 19.04.2021. godine, donio je i javno objavio P R E S U D U Okrivljeni
+				<party id="rm" refersTo="#rm" as="#defendant">
+					R.M.
+				</party>
+				,JMBG ... ,od oca H. i majke Z., rođene Ć., rođen ... godine u R., sa prebivalištem u R., selo G., državljanin C. G., razumije crnogorski jezik, a njegov maternji jezik je bosanski, nezaposlen, neoženjen, pismen, sa završenom osnovnom školom, siromašnog imovnog stanja, osuđivan presudom
+				<organization id="os" refersTo="#os">
+					Osnovnovnog suda u Rožajama 
+				</organization>
+				 K.br.187/08 zbog krivičnog djela teška tjelesna povreda iz 
+				<ref href="/krivicni#art_151">
+					čl.151 st.1 Krivičnog zakonika
+				</ref>
+				(kazna zatvora 60 dana), presudom
+				<organization id="os" refersTo="#os">
+					Osnovnovnog suda u Rožajama 
+				</organization>
+				K.br.144/10 zbog krivičnog djela ugrožavanje sigurnosti iz
+				<ref href="/krivicni#art_168">
+					čl.168 st.2 Krivičnog zakonika 
+				</ref>
+				 (kazna zatvora 45 dana) i presudom
+				<organization id="os" refersTo="#os">
+					Osnovnovnog suda u Rožajama 
+				</organization>
+				K.br.42/20 zbog krivičnog djela protivpravno zauzimanje zemljišta iz
+				<ref href="/krivicni#art_254">
+					čl.254 st.1 Krivičnog zakonika  
+				</ref>
+				 (novčana kazna). KRIV JE Što je dana 06.01.2021. godine, u mjestu zv."Homarski do", GJ Lovničke šume - Odjeljenje broj 50, Opština Rožaje, u uračunljivom stanju, svjestan svog djela čije je izvršenje htio, iako je znao da je njegovo djelo zabranjeno, radi krađe oborio u državnoj šumi 4 smrčeva stabla u ukupnoj kubnoj masi od 4,17 m3, pričinivši time štetu Crnoj Gori - Upravi za šume Pljevlja - PJ Rožaje u iznosu od 60,12 eura, - čime je izvršio krivično djelo šumska krađa iz 
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika Crne Gore 
+				</ref>
+				.
+			</p>
+			<conclusions>
+				<p>
+					Pa ga 
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					primjenom citiranih zakonskih odredbi, te odredbi
+					<ref href="/krivicni#art_3">
+						čl.3
+					</ref>
+					,
+					<ref href="/krivicni#art_4">
+						čl.4 st. 2
+					</ref>
+					,
+					<ref href="/krivicni#art_5">
+						čl.5
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_36">
+						čl.36
+					</ref>
+					,
+					<ref href="/krivicni#art_36a">
+						čl.36a
+					</ref>
+					,
+					<ref href="/krivicni#art_39">
+						čl.39
+					</ref>
+					i
+					<ref href="/krivicni#art_42">
+						čl.42 Krivičnog zakonika Crne Gore
+					</ref>
+					i odredbi 
+					<ref href="/postupak#art_226">
+						čl.226
+					</ref>
+					,
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					,
+					<ref href="/postupak#art_239">
+						čl.239
+					</ref>
+					i
+					<ref href="/postupak#art_374">
+						čl.374 Zakonika o krivičnom postupku
+					</ref>
+					O S U Đ U J E Na kaznu zatvora u trajanju od 60 (šezdeset) dana, koja kazna će se izvršiti tako što će je okrivljeni izdržavati u prostorijama u kojima stanuje, koje prostorije okrivljeni ne smije napuštati, osim u slučajevima propisanim zakonom kojim se uređuje izvršenje krivičnih sankcija, a ukoliko okrivljeni jednom u trajanju preko šest časova ili dva puta u trajanju do šest časova samovoljno napusti prostorije u kojima stanuje, sud će odrediti da ostatak kazne zatvora izdrži u Zavodu za izvršenje krivičnih sankcija i izriče mu novčanu kaznu u iznosu od 200,00 (dvije stotine) eura koju je okrivljeni dužan da plati u roku od dva mjeseca od dana pravosnažnosti presude na račun budžeta Crne Gore, a ukoliko novčanu kaznu ne plati u navedenom roku, ista će se zamijeniti kaznom zatvora, tako što će se za svakih započetih 25,00 eura (dvadesetpet eura) novčane kazne odrediti jedan dan zatvora, s tim da kazna zatvora ne može biti duža od šest mjeseci. Dosuđuje se Crnoj Gori - Upravi za šume imovinsko pravni zahtjev, te se obavezuje okrivljeni da u budžet Crne Gore uplati iznos od 60,12 eura u roku od 15 dana od dana pravosnažnosti ove presude. Dužan je okrivljeni da na ime troškova krivičnog postupka u budžet Crne Gore uplati iznos od 30,00 eura na ime sudskog paušala u roku od 15 dana od dana pravosnažnosti presude.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

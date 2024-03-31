@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Bijelom Polju
+					</FRBRauthor>
+					<FRBRdate date="2011-09-07">
+						2011-09-07
+					</FRBRdate>
+					<FRBRtitle>
+						K 321/2011
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="osbp" href="/ontology/organization/OsnovniSud.BijeloBolje" showAs="Osnovni sud u Bijelom Polju" />
+				<TLCOrganization eId="odtbp" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.BijeloPolje" showAs="Osnovno državno tužilaštvo iz Bijelog Polja" />
+
+				<TLCPerson eId="iadamovic" href="/ontology/person/iadamovic" showAs="Ivan Adamović" />
+				<TLCPerson eId="dboskovic" href="/ontology/person/dboskovic" showAs="Draginja Bošković" />
+				<TLCPerson eId="rs" href="/ontology/person/rs" showAs="R. Š." />	
+				<TLCPerson eId="vscepanovic" href="/ontology/person/dzvrko" showAs="Vesna Šćepanović" />
+				<TLCPerson eId="dr" href="/ontology/person/dr" showAs="Đ. R." />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="osbp" refersTo="#osbp">
+					OSNOVNI SUD U BIJELOM POLJU
+				</organization>
+				, po sudiji pojedincu
+				<party id="iadamovic" refersTo="#iadamovic" as="#judge">
+					Ivanu Adamoviću
+				</party>
+				, uz učešće namještenika suda
+				<party id="dboskovic" refersTo="#dboskovic" as="#clerk">
+					 Draginje Bošković
+				</party>
+				, kao zapisničara, u krivičnom predmetu protiv optuženog
+				<party id="rs" refersTo="#rs" as="#defendant">
+					R. Š.a
+				</party>
+				, iz Pali, opština Bijelo Polje, zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl. 324 st. 2
+				</ref>
+				u vezi
+				<ref href="/krivicni#art_324">
+					čl. 324 st. 1 Krivičnog zakonika
+				</ref>
+				,  po optužnom predlogu
+				<organization id="odtbp" refersTo="#odtbp">
+					Osnovnog državnog tužilaštva u Bijelom Polju
+				</organization>
+				 , KT. br. 800/09 od 25. 02. 2010. godine, nakon održanog glavnog i javnog pretresa, u prisustvu zamjenika
+				<organization id="odtbp" refersTo="#odtbp">
+					a ODT-a u Bijelom Polju
+				</organization>
+				<party id="vscepanovic" refersTo="#vscepanovic" as="#plaintiff">
+					Vesne Šćepanović
+				</party>
+				, okrivljenog i njegovog branioca
+				<party id="dr" refersTo="#dr" as="#lawyer">
+					adv. Đ.R.
+				</party>
+				, iz Mojkovca, a u odsustvu punomoćnika oštećene U. za Š.P.a, dana 07. 09. 2011. godine, donio je i javno objavio, PRESUDU Prema okrivljenom
+				<party id="rs" refersTo="#rs" as="#defendant">
+					R. Š.U
+				</party>
+				, od oca V., majke M., rođene V., rođen .... godine u Bijelom Polju, sa prebivalištem u mjestu Pali, opština Bijelo Polje, završio SSS, drž. CG, oženjen, otac jednog djeteta, lošeg imovnog stanja, osuđivan,
+			</p>
+			<conclusions>
+				<p>
+					ODBIJA SE OPTUŽBA -Da je: -dana 10. 10. 2009. godine u mjestu Slijepač Most, opština Bijelo Polje, u državnoj šumi zv. "S.", radi krađe oborio 8 hrastovih stabala ukupne drvne mase od 5,25m3, i time oštećenoj U. za Š.P.a pričinio štetu u iznosu od 444,20€. -čime bi izvršio krivično djelo šumska krađa iz
+					<ref href="/krivicni#art_324">
+						čl. 324 st. 1 Krivičnog zakonika
+					</ref>
+					, -usled odustanka zamjenika
+					<organization id="odtbp" refersTo="#odtbp">
+						ODT-a
+					</organization>
+					od optužbe. Troškovi krivičnog postupka padaju na teret budžetskih sredstava suda. Oštećena U.a za Š.P.a - PJ Bijelo Polje, radi ostvarivanja imovinsko-pravnog zahtjeva, upućuje se na parnični postupak.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

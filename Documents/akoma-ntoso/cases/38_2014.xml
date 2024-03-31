@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Cetinju
+					</FRBRauthor>
+					<FRBRdate date="2014-09-26">
+						2014-09-26
+					</FRBRdate>
+					<FRBRtitle>
+						K 38/2014
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Cetinje" showAs="Osnovni sud u Cetinju" />
+				<TLCOrganization eId="osp" href="/ontology/organization/OsnovniSud.Podgorica" showAs="Osnovni sud u Podgorici" />
+				<TLCOrganization eId="vs" href="/ontology/organization/VisiSud.Podgorica" showAs="Viši sud u Podgorici" />
+				<TLCOrganization eId="ost" href="/ontology/organization/OpstinskiSud.Titograd" showAs="Opštinski sud u Titogradu" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Cetinje" showAs="Osnovno državno tužilaštvo" />
+
+				<TLCPerson eId="mcupic" href="/ontology/person/mcupic" showAs="Marija Ćupić" />
+				<TLCPerson eId="amartinovic" href="/ontology/person/amartinovic" showAs="Aleksandra Martinović" />
+				<TLCPerson eId="kd" href="/ontology/person/kd" showAs="K.D." />	
+				<TLCPerson eId="kn" href="/ontology/person/kn" showAs="K.N." />	
+				<TLCPerson eId="nc" href="/ontology/person/nc" showAs="N.Č." />	
+				<TLCPerson eId="djm" href="/ontology/person/djm" showAs="Đ.M." />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					OSNOVNI SUD U CETINJU
+				</organization>
+				, kao prvostepeni krivični, po
+				<party id="mcupic" refersTo="#mcupic" as="#judge">
+					sudiji Mariji Ćupić
+				</party>
+				, kao sudiji pojedincu, uz sudjelovanje sudskog namještenikaa 
+				<party id="amartinovic" refersTo="#amartinovic" as="#clerk">
+					Martinović Aleksandre
+				</party>
+				, kao zapisničara, u krivičnom predmetu protiv okrivljenih
+				<party id="rm" refersTo="#rm" as="#defendant">
+					K. D. 
+				</party>
+				<party id="rm" refersTo="#rm" as="#defendant">
+					K. N.
+				</party>
+				 oba iz Danilovgrada zbog u saizvršilaštvu učinjenog krivičnog djela pustošenje šuma iz
+				<ref href="/krivicni#art_323">
+					člana 323 stav 1
+				</ref>
+				u vezi 
+				<ref href="/krivicni#art_23">
+					člana 23 stav 2 Krivičnog zakonika Crne Gore
+				</ref>
+				i
+				<party id="rm" refersTo="#rm" as="#defendant">
+					N. Č.
+				</party>
+				iz Podgorice, zbog izvršenja krivičnog djela pustošenje šuma podstrekavanjem iz 
+				<ref href="/krivicni#art_323">
+					člana 323 stav 1,
+				</ref>
+				u vezi
+				<ref href="/krivicni#art_24">
+					člana 24 stav 1 Krivičnog zakonika Crne Gore
+				</ref>
+				, rješavajući po Optužnom predlogu
+				<organization id="odt" refersTo="#odt">
+					ODT-a u Cetinju
+				</organization>
+				Kt. br. 188/13 od 19.02.2014. godine, nakon održanog glavnog i javnog pretresa, u prisustvu savjetnika 
+				<organization id="odt" refersTo="#odt">
+					Odt-a 
+				</organization>
+				<party id="djm" refersTo="#djm" as="#plaintiff">
+					Đ. M.
+				</party>
+				u odsustvu uredno pozvanih okrivljenih, donio je dana 26. 09. 2014. godine i javno objavio: P R E S U D U Okrivljeni: 1.
+				<party id="kd" refersTo="#kd" as="#defendant">
+					K. D.
+				</party>
+				,JMBG ... ,od oca A. i majke R., rođene G., rođen 01.01.19.. godine u Danilovgradu, gdje i prebiva, državljanin Crne Gore, nezaposlen, oženjen, otac troje maloljetne djece, pismen, sa završenom Osnovnom školom, neosuđivan, 2.
+				<party id="kn" refersTo="#kn" as="#defendant">
+					K. N. zvani „C.“
+				</party>
+				JMBG .... od oca M. i majke M. rođene R. rođen 08.06.19... godine u Danilovgradu, gdje i prebiva, državjanin Crne Gore, nezaposlen, neoženjen, pismen, sa završenom Srednjom školom, osuđivan presudom
+				<organization id="vs" refersTo="#vs">
+					Višeg suda u Podgorici 
+				</organization>
+				  K.br. 232/05, koja je postala pravosnažna dana 18.12.2007.godine, zbog krivičnog djela teško djelo protiv bezbjednosti javnog saobraćaja iz
+				<ref href="/krivicni#art_348">
+					člana 348 stav 2
+				</ref>
+				, u vezi
+				<ref href="/krivicni#art_339">
+					339 stav 1 KZ-a
+				</ref>
+				, na kaznu zatvora u trajanju od 2 (dvije) godine. 3.
+				<party id="nc" refersTo="#nc" as="#defendant">
+					N. Č.
+				</party>
+				od oca V. i majke V. rođene G. rođen 05.11.19... godine u Podgorici, gdje i prebiva, penzioner, oženjen, otac troje punoljetne djece, srednjeg imovnog stanja, osuđivan presudom
+				<organization id="ost" refersTo="#ost">
+					Opštinskog suda u Titogradu 
+				</organization>
+				K. br. 822/87, zbog izvršenja krivičnog djela
+				<ref href="/krivicni#art_185">
+					člana 185 stav 3
+				</ref>
+				u vezi
+				<ref href="/krivicni#art_185">
+					člana 185 stava 1, KZ-a
+				</ref>
+				, na kaznu zatvora u trajanju od 2 mjeseca, uslovno na 1 godinu, koja je postala pravosnažna dana 07. 06. 1989. godine, presudom
+				<organization id="osp" refersTo="#osp">
+					Osnovnog suda u Podgorici
+				</organization>
+				K. br. 03/10914 koja je postala pravosnažna dana 14. 02. 2008. godine zbog izvršenja krivičnog djela iz
+				<ref href="/krivicni#art_171">
+					člana 171 stav 4
+				</ref>
+				u vezi 
+				<ref href="/krivicni#art_164">
+					164 stav 4
+				</ref>
+				u vezi
+				<ref href="/krivicni#art_164">
+					164 stava 1 KZ-a
+				</ref>
+				, na kaznu zatvora u trajanju od 6 (šest) mjeseci, presudom
+				<organization id="osp" refersTo="#osp">
+					Osnovnog suda u Podgorici
+				</organization>
+				 K. br. 09/333 koja je postala pravosnažna dana 11. 02. 2010. godine zbog izvršenja krivičnog djela iz
+				<ref href="/krivicni#art_384">
+					člana 384 stav 3
+				</ref>
+				u vezi
+				<ref href="/krivicni#art_384">
+					člana 384 stava 1
+				</ref>
+				i
+				<ref href="/krivicni#art_384">
+					člana 384 stava 2 KZ-a
+				</ref>
+				, na kaznu zatvora u trajanju od 6 mjeseci, uslovno na 1 godinu, presudom
+				<organization id="osp" refersTo="#osp">
+					Osnovnog suda u Podgorici
+				</organization>
+				K. br. 09/463, koja je postala pravosnažna dana 17. 06. 2010. godine zbog izvršenja krivičnog djela teška tjelesna povreda iz
+				<ref href="/krivicni#art_151">
+					člana 151 stav 1 KZ-a
+				</ref>
+				, na kaznu zatvora u trajanu od 10 mjeseci, KRIVI SU Što su: Okrivljeni
+				<party id="kd" refersTo="#kd" as="#defendant">
+					K. D.
+				</party>
+				i
+				<party id="kn" refersTo="#kn" as="#defendant">
+					K. N.
+				</party>
+				u vremenskom periodu od polovine septembra mjeseca 2013.godine, do 24. septembra 2013.godine, u selu Donja Markovina-V. Do, opština Cetinje, u šumi vlasništvo oštećenog V. V. iz Nikšića, umišljajno podstreknuti od strane okrivljenog 
+				<party id="nc" refersTo="#nc" as="#defendant">
+					N. Č.
+				</party>
+				po prethodnom dogovoru i zajedno, protivno 
+				<ref href="/suma#art_53">
+					članu 53. Zakona o šumama
+				</ref>
+				, bez prethodno izvršenog odabiranja, obilježavanja i evidentiranja stabala za sječu, kao i bez prethodno izvršene kontrole inspektora šumarske struke, i protivno Odluci Direkcije za šume Crne Gore o visini naknade koju plaćaju vlasnici šuma br. 431 od 11.04.2003.godine, kojom je propisano da ista iznosi 2.00 eura po 1 metru kubnom ogrevnog drveta tvrdih lišćara, bez plaćanja propisanih naknada oštećenoj Upravi za šume Crne Gore, izvršili pustošenje šume, na način što su izvršili sječu velikog intenziteta u šumi vlasništvo oštećenog V. V. jer su motornom testerom, na površini od 2.669 m2, voljno oborili ukupno 142 hrastova stabla, u ukupnoj neto količini 23,60 m3, novčane vrijednosti od 617,78 eura, koje su odvezli do kuće okrivljenog
+				<party id="nc" refersTo="#nc" as="#defendant">
+					N. Č.
+				</party>
+				iako su okrivljeni znali da se stabla mogu sjeći samo nakon njihovog odabiranja, obilježavanja i evidentiranja, u skladu sa programom gazdovanja šumama i izvođačkim projektom, na osnovu prethodno donesenog rješenja Uprave za šume Crne Gore kojim se dozvoljava sječa, na koji način su okrivljeni oštećenom V. V. nanijeli imovinsku štetu u ukupnom novčanom iznosu od 617,78 eura, te Upravi za šume Crne Gore imovinsku štetu u ukupnom novčanom iznosu od 55,00 eura, - čime su 
+				<party id="kd" refersTo="#kd" as="#defendant">
+					K. D.
+				</party>
+				i
+				<party id="kn" refersTo="#kn" as="#defendant">
+					K. N.					
+				</party>
+				kao saizvršioci izvršili krivično djelo pustošenje šuma iz 
+				<ref href="/krivicni#art_323">
+					člana 323 stav 1
+				</ref>
+				, u vezi 
+				<ref href="/krivicni#art_23">
+					člana 23 stav 2 Krivičnog zakonika Crne Gore
+				</ref>
+				, a okrivljeni
+				<party id="nc" refersTo="#nc" as="#defendant">
+					N. Č.				
+				</party>
+				krivično djelo pustošenje šuma podstrekavanjem iz
+				<ref href="/krivicni#art_323">
+					člana 323 stav 1
+				</ref>
+				, u vezi
+				<ref href="/krivicni#art_24">
+					člana 24 stav 1 Krivičnog zakonika Crne Gore
+				</ref>
+				.
+			</p>
+			<conclusions>
+				<p>
+					Pa
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					okrivljenima
+					<party id="kd" refersTo="#kd" as="#defendant">
+						K. D.			
+					</party>
+					i
+					<party id="kn" refersTo="#kn" as="#defendant">
+						K. N.			
+					</party>
+					primjenom citiranih zakonskih propisa, te
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_5">
+						čl.5
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_42">
+						čl.42
+					</ref>
+					,
+					<ref href="/krivicni#art_52">
+						čl.52
+					</ref>
+					,
+					<ref href="/krivicni#art_53">
+						čl.53
+					</ref>
+					i
+					<ref href="/krivicni#art_54">
+						čl.54 KZ CG
+					</ref>
+					, te
+					<ref href="/postupak#art_226">
+						čl.226
+					</ref>
+					,
+					<ref href="/postupak#art_227">
+						čl.227
+					</ref>
+					,
+					<ref href="/postupak#art_228">
+						čl.228
+					</ref>
+					,
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					,
+					<ref href="/postupak#art_239">
+						čl.239
+					</ref>
+					i
+					<ref href="/postupak#art_374">
+						čl.374 Zakonika o krivičnom postupku
+					</ref>
+					, izriče USLOVNU OSUDU kojom im utvrđuje kazne zatvora u trajanju od po 30 (trideset) dana, i istovremeno određuje da se navedene kazne neće izvršiti, ukoliko okrivljeni u vremenskom periodu od 1 (jedne) godine, po pravosnažnosti presude, ne počine novo krivično djelo. - dok
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					okrivljenog
+					<party id="nc" refersTo="#nc" as="#defendant">
+						N. Č.		
+					</party>
+					na osnovu citirane zakonske odredbe te 
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_5">
+						čl.5
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_39">
+						čl.39
+					</ref>
+					i
+					<ref href="/krivicni#art_42">
+						čl.42 KZ-a Crne Gore
+					</ref>
+					, te
+					<ref href="/postupak#art_226">
+						čl.226
+					</ref>
+					,
+					<ref href="/postupak#art_227">
+						čl.227
+					</ref>
+					,
+					<ref href="/postupak#art_228">
+						čl.228
+					</ref>
+					,
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					,
+					<ref href="/postupak#art_239">
+						čl.239
+					</ref>
+					i
+					<ref href="/postupak#art_374">
+						čl.374 Zakonika o krivičnom postupku
+					</ref>
+					O S U Đ U J E Na novčanu kaznu u iznosu od 600,00 eura koju je dužan platiti u roku od 3 (tri) mjeseca po pravosnažnosti presude. Ako izrečenu novčanu kaznu ne plati u odredjenom roku 
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					će novčanu kaznu zamijeniti kaznom zatvora, tako što će za svakih započetih 25,00 eura, novčane kazne odrediti jedan dan kazne zatvora, s tim da kazna zatvora ne može biti duža od 6 (šest) mjeseci. Oštećenoj Upravi za šume se dosuđuje imovinskopravni zahtjev u cjelosti -55,00 eura koji iznos su okrivljeni obavezni solidarno naknaditi u roku od 15 dana po pravosnažnosti presude pod prijetnjom prinudnog izvršenja. Obavezuju se okrivljeni da na ime troškova krivičnog postupka, solidarno uplate iznos od 230,55 eura, te na ime paušala iznos od po 30,00 eura, u korist Budžeta Crne Gore, u roku od 15 dana po pravosnažnosti ove presude, pod prijetnjom prinudne naplate. 
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

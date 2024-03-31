@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Beranama
+					</FRBRauthor>
+					<FRBRdate date="2011-09-21">
+						2011-09-21
+					</FRBRdate>
+					<FRBRtitle>
+						K 146/2011
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Berane" showAs="Osnovni sud u Beranama" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Berane" showAs="Osnovno državno tužilaštvo u Beranama" />
+
+				<TLCPerson eId="akenjic" href="/ontology/person/akenjic" showAs="Ana Kenjić - Đukić" />
+				<TLCPerson eId="mobadovic" href="/ontology/person/mobadovic" showAs="Marina Obadović" />
+				<TLCPerson eId="dr" href="/ontology/person/dr" showAs="D. R." />	
+				<TLCPerson eId="mmagdelinic" href="/ontology/person/mmagdelinic" showAs="Miladin Magdelinić" />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					Osnovni sud u Beranama
+				</organization>
+				, kao prvostepeni krivični, po sudiji pojedincu
+				<party id="akenjic" refersTo="#akenjic" as="#judge">
+					Ani Kenjić - Đukić
+				</party>
+				, uz sudjelovanje
+				<party id="mmilanovic" refersTo="#mmilanovic" as="#clerk">
+					zapisničara Marine Obadović
+				</party>
+				, u krivičnom predmetu protiv okrivljenog
+				<party id="dr" refersTo="#dr" as="#defendant">
+					D. R.
+				</party>
+				, iz B., zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 KZ-a
+				</ref>
+				, po optužnom predlogu
+				<organization id="odt" refersTo="#odt">
+					Osnovnog državnog tužilaštva u Beranama
+				</organization>
+				Kt.br. 22/2011 od 19.04.2011. godine, nakon održanog glavnog javnog pretresa, u prisustvu Savjetnika
+				<organization id="odt" refersTo="#odt">
+					ODT-a
+				</organization>
+				<party id="mmagdelinic" refersTo="#mmagdelinic" as="#plaintiff">
+					Miladina Magdelinića
+				</party>
+				, okrivljenog i oštećenog S. R., donio je i javno objavio dana 21.09.2011. P R E S U D U Okrivljeni
+				<party id="dr" refersTo="#dr" as="#defendant">
+					D. R.
+				</party>
+				, JMBG …, od oca A. i majke D., rođene Đ., rodjen … godine u B., gdje je i stalno nastanjen u selu K., državljanin Crne Gore, nezaposlen, neoženjen, pismen, sa završenom OŠ, siromašnog imovnog stanja, osuđivan presudama 
+				<organization id="os" refersTo="#os">
+					Osnovnog suda u Beranama 
+				</organization>
+				K.br. … od 08.09.2006. godine, zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.2 KZ
+				</ref>
+				, na kaznu zatvora 6 mjeseci uslovno za jednu godinu i K. br. … od 10.11.2009. godine, zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.2 KZ
+				</ref>
+				, na kaznu zatvora u trajanju od 3 mjeseca i novčanu kaznu u iznosu od 200,00 eura, kaznu izdržao Kriv je : Što je: Dana 10.01.2011. godine, u privatnoj šumi vlasništvo oštećenog S. R., u mjestu "K." - K., Opština B., radi krađe oborio 2 (dva) hrastova stabla u ukupnoj količini 2,87 m3, čime je oštećenom S. R. pričinio štetu u iznosu od 110,00 eura, - čime je izvršio krivično djelo šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika
+				</ref>
+				.
+			</p>
+			<conclusions>
+				<p>
+					Pa ga 
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					 za izvršeno krivično djelo, na osnovu navedenog zakonskog propisa, te primjenom
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_36">
+						čl.36
+					</ref>
+					,
+					<ref href="/krivicni#art_39">
+						čl.39 st. 2 tač. 3
+					</ref>
+					i
+					<ref href="/krivicni#art_42">
+						čl.42 KZ
+					</ref>
+					, kao i primjenom
+					<ref href="/postupak#art_374">
+						čl. 374 ZKP
+					</ref>
+					, O S U Đ U J E Na novčanu kaznu u iznosu od 600,00 (šeststotina) eura, koju je dužan da plati u roku od 3 (tri) mjeseca, po pravosnažnosti presude. Ako osuđeni, ne plati novčanu kaznu, u ovom roku,
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					 će novčanu kaznu, zamijeniti kaznom zatvora, tako što će za svakih započetih 25,00 eura novčane kazne, odrediti jedan dan kazne zatvora i na kaznu zatvora u trajanju od 30 (trideset) dana. Okrivljeni se obavezuje, da plati sudu troškove krivičnog postupka u iznosu od 197,00 (jednastotinadevedestsedam) eura i paušal u iznosu od 30,00 ( trideset ) eura, u roku od 15 dana, po pravosnažnosti presude, pod prijetnjom prinudnog izvršenja. Okrivljeni se obavezuje, na osnovu
+					<ref href="/postupak#art_239">
+						čl. 239 st. 2 ZKP-a
+					</ref>
+					, da na ime imovinsko pravnog zahtjeva za naknadu štete, isplati oštećenom S. R., iz B., iznos od 110,00 eura, u roku od 15 dana, po pravosnažnosti presude.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

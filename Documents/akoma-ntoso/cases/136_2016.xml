@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Beranama
+					</FRBRauthor>
+					<FRBRdate date="2016-01-24">
+						2016-01-24
+					</FRBRdate>
+					<FRBRtitle>
+						K 136/2016
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Berane" showAs="Osnovni sud u Beranama" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Berane" showAs="Osnovno državno tužilaštvo u Beranama" />
+
+				<TLCPerson eId="aculafic" href="/ontology/person/aculafic" showAs="Aleksandar Ćulafić" />
+				<TLCPerson eId="mmilanovic" href="/ontology/person/mmilanovic" showAs="Milica Milanović" />
+				<TLCPerson eId="pm" href="/ontology/person/pm" showAs="P.M." />	
+				<TLCPerson eId="mbojovic" href="/ontology/person/mbojovic" showAs="Marko Bojović" />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					OSNOVNI SUD U BERANAMA
+				</organization>
+				, po sudiji pojedincu
+				<party id="aculafic" refersTo="#aculafic" as="#judge">
+					Aleksandaru Ćulafiću
+				</party>
+				, uz učešće samostalnog referenta
+				<party id="mmilanovic" refersTo="#mmilanovic" as="#clerk">
+					Milice Milanović, kao zapisničara
+				</party>
+				, u krivičnom predmetu protiv okrivljenog
+				<party id="pm" refersTo="#pm" as="#defendant">
+					P. M.
+				</party>
+				, iz B., zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.2
+				</ref>
+				u vezi 
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika Crne Gore
+				</ref>
+				, po optužnom predlogu
+				<organization id="odt" refersTo="#odt">
+					Osnovnog državnog tužilaštva u Beranama
+				</organization>
+				Kt.br. ..../16 od 09.09.2016. godine, nakon održanog glavnog i javnog pretresa, u prisustvu Državnog tužioca
+				<organization id="odt" refersTo="#odt">
+					ODT-a u Beranama
+				</organization>
+				<party id="mbojovic" refersTo="#mbojovic" as="#plaintiff">
+					Marka Bojovića
+				</party>
+				i okrivljenog , a u odsustvu oštećenog koga zastupa Zaštitnik imovinsko-pravnih interesa Crne Gore, dana 24.01.2017. godine, donio je i javno objavio P R E S U D U Okrivljeni
+				<party id="pm" refersTo="#pm" as="#defendant">
+					P. M.
+				</party>
+				, JMB .... od oca M. i majke D., rođene N., rođenog ...... godine, u B., sa prebivalištem u selu L., državljanin Crne Gore, pismen, nezaposlen, neoženjen, završio SSS, lošeg imovnog stanja, osuđivan presudom
+				<organization id="os" refersTo="#os">
+					Osnovnog suda u Beranama 
+				</organization>
+				K.br. .... koja je postala pravosnažna dana 06.08.2014. godine, po
+				<ref href="/krivicni#art_324">
+					čl.324 st.2
+				</ref>
+				u vezi 
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 KZCG
+				</ref>
+				, na kaznu zatvora u trajanju od 30 dana i novčanu kaznu u iznosu od 200,00 € i presudom K.br. .... koja je postala pravosnažna 20.04.2016. godine, po 
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 KZCG
+				</ref>
+				, na novčanu kaznu u iznosu od 800,00 €. Kriv je: Što je: -Dana 16.06.2016. godine u državnoj šumi, u mjestu "V. M." opština B., sposoban da shvati značaj svog djela i upravlja svojim postupcima i svjestan zabranjenosti svog djela čije je izvršenje htio, bez doznake i odobrenja radi krađe, oborio 6 čamovih stabala, u ukupnoj bruto masi od 19,06 m3, i tako oštećenoj Upravi za šume PJ B. pričinio štetu u iznosu od 1.305,56 €, -čime je izvršio krivično djelo šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.2
+				</ref>
+				u vezi 
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika Crne Gore
+				</ref>
+				,
+			</p>
+			<conclusions>
+				<p>
+					Pa ga 
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					 primjenom citiranih zakonskih propisa te
+					<ref href="/krivicni#art_2">
+						čl.2
+					</ref>
+					,
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_5">
+						čl.5
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_36">
+						čl.36
+					</ref>
+					,
+					<ref href="/krivicni#art_39">
+						čl.39
+					</ref>
+					,
+					<ref href="/krivicni#art_42">
+						čl.42
+					</ref>
+					<ref href="/krivicni#art_45">
+						čl.45
+					</ref>
+					i
+					<ref href="/krivicni#art_46">
+						čl.46 Krivičnog zakonika Crne Gore
+					</ref>
+					i
+					<ref href="/postupak#art_226">
+						čl.226
+					</ref>
+					,
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					,
+					<ref href="/postupak#art_239">
+						čl.239 st. 2
+					</ref>
+					i
+					<ref href="/postupak#art_374">
+						čl.374 ZKP-a
+					</ref>
+					O S U Đ U J E Na kaznu zatvora u trajanju od 60 /šesdeset/ dana, kao glavnu kaznu i na novčanu kaznu u iznosu od 200,00 (dvesta eura) €, kao sporednu kaznu, koju je dužan da plati u roku od 3 (tri) mjeseca po pravosnažnosti presude, a ako osuđeni ne plati novčanu kaznu u određenom roku
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					 će novčanu kaznu zamijeniti kaznom zatvora, tako što će za svakih započetih 25,00 € novačne kazne odrediti jedan dan zatvora, a ako osuđeni plati samo dio novčane kazne 
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+					 će ostatak novčane kazne srazmjerno zamijeniti kaznom zatvora, pa ako osuđeni isplati ostatak novčane kazne, izvršenje kazne zatvora će se obustaviti. Okrivljeni se obavezuje da plati na ime troškova krivičnog postupka iznos od ....,00 €, kao i na ime paušala plati iznos od 30,00 € koje iznose će uplatiti na žiro račun Državnog trezora Crne Gore br. 907-83001-19, u roku od 15 dana od dana pravosnažnosti presude, pod prijetnjom posledica prinudnog izvršenja. Radi ostvarivanja imovinsko-pravnog zahtjeva zakonski zastupnik oštećenog Zaštitnik imovinsko-pravnih interesa Crne Gore se upućuje na parnični postupak.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

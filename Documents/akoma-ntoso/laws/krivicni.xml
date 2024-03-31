@@ -1,0 +1,1643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd">
+	<act id="krivicni" name="Krivicni zakonik Crne Gore">
+		<meta>
+			<identification source="#palmirani">
+				<FRBRWork>
+					<FRBRthis value="/akn/krivicni/!main" />
+					<FRBRuri value="/krivicni" />
+					<FRBRdate date="2021-03-31" name="Generation" />
+					<FRBRauthor href="#congress" as="#author" />
+					<FRBRcountry value="cg" />
+					<FRBRnumber value="3/20" />
+					<FRBRname value="krivicniZakonikCrneGore" />
+					<FRBRprescriptive value="true" />
+					<FRBRauthoritative value="true" />
+				</FRBRWork>
+				<FRBRExpression>
+					<FRBRdate date="2021-03-31" name="Generation" />
+					<FRBRauthor href="#palmirani" as="#editor" />
+					<FRBRlanguage language="cg" />
+				</FRBRExpression>
+				<FRBRManifestation>
+					<FRBRdate date="2021-03-31" name="Generation" />
+					<FRBRauthor href="#palmirani" as="#editor" />
+					<FRBRformat value="xml" />
+				</FRBRManifestation>
+			</identification>
+			<publication name="sl" date="2008-08-11" showAs="Službeni list Crne Gore" number="76/2008" />
+			<classification source="#palmirani">
+				<keyword value="krivicni" showAs="Krivicni" dictionary="CG" />
+			</classification>
+			<references>
+				<TLCOrganization eId="sl" href="/akn/rs/ontology/organization/sg" showAs="Službeni list Crne Gore" />
+			</references>
+		</meta>
+		<body>
+			<heading>
+				Krivični zakonik Crne Gore
+			</heading>
+			<chapter eId="chp_1">
+				<num>
+					I.
+				</num>
+				<heading>
+					OSNOVNE ODREDBE
+				</heading>
+				<section eId="chp_1_sec_1">
+					<article eId="art_1">
+						<heading>
+							Osnov i granice krivičnopravne prinude
+						</heading>
+						<num>
+							Član 1
+						</num>
+						<paragraph eId="art_1_para_1">
+							<content eId="art_1_para_1_content">
+								<p>
+									Zaštita čovjeka i drugih osnovnih društvenih vrijednosti predstavlja osnov i granice za određivanje krivičnih djela, propisivanje krivičnih sankcija i njihovu primjenu, u mjeri u kojoj je to nužno za suzbijanje tih djela.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_2">
+						<heading>
+							Zakonitost u određivanju krivičnih djela i propisivanju krivičnih sankcija
+						</heading>
+						<num>
+							Član 2
+						</num>
+						<paragraph eId="art_2_para_1">
+							<content eId="art_2_para_1_content">
+								<p>
+									Kazna ili druga krivična sankcija može se izreći samo za djelo koje je, prije nego što je učinjeno, bilo zakonom određeno kao krivično djelo i za koje je bila zakonom propisana kazna.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_3">
+						<heading>
+							Nema kazne bez krivice
+						</heading>
+						<num>
+							Član 3
+						</num>
+						<paragraph eId="art_3_para_1">
+							<content eId="art_3_para_1_content">
+								<p>
+									Kazna i mjere upozorenja mogu se izreći samo učiniocu koji je kriv za učinjeno krivično djelo.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_4">
+						<heading>
+							Krivične sankcije i njihova opšta svrha
+						</heading>
+						<num>
+							Član 4
+						</num>
+						<paragraph eId="art_4_para_1">
+							<content eId="art_4_para_1_content">
+								<p>
+									Krivične sankcije su: kazne, mjere upozorenja, mjere bezbjednosti i vaspitne mjere.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_4_para_2">
+							<content eId="art_4_para_2_content">
+								<p>
+									Opšta svrha propisivanja i izricanja krivičnih sankcija je suzbijanje djela kojima se povređuju ili ugrožavaju vrijednosti zaštićene krivičnim zakonodavstvom.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+				</section>
+			</chapter>
+			<chapter eId="chp_25">
+				<num>
+					XXV.
+				</num>
+				<heading>
+					KRIVIČNA DJELA PROTIV ŽIVOTNE SREDINE I UREĐENjA PROSTORA
+				</heading>
+				<section eId="chp_25_sec_1">
+					<article eId="art_303">
+						<heading>
+							Zagađenje životne sredine
+						</heading>
+						<num>
+							Član 303
+						</num>
+						<paragraph eId="art_303_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_303_para_1_content">
+								<p>
+									Ko kršeći propise o zaštiti, očuvanju i unaprjeđenju životne sredine ispusti, unese ili odloži određenu količinu materije ili jonizujućeg zračenja u vazduh, vodu ili zemljište kojom izazove opasnost za život, tijelo ili zdravlje ljudi ili opasnost od nastupanja znatne štete u odnosu na kvalitet vazduha, vode ili zemljišta ili za životinjski ili biljni svijet, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_303_para_2_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_303_para_1">
+										1
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_303_para_3_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_303_para_1">
+										1
+									</ref>
+									ovog člana prouzrokovalo znatnu štetu u odnosu na kvalitet vazduha, vode ili zemljišta ili uništenje ili znatno oštećenje životinjskog ili biljnog svijeta, učinilac će se kazniti zatvorom od jedne do osam godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_303_para_4_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_303_para_3">
+										3
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti zatvorom od tri mjeseca do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303_para_5">
+							<num>
+								(5)
+							</num>
+							<content eId="art_303_para_5_content">
+								<p>
+									Ako je usljed djela iz stava
+									<ref href="/krivicni#art_303_para_1">
+										1
+									</ref>
+									ovog člana nastupila teška tjelesna povreda ili teško narušavanje zdravlja jednog ili više lica, učinilac će se kazniti zatvorom od dvije do deset godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303_para_6">
+							<num>
+								(6)
+							</num>
+							<content eId="art_303_para_6_content">
+								<p>
+									Ako je usljed djela iz stava
+									<ref href="/krivicni#art_303_para_1">
+										1
+									</ref>
+									ovog člana nastupila smrt jednog ili više lica, učinilac će se kazniti zatvorom od tri do dvanaest godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303_para_7">
+							<num>
+								(7)
+							</num>
+							<content eId="art_303_para_7_content">
+								<p>
+									Ako izrekne uslovnu osudu za djela iz st.
+									<ref href="/krivicni#art_303_para_1">
+										1
+									</ref>
+									do
+									<ref href="/krivicni#art_303_para_4">
+										4
+									</ref>
+									ovog člana, sud može odrediti obavezu učiniocu da u određenom roku preduzme određene propisane mjere zaštite, očuvanja i unaprjeđenja životne sredine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_303a">
+						<heading>
+							Zagađenje životne sredine otpadom
+						</heading>
+						<num>
+							Član 303a
+						</num>
+						<paragraph eId="art_303a_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_303a_para_1_content">
+								<p>
+									Ko sakupljanjem, prevozom, preradom, odlaganjem ili odstranjivanjem otpada izazove opasnost za život, tijelo ili zdravlje ljudi ili opasnost od nastupanja znatne štete u odnosu na kvalitet vazduha, vode ili zemljišta ili za životinjski ili biljni svijet, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303a_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_303a_para_2_content">
+								<p>
+									Ko djelo iz stava
+									<ref href="/krivicni#art_303a_para_1">
+										1
+									</ref>
+									ovog člana učini vršeći nadzor nad djelatnostima prikupljanja, prevoza, prerade, odlaganja ili odstranjivanja otpada ili vršeći naknadno održavanje mjesta za odlaganje otpada ili trgovinom otpadom ili organizovanjem prerade ili odstranjivanja otpada u tuđe ime, kazniće se zatvorom od tri mjeseca do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303a_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_303a_para_3_content">
+								<p>
+									Ako je djelo iz st.
+									<ref href="/krivicni#art_303a_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_303a_para_2">
+										2
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303a_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_303a_para_4_content">
+								<p>
+									Ako je djelo iz st.
+									<ref href="/krivicni#art_303a_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_303a_para_2">
+										2
+									</ref>
+									ovog člana prouzrokovalo znatnu štetu u odnosu na kvalitet vazduha, vode ili zemljišta ili uništenje ili znatno oštećenje životinjskog ili biljnog svijeta, učinilac će se kazniti zatvorom od jedne do osam godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303a_para_5">
+							<num>
+								(5)
+							</num>
+							<content eId="art_303a_para_5_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_303a_para_4">
+										4
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti zatvorom od tri mjeseca do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303a_para_6">
+							<num>
+								(6)
+							</num>
+							<content eId="art_303a_para_6_content">
+								<p>
+									Ako je usljed djela iz st.
+									<ref href="/krivicni#art_303a_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_303a_para_2">
+										2
+									</ref>
+									ovog člana nastupila teška tjelesna povreda ili teško narušavanje zdravlja jednog ili više lica, učinilac će se kazniti zatvorom od dvije do deset godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_303a_para_7">
+							<num>
+								(7)
+							</num>
+							<content eId="art_303a_para_7_content">
+								<p>
+									Ako je usljed djela iz st.
+									<ref href="/krivicni#art_303a_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_303a_para_2">
+										2
+									</ref>
+									ovog člana nastupila smrt jednog ili više lica, učinilac će se kazniti zatvorom od tri do dvanaest godina.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_303b">
+						<heading>
+							Oštećenje ozonskog omotača
+						</heading>
+						<num>
+							Član 303b
+						</num>
+						<paragraph eId="art_303b_para_1">
+							<content eId="art_303b_para_1_content">
+								<p>
+									Ko proizvodi ili protivno propisima uvozi, izvozi, stavlja u promet ili koristi materije koje oštećuju ozonski omotač, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_304">
+						<heading>
+							Nepreduzimanje mjera zaštite životne sredine
+						</heading>
+						<num>
+							Član 304
+						</num>
+						<paragraph eId="art_304_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_304_para_1_content">
+								<p>
+									Lice odgovorno za preduzimanje mjera zaštite, očuvanja i unapređenja životne sredine koje ne preduzme propisane mjere zaštite životne sredine, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_304_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_304_para_2_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_304_para_1">
+										1
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do šest mjeseci.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_304_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_304_para_3_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_304_para_1">
+										1
+									</ref>
+									ovog člana prouzrokovalo znatnu štetu u odnosu na kvalitet vazduha, vode ili zemljišta ili uništenje ili znatno oštećenje životinjskog ili biljnog svijeta, učinilac će se kazniti zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_304_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_304_para_4_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_304_para_3">
+										3
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_304_para_5">
+							<num>
+								(5)
+							</num>
+							<content eId="art_304_para_5_content">
+								<p>
+									Ako izrekne uslovnu osudu za djela iz st.
+									<ref href="/krivicni#art_304_para_1">
+										1
+									</ref>
+									do
+									<ref href="/krivicni#art_304_para_4">
+										4
+									</ref>
+									ovog člana, sud može odrediti obavezu učiniocu da u određenom roku preduzme određene propisane mjere zaštite, očuvanja i unaprjeđenja životne sredine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_305">
+						<heading>
+							Protivpravna izgradnja, stavljanje u pogon i rad objekata i postrojenja koja zagađuju životnu sredinu
+						</heading>
+						<num>
+							Član 305
+						</num>
+						<paragraph eId="art_305_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_305_para_1_content">
+								<p>
+									Službeno ili odgovorno lice koje protivno propisima o zaštiti, očuvanju i unaprjeđenju životne sredine dozvoli izgradnju, stavljanje u pogon, upotrebu ili rad objekta ili postrojenja u kojem se obavlja opasna djelatnost ili u kojem se skladište ili koriste opasne materije ili preparati i time izvan tog objekta ili postrojenja izazove opasnost za život, tijelo ili zdravlje ljudi ili opasnost od nastupanja znatne štete u odnosu na kvalitet vazduha, vode ili zemljišta ili za životinjski ili biljni svijet, kazniće se zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_305_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_305_para_2_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_305_para_1">
+										1
+									</ref>
+									ovog člana prouzrokovalo znatnu štetu u odnosu na kvalitet vazduha, vode ili zemljišta ili uništenje ili znatno oštećenje životinjskog ili biljnog svijeta, učinilac će se kazniti zatvorom od jedne do osam godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_305_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_305_para_3_content">
+								<p>
+									Ako je usljed djela iz stava
+									<ref href="/krivicni#art_305_para_1">
+										1
+									</ref>
+									ovog člana nastupila teška tjelesna povreda ili teško narušavanje zdravlja jednog ili više lica, učinilac će se kazniti zatvorom od jedne do deset godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_305_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_305_para_4_content">
+								<p>
+									Ako je usljed djela iz stava
+									<ref href="/krivicni#art_305_para_1">
+										1
+									</ref>
+									ovog člana nastupila smrt jednog ili više lica, učinilac će se kazniti zatvorom od dvije do dvanaest godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_305_para_5">
+							<num>
+								(5)
+							</num>
+							<content eId="art_305_para_5_content">
+								<p>
+									Ako izrekne uslovnu osudu za djela iz st.
+									<ref href="/krivicni#art_305_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_305_para_2">
+										2
+									</ref>
+									ovog člana, sud može odrediti obavezu učiniocu da u određenom roku preduzme određene propisane mjere zaštite, očuvanja i unaprjeđenja životne sredine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_306">
+						<heading>
+							Oštećenje objekata i uređaja za zaštitu životne sredine
+						</heading>
+						<num>
+							Član 306
+						</num>
+						<paragraph eId="art_306_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_306_para_1_content">
+								<p>
+									Ko ošteti, uništi, ukloni ili na drugi način učini neupotrebljivim objekte ili uređaje za zaštitu životne sredine, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_306_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_306_para_2_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_306_para_1">
+										1
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_306_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_306_para_3_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_306_para_1">
+										1
+									</ref>
+									ovog člana prouzrokovalo znatnu štetu u odnosu na kvalitet vazduha, vode ili zemljišta ili uništenje ili znatno oštećenje životinjskog ili biljnog svijeta, učinilac će se kazniti zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_306_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_306_para_4_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_306_para_3">
+										3
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_306_para_5">
+							<num>
+								(5)
+							</num>
+							<content eId="art_306_para_5_content">
+								<p>
+									Ako izrekne uslovnu osudu za djela iz st.
+									<ref href="/krivicni#art_306_para_1">
+										1
+									</ref>
+									do
+									<ref href="/krivicni#art_306_para_4">
+										4
+									</ref>
+									ovog člana, sud može odrediti obavezu učiniocu da u određenom roku preduzme određene propisane mjere zaštite, očuvanja i unaprjeđenja životne sredine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_307">
+						<heading>
+							Oštećenje životne sredine
+						</heading>
+						<num>
+							Član 307
+						</num>
+						<paragraph eId="art_307_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_307_para_1_content">
+								<p>
+									Ko kršeći propise, korišćenjem prirodnih bogatstava, izgradnjom objekata, izvođenjem kakvih radova ili na drugi način izazove oštećenje životne sredine u većoj mjeri ili na širem prostoru, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_307_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_307_para_2_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_307_para_1">
+										1
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_307_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_307_para_3_content">
+								<p>
+									Ako je usljed djela iz stava
+									<ref href="/krivicni#art_307_para_1">
+										1
+									</ref>
+									ovog člana došlo do uništenja ili oštećenja životinjskog ili biljnog svijeta velikih razmjera ili do zagađenja životne sredine u toj mjeri da su za njegovo otklanjanje potrebni duže vrijeme ili veliki troškovi, učinilac će se kazniti zatvorom od jedne do osam godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_307_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_307_para_4_content">
+								<p>
+									Ako je usljed djela iz stava
+									<ref href="/krivicni#art_307_para_2">
+										2
+									</ref>
+									ovog člana došlo do uništenja ili oštećenja životinjskog ili biljnog svijeta velikih razmjera ili do zagađenja životne sredine u toj mjeri da su za njegovo otklanjanje potrebni duže vrijeme ili veliki troškovi, učinilac će se kazniti zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_307_para_5">
+							<num>
+								(5)
+							</num>
+							<content eId="art_307_para_5_content">
+								<p>
+									Ako izrekne uslovnu osudu za djela iz st.
+									<ref href="/krivicni#art_307_para_1">
+										1
+									</ref>
+									do
+									<ref href="/krivicni#art_307_para_4">
+										4
+									</ref>
+									ovog člana, sud može odrediti obavezu učiniocu da u određenom roku preduzme određene propisane mjere zaštite, očuvanja i unapređenja životne sredine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_307a">
+						<heading>
+							Zloupotreba genetički modifikovanih organizama
+						</heading>
+						<num>
+							Član 307a
+						</num>
+						<paragraph eId="art_307a_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_307a_para_1_content">
+								<p>
+									Ko kršeći propise proizvodi radi prodaje, prodaje ili stavlja u promet proizvode koji sadrže, sastoje se ili su dobijeni od genetički modifikovanih organizama i time ugrozi životnu sredinu, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_307a_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_307a_para_2_content">
+								<p>
+									Ko otpad koji sadrži, sastoji se ili je dobijen od genetički modifikovanih organizama ne uništava na način da genetički modifikovani organizam više ne bude sposoban za reprodukciju ili prenos genetičkog materijala na druge organizme, kazniće se novčanom kaznom ili kaznom zatvora do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_308">
+						<heading>
+							Uništenje biljaka
+						</heading>
+						<num>
+							Član 308
+						</num>
+						<paragraph eId="art_308_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_308_para_1_content">
+								<p>
+									Ko kršeći propise uništava ili oštećuje biljke u većoj mjeri ili na širem prostoru, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_308_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_308_para_2_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_308_para_1">
+										1
+									</ref>
+									ovog člana učinjeno prema posebno zaštićenim biljnim vrstama, učinilac će se kazniti zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_308_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_308_para_3_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_308_para_1">
+										1
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do šest mjeseci.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_308_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_308_para_4_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_308_para_2">
+										2
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_308_para_5">
+							<num>
+								(5)
+							</num>
+							<content eId="art_308_para_5_content">
+								<p>
+									Ko neovlašćeno posjeduje biljke koje pripadaju posebno zaštićenoj biljnoj vrsti ili uzima uzorke te vrste, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_309">
+						<heading>
+							Ubijanje i mučenje životinja i razaranje njihovog staništa
+						</heading>
+						<num>
+							Član 309
+						</num>
+						<paragraph eId="art_309_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_309_para_1_content">
+								<p>
+									Ko kršeći propise ubije, povrijedi ili muči životinju, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_309_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_309_para_2_content">
+								<p>
+									Ko ubija ili povređuje životinje koje pripadaju posebno zaštićenim životinjskim vrstama, kazniće se zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_309_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_309_para_3_content">
+								<p>
+									Kaznom iz stava
+									<ref href="/krivicni#art_309_para_2">
+										2
+									</ref>
+									ovog člana kazniće se i ko znatno ošteti ili razori stanište životinja u okviru zaštićenog područja.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_309_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_309_para_4_content">
+								<p>
+									Ko neovlašćeno posjeduje životinje koje pripadaju posebno zaštićenoj životinjskoj vrsti ili uzima uzorke te vrste, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_310">
+						<heading>
+							Uništenje i oštećenje zaštićenog prirodnog dobra
+						</heading>
+						<num>
+							Član 310
+						</num>
+						<paragraph eId="art_310_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_310_para_1_content">
+								<p>
+									Ko uništi ili ošteti zaštićeno prirodno dobro, kazniće se zatvorom od tri mjeseca do pet godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_310_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_310_para_2_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_310_para_1">
+										1
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do šest mjeseci.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_311">
+						<heading>
+							Krađa zaštićenog prirodnog dobra
+						</heading>
+						<num>
+							Član 311
+						</num>
+						<paragraph eId="art_311_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_311_para_1_content">
+								<p>
+									Ko izvrši krađu (
+									<ref href="/krivicni#art_239">
+										član 239
+									</ref>
+									) zaštićenog prirodnog dobra, kazniće se zatvorom od jedne do šest godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_311_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_311_para_2_content">
+								<p>
+									Ako je zaštićeno prirodno dobro oduzeto putem razbojničke krađe ili razbojništva ili ako vrijednost ukradenog zaštićenog prirodnog dobra prelazi iznos od trideset hiljada eura, učinilac će se kazniti zatvorom od pet do petnaest godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_311_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_311_para_3_content">
+								<p>
+									Ko prilikom izvođenja građevinskih, rudarskih, vodoprivrednih, poljoprivrednih ili drugih radova prisvoji prirodno dobro koje ima svojstva zbog kojih može biti proglašeno za zaštićeno prirodno dobro, kazniće se prema odredbama st.
+									<ref href="/krivicni#art_311_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_311_para_2">
+										2
+									</ref>
+									ovog člana.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_312">
+						<heading>
+							Iznošenje i unošenje zaštićenog prirodnog dobra i posebno zaštićene biljke i životinje i trgovanje njima
+						</heading>
+						<num>
+							Član 312
+						</num>
+						<paragraph eId="art_312_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_312_para_1_content">
+								<p>
+									Ko protivno propisima izveze ili iznese u inostranstvo ili uveze ili unese u Crnu Goru zaštićeno prirodno dobro ili posebno zaštićenu biljku ili životinju, kazniće se zatvorom od tri mjeseca do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_312_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_312_para_2_content">
+								<p>
+									Kaznom iz stava
+									<ref href="/krivicni#art_312_para_1">
+										1
+									</ref>
+									ovog člana kazniće se i ko neovlašćeno trguje posebno zaštićenim biljkama ili životinjama ili njihovim djelovima ili proizvodima od njih.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_312_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_312_para_3_content">
+								<p>
+									Za pokušaj djela iz st.
+									<ref href="/krivicni#art_311_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_312_para_2">
+										2
+									</ref>
+									će se kazniti.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_313">
+						<heading>
+							Iznošenje i unošenje opasnih materija
+						</heading>
+						<num>
+							Član 313
+						</num>
+						<paragraph eId="art_313_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_313_para_1_content">
+								<p>
+									Ko protivno propisima izveze ili iznese u inostranstvo ili uveze ili unese u Crnu Goru nuklearni ili radioaktivni materijal ili drugu opasnu materiju ili opasni otpad ili ko vrši prevoz takvih materija preko teritorije Crne Gore, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_313_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_313_para_2_content">
+								<p>
+									Ko zloupotrebom svog službenog položaja ili ovlašćenja dozvoli ili omogući da se iz Crne Gore izveze ili iznese u inostranstvo ili uveze ili unese u Crnu Goru materija, materijal ili otpad iz stava
+									<ref href="/krivicni#art_313_para_1">
+										1
+									</ref>
+									ovog člana, kazniće se zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_313_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_313_para_3_content">
+								<p>
+									Ako je djelo iz st.
+									<ref href="/krivicni#art_313_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_313_para_2">
+										2
+									</ref>
+									ovog člana prouzrokovalo znatnu štetu u odnosu na kvalitet vazduha, vode ili zemljišta ili uništenje ili znatno oštećenje životinjskog ili biljnog svijeta, učinilac će se kazniti zatvorom od jedne do osam godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_313_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_313_para_4_content">
+								<p>
+									Ako je usljed djela iz st.
+									<ref href="/krivicni#art_313_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_313_para_2">
+										2
+									</ref>
+									ovog člana nastupila teška tjelesna povreda ili teško narušavanje zdravlja jednog ili više lica, učinilac će se kazniti zatvorom od dvije do deset godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_313_para_5">
+							<num>
+								(5)
+							</num>
+							<content eId="art_313_para_5_content">
+								<p>
+									Ako je usljed djela iz st.
+									<ref href="/krivicni#art_313_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_313_para_2">
+										2
+									</ref>
+									ovog člana nastupila smrt jednog ili više lica, učinilac će se kazniti zatvorom od tri do dvanaest godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_313_para_6">
+							<num>
+								(6)
+							</num>
+							<content eId="art_313_para_6_content">
+								<p>
+									Za pokušaj djela iz stava
+									<ref href="/krivicni#art_313_para_1">
+										1
+									</ref>
+									ovog člana kazniće se.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_314">
+						<heading>
+							Nedozvoljeno postupanje sa opasnim materijama
+						</heading>
+						<num>
+							Član 314
+						</num>
+						<paragraph eId="art_314_para_1">
+							<num>
+								(1)
+							</num>
+							<content eId="art_314_para_1_content">
+								<p>
+									Ko protivno propisima upotrebljava, proizvodi, prerađuje, drži, odlaže, sakuplja, skladišti, pribavlja, koristi, prevozi, daje drugom ili otprema nuklearni ili radioaktivni materijal ili drugu opasnu materiju ili opasni otpad, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_314_para_2">
+							<num>
+								(2)
+							</num>
+							<content eId="art_314_para_2_content">
+								<p>
+									Ko zloupotrebom svog službenog položaja ili ovlašćenja dozvoli ili omogući upotrebu, proizvodnju, preradu, držanje, odlaganje, sakupljanje, skladištenje ili otpremanje materije, materijala ili otpada iz stava
+									<ref href="/krivicni#art_314_para_1">
+										1
+									</ref>
+									ovog člana, kazniće se zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_314_para_3">
+							<num>
+								(3)
+							</num>
+							<content eId="art_314_para_3_content">
+								<p>
+									Ako je djelo iz st.
+									<ref href="/krivicni#art_314_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_314_para_2">
+										2
+									</ref>
+									ovog člana prouzrokovalo znatnu štetu u odnosu na kvalitet vazduha, vode ili zemljišta ili je došlo do uništenja ili znatnog oštećenja životinjskog ili biljnog svijeta, učinilac će se kazniti zatvorom od jedne do osam godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_314_para_4">
+							<num>
+								(4)
+							</num>
+							<content eId="art_314_para_4_content">
+								<p>
+									Ako je usljed djela iz st.
+									<ref href="/krivicni#art_314_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_314_para_2">
+										2
+									</ref>
+									ovog člana nastupila teška tjelesna povreda ili teško narušavanje zdravlja jednog ili više lica, učinilac će se kazniti zatvorom od dvije do deset godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_314_para_5">
+							<num>
+								(5)
+							</num>
+							<content eId="art_314_para_5_content">
+								<p>
+									Ako je usljed djela iz st.
+									<ref href="/krivicni#art_314_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_314_para_2">
+										2
+									</ref>
+									ovog člana nastupila smrt jednog ili više lica, učinilac će se kazniti zatvorom od tri do dvanaest godina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_314_para_6">
+							<num>
+								(6)
+							</num>
+							<content eId="art_314_para_6_content">
+								<p>
+									Za pokušaj djela iz stava
+									<ref href="/krivicni#art_314_para_1">
+										1
+									</ref>
+									ovog člana kazniće se.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_314_para_7">
+							<num>
+								(7)
+							</num>
+							<content eId="art_314_para_7_content">
+								<p>
+									Ako izrekne uslovnu osudu za djela iz st.
+									<ref href="/krivicni#art_314_para_1">
+										1
+									</ref>
+									do
+									<ref href="/krivicni#art_314_para_4">
+										4
+									</ref>
+									ovog člana, sud može odrediti obavezu učiniocu da u određenom roku preduzme određene propisane mjere zaštite od jonizujućih zračenja ili druge propisane mjere zaštite.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_315">
+						<heading>
+							Nedozvoljena izgradnja nuklearnih postrojenja
+						</heading>
+						<num>
+							Član 315
+						</num>
+						<paragraph eId="art_315_para_1">
+							<content eId="art_315_para_1_content">
+								<p>
+									Ko protivno propisima odobri ili pristupi izgradnji nuklearne elektrane, postrojenja za proizvodnju nuklearnog goriva ili postrojenja za preradu isluženog nuklearnog goriva, kazniće se zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_316">
+						<heading>
+							Neizvršenje odluke o mjerama zaštite životne sredine
+						</heading>
+						<num>
+							Član 316
+						</num>
+						<paragraph eId="art_316_para_1">
+							<content eId="art_316_para_1_content">
+								<p>
+									Službeno ili odgovorno lice koje ne postupi po odluci nadležnog organa o preduzimanju mjera zaštite životne sredine, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_316_para_2">
+							<content eId="art_316_para_2_content">
+								<p>
+									Ako izrekne uslovnu osudu za djelo iz stava
+									<ref href="/krivicni#art_316_para_1">
+										1
+									</ref>
+									ovog člana, sud može odrediti obavezu učiniocu da u određenom roku preduzme mjere koje je nadležni organ odredio.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_317">
+						<heading>
+							Povreda prava na informisanje o stanju životne sredine
+						</heading>
+						<num>
+							Član 317
+						</num>
+						<paragraph eId="art_317_para_1">
+							<content eId="art_317_para_1_content">
+								<p>
+									Ko protivno propisima uskrati podatke ili da neistinite podatke o stanju životne sredine i pojavama koji su neophodni za procjenu opasnosti po životnu sredinu i preduzimanje mjera zaštite života i zdravlja ljudi, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_317_para_2">
+							<content eId="art_317_para_2_content">
+								<p>
+									Kaznom iz stava
+									<ref href="/krivicni#art_317_para_1">
+										1
+									</ref>
+									ovog člana kazniće se i ko iznese u javnost neistinite podatke o stanju životne sredine i time izazove paniku ili značajnije uznemirenje građana.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_318">
+						<heading>
+							Prenošenje zaraznih bolesti kod životinja i biljaka
+						</heading>
+						<num>
+							Član 318
+						</num>
+						<paragraph eId="art_318_para_1">
+							<content eId="art_318_para_1_content">
+								<p>
+									Ko za vrijeme epidemije neke bolesti životinja koja može ugroziti stočarstvo ne postupa po propisima, odlukama ili naredbama kojima se određuju mjere za suzbijanje ili sprječavanje bolesti, kazniće se novčanom kaznom ili zatvorom do dvije godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_318_para_2">
+							<content eId="art_318_para_2_content">
+								<p>
+									Kaznom iz stava
+									<ref href="/krivicni#art_318_para_1">
+										1
+									</ref>
+									ovog člana kazniće se i ko za vrijeme postojanja opasnosti od bolesti i štetočina koje mogu ugroziti životinjski i biljni svijet ne postupa po propisima, odlukama ili naredbama kojima se određuju mjere za suzbijanje ili sprječavanje bolesti odnosno štetočina.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_318_para_3">
+							<content eId="art_318_para_3_content">
+								<p>
+									Ako je usljed djela iz st.
+									<ref href="/krivicni#art_318_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_318_para_2">
+										2
+									</ref>
+									ovog člana nastupilo uginuće životinja, uništenje biljaka ili druga znatna šteta čija vrijednost prelazi iznos od tri hiljade eura, učinilac će se kazniti zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_318_para_4">
+							<content eId="art_318_para_4_content">
+								<p>
+									Ako je djelo iz st.
+									<ref href="/krivicni#art_318_para_1">
+										1
+									</ref>
+									do
+									<ref href="/krivicni#art_318_para_3">
+										3
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_318_para_5">
+							<content eId="art_318_para_5_content">
+								<p>
+									Ko pritivno propisima prikriva postojanje zarazne bolesti kod životinja ili ne prijavi javnoj veterinarskoj službi, veterinaru koji obavlja privatnu praksu ili organu nadležnom za poslove veterinarstva, da postoje znaci koji ukazuju na to da takva bolest postoji, pa usljed toga nastupi širenje zarazne bolesti ili uginuće životinja ili druga znatna šteta čija vrijednost prelazi iznos od tri hiljade eura, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_319">
+						<heading>
+							Nesavjesno pružanje veterinarske pomoći
+						</heading>
+						<num>
+							Član 319
+						</num>
+						<paragraph eId="art_319_para_1">
+							<content eId="art_319_para_1_content">
+								<p>
+									Veterinar ili ovlašćeni veterinarski radnik koji pri pružanju veterinarske pomoći prepiše ili primijeni očigledno nepodobno sredstvo ili očigledno nepodoban način liječenja ili uopšte nesavjesno postupa pri liječenju životinja i time prouzrokuje uginuće životinja ili drugu znatnu štetu čiju vrijednost prelazi iznos od tri hiljade eura, kazniće se novčanom kaznom ili zatvorom do dvije godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_319_para_2">
+							<content eId="art_319_para_2_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_319_para_1">
+										1
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do šest mjeseci.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_320">
+						<heading>
+							Nadriveterinarstvo
+						</heading>
+						<num>
+							Član 320
+						</num>
+						<paragraph eId="art_320_para_1">
+							<content eId="art_320_para_1_content">
+								<p>
+									Ko se bez odgovarajuće stručne spreme uz naknadu bavi liječenjem životinja ili pružanjem drugih veterinarskih usluga, kazniće se novčanom kaznom ili zatvorom do šest mjeseci.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_321">
+						<heading>
+							Proizvodnja štetnih sredstava za liječenje životinja
+						</heading>
+						<num>
+							Član 321
+						</num>
+						<paragraph eId="art_321_para_1">
+							<content eId="art_321_para_1_content">
+								<p>
+									Ko proizvodi radi prodaje ili stavlja u promet sredstva za liječenje ili za sprječavanje zaraze kod životinja koja su opasna za njihov život ili zdravlje, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_321_para_2">
+							<content eId="art_321_para_2_content">
+								<p>
+									Ako je djelom iz stava
+									<ref href="/krivicni#art_321_para_1">
+										1
+									</ref>
+									ovog člana prouzrokovano uginuće životinja ili druga znatna šteta čija vrijednost prelazi iznos od tri hiljade eura, učinilac će se kazniti novčanom kaznom ili zatvorom do dvije godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_321_para_3">
+							<content eId="art_321_para_3_content">
+								<p>
+									Ako je djelo iz st.
+									<ref href="/krivicni#art_321_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_321_para_2">
+										2
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do šest mjeseci.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_322">
+						<heading>
+							Zagađivanje hrane i vode za ishranu odnosno napajanje životinja
+						</heading>
+						<num>
+							Član 322
+						</num>
+						<paragraph eId="art_322_para_1">
+							<content eId="art_322_para_1_content">
+								<p>
+									Ko kakvom škodljivom materijom zagadi hranu ili vodu koje služe za ishranu ili napajanje životinja i time dovede u opasnost njihov život ili zdravlje, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_322_para_2">
+							<content eId="art_322_para_2_content">
+								<p>
+									Kaznom iz stava
+									<ref href="/krivicni#art_322_para_1">
+										1
+									</ref>
+									ovog člana kazniće se i ko kakvom škodljivom materijom zagadi vodu u ribnjaku, jezeru, rijeci, kanalu ili moru ili poribljavanjem iz zaraženih voda prouzrokuje opasnost za opstanak riba ili drugih vodenih životinja.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_322_para_3">
+							<content eId="art_322_para_3_content">
+								<p>
+									Ako je djelom iz st.
+									<ref href="/krivicni#art_322_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_322_para_2">
+										2
+									</ref>
+									ovog člana prouzrokovano uginuće životinja ili druga znatna šteta čija vrijednost prelazi iznos od tri hiljade eura, učinilac će se kazniti novčanom kaznom ili zatvorom do dvije godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_322_para_4">
+							<content eId="art_322_para_4_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_322_para_1">
+										1
+									</ref>
+									ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do šest mjeseci.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_323">
+						<heading>
+							Pustošenje šuma
+						</heading>
+						<num>
+							Član 323
+						</num>
+						<paragraph eId="art_323_para_1">
+							<content eId="art_323_para_1_content">
+								<p>
+									Ko protivno propisima ili naredbama nadležnih organa vrši sječu ili krčenje šume, ili ko oštećuje stabla ili na drugi način pustoši šume ili obori jedno ili više stabala u parku, drvoredu ili na drugom mjestu gdje sječa nije dozvoljena, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_323_para_2">
+							<content eId="art_323_para_2_content">
+								<p>
+									Ko djelo iz stava
+									<ref href="/krivicni#art_323_para_1">
+										1
+									</ref>
+									ovog člana izvrši u zaštitnoj šumi, nacionalnom parku ili u drugoj šumi sa posebnom namjenom, kazniće se zatvorom od tri mjeseca do tri godine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_324">
+						<heading>
+							Šumska krađa
+						</heading>
+						<num>
+							Član 324
+						</num>
+						<paragraph eId="art_324_para_1">
+							<content eId="art_324_para_1_content">
+								<p>
+									Ko radi krađe obori u šumi, parku ili drvoredu jedno ili više stabala, a količina oborenog drveta je veća od jednog kubnog metra, kazniće se novčanom kaznom i zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_324_para_2">
+							<content eId="art_324_para_2_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_324_para_1">
+										1
+									</ref>
+									ovog člana učinjeno u namjeri da se oboreno drvo proda, ili ako je količina oborenog drveta veća od pet kubnih metara ili ako je djelo izvršeno u zaštitnoj šumi, nacionalnom parku ili drugoj šumi sa posebnom namjenom, učinilac će se kazniti zatvorom od tri mjeseca do tri godine i novčanom kaznom.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_324_para_3">
+							<content eId="art_324_para_3_content">
+								<p>
+									Za pokušaj djela iz st.
+									<ref href="/krivicni#art_324_para_1">
+										1
+									</ref>
+									i
+									<ref href="/krivicni#art_324_para_2">
+										2
+									</ref>
+									ovog člana kazniće se.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_325">
+						<heading>
+							Nezakonit lov
+						</heading>
+						<num>
+							Član 325
+						</num>
+						<paragraph eId="art_325_para_1">
+							<content eId="art_325_para_1_content">
+								<p>
+									Ko lovi divljač za vrijeme lovostaja ili na području gdje je lov zabranjen, kazniće se novčanom kaznom ili zatvorom do šest mjeseci.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_325_para_2">
+							<content eId="art_325_para_2_content">
+								<p>
+									Ko neovlašćeno lovi na tuđem lovištu i ubije ili rani divljač ili je uhvati živu, kazniće se novčanom kaznom ili zatvorom do jedne godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_325_para_3">
+							<content eId="art_325_para_3_content">
+								<p>
+									Ako je djelo iz stava
+									<ref href="/krivicni#art_325_para_2">
+										2
+									</ref>
+									ovog člana učinjeno u odnosu na krupnu divljač, učinilac će se kazniti novčanom kaznom ili zatvorom do dvije godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_325_para_4">
+							<content eId="art_325_para_4_content">
+								<p>
+									Ko lovi divljač čiji je lov zabranjen ili ko lovi bez posebne dozvole određenu vrstu divljači za čiji je lov potrebna takva dozvola ili ko lovi na način ili sredstvima kojima se divljač masovno uništava, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_325_para_5">
+							<content eId="art_325_para_5_content">
+								<p>
+									Ulovljena divljač i sredstva za lov oduzeće se.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_326">
+						<heading>
+							Nezakonit ribolov
+						</heading>
+						<num>
+							Član 326
+						</num>
+						<paragraph eId="art_326_para_1">
+							<content eId="art_326_para_1_content">
+								<p>
+									Ko lovi ribu ili druge vodene životinje za vrijeme lovostaja ili u vodama u kojima je lov zabranjen, kazniće se novčanom kaznom ili zatvorom do šest mjeseci.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_326_para_2">
+							<content eId="art_326_para_2_content">
+								<p>
+									Ko lovi ribu ili druge vodene životinje eksplozivom, električnom strujom, otrovom, sredstvima za omamljivanje ili na način štetan za razmnožavanje tih životinja ili kojim se te životinje masovno uništavaju, kazniće se zatvorom do tri godine.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_326_para_3">
+							<content eId="art_326_para_3_content">
+								<p>
+									Kaznom iz stava
+									<ref href="/krivicni#art_326_para_2">
+										2
+									</ref>
+									ovog člana kazniće se i ko lovi ribu ili druge vodene životinje veće biološke vrijednosti ili u većoj količini ili pri lovu uništi veću količinu riba ili drugih vodenih životinja.
+								</p>
+							</content>
+						</paragraph>
+						<paragraph eId="art_326_para_4">
+							<content eId="art_326_para_4_content">
+								<p>
+									Ulov i sredstva za ribolov oduzeće se.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_326a">
+						<heading>
+							Građenje objekta bez prijave i dokumentacije za građenje
+						</heading>
+						<num>
+							Član 326a
+						</num>
+						<paragraph eId="art_326a_para_1">
+							<content eId="art_326a_para_1_content">
+								<p>
+									Ko protivno propisima o planiranju prostora i izgradnji objekata započne građenje objekta bez prethodno podnijete prijave i dokumentacije za građenje ili gradi objekat suprotno revidovanom glavnom projektu ili odluci nadležnog organa o zabrani građenja, kazniće se zatvorom od šest mjeseci do pet godina.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_326b">
+						<heading>
+							Građenje složenog inženjerskog objekta bez građevinske dozvole
+						</heading>
+						<num>
+							Član 326b
+						</num>
+						<paragraph eId="art_326b_para_1">
+							<content eId="art_326b_para_1_content">
+								<p>
+									Ko protivno propisima o planiranju prostora i izgradnji objekata započne građenje složenog inženjerskog objekta bez građevinske dozvole ili gradi objekt suprotno građevinskoj dozvoli i revidovanom glavnom projektu ili odluci nadležnog organa o zabrani građenja, kazniće se zatvorom od jedne do osam godina.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+					<article eId="art_326c">
+						<heading>
+							Protivpravno priključenje na infrastrukturu
+						</heading>
+						<num>
+							Član 326c
+						</num>
+						<paragraph eId="art_326c_para_1">
+							<content eId="art_326c_para_1_content">
+								<p>
+									Ko protivno propisima o planiranju prostora i izgradnji objekata priključi ili dozvoli da se na infrastrukturu priključi gradilište, objekat u izgradnji ili izgrađeni objekat, za koji nije podnijeta prijava građenja i dokumentacija, odnosno građevinska dozvola i dokumentacija za građenje složenog inženjerskog objekta, kazniće se zatvorom od tri mjeseca do tri godine.
+								</p>
+							</content>
+						</paragraph>
+					</article>
+				</section>
+			</chapter>
+		</body>
+	</act>
+</akomaNtoso>
