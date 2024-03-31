@@ -1,8 +1,15 @@
 package org.example.legalinformaticbackend.controller;
 
+import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRQuery;
+import es.ucm.fdi.gaia.jcolibri.cbrcore.CaseComponent;
 import lombok.RequiredArgsConstructor;
+import org.example.legalinformaticbackend.mapper.MapperService;
 import org.example.legalinformaticbackend.model.DbEntity;
+import org.example.legalinformaticbackend.model.LegalCase;
+import org.example.legalinformaticbackend.dto.LegalCaseDTO;
 import org.example.legalinformaticbackend.service.AttributeExtractionService;
+import org.example.legalinformaticbackend.service.CbrService;
+import org.example.legalinformaticbackend.service.LegalCaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
@@ -17,11 +24,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/case")
+@CrossOrigin(origins = "http://localhost:4200")
 public class LegalCaseController {
 
     @Autowired
@@ -32,6 +39,15 @@ public class LegalCaseController {
 
     @Autowired
     AttributeExtractionService attributeExtractionService;
+
+    @Autowired
+    MapperService mapperService;
+
+    @Autowired
+    CbrService cbrService;
+
+    @Autowired
+    LegalCaseService legalCaseService;
 
 
     @GetMapping("/cases-pdf")
@@ -54,29 +70,6 @@ public class LegalCaseController {
                 .body(Files.readAllBytes(path));
     }
 
-    @GetMapping("/extract-cases-attributes-from-pdf1")
-    public ResponseEntity<?> extractCasesAttributesFromPdf1() throws IOException {
-        Resource[] resources = resourceResolver.getResources("classpath:cases/*.pdf");
-        List<DbEntity> ret = new ArrayList<>();
-
-        for(Resource resource : resources){
-            String filePath = resource.getURI().toString();
-            int lastSlashIndex = filePath.lastIndexOf('/');
-            int lastDotIndex = filePath.lastIndexOf('.');
-            String caseNmbr = filePath.substring(lastSlashIndex + 1, lastDotIndex);
-            DbEntity retVal = attributeExtractionService.attributeExtraction(caseNmbr);
-            ret.add(retVal);
-        }
-
-
-        return ResponseEntity.ok(ret);
-    }
-
-    @GetMapping("/extract-case-attributes-from-pdf1/{caseNumber}")
-    public ResponseEntity<?> extractCaseAttributesFromPdf1(@PathVariable String caseNumber) throws IOException {
-        DbEntity retVal = attributeExtractionService.attributeExtraction(caseNumber);
-        return ResponseEntity.ok(retVal);
-    }
 
     @GetMapping("/extract-cases-attributes-from-pdf")
     public ResponseEntity<?> extractCasesAttributesFromPdf() throws IOException {
@@ -102,12 +95,6 @@ public class LegalCaseController {
         return ResponseEntity.ok(retVal);
     }
 
-
-    //Novi slucaj, csv, baza?
-    //Preporuka odluke, funkcija slicnosti
-    //Generisanje odluka po sablonu
-
-
     @GetMapping("/cases-akoma-ntoso")
     public ResponseEntity<?> getCasesAkomaNtoso() throws IOException {
         return null;
@@ -116,6 +103,24 @@ public class LegalCaseController {
     @GetMapping("/cases-akoma-ntoso/{caseName}")
     public ResponseEntity<?> getCaseAkomaNtoso(@PathVariable String caseName) throws IOException {
         return null;
+    }
+
+    @PostMapping("/recommend-case-solution")
+    public ResponseEntity<?> recommendCaseSolution(@RequestBody LegalCaseDTO caseDTO) {
+        LegalCase legalCase = mapperService.mapToLegalCase(caseDTO);
+        CBRQuery query = new CBRQuery();
+        query.setDescription((CaseComponent) legalCase);
+        List<String> retVal = cbrService.recommend(query);
+
+        return ResponseEntity.ok(retVal);
+    }
+
+    @PostMapping("/add-new-case")
+    public ResponseEntity<?> addNewCase(@RequestBody LegalCaseDTO caseDTO) {
+        LegalCase legalCase = mapperService.mapToLegalCase(caseDTO);
+        LegalCase retVal = legalCaseService.addNewCase(legalCase);
+
+        return ResponseEntity.ok(retVal);
     }
 
 }

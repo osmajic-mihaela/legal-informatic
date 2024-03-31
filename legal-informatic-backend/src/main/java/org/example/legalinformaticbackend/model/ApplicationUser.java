@@ -1,18 +1,19 @@
 package org.example.legalinformaticbackend.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
 
-import javax.persistence.Id;
+import lombok.*;
 
-@Entity
+import jakarta.persistence.*;
+
+@Entity(name="ApplicationUser")
 @Table(name = "application_user")
-@Data
-@EqualsAndHashCode(callSuper = true)
+@Getter
+@Setter
 public class ApplicationUser extends DbEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(name = "firstName", nullable = false)
     private String firstName;
