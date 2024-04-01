@@ -81,27 +81,54 @@ public class LegalCase extends DbEntity implements CaseComponent {
 
     @Override
     public String toString() {
-        return "LegalCase{" +
-                "id=" + id +
-                ", caseNumber='" + caseNumber + '\'' +
-                ", court='" + court + '\'' +
-                ", judge='" + judge + '\'' +
-                ", courtReporter='" + courtReporter + '\'' +
-                ", defendant='" + defendant + '\'' +
-                ", protectedSurface=" + protectedSurface +
-                ", forestProperty='" + forestProperty + '\'' +
-                ", financialDamage=" + financialDamage +
-                ", woodVolume=" + woodVolume +
-                ", awareness=" + awareness +
-                ", convicted=" + convicted +
-                ", numberOfTrees=" + numberOfTrees +
-                ", treeType='" + treeType + '\'' +
-                ", reasonForProsecution='" + reasonForProsecution + '\'' +
-                ", conditionalSentence=" + conditionalSentence +
-                ", prisonSentence='" + prisonSentence + '\'' +
-                ", financialSentence=" + financialSentence +
-                ", communitySentence='" + communitySentence + '\'' +
-                ", citedArticles='" + citedArticles + '\'' +
-                '}';
+        String osudjen = "";
+        String zasticenaPovrsina = "";
+        String svestan = "";
+        String uslovna = "";
+
+        if(convicted){
+            osudjen = "Osuđujuća";
+        }else{
+            osudjen = "Oslobađajuća";
+        }
+
+        if(protectedSurface){
+            zasticenaPovrsina = "Da";
+        }else{
+            zasticenaPovrsina = "Ne";
+        }
+
+        if(awareness){
+            svestan = "Svestan dela";
+        }else{
+            svestan = "Nesvestan dela";
+        }
+
+        if(conditionalSentence){
+            uslovna = "Uslovna";
+        }else{
+            uslovna = "Neuslovna";
+        }
+
+        return "<br>" +
+                "Broj slučaja: " + caseNumber  + "<br>" +
+                "Sud: " + court  + "<br>" +
+                "Sudija: " + judge  + "<br>" +
+                "Zapisničar: " + courtReporter  + "<br>" +
+                "Optuženi: " + defendant  + "<br>" +
+                "Broj oborenih stabala: " + numberOfTrees + "<br>" +
+                "Ukupna kubikaža: " + woodVolume + "m³<br>" +
+                "Vrsta drveta: " + treeType +  "<br>" +
+                "Svesnost izvršioca: " + svestan + "<br>" +
+                "Pripadnost površine: " + forestProperty  + "<br>" +
+                "Zaštićena površina: " + zasticenaPovrsina + "<br>" +
+                "Pričinjena novčana šteta: " + financialDamage + "€<br>" +
+                "Prekršaj: " + reasonForProsecution  + "<br>" +
+                "Osuđen: " + osudjen + "<br>" +
+                "Primenjeni propisi: " + citedArticles  + "<br>" +
+                "Novčana kazna: " + financialSentence + "€<br>" +
+                "Uslovnost kazne: " + uslovna + "<br>" +
+                "Zatvorska kazna: " + prisonSentence  + "<br>" +
+                "Kazna rada u javnom interesu: " + communitySentence  + "<br>";
+        }
     }
-}

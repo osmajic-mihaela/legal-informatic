@@ -38,30 +38,7 @@
         </div>
       </div>
 
-      <div class="columns">
-        <div class="column">
-          <div class="column action-field">
-            <mat-form-field appearance="outline">
-              <mat-label>Prekršaj</mat-label>
-              <mat-select [(ngModel)]="selectedOffense" (ngModelChange)="updateReason()">
-                <mat-option value="323.">Pustošenje šuma</mat-option>
-                <mat-option value="324.">Šumska krađa</mat-option>
-              </mat-select>
-              <mat-hint>
-                <mat-label>Prekršaj u celosti:</mat-label>
-                  <input matInput disabled="true" [(ngModel)]="legalCase.reasonForProsecution"/>
-              </mat-hint>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="column">
-          <mat-form-field appearance="outline" class="mb-5">
-            <mat-label>Stav</mat-label>
-            <input matInput [(ngModel)]="stav" (ngModelChange)="updateStav()"/>
-          </mat-form-field>
-        </div>
 
-      </div>
 
 
       <div class="columns">
@@ -154,6 +131,31 @@
 
       <div class="columns mt-5">
         <div class="column">
+          <div class="column action-field">
+            <mat-form-field appearance="outline">
+              <mat-label>Prekršaj</mat-label>
+              <mat-select [(ngModel)]="selectedOffense" (ngModelChange)="updateReason()">
+                <mat-option value="323.">Pustošenje šuma</mat-option>
+                <mat-option value="324.">Šumska krađa</mat-option>
+              </mat-select>
+              <mat-hint>
+                <mat-label>Prekršaj u celosti:</mat-label>
+                <input matInput disabled="true" [(ngModel)]="legalCase.reasonForProsecution"/>
+              </mat-hint>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline" class="mb-5">
+            <mat-label>Stav</mat-label>
+            <input matInput [(ngModel)]="stav" (ngModelChange)="updateStav()"/>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="columns mt-5">
+        <div class="column">
           <mat-form-field appearance="outline">
             <mat-label>Ishod presude</mat-label>
             <mat-select [(ngModel)]="legalCase.convicted">
@@ -242,8 +244,7 @@
         <h1>Rasuđivanje po slučajevima</h1>
         <div>
           <p *ngIf="caseRecommendation.length == 0">Nema preporuka.</p>
-          <div class="mb-5" *ngFor="let item of caseRecommendation">
-            {{ item }}
+          <div class="mb-5" *ngFor="let item of caseRecommendation" [innerHTML]="item">
           </div>
         </div>
         <mat-divider class="my-5"></mat-divider>
