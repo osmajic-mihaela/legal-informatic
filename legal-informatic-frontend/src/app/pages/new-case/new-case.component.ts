@@ -32,12 +32,12 @@ export class NewCaseComponent implements OnInit {
     this.cbrService.getCaseReccomendation(this.legalCase).subscribe((response) => {
       this.caseRecommendation = response;
       this.isLoading = false;
+      console.log(response)
     });
   }
 
   addNewCase() {
     this.legalCaseService.addNewCase(this.legalCase).subscribe((response) => {
-      console.log(response)
       alert('Slučaj ' + response.caseNumber+' je zabeležen u bazi!');
       this.isLoading = false;
     });
@@ -67,8 +67,8 @@ export class NewCaseComponent implements OnInit {
       this.legalCase.woodVolume ==0 ||
       this.legalCase.awareness=='' ||
       this.legalCase.numberOfTrees==0  ||
-      this.legalCase.treeType=='' ||
-      this.legalCase.reasonForProsecution==''
+      this.legalCase.treeType==''
+
     );
   }
 

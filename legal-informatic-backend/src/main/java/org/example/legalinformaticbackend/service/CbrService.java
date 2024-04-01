@@ -68,7 +68,7 @@ public class CbrService {
         eval = SelectCases.selectTopKRR(eval, 5);
         List<String> retVal = new ArrayList<>();
         for (RetrievalResult nse : eval)
-            retVal.add(nse.get_case().getDescription() + " -> " + nse.getEval());
+            retVal.add(nse.get_case().getDescription() + "<br> Sličnost: " + String.format("%.2f", nse.getEval())+"<br>-------------------------------------------------------------");
         return  retVal;
     }
 
