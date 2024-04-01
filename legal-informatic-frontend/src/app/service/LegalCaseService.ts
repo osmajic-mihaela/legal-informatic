@@ -16,5 +16,4 @@ export class LegalCaseService {
     return this.http.post<LegalCase>(this.apiHost + `/case/add-new-case`, caseDescription,{headers: this.headers});
   }
 
-
 }

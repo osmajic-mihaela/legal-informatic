@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Kolašinu
+					</FRBRauthor>
+					<FRBRdate date="2020-05-28">
+						2020-05-28
+					</FRBRdate>
+					<FRBRtitle>
+						K 22/2020
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="osk" href="/ontology/organization/OsnovniSud.Kolasin" showAs="Osnovni sud u Kolašinu" />
+				<TLCOrganization eId="osbp" href="/ontology/organization/OsnovniSud.BijeloBolje" showAs="Osnovni sud u Bijelom Polju" />
+				<TLCOrganization eId="odtk" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Kolasin" showAs="Osnovno državno tužilaštvo Kolašin" />
+				<TLCOrganization eId="odtbp" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.BijeloPolje" showAs="Osnovno državno tužilaštvo iz Bijelog Polja" />
+
+				<TLCPerson eId="apopovic" href="/ontology/person/apopovic" showAs="Arsen Popović" />
+				<TLCPerson eId="ljmrdak" href="/ontology/person/ljmrdak" showAs="Ljiljana Mrdak" />
+				<TLCPerson eId="bb" href="/ontology/person/bb" showAs="B.B." />	
+				<TLCPerson eId="vgrujic" href="/ontology/person/vgrujic" showAs="Vojislav Grujić" />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="osk" refersTo="#osk">
+					Osnovni sud u Kolašinu
+				</organization>
+				kao prvostepeni krivični, po predsjedniku suda 
+				<party id="apopovic" refersTo="#apopovic" as="#judge">
+					Arsenu Popoviću kao sudiji pojedincu
+				</party>
+				, uz učešće zapisničara 
+				<party id="ljmrdak" refersTo="#ljmrdak" as="#clerk">
+					Mrdak Ljiljane
+				</party>
+				, u krivičnom predmetu protiv okrivljenog 
+				<party id="bb" refersTo="#bb" as="#defendant">
+					B.B.
+				</party>
+				, iz B., zbog krivičnog djela šumska kradja iz 
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika
+				</ref>
+				,  po optužnom predlogu
+				<organization id="odtbp" refersTo="#odtbp">
+					 ODT iz Bijelog Polja
+				</organization>
+				 Kt.br.8/21 od 29.01.2021. godine, nakon glavnog i javnog pretresa održanog dana 19.04.2021. godine, u 
+				<organization id="odtk" refersTo="#odtk">
+					ODT Kolašin
+				</organization>
+				<party id="vgrujic" refersTo="#vgrujic" as="#plaintiff">
+					 Grujić Vojislava
+				</party>
+				, i okrivljenog
+				<party id="bb" refersTo="#bb" as="#defendant">
+					B.B.
+				</party>
+				, donio je i javno objavio, - P R E S U D U Okrivljeni:
+				<party id="bb" refersTo="#bb" as="#defendant">
+					B.B.
+				</party>
+				,JMBG ... ,od oca M. i majke S., rođ. v., rođen ... godine u B., gde je i nastanjen - G.P., državljanin Crne Gore, nezaposlen, neoženjen, pismen, završio srednju školu, lošeg imovnog stanja, osudjivan presudom
+				<organization id="osbp" refersTo="#osbp">
+					Osnovnog suda u Bijelom Polju 
+				</organization>
+				  u predmetu K.br.651/10 za krivično djelo iz 
+				<ref href="/krivicni#art_152">
+					čl.152 KZ-a
+				</ref>
+				na zatvorsku kaznu, presudom
+				<organization id="osbp" refersTo="#osbp">
+					Osnovnovnog suda u Bijelom Polju 
+				</organization>
+				 u predmetu K.br.396/06 za krivično djelo iz
+				<ref href="/krivicni#art_246">
+					čl. 246 KZ-a
+				</ref>
+				 na zatvorsku kaznu, presudom
+				<organization id="osbp" refersTo="#osbp">
+					Osnovnovnog suda u Bijelom Polju 
+				</organization>
+				u predmetu K.br.193/03 za krivično djelo iz
+				<ref href="/krivicni#art_136">
+					čl. 136 KZ RCG  
+				</ref>
+				 na zatvorsku kaznu, presudom
+				<organization id="osbp" refersTo="#osbp">
+					Osnovnovnog suda u Bijelom Polju 
+				</organization>
+				u predmetu K.br.71/03 za krivično djelo iz 
+				<ref href="/krivicni#art_37">
+					čl. 37 KZ RCG 
+				</ref>
+				na zatvorsku kaznu, presudom
+				<organization id="osbp" refersTo="#osbp">
+					Osnovnovnog suda u Bijelom Polju 
+				</organization>
+				u predmetu K.br.84/00 za krivično djelo iz
+				<ref href="/krivicni#art_36">
+					čl. 36 KZ RCG 
+				</ref>
+				na uslovnu osudu i presudom
+				<organization id="osbp" refersTo="#osbp">
+					Osnovnovnog suda u Bijelom Polju 
+				</organization>
+				u predmetu K.br.639/95 za krivično djelo iz
+				<ref href="/krivicni#art_136">
+					čl. 136 KZ RCG
+				</ref>
+				 na zatvorsku kaznu. Kriv je Zato što je : Dana 30.08.2019 godine, u državnoj šumi u mjestu zv.P. K. - P., Opština B., u odjeljenju br. 54, radi kradje oborio 11 bukovih stabala ukupne drvne mase 3,12 m3 i na taj način pričinio štetu oštećenoj U.za B. - PJ B. u iznosu od 57,00 €, pri čemu je bio svjestan svog djela i htio njegovo izvršenje, - čime je izvršio krivično djelo šumska krađa iz 
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika
+				</ref>
+				.
+			</p>
+			<conclusions>
+				<p>
+					Pa ga 
+					<organization id="osk" refersTo="#osk">
+						sud 
+					</organization>
+					primjenom citirane zakonske odredbe, te
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_33">
+						čl.33
+					</ref>
+					i
+					<ref href="/krivicni#art_39">
+						čl.39 Krivičnog zakonika
+					</ref>
+					i 
+					<ref href="/postupak#art_374">
+						čl.374 ZKP-a
+					</ref>
+					, - O S U Đ U J E Na novčanu kaznu u iznosu od 200,00 € (dvijestotine eura), koju je okrivljeni dužan platiti u roku od 15 dana od dana pravosnažnosti presude uplatom na žiro-račun br.832-196-94 koji se vodi na ime 
+					<organization id="osk" refersTo="#osk">
+						Osnovnovnog suda Kolašin 
+					</organization>
+					. Ukoliko okrivljeni ne plati novčanu kaznu u ostavljenom roku, 
+					<organization id="osk" refersTo="#osk">
+						sud 
+					</organization>
+					će novčanu kaznu zamjeniti kaznom zatvora tako što će za svakih započenih 25,00 € novčane kazne odrediti jedan dan zatvora. Za slučaj da okrivljeni plati samo dio novčane kazne, sud će ostatak kazne srazmjerno zamjeniti kaznom zatvora.
+					<organization id="osk" refersTo="#osk">
+						Sud 
+					</organization>
+					okrivljenog na osnovu
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_33">
+						čl.33
+					</ref>
+					,
+					<ref href="/krivicni#art_41">
+						čl.41
+					</ref>
+					<ref href="/krivicni#art_42">
+						čl.42 Krivičnog zakonika
+					</ref>
+					, te 
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					,
+					<ref href="/postupak#art_239">
+						čl.239
+					</ref>
+					,
+					<ref href="/postupak#art_374">
+						čl.374 ZKP-a
+					</ref>
+					, O S U Đ U J E Na a kaznu rada u javnom interesu u trajanju od 120 (sto dvadeset) časova, koja kazna će se izvršiti za vrijeme od 3 (tri) mjeseca, stim što ista ne može biti duža od 60 (šesdeset) časova u toku jednog mjeseca. Ukoliko okrivljeni ne bude vršio rad u javnom interesu, ova kazna će se zamijeniti kaznom zatvora tako što će se za svakih započetih 60 (šesdeset) časova rada u javnom interesu zamijeniti kaznom zatvora u trajanju od jednog mjeseca. Obavezuje se okrivljeni na plaćanje sudskog paušala u iznosu od 30,00 €, prednje u roku od 15 dana od dana pravosnažnosti ove presude uplatom na žiro-račun br.832-196-94 koji se vodi na ime
+					<organization id="osk" refersTo="#osk">
+						Osnovnog suda Kolašin
+					</organization>
+					. Obavezuje se okrivljeni da oštećenoj U.za B. – PJ B. na ime imovinsko-poravnog zahtjeva plati iznos od 57,00 €.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

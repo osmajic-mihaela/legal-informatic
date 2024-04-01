@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Bijelom Polju
+					</FRBRauthor>
+					<FRBRdate date="2016-10-10">
+						2016-10-10
+					</FRBRdate>
+					<FRBRtitle>
+						K 165/2016
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="osbp" href="/ontology/organization/OsnovniSud.BijeloBolje" showAs="Osnovni sud u Bijelom Polju" />
+				<TLCOrganization eId="odtbp" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.BijeloPolje" showAs="Osnovno državno tužilaštvo iz Bijelog Polja" />
+
+				<TLCPerson eId="iadamovic" href="/ontology/person/iadamovic" showAs="Ivan Adamović" />
+				<TLCPerson eId="dboskovic" href="/ontology/person/dboskovic" showAs="Draginja Bošković" />
+				<TLCPerson eId="mp" href="/ontology/person/mp" showAs="M. P." />	
+				<TLCPerson eId="dzvrko" href="/ontology/person/dzvrko" showAs="Denis Zvrko" />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="osbp" refersTo="#osbp">
+					OSNOVNI SUD U BIJELOM POLJU
+				</organization>
+				, sudija pojedinac
+				<party id="iadamovic" refersTo="#iadamovic" as="#judge">
+					Ivan Adamović
+				</party>
+				, uz učešće samostalnog referenta zapisničara
+				<party id="dboskovic" refersTo="#dboskovic" as="#clerk">
+					 Draginje Bošković
+				</party>
+				, u krivičnom predmetu protiv okrivljenog 
+				<party id="mp" refersTo="#mp" as="#defendant">
+					M.a P.a
+				</party>
+				iz Mojkovca, zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika Crne Gore
+				</ref>
+				,  po optužnom predlogu
+				<organization id="odtbp" refersTo="#odtbp">
+					Osnovnog državnog tužilaštva u Bijelom Polju
+				</organization>
+				 , KT. br. 159/16 od 29. 08. 2016. godine, nakon održanog usmenog, glavnog i javnog pretresa, u prisustvu Državnog tužioca u 
+				<organization id="odtbp" refersTo="#odtbp">
+					Osnovnom državnom tužilaštvu u Bijelom Polju
+				</organization>
+				<party id="dzvrko" refersTo="#dzvrko" as="#plaintiff">
+					 Denisa Zvrka
+				</party>
+				, i okrivljenog
+				<party id="mp" refersTo="#mp" as="#defendant">
+					M.a P.a
+				</party>
+				, dana 10. 10. 2016. godine, donio je i objavio, P R E S U D U Okrivljeni
+				<party id="mp" refersTo="#mp" as="#defendant">
+					M. P.
+				</party>
+				, JMBG-.., od oca P., majke D., rođene R., rođen .... .. godine u Mojkovcu, sa prebivalištem u mjestu L., opština Mojkovac, državljanin Crne Gore, oženjen, otac troje djece, završio SSS, nezaposlen, lošeg imovnog stanja, neosuđivan, KRIV JE -Zato što je: -Dana 30. 05. 2016. godine, u državnoj šumi u mjestu U.a, rejon L., u 12-om Odjeljenju GJ L., "Palješka Gora", opština Mojkovac, radi krađe oborio jedno stablo bukve, ukupne drvne mase 1,66 m3 i time oštećenoj U. za Š.P.pričinio štetu u iznosu od 71,08 eura, pri čemu je bio svjestan svog djela i htio njegovo izvršenje i ako je znao da je njegovo djelo zabranjeno, -čime je izvršio krivično djelo šumska kradja iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika Crne Gore
+				</ref>
+				,
+			</p>
+			<conclusions>
+				<p>
+					Pa mu 
+					<organization id="osbp" refersTo="#osbp">
+						sud 
+					</organization>
+					, primjenom citiranog zakonskog propisa, te
+					<ref href="/krivicni#art_2">
+						čl.2
+					</ref>
+					,
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_5">
+						čl.5
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_36">
+						čl.36
+					</ref>
+					,
+					<ref href="/krivicni#art_39">
+						čl.39
+					</ref>
+					,
+					<ref href="/krivicni#art_42">
+						čl.42
+					</ref>
+					,
+					<ref href="/krivicni#art_52">
+						čl.52
+					</ref>
+					,
+					<ref href="/krivicni#art_53">
+						čl.53
+					</ref>
+					i
+					<ref href="/krivicni#art_54">
+						čl.54 Krivičnog zakonika Crne Gore (KZ-a CG)
+					</ref>
+					, i
+					<ref href="/postupak#art_226">
+						čl.226
+					</ref>
+					,
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					,
+					<ref href="/postupak#art_236">
+						čl.239
+					</ref>
+					i
+					<ref href="/postupak#art_374">
+						čl.374 Zakonika o krivičnom postupku Crne Gore (ZKP-a CG)
+					</ref>
+					, izriče, USLOVNU OSUDU Kojom mu utvrđuje kaznu zatvora od 30 (trideset) dana, kao glavnu krivičnu sankciju i istovremeno određuje da se ista neće izvršiti ukoliko okrivljeni u roku od 2 (dvije) godine, po pravosnažnosti presude, ne izvrši novo krivično djelo i istog, OSUĐUJE Na novčanu kaznu u iznosu od 200,00 € (dvijestotine eura), kao sporednu kaznu, koju kaznu je dužan da plati ovom sudu u roku od 3 (tri) mjeseca po pravosnažnosti presude, uplatom na žiro račun Budžeta Crne Gore broj: 832-151-35, s tim što je dokaz o uplati iste dužan dostaviti krivičnoj pisarnici ovog suda. Ako osuđeni ne plati novčanu kaznu u određenom roku, 
+					<organization id="osbp" refersTo="#osbp">
+						sud 
+					</organization>
+					će novčanu kaznu zamijeniti kaznom zatvora tako što će za svakih započetih 25,00 eura novčane kazne odrediti jedan dan zatvora, a ako osuđeni plati samo dio novčane kazne, 
+					<organization id="osbp" refersTo="#osbp">
+						sud 
+					</organization>
+					će ostatak kazne srazmjerno zamijeniti kaznom zatvora, pa ako osuđeni isplati ostatak novčane kazne izvršenje kazne zatvora će se obustaviti. Okrivljeni se obavezuje da na ime paušala plati ovom sudu iznos od 30,00€, kao i na ime ostalih troškova iznos od 97,00€, koje iznose će uplatiti na račun Budžeta CG, broj: 832-151-35, u roku od 15 dana, po pravosnažnosti presude, pod prijetnjom prinudnog izvršenja, s tim što je dokaz o uplati istih dužan dostaviti krivičnoj pisarnici ovog suda. Okrivljeni se obavezuje i da oštećenoj U. za Š.P.- PJ Mojkovac, na ime imovinsko-pravnog zahtjeva plati iznos od 71,08 eura, u roku od 15 dana, po pravosnažnosti presude, pod prijetnjom prinudnog izvršenja. Kako su se Državni tužilac u
+					<organization id="odtbp" refersTo="#odtbp">
+						ODT-u u Bijelom Polju
+					</organization>
+					<party id="dzvrko" refersTo="#dzvrko" as="#plaintiff">
+						Denis Zvrko
+					</party>
+					i okrivljeni
+					<party id="mp" refersTo="#mp" as="#defendant">
+						M. P.
+					</party>
+					, po objavljivanju presude, odrekli prava na žalbu i nijesu zahtijevali dostavljanje presude, to ista ne sadrži obrazloženje, shodno čl.
+					<ref href="/postupak#art_458">
+						čl. 458 st. 7 ZKP CG
+					</ref>
+					.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

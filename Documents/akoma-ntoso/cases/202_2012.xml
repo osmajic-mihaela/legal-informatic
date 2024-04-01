@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Cetinju
+					</FRBRauthor>
+					<FRBRdate date="2013-04-04">
+						2013-04-04
+					</FRBRdate>
+					<FRBRtitle>
+						K 202/2012
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Cetinje" showAs="Osnovni sud u Cetinju" />
+				<TLCOrganization eId="ops" href="/ontology/organization/OpstinskiSud.Cetinje" showAs="Opštinski sud u Cetinju" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Cetinje" showAs="Osnovno državno tužilaštvo iz Cetinja" />
+
+				<TLCPerson eId="mcupic" href="/ontology/person/mcupic" showAs="Marija Ćupić" />
+				<TLCPerson eId="amartinovic" href="/ontology/person/amartinovic" showAs="Aleksandra Martinović" />
+				<TLCPerson eId="vv" href="/ontology/person/vv" showAs="V. V." />	
+				<TLCPerson eId="djm" href="/ontology/person/djm" showAs="Dj. M." />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					OSNOVNI SUD U CETINJU
+				</organization>
+				, kao prvostepeni, po sudiji pojedincu
+				<party id="mcupic" refersTo="#mcupic" as="#judge">
+					Ćupić Mariji
+				</party>
+				uz sudjelovanje namještenika suda 
+				<party id="amartinovic" refersTo="#amartinovic" as="#clerk">
+					Aleksandre Martinović
+				</party>
+				, kao zapisničara, u krivičnom predmetu okr.
+				<party id="vv" refersTo="#vv" as="#defendant">
+					V. V. 
+				</party>
+				iz Cetinja, zbog krivičnog djela pustošenje šuma iz
+				<ref href="/krivicni#art_323">
+					čl. 323. st. 1 KZ-a
+				</ref>
+				, po Optužnom prijedlogu 
+				<organization id="odt" refersTo="#odt">
+					Osnovnog Državnog Tužilaštva u Cetinju
+				</organization>
+				, Kt.br.299/10 od 17.09.2012.godine, nakon održanog glavnog i javnog pretresa dana 02.04.2013.godine u prisustvu savjetnika
+				<organization id="odt" refersTo="#odt">
+					ODT-a 
+				</organization>
+				<party id="pk" refersTo="#pk" as="#plaintiff">
+					Dj. M.
+				</party>
+				ovlašćenog predstavnika oštećene U. za š. N. D. i u odsustvu uredno pozvanog okrivljenog
+				<party id="vv" refersTo="#vv" as="#defendant">
+					V. V. 
+				</party>
+				dana 04.04.2013.godine donio je i javno objavio, ovu PRESUDU Okr.
+				<party id="vv" refersTo="#vv" as="#defendant">
+					V. V.
+				</party>
+				, od oca Dj. i majke V. rodjene Ž. rodjen ... .godine u mjestu B. C. opština Cetinje, sa boravištem u B. državljanin Crne Gore, zemljoradnik, oženjen, otac četvoro maloljetne djece, pismen sa završenom Osnovnom školom, lošeg imovnog stanja, osudjivan presudom 
+				<organization id="ops" refersTo="#ops">
+					opštinskog suda u Cetinju 
+				</organization>
+				K.27/84 od 22.05.1984.godine za krivično djelo iz
+				<ref href="/krivicni#art_84">
+					čl. 84 st.1 KZ CG
+				</ref>
+				na novčanu kaznu 3.200 dinara i presudom 
+				<organization id="os" refersTo="#ops">
+					Osnovnog suda u Cetinju
+				</organization>
+				K.100/94 od 03.06.1996.godine, zbog krivičnog djela iz
+				<ref href="/krivicni#art_143">
+					čl. 143 st.2
+				</ref>
+				i
+				<ref href="/krivicni#art_143">
+					čl. 143 st.1 KZ RCG
+				</ref>
+				, na novčanu kaznu u iznosu od 300 dinara Kriv je Što je: Neutvrdjenog dana u mjesecu septembru i oktobru 2010.godine, u mjestu zv. »Grabova gomila«, na lokalitetu »Crne kamenice«, KO Č opština Cetinje, protivno 
+				<ref href="/suma#art_28">
+					čl. 28 st.1
+				</ref>
+				i
+				<ref href="/suma#art_37">
+					čl. 37 st.5. Zakona o šumama
+				</ref>
+				, svjesno i voljno bez prethodno izvršenog odabiranja, obilježavanja i evidentiranja stabala za sječu, kao i bez prethodno izvršene kontrole inspektora šumarske struke, izvršio čistu sječu šume, na način što je na površini od 2 h, oborio 838 stabala grabovog drveta, u ukupnoj neto količini od 110,72 m3, novčane vrijednosti od 1.036,34 eura, u šumi vlasništvo V. B. iz Beograda, i ako je znao da mu nije izdato rješenje za sječu od strane U. za š. – Područne jedinice Kotor - Ispostave Cetinje, odnosno da je odbijen njegov zahtjev za izdavanje rješenja za sječu, kojom prilikom je sebi pribavio protivpravnu imovinsku korist u iznosu od 1.036,34 eura, a »U. za š.« CG, za isti iznos pričinio štetu, -čime je izvršio krivično djelo pustošenje šuma iz
+				<ref href="/krivicni#art_323">
+					čl.323 st.1 KZ-a
+				</ref>
+			</p>
+			<conclusions>
+				<p>
+					Pa mu
+					<organization id="os" refersTo="#os">
+						sud 
+					</organization>
+						primjenom citiranih zakonskih propisa i primjenom
+					<ref href="/krivicni#art_5">
+						čl.5
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_42">
+						čl.42
+					</ref>
+					,
+					<ref href="/krivicni#art_52">
+						čl.52
+					</ref>
+					,
+					<ref href="/krivicni#art_53">
+						čl.53
+					</ref>
+					i
+					<ref href="/krivicni#art_54">
+						čl.54 KZ-a
+					</ref>
+					i 
+					<ref href="/postupak#art_226">
+						čl.226
+					</ref>
+					,
+					<ref href="/postupak#art_227">
+						čl.227
+					</ref>
+					,
+					<ref href="/postupak#art_228">
+						čl.228
+					</ref>
+					,
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					i
+					<ref href="/postupak#art_374">
+						čl.374, ZKP-a
+					</ref>
+					izriče USLOVNU OSUDU Kojom okrivljenom utvrđuje kaznu zatvora u trajanju od 60 dana i istovremeno određuje da se navedena kazna neće izvršiti ukoliko okrivljeni u periodu od 1 (jedne) godine, po pravosnažnosti presude, ne počini novo krivično djelo. Obavezuje se okrivljeni da na ime troškova krivičnog postupka u korist budžeta Crne Gore uplati iznos od 361,75 eura, te na ime paušala iznosu od 30,00 eura, u roku od 15 dana, po pravosnažnosti presude, a pod prijetnjom prinudnog izvršenja
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>
