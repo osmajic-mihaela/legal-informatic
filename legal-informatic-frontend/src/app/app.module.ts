@@ -23,27 +23,29 @@ import { AkomaNtosoCasesComponent } from './pages/akoma-ntoso-cases/akoma-ntoso-
 import { AkomaNtosoLawComponent } from './pages/akoma-ntoso-law/akoma-ntoso-law.component';
 import { MatListModule } from '@angular/material/list';
 import { BoolToDaOrNePipe } from './pipes/bool-to-da-or-ne.pipe';
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent, NewCaseComponent, AkomaNtosoCasesComponent, AkomaNtosoLawComponent, BoolToDaOrNePipe],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatIconModule,
-    MatDividerModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatOptionModule,
-    MatProgressSpinnerModule,
-    MatInputModule,
-    FormsModule,
-    HttpClientModule,
-    MatListModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatButtonModule,
+        MatIconModule,
+        MatDividerModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        MatOptionModule,
+        MatProgressSpinnerModule,
+        MatInputModule,
+        FormsModule,
+        HttpClientModule,
+        MatListModule,
+        MatCheckboxModule
+    ],
   providers: [],
   bootstrap: [AppComponent],
 })

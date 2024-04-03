@@ -9,16 +9,16 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class RulingTemplateService {
     private String makeHTMLHeader() {
-        return "<html>\n<body>";
+        return "<html>" + "\n<body>";
     }
 
     private String makeHTMLFooter() {
-        return "</body>\n<html>";
+        return "</body>\n</html>";
     }
 
     private String makeLegalCaseBody(LegalCase legalCase) {
         return "\n<div id='case-body'>" +
-                "\n<h1>U IME CRNE GORE</h1>" +
+                "\n<h3>U IME CRNE GORE</h3>" +
                 "\n<div>" +
                 "\n<p>Sud u " + legalCase.getCourt() + ", " +
                 "sudija " + legalCase.getJudge() + ", " +
@@ -31,7 +31,7 @@ public class RulingTemplateService {
 
     private String makeDrDeviceLegalCaseBody(DrDeviceLegalCase drDeviceLegalCase) {
         return "\n<div id='case-body'>" +
-                "\n<h1>U IME CRNE GORE</h1>" +
+                "\n<h3>U IME CRNE GORE</h3>" +
                 "\n<div>" +
                 "\n<p>Sud u " + drDeviceLegalCase.getCourt() + ", " +
                 "sudija " + drDeviceLegalCase.getJudge() + ", " +
@@ -44,8 +44,9 @@ public class RulingTemplateService {
 
     private String makeRulingBody(String ruling) {
         return "\n<div id='ruling'>" +
-                "\n<h1>PRESUDU</h1>" +
+                "\n<h3>PRESUDU</h3>" +
                 "\n<div>\n<p>\n" + ruling + "\n</p>\n</div>" +
+                "\n</div>" +
                 "\n</div>";
     }
 

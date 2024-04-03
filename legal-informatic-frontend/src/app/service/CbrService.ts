@@ -15,6 +15,8 @@ export class CbrService {
   getCaseReccomendation(caseDescription:LegalCase): Observable<LegalCase[]> {
     return this.http.post<LegalCase[]>(this.apiHost + `/case/recommend-case-solution`, caseDescription,{headers: this.headers});
   }
-
+  recommendCaseVerdict(caseDescription:LegalCase): Observable<LegalCase[]> {
+    return this.http.post<LegalCase[]>(this.apiHost + `/dr-device-cases/recommend-case-verdict`, caseDescription,{headers: this.headers});
+  }
 
 }

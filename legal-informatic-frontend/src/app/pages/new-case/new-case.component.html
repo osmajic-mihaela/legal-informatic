@@ -111,8 +111,56 @@
             <input matInput type="number" [(ngModel)]="legalCase.financialDamage" />
           </mat-form-field>
         </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Krčenje šume</mat-label>
+            <mat-select [(ngModel)]="legalCase.deforestation">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
       </div>
-
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Pustošenje šume</mat-label>
+            <mat-select [(ngModel)]="legalCase.desolation">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Posebna šuma</mat-label>
+            <mat-select [(ngModel)]="legalCase.special_forest">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Sa namerom</mat-label>
+            <mat-select [(ngModel)]="legalCase.had_intention">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Sa namerom da proda</mat-label>
+            <mat-select [(ngModel)]="legalCase.intention_to_sell">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
       <div
         class="stretch-width is-flex is-flex-direction-row is-justify-content-center mb-5"
       >
@@ -120,6 +168,7 @@
           mat-flat-button
           [style.background-color]="'#1B1C20'"
           [style.color]="'rgba(255, 255,255)'"
+          [style.opacity]="isValidForRecommendation() ? 0.4 : 1"
           (click)="getRecommendations()"
           [disabled]=isValidForRecommendation()
         >
@@ -226,6 +275,7 @@
         <button
           mat-flat-button
           [style.background-color]="'#1B1C20'"
+          [style.opacity]="isValidForRecommendation() ? 0.4 : 1"
           [style.color]="'rgba(255, 255,255)'"
           (click)="addNewCase()"
           [disabled] = isValidForNewCaseAdding()
@@ -237,10 +287,10 @@
 
 
     <div class="column ">
-      <div *ngIf="isLoading">
+      <div *ngIf="isLoadingCaseRecommendation || isLoadingVerdictRecommendation">
         <mat-spinner class="auto-margin pt-8 mt-5"></mat-spinner>
       </div>
-      <div *ngIf="!isLoading">
+      <div *ngIf="!(isLoadingCaseRecommendation || isLoadingVerdictRecommendation)">
         <h1>Rasuđivanje po slučajevima</h1>
         <div>
           <p *ngIf="caseRecommendation.length == 0">Nema preporuka.</p>
@@ -250,8 +300,17 @@
         <mat-divider class="my-5"></mat-divider>
         <h1 class="mt-5">Rasuđivanje po pravilima</h1>
         <div>
-          <p >Nema preporuka.</p>
-
+          <p *ngIf="verdictRecommendation.length == 0">Nema preporuka.</p>
+          <div class="mb-5" *ngFor="let item of verdictRecommendation" [innerHTML]="item">
+          </div>
+        </div>
+        <mat-divider class="my-5"></mat-divider>
+        <h1 class="mt-5">Presuda generisana preko slučajeva</h1>
+        <div [innerHTML]="caseGeneratedByCases">
+        </div>
+        <mat-divider class="my-5"></mat-divider>
+        <h1 class="mt-5">Presuda generisana preko pravila</h1>
+        <div [innerHTML]="caseGeneratedByRules">
         </div>
       </div>
     </div>
