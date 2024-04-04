@@ -6,7 +6,6 @@ import org.example.legalinformaticbackend.repository.DrDeviceLegalCaseRepository
 import org.springframework.stereotype.Service;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -140,6 +139,28 @@ public class DrDeviceLegalCaseService {
         return 0;
     }
 
+    private String prettifyVerdict(String verdict) {
+        // meta
+        verdict = verdict.replace(": defeasibly-proven-positive", "");
+        verdict = verdict.replace("Defendant is not guilty on any charges", "Optuženi nije pronađen kriv ni po jednoj stavci");
+        verdict = verdict.replace("Defendant to pay", "Optuženi da plati");
+        verdict = verdict.replace("Defendant minimum prison time", "Minimalna zatvorska kazna za optuženog");
+        verdict = verdict.replace("Defendant maximum prison time", "Maksimalna zatvorska kazna za optuženog");
+
+        // charges
+        verdict = verdict.replace("has_deforested_forest", "Optuženi je vršio seču ili krčio šumu");
+        verdict = verdict.replace("has_desolated_forest", "Optuženi je oštetio ili na drugi način pustošio šumu");
+        verdict = verdict.replace("in_prohibited_land", "Optuženi je u parku, drvoredu ili drugom mestu gde je zabranjena seča");
+        verdict = verdict.replace("defendant_desolated_special_forest", "Optuženi je kriv po Krivičnom zakoniku član 323 tačka 2 - Pustošenje Zaštićenih Šuma");
+        verdict = verdict.replace("defendant_desolated_forest", "Optuženi je kriv po Krivičnom zakoniku član 323 tačka 1 - Pustošenje Šuma");
+        verdict = verdict.replace("in_special_forest", "Optuženi je u zaštićenoj šumi, nacionalnom parku ili drugoj šumi sa posebnom namenom");
+        verdict = verdict.replace("defendant_stole_forest_level_2", "Optuženi je kriv po Krivičnom zakoniku član 324 tačka 2 - Krađa Zaštićene Šume");
+        verdict = verdict.replace("defendant_stole_forest", "Optuženi je kriv po Krivičnom zakoniku član 324 tačka 1 - Šumska Krađa");
+        verdict = verdict.replace("defendant_has_intention_to_steal_forest", "Optuženi je kriv po Krivičnom zakoniku član 324 tačka 3 - Namera Šumske Krađe");
+
+        return verdict;
+    }
+
     public String parseExportRDF() throws IOException {
         Path path = Path.of(this.exportRDFPath);
         String rdfContent = Files.readString(path);
@@ -193,10 +214,10 @@ public class DrDeviceLegalCaseService {
         }
         maxPrisonTime = Collections.max(imprisonmentValues);
 
-        indictment.append("Defendant to pay: ").append(toPay.toString()).append("\n");
-        indictment.append("Defendant minimum prison time: ").append(minPrisonTime.toString()).append("\n");
-        indictment.append("Defendant maximum prison time: ").append(maxPrisonTime.toString()).append("\n");
+        indictment.append("Defendant to pay: ").append(toPay.toString()).append(" eura\n");
+        indictment.append("Defendant minimum prison time: ").append(minPrisonTime.toString()).append(" meseci\n");
+        indictment.append("Defendant maximum prison time: ").append(maxPrisonTime.toString()).append(" meseci\n");
 
-        return indictment.toString();
+        return this.prettifyVerdict(indictment.toString());
     }
 }
