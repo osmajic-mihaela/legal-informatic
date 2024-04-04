@@ -132,5 +132,45 @@ public class LegalCase extends DbEntity implements CaseComponent {
                 "Uslovnost kazne: " + uslovna + "<br />" +
                 "Zatvorska kazna: " + prisonSentence  + "<br />" +
                 "Kazna rada u javnom interesu: " + communitySentence  + "<br />";
-        }
     }
+
+    public String toStringVerdict() {
+        String osudjen = "";
+        String uslovna = "";
+
+        if(convicted != null && convicted){
+            osudjen = "Osuđujuća";
+        }else{
+            osudjen = "Oslobađajuća";
+        }
+
+        if(conditionalSentence != null && conditionalSentence){
+            uslovna = "Uslovna";
+        }else{
+            uslovna = "Neuslovna";
+        }
+
+        return "Prekršaj: " + reasonForProsecution  + ", " +
+        "Osuđen: " + osudjen + ", " +
+        "Primenjeni propisi: " + citedArticles  + ", " +
+        "Novčana kazna: " + financialSentence + "€, " +
+        "Uslovnost kazne: " + uslovna + ", " +
+        "Zatvorska kazna: " + prisonSentence  + ", " +
+        "Kazna rada u javnom interesu: " + communitySentence;
+    }
+
+    public String toStringPenalties() {
+        String uslovna = "";
+
+        if(conditionalSentence != null && conditionalSentence){
+            uslovna = "Uslovna";
+        }else{
+            uslovna = "Neuslovna";
+        }
+
+        return "Novčana kazna: " + financialSentence + "€, " +
+                "Uslovnost kazne: " + uslovna + ", " +
+                "Zatvorska kazna: " + prisonSentence  + ", " +
+                "Kazna rada u javnom interesu: " + communitySentence;
+    }
+}

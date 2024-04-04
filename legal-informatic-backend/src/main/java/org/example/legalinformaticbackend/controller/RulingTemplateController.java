@@ -27,9 +27,11 @@ public class RulingTemplateController {
     @PostMapping("/template-legal-case")
     public ResponseEntity<?> templateLegalCase(@RequestBody RulingTemplateLegalCaseDTO rulingTemplateLegalCaseDTO) {
         LegalCase legalCase = mapperService.mapToLegalCase(rulingTemplateLegalCaseDTO.getLegalCaseDTO());
-        String ruling = rulingTemplateLegalCaseDTO.getRuling();
+        String date = rulingTemplateLegalCaseDTO.getDate();
+        String judgementMeta = rulingTemplateLegalCaseDTO.getJudgementMeta();
+        String explanationMeta = rulingTemplateLegalCaseDTO.getExplanationMeta();
 
-        String res = rulingTemplateService.makeLegalCaseTemplate(legalCase, ruling);
+        String res = rulingTemplateService.makeLegalCaseTemplate(legalCase, date, judgementMeta, explanationMeta);
 
         return ResponseEntity.ok(res);
     }
@@ -38,8 +40,11 @@ public class RulingTemplateController {
     public ResponseEntity<?> templateDrDeviceLegalCase(@RequestBody RulingTemplateDrDeviceLegalCaseDTO rulingTemplateDrDeviceLegalCaseDTO) {
         DrDeviceLegalCase drDeviceLegalCase = mapperService.mapToDrDeviceLegalCase(rulingTemplateDrDeviceLegalCaseDTO.getDrDeviceLegalCaseDTO());
         String ruling = rulingTemplateDrDeviceLegalCaseDTO.getRuling();
+        String date = rulingTemplateDrDeviceLegalCaseDTO.getDate();
+        String judgementMeta = rulingTemplateDrDeviceLegalCaseDTO.getJudgementMeta();
+        String explanationMeta = rulingTemplateDrDeviceLegalCaseDTO.getExplanationMeta();
 
-        String res = rulingTemplateService.makeDrDeviceLegalCaseTemplate(drDeviceLegalCase, ruling);
+        String res = rulingTemplateService.makeDrDeviceLegalCaseTemplate(drDeviceLegalCase, ruling, date, judgementMeta, explanationMeta);
 
         return ResponseEntity.ok(res);
     }

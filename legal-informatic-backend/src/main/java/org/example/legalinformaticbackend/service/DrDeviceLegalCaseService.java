@@ -6,6 +6,7 @@ import org.example.legalinformaticbackend.repository.DrDeviceLegalCaseRepository
 import org.springframework.stereotype.Service;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -214,10 +215,48 @@ public class DrDeviceLegalCaseService {
         }
         maxPrisonTime = Collections.max(imprisonmentValues);
 
-        indictment.append("Defendant to pay: ").append(toPay.toString()).append(" eura\n");
+        indictment.append("Defendant to pay: ").append(toPay.toString()).append("€\n");
         indictment.append("Defendant minimum prison time: ").append(minPrisonTime.toString()).append(" meseci\n");
         indictment.append("Defendant maximum prison time: ").append(maxPrisonTime.toString()).append(" meseci\n");
 
         return this.prettifyVerdict(indictment.toString());
+    }
+
+    public String getVerdictArticles(String prettyVerdict) {
+        ArrayList<String> articles = new ArrayList<String>();
+
+        Pattern pattern = Pattern.compile("čl.(323|324)\\s?st.\\d{1,2}");
+        Matcher matcher = pattern.matcher(prettyVerdict);
+
+        while (matcher.find()) {
+            articles.add(matcher.group());
+        }
+
+        StringBuilder retVal = new StringBuilder();
+
+        for (String article: articles) {
+            retVal.append(article);
+            retVal.append(", ");
+        }
+
+        return retVal.toString();
+    }
+
+    private String getSingleGroupMatch(String source, Pattern pattern) {
+        Matcher matcher = pattern.matcher(source);
+
+        while (matcher.find()) {
+            return matcher.group();
+        }
+
+        return "";
+    }
+
+    public String getVerdictPenalties(String prettyVerdict) {
+        String paymentPenalty = this.getSingleGroupMatch(prettyVerdict, Pattern.compile("optuženi da plati: \\d+"));
+        String minImprisonment = this.getSingleGroupMatch(prettyVerdict, Pattern.compile("minimalna zatvorska kazna za optuženog: \\d+"));
+        String maxImprisonment = this.getSingleGroupMatch(prettyVerdict, Pattern.compile("maksimalna zatvorska kazna za optuženog: \\d+"));
+
+        return paymentPenalty + ", " + minImprisonment + ", " + maxImprisonment;
     }
 }
