@@ -151,12 +151,12 @@ public class DrDeviceLegalCaseService {
         verdict = verdict.replace("has_deforested_forest", "Optuženi je vršio seču ili krčio šumu");
         verdict = verdict.replace("has_desolated_forest", "Optuženi je oštetio ili na drugi način pustošio šumu");
         verdict = verdict.replace("in_prohibited_land", "Optuženi je u parku, drvoredu ili drugom mestu gde je zabranjena seča");
-        verdict = verdict.replace("defendant_desolated_special_forest", "Optuženi je kriv po Krivičnom zakoniku član 323 tačka 2 - Pustošenje Zaštićenih Šuma");
-        verdict = verdict.replace("defendant_desolated_forest", "Optuženi je kriv po Krivičnom zakoniku član 323 tačka 1 - Pustošenje Šuma");
+        verdict = verdict.replace("defendant_desolated_forest", "Optuženi je kriv za krivično delo postošenje šuma iz čl.323 st.1");
+        verdict = verdict.replace("defendant_desolated_special_forest", "Optuženi je kriv za krivično delo postošenje šuma iz čl.323 st.2");
         verdict = verdict.replace("in_special_forest", "Optuženi je u zaštićenoj šumi, nacionalnom parku ili drugoj šumi sa posebnom namenom");
-        verdict = verdict.replace("defendant_stole_forest_level_2", "Optuženi je kriv po Krivičnom zakoniku član 324 tačka 2 - Krađa Zaštićene Šume");
-        verdict = verdict.replace("defendant_stole_forest", "Optuženi je kriv po Krivičnom zakoniku član 324 tačka 1 - Šumska Krađa");
-        verdict = verdict.replace("defendant_has_intention_to_steal_forest", "Optuženi je kriv po Krivičnom zakoniku član 324 tačka 3 - Namera Šumske Krađe");
+        verdict = verdict.replace("defendant_stole_forest_level_2", "Optuženi je kriv za krivično delo šumska krađa iz čl.324 st.2");
+        verdict = verdict.replace("defendant_stole_forest", "Optuženi je kriv za krivično delo šumska krađa iz čl.324 st.1");
+        verdict = verdict.replace("defendant_has_intention_to_steal_forest", "Optuženi je kriv za krivično delo šumska krađa iz čl.324 st.3");
 
         return verdict;
     }
