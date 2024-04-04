@@ -61,7 +61,8 @@ export class NewCaseComponent implements OnInit {
     this.legalCaseService.addNewCase(this.legalCase).subscribe((response) => {
       alert('Slučaj ' + response.caseNumber+' je zabeležen u bazi!');
     });
-    const caseRecommendations = this.caseRecommendation[0];
+    let caseRecommendations = this.caseRecommendation[0];
+    caseRecommendations = caseRecommendations.split('Sličnost:')[0];
     this.legalCaseService.getTemplateByCases({
       ruling: caseRecommendations,
       legalCaseDTO: {

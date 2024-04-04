@@ -47,7 +47,7 @@ public class RulingTemplateService {
                 "sudija " + legalCase.getJudge() + ", " +
                 "uz učešće zapisničara " + legalCase.getCourtReporter() + ", " +
                 "u krivičnom predmetu " + legalCase.getCaseNumber() + ", protiv" +
-                "okrivljenog " + legalCase.getDefendant() + ", u prisustvu državnog tužioca Odt - a" +
+                "okrivljenog " + legalCase.getDefendant() + ", u prisustvu državnog tužioca Odt - a " +
                 legalCase.getPlaintiff() + " i okrivljenog " + legalCase.getDefendant() +
                 " doneo je: </p>" +
                 "</div>";
@@ -61,9 +61,9 @@ public class RulingTemplateService {
                 "sudija " + drDeviceLegalCase.getJudge() + ", " +
                 "uz učešće zapisničara " + drDeviceLegalCase.getCourtReporter() + ", " +
                 "u krivičnom predmetu " + drDeviceLegalCase.getCaseNumber() + ", protiv" +
-                "okrivljenog " + drDeviceLegalCase.getDefendant() + ", u prisustvu državnog tužioca Odt - a" +
+                "okrivljenog " + drDeviceLegalCase.getDefendant() + ", u prisustvu državnog tužioca Odt - a " +
                 drDeviceLegalCase.getPlaintiff() + " i okrivljenog " + drDeviceLegalCase.getDefendant() +
-                "doneo je: </p>" +
+                " doneo je: </p>" +
                 "</div>";
     }
 
