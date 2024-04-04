@@ -2,6 +2,7 @@ export interface DrDeviceLegalCaseDTO{
   caseNumber: string;
   court: string;
   judge: string;
+  plaintiff: string;
   courtReporter: string;
   defendant: string;
   deforestation: boolean;

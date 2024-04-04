@@ -27,6 +27,8 @@ public class DrDeviceLegalCase extends DbEntity implements CaseComponent {
     @Column(name = "judge")
     private String judge;
 
+    @Column(name = "plaintiff")
+    private String plaintiff;
     @Column(name = "court_reporter")
     private String courtReporter;
 
@@ -68,6 +70,7 @@ public class DrDeviceLegalCase extends DbEntity implements CaseComponent {
                 " case_number=" + caseNumber +
                 " court=" + court +
                 " judge=" + judge +
+                " plaintiff=" + plaintiff +
                 " courtReporter=" + courtReporter +
                 " defendant=" + defendant +
                 " deforestation=" + deforestation +

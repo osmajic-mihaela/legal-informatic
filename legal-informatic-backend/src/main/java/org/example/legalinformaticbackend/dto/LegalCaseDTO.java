@@ -16,6 +16,8 @@ public class LegalCaseDTO {
 
     private String judge;
 
+    private String plaintiff;
+
     private String courtReporter;
 
     private String defendant;

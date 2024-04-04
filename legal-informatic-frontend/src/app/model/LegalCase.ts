@@ -32,6 +32,7 @@ export class LegalCase implements ILegalCase {
   caseNumber?: string="";
   court?: string="";
   judge?: string="";
+  plaintiff?: string="";
   courtReporter?: string="";
   defendant?: string="";
   protectedSurface?: string="";

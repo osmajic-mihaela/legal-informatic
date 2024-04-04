@@ -9,7 +9,30 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class RulingTemplateService {
     private String makeHTMLHeader() {
-        return "<html>" + "\n<body>";
+        return "<html><head>" +
+                "<style>\n" +
+                "        h1,\n" +
+                "        h2,\n" +
+                "        h3,\n" +
+                "        h4 {\n" +
+                "            text-align: center;\n" +
+                "        }\n" +
+                "\n" +
+                "        h3 {\n" +
+                "            margin-bottom: 60px;\n" +
+                "        }\n" +
+                "\n" +
+                "        h4 {\n" +
+                "            margin-top: 50px;\n" +
+                "            margin-bottom: 50px;\n" +
+                "        }\n" +
+                "\n" +
+                "        p{\n" +
+                "            margin-top: 30px;\n" +
+                "            margin-bottom: 30px;\n" +
+                "        }\n" +
+                "    </style>" +
+                "</head>" + "\n<body>";
     }
 
     private String makeHTMLFooter() {
@@ -20,12 +43,13 @@ public class RulingTemplateService {
         return "\n<div id='case-body'>" +
                 "\n<h3>U IME CRNE GORE</h3>" +
                 "\n<div>" +
-                "\n<p>Sud u " + legalCase.getCourt() + ", " +
+                "\n<p>" + legalCase.getCourt() + ", " +
                 "sudija " + legalCase.getJudge() + ", " +
                 "uz učešće zapisničara " + legalCase.getCourtReporter() + ", " +
-                "u krivičnom predmetu " + legalCase.getCaseNumber() + ", " +
-                "okrivljenog " + legalCase.getDefendant() + ", " +
-                "doneo je: </p>" +
+                "u krivičnom predmetu " + legalCase.getCaseNumber() + ", protiv" +
+                "okrivljenog " + legalCase.getDefendant() + ", u prisustvu državnog tužioca Odt - a" +
+                legalCase.getPlaintiff() + " i okrivljenog " + legalCase.getDefendant() +
+                " doneo je: </p>" +
                 "</div>";
     }
 
@@ -33,11 +57,12 @@ public class RulingTemplateService {
         return "\n<div id='case-body'>" +
                 "\n<h3>U IME CRNE GORE</h3>" +
                 "\n<div>" +
-                "\n<p>Sud u " + drDeviceLegalCase.getCourt() + ", " +
+                "\n<p>" + drDeviceLegalCase.getCourt() + ", " +
                 "sudija " + drDeviceLegalCase.getJudge() + ", " +
                 "uz učešće zapisničara " + drDeviceLegalCase.getCourtReporter() + ", " +
-                "u krivičnom predmetu " + drDeviceLegalCase.getCaseNumber() + ", " +
-                "okrivljenog " + drDeviceLegalCase.getDefendant() + ", " +
+                "u krivičnom predmetu " + drDeviceLegalCase.getCaseNumber() + ", protiv" +
+                "okrivljenog " + drDeviceLegalCase.getDefendant() + ", u prisustvu državnog tužioca Odt - a" +
+                drDeviceLegalCase.getPlaintiff() + " i okrivljenog " + drDeviceLegalCase.getDefendant() +
                 "doneo je: </p>" +
                 "</div>";
     }

@@ -2,32 +2,39 @@
   <div class="columns">
     <div class="column ">
       <h1>Dodavanje nove presude</h1>
-
-      <mat-form-field appearance="outline">
-        <mat-label>Sud</mat-label>
-        <input matInput [(ngModel)]="legalCase.court"/>
-      </mat-form-field>
-
       <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Sud</mat-label>
+            <input matInput [(ngModel)]="legalCase.court"/>
+          </mat-form-field>
+        </div>
         <div class="column">
           <mat-form-field appearance="outline">
             <mat-label>Broj presude</mat-label>
             <input matInput [(ngModel)]="legalCase.caseNumber" />
           </mat-form-field>
         </div>
+      </div>
+      <div class="columns">
         <div class="column">
           <mat-form-field appearance="outline">
             <mat-label>Sudija</mat-label>
             <input matInput [(ngModel)]="legalCase.judge"/>
           </mat-form-field>
         </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Zapisnicar</mat-label>
+            <input matInput [(ngModel)]="legalCase.courtReporter" />
+          </mat-form-field>
+        </div>
       </div>
-
       <div class="columns">
         <div class="column">
           <mat-form-field appearance="outline">
             <mat-label>Tužilac</mat-label>
-            <input matInput  [(ngModel)]="legalCase.courtReporter"/>
+            <input matInput  [(ngModel)]="legalCase.plaintiff"/>
           </mat-form-field>
         </div>
         <div class="column">
@@ -301,7 +308,7 @@
         <h1 class="mt-5">Rasuđivanje po pravilima</h1>
         <div>
           <p *ngIf="verdictRecommendation.length == 0">Nema preporuka.</p>
-          <div class="mb-5" *ngFor="let item of verdictRecommendation" [innerHTML]="item">
+          <div class="mb-5" *ngIf="verdictRecommendation.length != 0" [innerHTML]="verdictRecommendation">
           </div>
         </div>
         <mat-divider class="my-5"></mat-divider>

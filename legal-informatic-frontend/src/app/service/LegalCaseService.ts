@@ -12,17 +12,18 @@ export class LegalCaseService {
 
   private apiHost = 'http://localhost:8080'
   headers: HttpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
-  constructor(private  http:HttpClient) { }
+  constructor(private  http: HttpClient) { }
 
-  addNewCase(caseDescription:LegalCase): Observable<LegalCase> {
+  addNewCase(caseDescription: LegalCase): Observable<LegalCase> {
     return this.http.post<LegalCase>(this.apiHost + `/case/add-new-case`, caseDescription, { headers: this.headers });
   }
 
-  getTemplateByCases(legalCase: RulingTemplateLegalCaseDTO){
+  getTemplateByCases(legalCase: RulingTemplateLegalCaseDTO): Observable<any>{
     return this.http.post<any>(this.apiHost + `/ruling-template/template-legal-case`, legalCase, {  responseType: 'text' as 'json' });
   }
-  getTemplateByRules(legalCase: RulingTemplateDrDeviceLegalCaseDTO){
-    return this.http.post<any>(this.apiHost + `/ruling-template/template-dr-device-legal-case`, legalCase,{  responseType: 'text' as 'json' });
+  getTemplateByRules(legalCase: RulingTemplateDrDeviceLegalCaseDTO): Observable<any>{
+    return this.http.post<any>(this.apiHost + `/ruling-template/template-dr-device-legal-case`,
+      legalCase, {  responseType: 'text' as 'json' });
   }
 
 }

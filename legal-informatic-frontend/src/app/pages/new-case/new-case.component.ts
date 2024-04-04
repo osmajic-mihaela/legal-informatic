@@ -14,7 +14,7 @@ export class NewCaseComponent implements OnInit {
   public isLoadingCaseRecommendation = false;
   public legalCase: LegalCase = new LegalCase();
   public caseRecommendation :any[] = [];
-  public verdictRecommendation :any[] = [];
+  public verdictRecommendation = '';
   selectedOffense: string;
   stav: string;
   caseGeneratedByCases: SafeHtml | undefined;
@@ -33,31 +33,35 @@ export class NewCaseComponent implements OnInit {
   }
 
   getRecommendations() {
-    this.isLoadingCaseRecommendation = true;
-    this.isLoadingVerdictRecommendation = true;
-
-    this.cbrService.getCaseReccomendation(this.legalCase).subscribe((response) => {
-      this.caseRecommendation = response;
-      this.isLoadingCaseRecommendation = false;
-    });
+    //this.isLoadingCaseRecommendation = true;
+    //this.isLoadingVerdictRecommendation = true;
     const dto = {
       ...this.legalCase,
       prohibited_land: this.legalCase.protectedSurface === 'true'
-    }
-    this.cbrService.recommendCaseVerdict(dto).subscribe((response) => {
-      this.verdictRecommendation = response;
-      this.isLoadingVerdictRecommendation = false;
+    };
+    this.cbrService.getCaseVerdict(dto).subscribe((response: any) => {
+        this.verdictRecommendation = response.verdict;
+        this.isLoadingVerdictRecommendation = false;
+      },
+      error => () => {
+        this.isLoadingVerdictRecommendation = false;
+      });
+    this.cbrService.getCaseReccomendation(this.legalCase).subscribe((response) => {
+      this.caseRecommendation = response;
+      this.isLoadingCaseRecommendation = false;
+    },
+    error => () =>{
+      this.isLoadingCaseRecommendation = false;
     });
+
+
   }
 
   addNewCase() {
     this.legalCaseService.addNewCase(this.legalCase).subscribe((response) => {
       alert('Slučaj ' + response.caseNumber+' je zabeležen u bazi!');
     });
-    let caseRecommendations = '';
-    this.caseRecommendation.forEach((recommendation) => {
-      caseRecommendations += '<br /><br />' + recommendation;
-    });
+    const caseRecommendations = this.caseRecommendation[0];
     this.legalCaseService.getTemplateByCases({
       ruling: caseRecommendations,
       legalCaseDTO: {
@@ -68,6 +72,7 @@ export class NewCaseComponent implements OnInit {
         communitySentence: this.legalCase.communitySentence ?? '',
         conditionalSentence: this.legalCase.conditionalSentence ?? '',
         convicted: this.legalCase.convicted ?? 'false',
+        plaintiff: this.legalCase.plaintiff ?? '',
         courtReporter: this.legalCase.courtReporter ?? '',
         defendant: this.legalCase.defendant ?? '',
         financialDamage: this.legalCase.financialDamage?.toString() ?? '',
@@ -90,16 +95,14 @@ export class NewCaseComponent implements OnInit {
         new XMLSerializer().serializeToString(xmlDocument)
       );
     });
-    let ruleRecommendations = '';
-    this.verdictRecommendation.forEach((recommendation) => {
-      ruleRecommendations += '<br /><br />' + recommendation;
-    });
+    const ruleRecommendations = this.verdictRecommendation;
     this.legalCaseService.getTemplateByRules({
-      ruling: ruleRecommendations,
+      ruling: ruleRecommendations as any,
       drDeviceLegalCaseDTO: {
         caseNumber: this.legalCase.caseNumber ?? '',
         court: this.legalCase.court ?? '',
         judge: this.legalCase.judge ?? '',
+        plaintiff: this.legalCase.plaintiff ?? '',
         courtReporter: this.legalCase.courtReporter ?? '',
         defendant: this.legalCase.defendant ?? '',
         deforestation: this.legalCase.deforestation ?? false,
@@ -136,6 +139,7 @@ export class NewCaseComponent implements OnInit {
       this.legalCase.caseNumber=='' ||
       this.legalCase.court=='' ||
       this.legalCase.judge=='' ||
+      this.legalCase.plaintiff == '' ||
       this.legalCase.courtReporter=='' ||
       this.legalCase.defendant=='' ||
       this.legalCase.protectedSurface=='' ||
@@ -159,6 +163,7 @@ export class NewCaseComponent implements OnInit {
       this.legalCase.caseNumber=='' ||
       this.legalCase.court=='' ||
       this.legalCase.judge=='' ||
+      this.legalCase.plaintiff == '' ||
       this.legalCase.courtReporter=='' ||
       this.legalCase.defendant=='' ||
       this.legalCase.protectedSurface=='' ||
