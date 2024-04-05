@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Beranama
+					</FRBRauthor>
+					<FRBRdate date="2011-09-28">
+						2011-09-28
+					</FRBRdate>
+					<FRBRtitle>
+						K 266/2011
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Berane" showAs="Osnovni sud u Beranama" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Berane" showAs="Osnovno državno tužilaštvo u Beranama" />
+
+				<TLCPerson eId="akenjic" href="/ontology/person/akenjic" showAs="Ana Kenjić - Đukić" />
+				<TLCPerson eId="mobadovic" href="/ontology/person/mobadovic" showAs="Marina Obadović" />
+				<TLCPerson eId="mg" href="/ontology/person/mg" showAs="M. G." />	
+				<TLCPerson eId="mmagdelinic" href="/ontology/person/mmagdelinic" showAs="Miladin Magdelinić" />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					Osnovni sud u Beranama
+				</organization>
+				, kao prvostepeni krivični, po sudiji pojedincu
+				<party id="akenjic" refersTo="#akenjic" as="#judge">
+					Ani Kenjić - Đukić
+				</party>
+				, uz sudjelovanje
+				<party id="mmilanovic" refersTo="#mmilanovic" as="#clerk">
+					zapisničara Marine Obadović
+				</party>
+				, u krivičnom predmetu protiv okrivljenog
+				<party id="mg" refersTo="#mg" as="#defendant">
+					M. G.
+				</party>
+				, iz B., zbog krivičnog djela šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.2
+				</ref>
+				u vezi
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 KZ
+				</ref>
+				, po optužnom predlogu
+				<organization id="odt" refersTo="#odt">
+					Osnovnog državnog tužilaštva u Beranama
+				</organization>
+				Kt.br. 32/11 od 23.08.2011. godine, nakon održanog javnog i glavnog pretresa, u prisustvu Savjetnika
+				<organization id="odt" refersTo="#odt">
+					ODT-a
+				</organization>
+				<party id="mmagdelinic" refersTo="#mmagdelinic" as="#plaintiff">
+					Miladina Magdelinića
+				</party>
+				, okrivljenog i ovlašćenog predstavnika oštećene Uprave za šume PJ A. M. V., donio je i javno objavio dana 28.09.2011. godine PRESUDU Okrivljeni
+				<party id="mg" refersTo="#mg" as="#defendant">
+					M. G.
+				</party>
+				, JMBG …, od oca M. - M. i majke K., rođene D., rođen … godine, u A., stalno nastanjen u Ul. „8 C.", opština B., državljanin CG, penzioner, oženjen, otac četvoro djece, pismen, završio SSS, srednjeg imovnog stanja, neosuđivan,
+			</p>
+			<conclusions>
+				<p>
+					OSLOBAĐA SE OD OPTUŽBE Da je : Avgusta mjeseca 2010. godine, u državnoj šumi, kojom gazduje Uprava za šume Pljevlja-PJ A., u mjestu zv. "K.-S.", Opština A., radi krađe oborio 18 (osamnaest) čamovih stabala u ukupnoj količini od 15,46 m3, čime je pričinio štetu oštećenoj Upravi za šume Pljevlja PJ A., u iznosu od 1.391,07 eura, - čime bi izvršio krivično djelo šumska krađa iz
+					<ref href="/krivicni#art_324">
+						čl. 324 st. 2
+					</ref>
+					u vezi
+					<ref href="/krivicni#art_324">
+						čl. 324 st. 1 Krivičnog zakonika
+					</ref>
+					. - Pošto nije dokazano da je izvršio krivično djelo za koje je optužen, na osnovu 
+					<ref href="/postupak#art_373">
+						čl. 373 tač. 2 Zakonika o krivičnom postupku
+					</ref>
+					. Troškovi krivičnog postupka, padaju na teret budžetskih sredstava ovoga suda, na osnovu
+					<ref href="/postupak#art_230">
+						čl. 230 st. 1 ZKP-a
+					</ref>
+					. Oštećena Uprava za šume Pljevlja - Područna Jedinica A., radi ostvarivanja imovinsko pravnog zahtjeva za naknadu štete, upućuje se na parnicu, na osnovu
+					<ref href="/postupak#art_239">
+						čl. 239 st. 3 ZKP-a
+					</ref>
+					.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

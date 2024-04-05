@@ -1,0 +1,47 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button
+    mat-icon-button
+    *ngIf="sidenav.mode === 'over'"
+    (click)="sidenav.toggle()"
+  >
+    <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+    <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+  </button>
+  Pravna informatika
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <img
+      class="avatar mat-elevation-z8 gold-shadow"
+      src="assets/law-logo.png"
+    />
+
+    <h5 class="name">Fakultet tehničkih nauka</h5>
+    <h6 class="designation">Novi Sad</h6>
+
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/krivicni">
+      <mat-icon>gavel</mat-icon>
+      <span>Zakoni</span>
+    </button>
+    <button mat-button class="menu-button" routerLink="/cases">
+      <mat-icon>work</mat-icon>
+      <span>Presude</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button class="menu-button" routerLink="/new-case">
+      <mat-icon>help</mat-icon>
+      <span>Nova presuda</span>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z8">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

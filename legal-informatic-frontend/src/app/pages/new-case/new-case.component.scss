@@ -1,0 +1,110 @@
+
+
+mat-form-field {
+  width: 100%;
+}
+
+.scroll {
+  //max-height: calc(100vh - 53px);
+  overflow-y: scroll;
+}
+
+.scroll1{
+  overflow: hidden; /* Prevent individual columns from having their own scrollbar */
+}
+
+.action-field {
+  margin-top: -12px;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+/* Layout */
+.centered-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.stretch-width {
+  width: 100%;
+}
+
+.stretch-height {
+  height: 100%;
+}
+
+/* Max width */
+.max-width-500 {
+  max-width: 500px;
+}
+
+.max-width-600 {
+  max-width: 600px;
+}
+
+.max-width-700 {
+  max-width: 700px;
+}
+
+.max-width-800 {
+  max-width: 800px;
+}
+
+.max-width-900 {
+  max-width: 900px;
+}
+
+.max-width-1200 {
+  max-width: 1200px;
+}
+
+/* Border */
+.container {
+  border: 0.8px solid lightgray;
+  border-radius: 10px;
+  padding: 24px;
+}
+
+/* Aditional */
+.clickable {
+  cursor: pointer;
+}
+
+.auto-margin {
+  margin: auto;
+}
+
+.page-container {
+  width: 100%;
+  padding: 30px;
+}
+
+html {
+  --scrollbarBG: #81c4e0;
+  --thumbBG: #165e81;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  font-weight: 600;
+}
+
+p {
+  text-align: center !important;
+}
+

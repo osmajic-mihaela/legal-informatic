@@ -1,0 +1,348 @@
+<div class="page-container">
+  <div class="columns">
+    <div class="column ">
+      <h1>Dodavanje nove presude</h1>
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Sud</mat-label>
+            <input matInput [(ngModel)]="legalCase.court"/>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Broj presude</mat-label>
+            <input matInput [(ngModel)]="legalCase.caseNumber" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Sudija</mat-label>
+            <input matInput [(ngModel)]="legalCase.judge"/>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Zapisnicar</mat-label>
+            <input matInput [(ngModel)]="legalCase.courtReporter" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Tužilac</mat-label>
+            <input matInput  [(ngModel)]="legalCase.plaintiff"/>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Optuženi</mat-label>
+            <input matInput [(ngModel)]="legalCase.defendant" />
+          </mat-form-field>
+        </div>
+      </div>
+
+
+
+
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Broj oborenih stabala</mat-label>
+            <input matInput type="number" [(ngModel)]="legalCase.numberOfTrees"/>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Ukupna kubikaža</mat-label>
+            <input matInput type="number"  [(ngModel)]="legalCase.woodVolume"/>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Vrsta drveta</mat-label>
+            <mat-select [(ngModel)]="legalCase.treeType">
+              <mat-option value="bukovih">Bukva</mat-option>
+              <mat-option value="hrastovih">Hrast</mat-option>
+              <mat-option value="smrčevih">Smrča</mat-option>
+              <mat-option value="grabovog">Grab</mat-option>
+              <mat-option value="čamovih">Čam</mat-option>
+              <mat-option value="topole">Topola</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Svesnost izvršioca</mat-label>
+            <mat-select [(ngModel)]="legalCase.awareness" >
+              <mat-option value="true">Svestan dela</mat-option>
+              <mat-option value="false">Nesvestan dela</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Pripadnost površine</mat-label>
+            <mat-select [(ngModel)]="legalCase.forestProperty">
+              <mat-option value="Državna">Državna</mat-option>
+              <mat-option value="Privatna">Privatna</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Zaštićena površina</mat-label>
+            <mat-select [(ngModel)]="legalCase.protectedSurface">
+              <mat-option value="true">Da</mat-option>
+              <mat-option value="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class = "columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Pričinjena šteta u evrima</mat-label>
+            <input matInput type="number" [(ngModel)]="legalCase.financialDamage" />
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Krčenje šume</mat-label>
+            <mat-select [(ngModel)]="legalCase.deforestation">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Pustošenje šume</mat-label>
+            <mat-select [(ngModel)]="legalCase.desolation">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Posebna šuma</mat-label>
+            <mat-select [(ngModel)]="legalCase.special_forest">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Sa namerom</mat-label>
+            <mat-select [(ngModel)]="legalCase.had_intention">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Sa namerom da proda</mat-label>
+            <mat-select [(ngModel)]="legalCase.intention_to_sell">
+              <mat-option [value]="true">Da</mat-option>
+              <mat-option [value]="false">Ne</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div
+        class="stretch-width is-flex is-flex-direction-row is-justify-content-center mb-5"
+      >
+        <button
+          mat-flat-button
+          [style.background-color]="'#1B1C20'"
+          [style.color]="'rgba(255, 255,255)'"
+          [style.opacity]="isValidForRecommendation() ? 0.4 : 1"
+          (click)="getRecommendations()"
+          [disabled]=isValidForRecommendation()
+        >
+          Preporuke rasuđivanja
+        </button>
+      </div>
+
+      <mat-divider></mat-divider>
+      <div class="columns mt-5">
+        <div class="column">
+          <mat-form-field appearance="fill">
+            <mat-label>Datum sudjenja</mat-label>
+            <input matInput [(ngModel)]="legalCase.date" [disabled]="true" [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker [disabled]="false" #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="columns mt-5">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Tekst presude</mat-label>
+            <textarea [(ngModel)]="legalCase.judgementMeta" matInput></textarea>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Tekst obrazloženja</mat-label>
+            <textarea [(ngModel)]="legalCase.explanationMeta"  matInput></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="columns mt-5">
+        <div class="column">
+          <div class="column action-field">
+            <mat-form-field appearance="outline">
+              <mat-label>Prekršaj</mat-label>
+              <mat-select [(ngModel)]="selectedOffense" (ngModelChange)="updateReason()">
+                <mat-option value="323.">Pustošenje šuma</mat-option>
+                <mat-option value="324.">Šumska krađa</mat-option>
+              </mat-select>
+              <mat-hint>
+                <mat-label>Prekršaj u celosti:</mat-label>
+                <input matInput disabled="true" [(ngModel)]="legalCase.reasonForProsecution"/>
+              </mat-hint>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline" class="mb-5">
+            <mat-label>Stav</mat-label>
+            <input matInput [(ngModel)]="stav" (ngModelChange)="updateStav()"/>
+          </mat-form-field>
+        </div>
+
+      </div>
+      <div class="columns mt-5">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Ishod presude</mat-label>
+            <mat-select [(ngModel)]="legalCase.convicted">
+              <mat-option value="true">Optužujuća</mat-option>
+              <mat-option value="false">Oslobađajuća</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline" class="mb-5">
+            <mat-label>Primenjeni propisi</mat-label>
+            <input matInput [(ngModel)]="legalCase.citedArticles"/>
+            <mat-hint
+            >Sudske odredbe razdvojiti zarezima (cl.16 KZ, cl.323
+              KZ...)</mat-hint
+            >
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div  *ngIf="legalCase.convicted == 'true'">
+        <div class="columns mt-5">
+          <div class="column">
+            <mat-form-field appearance="outline">
+              <mat-label>Novčana kazna u evrima</mat-label>
+              <input matInput type="number" [(ngModel)]="legalCase.financialSentence" />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="columns mt-5">
+          <div class="column">
+            <mat-form-field appearance="outline" class="mb-5">
+              <mat-label>Zatvorska kazna</mat-label>
+              <input matInput [(ngModel)]="legalCase.prisonSentence"/>
+            </mat-form-field>
+          </div>
+
+          <div class="column">
+            <mat-form-field appearance="outline">
+              <mat-label>Uslovnost zatvorske kazne</mat-label>
+              <mat-select [(ngModel)]="legalCase.conditionalSentence">
+                <mat-option value="true">Uslovna</mat-option>
+                <mat-option value="false">Neuslovna</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+        </div>
+
+        <div class="columns mt-5">
+          <div class="column">
+            <mat-form-field appearance="outline" class="mb-5">
+              <mat-label>Kazna rada u javnom interesu</mat-label>
+              <input matInput [(ngModel)]="legalCase.communitySentence"/>
+            </mat-form-field>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+      <div
+        class="stretch-width is-flex is-flex-direction-row is-justify-content-center mt-5"
+      >
+        <button
+          mat-flat-button
+          [style.background-color]="'#1B1C20'"
+          [style.opacity]="isValidForNewCaseAdding() ? 0.4 : 1"
+          [style.color]="'rgba(255, 255,255)'"
+          (click)="addNewCase()"
+          [disabled] = isValidForNewCaseAdding()
+        >
+          Dodaj novu presudu
+        </button>
+      </div>
+    </div>
+
+
+    <div class="column ">
+      <div *ngIf="isLoadingCaseRecommendation || isLoadingVerdictRecommendation">
+        <mat-spinner class="auto-margin pt-8 mt-5"></mat-spinner>
+      </div>
+      <div *ngIf="!(isLoadingCaseRecommendation || isLoadingVerdictRecommendation)">
+        <h1>Rasuđivanje po slučajevima</h1>
+        <div>
+          <p *ngIf="caseRecommendation.length == 0">Nema preporuka.</p>
+          <div class="mb-5" *ngFor="let item of caseRecommendation" [innerHTML]="item">
+          </div>
+        </div>
+        <mat-divider class="my-5"></mat-divider>
+        <h1 class="mt-5">Rasuđivanje po pravilima</h1>
+        <div>
+          <p *ngIf="verdictRecommendation.length == 0">Nema preporuka.</p>
+          <div class="mb-5" *ngIf="verdictRecommendation.length != 0" [innerHTML]="verdictRecommendation">
+          </div>
+        </div>
+        <mat-divider class="my-5"></mat-divider>
+        <h1 class="mt-5">Presuda generisana preko slučajeva</h1>
+        <div [innerHTML]="caseGeneratedByCases">
+        </div>
+        <mat-divider class="my-5"></mat-divider>
+        <h1 class="mt-5">Presuda generisana preko pravila</h1>
+        <div [innerHTML]="caseGeneratedByRules">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Bijelom Polju
+					</FRBRauthor>
+					<FRBRdate date="2010-05-17">
+						2010-05-17
+					</FRBRdate>
+					<FRBRtitle>
+						K 692/2010
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="osbp" href="/ontology/organization/OsnovniSud.BijeloBolje" showAs="Osnovni sud u Bijelom Polju" />
+				<TLCOrganization eId="odtbp" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.BijeloPolje" showAs="Osnovno državno tužilaštvo iz Bijelog Polja" />
+
+				<TLCPerson eId="dmrdak" href="/ontology/person/dmrdak" showAs="Dragan Mrdak" />
+				<TLCPerson eId="kljesnjak" href="/ontology/person/kljesnjak" showAs="Koviljka Lješnjak" />
+				<TLCPerson eId="fb" href="/ontology/person/fb" showAs="F. B." />
+				<TLCPerson eId="kkljajevic" href="/ontology/person/kkljajevic" showAs="Katarina Kljajević" />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="osbp" refersTo="#osbp">
+					Osnovni sud u Bijelom Polju 
+				</organization>
+				kao prvostepeni krivični sud
+				<party id="dmrdak" refersTo="#dmrdak" as="#judge">
+					sudija Dragan Mrdak
+				</party>
+				, sudija pojedinac, uz učešće nameštenika suda
+				<party id="kkljajevic" refersTo="#kkljajevic" as="#clerk">
+					 Koviljke Lješnjak
+				</party>
+				, kao zapisničara, u postupku po optužnom predlogu
+				<organization id="odtbp" refersTo="#odtbp">
+					Osnovnog državnog tužilaštva, u B. Polju
+				</organization>
+				, KT. br. 430/08 od 14. 12. 2010. godine, protiv okrivljenog
+				<party id="fb" refersTo="#fb" as="#defendant">
+					F. B.
+				</party>
+				, zbog krivičnog djela šumska kradja iz 
+				<ref href="/krivicni#art_324">
+					čl. 324 st. 1 Krivičnog zakonika
+				</ref>
+				, po održanom glavnom i javnom pretresu u prisustvu zamjenika u
+				<organization id="odtbp" refersTo="#odtbp">
+					ODT-u u Bijelom Polju
+				</organization>
+				<party id="kkljajevic" refersTo="#kkljajevic" as="#plaintiff">
+					Kljajević Katarine
+				</party>
+				, okrivljenog 
+				<party id="fb" refersTo="#fb" as="#defendant">
+					F. B.a
+				</party>
+				, oštećenih F.M.a i F.D.a, dana 17.05.2011. godine, donio je i javno objavio: PRESUDU Prema okrivljenom:
+				<party id="fb" refersTo="#fb" as="#defendant">
+					F. B.U
+				</party>
+				,od oca M. i majke Z., rođene B., rođen ... godine, u Bijelom Polju, sa prebivalištem u mjestu Podbišće, opština Mojkovac,državljanin Crne Gore, nezaposlen, neoženjen, pismen, sa završenom srednjom školom, srednjeg imovnog stanja,neosuđivan.
+			</p>
+			<conclusions>
+				<p>
+					Na osnovu
+					<ref href="/krivicni#art_362">
+						čl. 362 tač. 1 Zakonika o krivičnom postupku CG
+					</ref>
+					, ODBIJA SE OPTUŽBA Da je: - neutvrđenog dana u prvoj polovini maja mjeseca 2008 godine, u mjestu Buren, opština Mojkovac, u šumi zvanoj ''Fuštića Ograde, vlasništvo oštećenih F.M.a i F.D.a, radi krađe oborio jedno smrčevo stablo, ukupne drvne mase od 1,29 m3 i time im pričinio štetu u iznosu od 129,00 €, - čime bi izvršio krivično djelo šumska kradja iz 
+					<ref href="/krivicni#art_324">
+						324 st. 1 Krivičnog zakonika
+					</ref>
+					. - zbog odustanka 
+					<organization id="odtbp" refersTo="#odtbp">
+						Osnovnog državnog tužilaštva iz B. Polja 
+					</organization>
+					od optužbe prije završetka glavnog pretresa. Troškovi krivičnog postupka padaju na teret budžeta CG.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

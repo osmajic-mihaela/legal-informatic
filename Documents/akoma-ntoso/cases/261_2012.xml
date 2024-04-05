@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+			<identification source="#court">
+				<FRBRWork>
+					<FRBRauthor>
+						Osnovni Sud u Cetinju
+					</FRBRauthor>
+					<FRBRdate date="2013-04-08">
+						2013-04-08
+					</FRBRdate>
+					<FRBRtitle>
+						K 261/2012
+					</FRBRtitle>
+					<FRBRcountry>
+						CG
+					</FRBRcountry>
+				</FRBRWork>
+			</identification>
+			<references>
+				<TLCOrganization eId="os" href="/ontology/organization/OsnovniSud.Cetinje" showAs="Osnovni sud u Cetinju" />
+				<TLCOrganization eId="odt" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Cetinje" showAs="Osnovno državno tužilaštvo iz Cetinja" />
+
+				<TLCPerson eId="mcupic" href="/ontology/person/mcupic" showAs="Marija Ćupić" />
+				<TLCPerson eId="olipovina" href="/ontology/person/olipovina" showAs="Olga Lipovina" />
+				<TLCPerson eId="smartinovic" href="/ontology/person/smartinovic" showAs="Sava Martinović" />	
+				<TLCPerson eId="bmartinovic" href="/ontology/person/bmartinovic" showAs="Branislav Martinović" />	
+				<TLCPerson eId="mdjukanovic" href="/ontology/person/mdjukanovic" showAs="Marko Đukanović" />
+				<TLCPerson eId="rbojovic" href="/ontology/person/rbojovic" showAs="Rajko Bojović" />
+
+				<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+				<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+				<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+				<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+				<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+			</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="os" refersTo="#os">
+					OSNOVNI SUD U CETINJU
+				</organization>
+				, kao prvostepeni krivični, po
+				<party id="mcupic" refersTo="#mcupic" as="#judge">
+					sudiji Mariji Ćupić
+				</party>
+				, kao sudiji pojedincu, uz sudjelovanje sudskog namještenika 
+				<party id="olipovina" refersTo="#olipovina" as="#clerk">
+					Lipovina Olge
+				</party>
+				, kao zapisničara, u krivičnom predmetu okr.
+				<party id="smartinovic" refersTo="#smartinovic" as="#defendant">
+					.Martinović Sava 
+				</party>
+				i
+				<party id="bmartinovic" refersTo="#bmartinovic" as="#defendant">
+					.Martinović Branislava 
+				</party>
+				iz Cetinja, kao saizvršilaca zbog izvršenog krivičnog djela pustošenje šuma iz
+				<ref href="/krivicni#art_323">
+					čl.323.st.2.
+				</ref>
+				u vezi 
+				<ref href="/krivicni#art_323">
+					čl.323.st.1.
+				</ref>
+				, a u vezi
+				<ref href="/krivicni#art_23">
+					čl.23.st.2. Krivičnog zakonika
+				</ref>
+				, a po optužnom predlogu 
+				<organization id="odt" refersTo="#odt">
+					 Osnovnog državnog tužilaštva u Cetinju
+				</organization>
+				Kt.br.13/10 od 26.03.2012.godine, nakon održanog glavnog i javnog pretresa dana 03.04.2013.godine, u prisustvu savjetnika
+				<organization id="odt" refersTo="#odt">
+					ODT-a u Cetinju
+				</organization>
+				<party id="pk" refersTo="#pk" as="#plaintiff">
+					Đukanović Marka
+				</party>
+				i okr. 
+				<party id="smartinovic" refersTo="#smartinovic" as="#defendant">
+					Martinović Sava 
+				</party>
+				, sa braniocem
+				<party id="rbojovic" refersTo="#rbojovic" as="#lawyer">
+					Bojović Rajkom, adv. 
+				</party>
+				.iz Cetinja, ovlašćenog predstavnika ošt. JP za Nacionalne parkove Crne Gore,Radusinović Đorđija, donio je ,a dana 08.04.2013.godine i javno objavio PRESUDU Okr.
+				<party id="smartinovic" refersTo="#smartinovic" as="#defendant">
+					Martinović Savo
+				</party>
+				, od oca Nika i majke Savice, rođene Martinović, rođen 25.01.1950.godine u Cetinje, gdje i prebiva ul:,,Bulevar crnogorskih junaka,,bb., državljanin Crne Gore, nezaposlen, oženjen, pismen, sa završenom Srednjom školom, lošeg imovnog stanja, osudjivan presudom
+				<organization id="os" refersTo="#os">
+					Osnovnog suda u Cetinju
+				</organization>
+				, posl.br.K.br.43/06 od 21.02.2006.godine.,zbog krivičnog djela ugrožavanje sigurnosti iz
+				<ref href="/krivicni#art_168">
+					čl.168.KZ
+				</ref>
+				na kaznu zatvora u trajanju od 6 mjeseci, uslovno na dvije godine., i presudom
+				<organization id="os" refersTo="#os">
+					Osnovnog suda u Cetinju
+				</organization>
+				posl.br.K.br.128/08 od 06.06.2008.godine.,zbog krivičnog djela krađa iz
+				<ref href="/krivicni#art_239">
+					čl.239.KZ
+				</ref>
+				na kaznu zatvora u trajanju od 30 dana, uslovno na jednu godinu. Okr.
+				<party id="bmartinovic" refersTo="#bmartinovic" as="#defendant">
+					Martinović Branislav
+				</party>
+				, od oca Sava i majke Mileve, rođene Martinović, rođen 19.11.1980.godine Cetinje, gdje i prebiva ul:,,Bulevar crnogorskih junaka,,bb., državljanin Crne Gore, nezaposlen, neoženjen, pismen, sa završenom Srednjom školom, lošeg imovnog stanja, neosudjivan.
+			</p>
+			<conclusions>
+				<p>
+					Na osnovu
+					<ref href="/postupak#art_373">
+						čl. 373. tačka. 2. ZKP-a
+					</ref>
+					se OSLOBADJAJU OD OPTUŽBE Da su: Neutvrđenog dana, u vremenskom periodu od 09. do 29.decembra 2009.godine., u Nacionalnom parku ,,Lovćen,, u mjestu zv:,,Duge njive,,opština Cetinje, protivno
+					<ref href="/suma#art_28">
+						čl.28.st.1.Zakona o šumama
+					</ref>
+					(sl.list.RCG br.55/2000), bez prethodno izvršenog odabiranja, obilježavanja i evidentiranja stabala za sječu, kao i bez prethodno izvršene kontrole inspektora šumarske struke, u šumi lociranoj na kat.parceli br.4278,4279,4282,4283,4284 i br.4287, suvlasništvo okrivljenog Martinović Sava i Martinović Čedomile, Martinović Snežane, Martinović Petra i Martinović Miodraga, oborili 102 stabla bukovog drveta u količini od 5,58 m3 neto drvne mase, ukupne novčane vrijednosti od 158,60 eura. - čime bi kao saizvršioci izvršili krivično djelo pustošenje šuma iz
+					<ref href="/krivicni#art_323">
+						čl.323.st.2.
+					</ref>
+					u vezi
+					<ref href="/krivicni#art_323">
+						čl.323.st.1.
+					</ref>
+					, a u vezi 
+					<ref href="/krivicni#art_23">
+						čl.23.st.2. Krivičnog zakonika
+					</ref>
+					Troškovi krivičnog postupka u iznosu od 132,00 eura, padaju na teret budžetskih sredstava suda.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>

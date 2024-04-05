@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Akoma_Ntoso document -->
+<akomaNtoso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17 ../schemas/akomantoso30.xsd " xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0/WD17" xmlns:mods="http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+	<judgment>
+		<meta>
+				<identification source="#court">
+						<FRBRWork>
+								<FRBRauthor>
+										Osnovni Sud u Kolašinu
+								</FRBRauthor>
+								<FRBRdate date="2020-04-29">
+										2020-04-29
+								</FRBRdate>
+								<FRBRtitle>
+										K 22/2020
+								</FRBRtitle>
+								<FRBRcountry>
+										CG
+								</FRBRcountry>
+						</FRBRWork>
+				</identification>
+				<references>
+						<TLCOrganization eId="osk" href="/ontology/organization/OsnovniSud.Kolasin" showAs="Osnovni sud u Kolašinu" />
+						<TLCOrganization eId="odtk" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.Kolasin" showAs="Osnovno državno tužilaštvo Kolašin" />
+						<TLCOrganization eId="odtbp" href="/ontology/organization/OsnovnoDrzavnoTuzilastvo.BijeloPolje" showAs="Osnovno državno tužilaštvo iz Bijelog Polja" />
+
+						<TLCPerson eId="apopovic" href="/ontology/person/apopovic" showAs="Arsen Popović" />
+						<TLCPerson eId="ljmrdak" href="/ontology/person/ljmrdak" showAs="Ljiljana Mrdak" />
+						<TLCPerson eId="jj" href="/ontology/person/jj" showAs="J. J." />
+						<TLCPerson eId="srakocevic" href="/ontology/person/srakocevic" showAs="Stanko Ranković" />
+
+						<TLCRole eId="plaintiff" href="/ontology/role/plaintiff" showAs="Plaintiff" />
+						<TLCRole eId="defendant" href="/ontology/role/defendant" showAs="Defendant" />
+						<TLCRole eId="judge" href="/ontology/role/judge" showAs="Judge" />
+						<TLCRole eId="lawyer" href="/ontology/role/lawyer" showAs="Lawyer" />
+						<TLCRole eId="clerk" href="/ontology/role/clerk" showAs="Clerk" />
+				</references>
+		</meta>
+		<judgmentBody>
+			<p>
+				<organization id="osk" refersTo="#osk">
+					Osnovni sud u Kolašinu
+				</organization>
+				kao prvostepeni krivični, po predsjedniku suda
+				<party id="apopovic" refersTo="#apopovic" as="#judge">
+					Arsenu Popoviću kao sudiji pojedincu
+				</party>
+				, uz učešće zapisničara
+				<party id="ljmrdak" refersTo="#ljmrdak" as="#clerk">
+					Mrdak Ljiljane
+				</party>
+				, u krivičnom predmetu protiv okrivljenog
+				<party id="jj" refersTo="#jj" as="#defendant">
+					J. J.
+				</party>
+				, iz J., zbog krivičnog djela šumska kradja iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.2
+				</ref>
+				, u vezi sa
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika
+				</ref>
+				,  po optužnom predlogu
+				<organization id="odtbp" refersTo="#odtbp">
+					ODT iz Bijelog Polja
+				</organization>
+				Kt.br.141/19 od 16.09.2019 godine, nakon održanog glavnog javnog pretresa dana 29.04.2021 godine u prisustvu stručnog saradnika
+				<organization id="odtk" refersTo="#odtbp">
+					ODT iz Kolašin
+				</organization>
+				<party id="srakocevic" refersTo="#srakocevic" as="#plaintiff">
+					Rakočević Stanka
+				</party>
+				, i okrivljenog
+				<party id="jj" refersTo="#jj" as="#defendant">
+					J. J.a
+				</party>
+				, donio je i javno objavio,- P R E S U D U Okrivljeni:
+				<party id="jj" refersTo="#jj" as="#defendant">
+					J. J.
+				</party>
+				, JMBG …, od oca M.majke D.rodj. V., rodjen …godine u M. gdje i živi - mjesto P., državljanin Crne Gore, nezaposlen, oženjen, otac troje djece, pismen, završio visoku školu, dobrog imovnog stanja, neosudjivan. Kriv je Zato što je : U drugoj polovini marta mjeseca 2019 godine, u mjestu J. J. - J., Opština J., na katastarskoj parceli br.226/1 knjižene u listu nepokretnosti br.121 KO J. vlasništvo Države Crne Gore kojom gazduje J. za J. - PJ J., radi kradje oborio 36 bukovih stabala ukupne drvne mase 72,43 m3, i na taj način pričinio štetu oštećenoj J. za J. - PJ J. u iznosu od 3.268,98 €, pri čemu je bio sposoban da shvati značaj svoj djela i upravlja svojim postupcima i bio svjestan zabranjenosti svog djela i htio njegovo izvršenje, - čime je izvršio krivično djelo šumska krađa iz
+				<ref href="/krivicni#art_324">
+					čl.324 st.2
+				</ref>
+				, u vezi sa
+				<ref href="/krivicni#art_324">
+					čl.324 st.1 Krivičnog zakonika
+				</ref>
+				.
+			</p>
+			<conclusions>
+				<p>
+					<organization id="osk" refersTo="#osk">
+						Sud
+					</organization>
+					okrivljenom na osnovu
+					,
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_52">
+						čl.52
+					</ref>
+					,
+					<ref href="/krivicni#art_53">
+						čl.53
+					</ref>
+					i
+					<ref href="/krivicni#art_54">
+						čl.54
+					</ref>
+					i
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					,
+					<ref href="/postupak#art_239">
+						čl.239
+					</ref>
+					i
+					<ref href="/postupak#art_374">
+						čl.374 ZKP-a
+					</ref>
+					, izriče USLOVNU OSUDU kojom okrivljenom utvrdjuje kaznu zatvora u trajanju od 6 (šest) mjeseci i istovremeno odredjuje da se ista neće izvršiti ukoliko okrivljeni u roku od jedne godine ne počini novo krivično djelo. Pa ga
+					<organization id="osk" refersTo="#osk">
+						sud
+					</organization>
+					primjenom citirane zakonske odredbe, te
+					<ref href="/krivicni#art_4">
+						čl.4
+					</ref>
+					,
+					<ref href="/krivicni#art_13">
+						čl.13
+					</ref>
+					,
+					<ref href="/krivicni#art_15">
+						čl.15
+					</ref>
+					,
+					<ref href="/krivicni#art_32">
+						čl.32
+					</ref>
+					,
+					<ref href="/krivicni#art_33">
+						čl.33
+					</ref>
+					i
+					<ref href="/krivicni#art_39">
+						čl.39 Krivičnog zakonika
+					</ref>
+					i
+					<ref href="/postupak#art_229">
+						čl.229
+					</ref>
+					,
+					<ref href="/postupak#art_239">
+						čl.239
+					</ref>
+					,
+					<ref href="/postupak#art_374">
+						čl.374 ZKP-a
+					</ref>
+					, - O S U Đ U J E Na novčanu kaznu u iznosu od 600,00 € (šest stotina eura), koju je okrivljeni dužan platiti u roku od tri mjeseca od dana pravosnažnosti presude uplatom na žiro-račun br.832-196-94 koji se vodi na ime 
+					<organization id="osk" refersTo="#osk">
+						Osnovnog suda Kolašin
+					</organization>
+					. Ukoliko okrivljeni ne plati novčanu kaznu u ostavljenom roku, 
+					<organization id="osk" refersTo="#osk">
+						sud
+					</organization>
+					će novčanu kaznu zamjeniti kaznom zatvora tako što će za svakih započenih 25,00 € novčane kazne odrediti jedan dan zatvora. Za slučaj da okrivljeni plati samo dio novčane kazne, sud će ostatak kazne srazmjerno zamjeniti kaznom zatvora. Obavezuje se okrivljeni na plaćanje troškova krivičnog postupka u iznosu od 467,50 € kao i na plaćanje sudskog paušala u iznosu od 30,00 €, prednje u roku od 15 dana od dana pravosnažnosti ove presude uplatom na žiro-račun br.832-196-94 koji se vodi na ime
+					<organization id="osk" refersTo="#osk">
+						Osnovnog suda Kolašin
+					</organization>
+					. Oštećena J. za J. - PJ J. upućuje se na parnični postupak radi ostvarenja svog imovinskopravnog zahtjeva.
+				</p>
+			</conclusions>
+		</judgmentBody>
+	</judgment>
+</akomaNtoso>
