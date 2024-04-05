@@ -86,7 +86,10 @@ export class NewCaseComponent implements OnInit {
         woodVolume: this.legalCase.woodVolume?.toString() ?? '',
         reasonForProsecution: this.legalCase.reasonForProsecution ?? '',
         prisonSentence: this.legalCase.prisonSentence ?? ''
-      }
+      },
+      date: this.legalCase.date?.toLocaleDateString() ?? '',
+      explanationMeta: this.legalCase.explanationMeta ?? '',
+      judgementMeta: this.legalCase.judgementMeta ?? ''
     }).subscribe((response) => {
       let xmlDocument = new DOMParser().parseFromString(
         response,
@@ -113,7 +116,10 @@ export class NewCaseComponent implements OnInit {
         woodVolume: this.legalCase.woodVolume ?? 0,
         intention_to_sell: this.legalCase.intention_to_sell ?? false,
         had_intention: this.legalCase.had_intention ?? false
-      }
+      },
+      date: this.legalCase.date?.toLocaleDateString() ?? '',
+      explanationMeta: this.legalCase.explanationMeta ?? '',
+      judgementMeta: this.legalCase.judgementMeta ?? ''
     }).subscribe((response) => {
       let xmlDocument = new DOMParser().parseFromString(
         response,
@@ -181,8 +187,10 @@ export class NewCaseComponent implements OnInit {
       this.legalCase.desolation === undefined ||
       this.legalCase.special_forest === undefined ||
       this.legalCase.had_intention === undefined ||
-      this.legalCase.intention_to_sell === undefined
-
+      this.legalCase.intention_to_sell === undefined ||
+      this.legalCase.date === undefined ||
+      this.legalCase.judgementMeta == '' ||
+      this.legalCase.explanationMeta == ''
     );
   }
 }

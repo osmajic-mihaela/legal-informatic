@@ -109,8 +109,7 @@ public class RulingTemplateService {
                 this.makeHTMLJudgement(legalCase.getDefendant(), judgementMeta) +
                 this.makeHTMLIsGuilty(date, legalCase.toStringVerdict()) +
                 this.makeHTMLPenalty(legalCase.toStringPenalties()) +
-                this.makeHTMLExplanation(explanationMeta) +
-                this.makeHTMLFooter();
+                this.makeHTMLExplanation(explanationMeta);
     }
 
     private String makeDrDeviceLegalCaseBody(DrDeviceLegalCase drDeviceLegalCase, String ruling, String date, String judgementMeta, String explanationMeta) {
@@ -122,8 +121,7 @@ public class RulingTemplateService {
                 this.makeHTMLJudgement(drDeviceLegalCase.getDefendant(), judgementMeta) +
                 this.makeHTMLIsGuilty(date, ruling) +
                 this.makeHTMLPenalty(this.drDeviceLegalCaseService.getVerdictPenalties(ruling)) +
-                this.makeHTMLExplanation(explanationMeta) +
-                this.makeHTMLFooter();
+                this.makeHTMLExplanation(explanationMeta);
     }
 
     public String makeLegalCaseTemplate(LegalCase legalCase, String date, String judgementMeta, String explanationMeta) {

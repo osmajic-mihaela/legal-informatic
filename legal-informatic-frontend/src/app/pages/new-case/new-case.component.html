@@ -184,7 +184,30 @@
       </div>
 
       <mat-divider></mat-divider>
-
+      <div class="columns mt-5">
+        <div class="column">
+          <mat-form-field appearance="fill">
+            <mat-label>Datum sudjenja</mat-label>
+            <input matInput [(ngModel)]="legalCase.date" [disabled]="true" [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker [disabled]="false" #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="columns mt-5">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Tekst presude</mat-label>
+            <textarea [(ngModel)]="legalCase.judgementMeta" matInput></textarea>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Tekst obrazloženja</mat-label>
+            <textarea [(ngModel)]="legalCase.explanationMeta"  matInput></textarea>
+          </mat-form-field>
+        </div>
+      </div>
       <div class="columns mt-5">
         <div class="column">
           <div class="column action-field">
@@ -209,7 +232,6 @@
         </div>
 
       </div>
-
       <div class="columns mt-5">
         <div class="column">
           <mat-form-field appearance="outline">
@@ -282,7 +304,7 @@
         <button
           mat-flat-button
           [style.background-color]="'#1B1C20'"
-          [style.opacity]="isValidForRecommendation() ? 0.4 : 1"
+          [style.opacity]="isValidForNewCaseAdding() ? 0.4 : 1"
           [style.color]="'rgba(255, 255,255)'"
           (click)="addNewCase()"
           [disabled] = isValidForNewCaseAdding()

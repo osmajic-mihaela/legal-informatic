@@ -9,7 +9,7 @@
           [ngClass]="{ selected: currentFile == case }"
         >
           <mat-icon matListItemIcon>work</mat-icon>
-          <div matListItemTitle>{{ case.split('.')[0] }}</div>
+          <div matListItemTitle>K {{ case.split('.')[0].split('_')[0] }}/{{ case.split('.')[0].split('_')[1] }}</div>
         </mat-list-item>
       </mat-list>
     </div>

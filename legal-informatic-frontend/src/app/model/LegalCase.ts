@@ -25,6 +25,9 @@ export interface ILegalCase {
   special_forest?: boolean;
   intention_to_sell?: boolean;
   had_intention?: boolean;
+  date?: Date;
+  judgementMeta?: string;
+  explanationMeta?: string;
 }
 
 export class LegalCase implements ILegalCase {
@@ -55,6 +58,9 @@ export class LegalCase implements ILegalCase {
   special_forest?: boolean;
   intention_to_sell?: boolean;
   had_intention?: boolean;
+  date?: Date;
+  judgementMeta?: string;
+  explanationMeta?: string;
   constructor(data?: ILegalCase) {
     if (data) {
       for (const property in data) {
