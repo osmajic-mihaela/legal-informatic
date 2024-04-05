@@ -3,6 +3,7 @@ package org.example.legalinformaticbackend.controller;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.io.IOCase;
 import org.example.legalinformaticbackend.dto.DrDeviceLegalCaseDTO;
+import org.example.legalinformaticbackend.dto.VerdictDTO;
 import org.example.legalinformaticbackend.mapper.MapperService;
 import org.example.legalinformaticbackend.model.DrDeviceLegalCase;
 import org.example.legalinformaticbackend.service.DrDeviceLegalCaseService;
@@ -46,8 +47,9 @@ public class DrDeviceLegalCaseController {
             legalCaseService.runCleanBat();
 
             // make pdf?
-
-            return ResponseEntity.ok(verdict);
+            var verdictDto = new VerdictDTO();
+            verdictDto.verdict = verdict;
+            return ResponseEntity.ok(verdictDto);
         }
         catch (IOException e) {
             e.printStackTrace();

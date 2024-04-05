@@ -140,6 +140,28 @@ public class DrDeviceLegalCaseService {
         return 0;
     }
 
+    private String prettifyVerdict(String verdict) {
+        // meta
+        verdict = verdict.replace(": defeasibly-proven-positive", "");
+        verdict = verdict.replace("Defendant is not guilty on any charges", "Optuženi nije pronađen kriv ni po jednoj stavci");
+        verdict = verdict.replace("Defendant to pay", "Optuženi da plati");
+        verdict = verdict.replace("Defendant minimum prison time", "Minimalna zatvorska kazna za optuženog");
+        verdict = verdict.replace("Defendant maximum prison time", "Maksimalna zatvorska kazna za optuženog");
+
+        // charges
+        verdict = verdict.replace("has_deforested_forest", "Optuženi je vršio seču ili krčio šumu");
+        verdict = verdict.replace("has_desolated_forest", "Optuženi je oštetio ili na drugi način pustošio šumu");
+        verdict = verdict.replace("in_prohibited_land", "Optuženi je u parku, drvoredu ili drugom mestu gde je zabranjena seča");
+        verdict = verdict.replace("defendant_desolated_forest", "Optuženi je kriv za krivično delo postošenje šuma iz čl.323 st.1");
+        verdict = verdict.replace("defendant_desolated_special_forest", "Optuženi je kriv za krivično delo postošenje šuma iz čl.323 st.2");
+        verdict = verdict.replace("in_special_forest", "Optuženi je u zaštićenoj šumi, nacionalnom parku ili drugoj šumi sa posebnom namenom");
+        verdict = verdict.replace("defendant_stole_forest_level_2", "Optuženi je kriv za krivično delo šumska krađa iz čl.324 st.2");
+        verdict = verdict.replace("defendant_stole_forest", "Optuženi je kriv za krivično delo šumska krađa iz čl.324 st.1");
+        verdict = verdict.replace("defendant_has_intention_to_steal_forest", "Optuženi je kriv za krivično delo šumska krađa iz čl.324 st.3");
+
+        return verdict;
+    }
+
     public String parseExportRDF() throws IOException {
         Path path = Path.of(this.exportRDFPath);
         String rdfContent = Files.readString(path);
@@ -193,10 +215,48 @@ public class DrDeviceLegalCaseService {
         }
         maxPrisonTime = Collections.max(imprisonmentValues);
 
-        indictment.append("Defendant to pay: ").append(toPay.toString()).append("\n");
-        indictment.append("Defendant minimum prison time: ").append(minPrisonTime.toString()).append("\n");
-        indictment.append("Defendant maximum prison time: ").append(maxPrisonTime.toString()).append("\n");
+        indictment.append("Defendant to pay: ").append(toPay.toString()).append("€\n");
+        indictment.append("Defendant minimum prison time: ").append(minPrisonTime.toString()).append(" meseci\n");
+        indictment.append("Defendant maximum prison time: ").append(maxPrisonTime.toString()).append(" meseci\n");
 
-        return indictment.toString();
+        return this.prettifyVerdict(indictment.toString());
+    }
+
+    public String getVerdictArticles(String prettyVerdict) {
+        ArrayList<String> articles = new ArrayList<String>();
+
+        Pattern pattern = Pattern.compile("čl.(323|324)\\s?st.\\d{1,2}");
+        Matcher matcher = pattern.matcher(prettyVerdict);
+
+        while (matcher.find()) {
+            articles.add(matcher.group());
+        }
+
+        StringBuilder retVal = new StringBuilder();
+
+        for (String article: articles) {
+            retVal.append(article);
+            retVal.append(", ");
+        }
+
+        return retVal.toString();
+    }
+
+    private String getSingleGroupMatch(String source, Pattern pattern) {
+        Matcher matcher = pattern.matcher(source);
+
+        while (matcher.find()) {
+            return matcher.group();
+        }
+
+        return "";
+    }
+
+    public String getVerdictPenalties(String prettyVerdict) {
+        String paymentPenalty = this.getSingleGroupMatch(prettyVerdict, Pattern.compile("optuženi da plati: \\d+"));
+        String minImprisonment = this.getSingleGroupMatch(prettyVerdict, Pattern.compile("minimalna zatvorska kazna za optuženog: \\d+"));
+        String maxImprisonment = this.getSingleGroupMatch(prettyVerdict, Pattern.compile("maksimalna zatvorska kazna za optuženog: \\d+"));
+
+        return paymentPenalty + ", " + minImprisonment + ", " + maxImprisonment;
     }
 }

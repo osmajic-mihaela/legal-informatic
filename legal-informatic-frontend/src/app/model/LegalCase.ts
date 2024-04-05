@@ -19,7 +19,15 @@ export interface ILegalCase {
   financialSentence?: number;
   communitySentence?: string;
   citedArticles?: string;
-
+  deforestation?: boolean;
+  desolation?: boolean;
+  prohibited_land?: boolean;
+  special_forest?: boolean;
+  intention_to_sell?: boolean;
+  had_intention?: boolean;
+  date?: Date;
+  judgementMeta?: string;
+  explanationMeta?: string;
 }
 
 export class LegalCase implements ILegalCase {
@@ -27,6 +35,7 @@ export class LegalCase implements ILegalCase {
   caseNumber?: string="";
   court?: string="";
   judge?: string="";
+  plaintiff?: string="";
   courtReporter?: string="";
   defendant?: string="";
   protectedSurface?: string="";
@@ -43,6 +52,15 @@ export class LegalCase implements ILegalCase {
   financialSentence?: number=0;
   communitySentence?: string="0";
   citedArticles?: string="";
+  deforestation?: boolean;
+  desolation?: boolean;
+  prohibited_land?: boolean;
+  special_forest?: boolean;
+  intention_to_sell?: boolean;
+  had_intention?: boolean;
+  date?: Date;
+  judgementMeta?: string;
+  explanationMeta?: string;
   constructor(data?: ILegalCase) {
     if (data) {
       for (const property in data) {

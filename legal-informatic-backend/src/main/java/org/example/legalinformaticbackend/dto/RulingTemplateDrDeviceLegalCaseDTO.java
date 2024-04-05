@@ -9,5 +9,10 @@ import lombok.Setter;
 @Setter
 public class RulingTemplateDrDeviceLegalCaseDTO {
     private DrDeviceLegalCaseDTO drDeviceLegalCaseDTO;
+    // Response koji sam dobio od endpoint-a za rasudjivanje po pravilima
     private String ruling;
+
+    private String date;
+    private String judgementMeta;
+    private String explanationMeta;
 }

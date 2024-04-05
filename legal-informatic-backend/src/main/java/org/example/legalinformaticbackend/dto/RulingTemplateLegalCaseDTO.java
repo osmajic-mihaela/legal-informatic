@@ -9,5 +9,8 @@ import lombok.Setter;
 @Setter
 public class RulingTemplateLegalCaseDTO {
     private LegalCaseDTO legalCaseDTO;
-    private String ruling;
+
+    private String date;
+    private String judgementMeta;
+    private String explanationMeta;
 }

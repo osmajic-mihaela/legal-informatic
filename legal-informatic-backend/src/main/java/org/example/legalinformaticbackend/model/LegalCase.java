@@ -26,6 +26,8 @@ public class LegalCase extends DbEntity implements CaseComponent {
     @Column(name = "judge")
     private String judge;
 
+    @Column(name = "plaintiff")
+    private String plaintiff;
     @Column(name = "court_reporter")
     private String courtReporter;
 
@@ -86,49 +88,89 @@ public class LegalCase extends DbEntity implements CaseComponent {
         String svestan = "";
         String uslovna = "";
 
-        if(convicted){
+        if(convicted != null && convicted){
             osudjen = "Osuđujuća";
         }else{
             osudjen = "Oslobađajuća";
         }
 
-        if(protectedSurface){
+        if(protectedSurface != null && protectedSurface){
             zasticenaPovrsina = "Da";
         }else{
             zasticenaPovrsina = "Ne";
         }
 
-        if(awareness){
+        if(awareness != null && awareness){
             svestan = "Svestan dela";
         }else{
             svestan = "Nesvestan dela";
         }
 
-        if(conditionalSentence){
+        if(conditionalSentence != null && conditionalSentence){
             uslovna = "Uslovna";
         }else{
             uslovna = "Neuslovna";
         }
 
-        return "<br>" +
-                "Broj slučaja: " + caseNumber  + "<br>" +
-                "Sud: " + court  + "<br>" +
-                "Sudija: " + judge  + "<br>" +
-                "Zapisničar: " + courtReporter  + "<br>" +
-                "Optuženi: " + defendant  + "<br>" +
-                "Broj oborenih stabala: " + numberOfTrees + "<br>" +
-                "Ukupna kubikaža: " + woodVolume + "m³<br>" +
-                "Vrsta drveta: " + treeType +  "<br>" +
-                "Svesnost izvršioca: " + svestan + "<br>" +
-                "Pripadnost površine: " + forestProperty  + "<br>" +
-                "Zaštićena površina: " + zasticenaPovrsina + "<br>" +
-                "Pričinjena novčana šteta: " + financialDamage + "€<br>" +
-                "Prekršaj: " + reasonForProsecution  + "<br>" +
-                "Osuđen: " + osudjen + "<br>" +
-                "Primenjeni propisi: " + citedArticles  + "<br>" +
-                "Novčana kazna: " + financialSentence + "€<br>" +
-                "Uslovnost kazne: " + uslovna + "<br>" +
-                "Zatvorska kazna: " + prisonSentence  + "<br>" +
-                "Kazna rada u javnom interesu: " + communitySentence  + "<br>";
-        }
+        return "<br />" +
+                "Broj slučaja: " + caseNumber  + "<br />" +
+                "Sud: " + court  + "<br />" +
+                "Sudija: " + judge  + "<br />" +
+                "Zapisničar: " + courtReporter  + "<br />" +
+                "Optuženi: " + defendant  + "<br />" +
+                "Broj oborenih stabala: " + numberOfTrees + "<br />" +
+                "Ukupna kubikaža: " + woodVolume + "m³<br />" +
+                "Vrsta drveta: " + treeType +  "<br />" +
+                "Svesnost izvršioca: " + svestan + "<br />" +
+                "Pripadnost površine: " + forestProperty  + "<br />" +
+                "Zaštićena površina: " + zasticenaPovrsina + "<br />" +
+                "Pričinjena novčana šteta: " + financialDamage + "€<br />" +
+                "Prekršaj: " + reasonForProsecution  + "<br />" +
+                "Osuđen: " + osudjen + "<br />" +
+                "Primenjeni propisi: " + citedArticles  + "<br />" +
+                "Novčana kazna: " + financialSentence + "€<br />" +
+                "Uslovnost kazne: " + uslovna + "<br />" +
+                "Zatvorska kazna: " + prisonSentence  + "<br />" +
+                "Kazna rada u javnom interesu: " + communitySentence  + "<br />";
     }
+
+    public String toStringVerdict() {
+        String osudjen = "";
+        String uslovna = "";
+
+        if(convicted != null && convicted){
+            osudjen = "Osuđujuća";
+        }else{
+            osudjen = "Oslobađajuća";
+        }
+
+        if(conditionalSentence != null && conditionalSentence){
+            uslovna = "Uslovna";
+        }else{
+            uslovna = "Neuslovna";
+        }
+
+        return "Prekršaj: " + reasonForProsecution  + ", " +
+        "Osuđen: " + osudjen + ", " +
+        "Primenjeni propisi: " + citedArticles  + ", " +
+        "Novčana kazna: " + financialSentence + "€, " +
+        "Uslovnost kazne: " + uslovna + ", " +
+        "Zatvorska kazna: " + prisonSentence  + ", " +
+        "Kazna rada u javnom interesu: " + communitySentence;
+    }
+
+    public String toStringPenalties() {
+        String uslovna = "";
+
+        if(conditionalSentence != null && conditionalSentence){
+            uslovna = "Uslovna";
+        }else{
+            uslovna = "Neuslovna";
+        }
+
+        return "Novčana kazna: " + financialSentence + "€, " +
+                "Uslovnost kazne: " + uslovna + ", " +
+                "Zatvorska kazna: " + prisonSentence  + ", " +
+                "Kazna rada u javnom interesu: " + communitySentence;
+    }
+}

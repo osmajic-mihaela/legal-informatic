@@ -14,7 +14,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NewCaseComponent } from './pages/new-case/new-case.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatSelectModule} from "@angular/material/select";
-import {MatOptionModule} from "@angular/material/core";
+import {MatNativeDateModule, MatOptionModule} from "@angular/material/core";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatInputModule} from "@angular/material/input";
 import { FormsModule } from '@angular/forms';
@@ -23,6 +23,8 @@ import { AkomaNtosoCasesComponent } from './pages/akoma-ntoso-cases/akoma-ntoso-
 import { AkomaNtosoLawComponent } from './pages/akoma-ntoso-law/akoma-ntoso-law.component';
 import { MatListModule } from '@angular/material/list';
 import { BoolToDaOrNePipe } from './pipes/bool-to-da-or-ne.pipe';
+import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, NotFoundComponent, NewCaseComponent, AkomaNtosoCasesComponent, AkomaNtosoLawComponent, BoolToDaOrNePipe],
@@ -42,9 +44,12 @@ import { BoolToDaOrNePipe } from './pipes/bool-to-da-or-ne.pipe';
     MatInputModule,
     FormsModule,
     HttpClientModule,
-    MatListModule
+    MatListModule,
+    MatCheckboxModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  providers: [MatDatepickerModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
