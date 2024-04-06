@@ -335,12 +335,14 @@
         </div>
         <mat-divider class="my-5"></mat-divider>
         <h1 class="mt-5">Presuda generisana preko slučajeva</h1>
-        <div [innerHTML]="caseGeneratedByCases">
+        <div #templateByCases [innerHTML]="caseGeneratedByCases">
         </div>
+        <button mat-flat-button (click)="onSavePdfCases()" color="primary">Sačuvaj kao PDF</button>
         <mat-divider class="my-5"></mat-divider>
         <h1 class="mt-5">Presuda generisana preko pravila</h1>
-        <div [innerHTML]="caseGeneratedByRules">
+        <div #templateByRules [innerHTML]="caseGeneratedByRules">
         </div>
+        <button mat-flat-button (click)="onSavePdfRules()" color="primary">Sačuvaj kao PDF</button>
       </div>
     </div>
 

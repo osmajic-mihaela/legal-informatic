@@ -1,8 +1,9 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 import {LegalCase} from "../../model/LegalCase";
 import {CbrService} from "../../service/CbrService";
 import {LegalCaseService} from "../../service/LegalCaseService";
 import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
+declare var html2pdf: any;
 
 @Component({
   selector: 'app-new-case',
@@ -10,6 +11,9 @@ import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
   styleUrls: ['./new-case.component.scss'],
 })
 export class NewCaseComponent implements OnInit {
+  @ViewChild('templateByCases', {static: false}) templateByCases!: ElementRef;
+  @ViewChild('templateByRules', {static: false}) templateByRules!: ElementRef;
+
   public isLoadingVerdictRecommendation = false;
   public isLoadingCaseRecommendation = false;
   public legalCase: LegalCase = new LegalCase();
@@ -192,5 +196,11 @@ export class NewCaseComponent implements OnInit {
       this.legalCase.judgementMeta == '' ||
       this.legalCase.explanationMeta == ''
     );
+  }
+  onSavePdfRules(){
+    html2pdf().from(this.templateByRules.nativeElement).save('presuda.pdf');
+  }
+  onSavePdfCases() {
+    html2pdf().from(this.templateByCases.nativeElement).save('presuda.pdf');
   }
 }
