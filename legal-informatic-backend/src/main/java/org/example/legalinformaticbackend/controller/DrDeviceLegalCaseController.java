@@ -31,7 +31,7 @@ public class DrDeviceLegalCaseController {
         DrDeviceLegalCase legalCase = mapperService.mapToDrDeviceLegalCase(legalCaseDTO);
 
         // add case
-        legalCaseService.addDrDeviceLegalCase(legalCase);
+        //legalCaseService.addDrDeviceLegalCase(legalCase);
 
         // make facts
         legalCaseService.writeFactsRDF(legalCase);
