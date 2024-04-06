@@ -34,6 +34,9 @@ export class NewCaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.legalCaseService.importData().subscribe((response) => {
+      console.log(response)
+    });
   }
 
   getRecommendations() {

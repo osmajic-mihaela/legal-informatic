@@ -28,9 +28,6 @@ public class AttributeExtractionService {
     private final ResourceLoader resourceLoader;
 
 
-    // u vezi clana?
-    //Vremenski rok za placanje?
-    //Zamena ako ne plati?
     public DbEntity attributeExtraction(String caseNumber){
         Map<String, String> retVal = new HashMap<>();
         LegalCase legalCase = new LegalCase();

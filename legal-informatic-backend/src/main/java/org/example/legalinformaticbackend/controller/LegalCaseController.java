@@ -23,6 +23,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @RestController
@@ -142,6 +143,30 @@ public class LegalCaseController {
         LegalCase retVal = legalCaseService.addNewCase(legalCase);
 
         return ResponseEntity.ok(retVal);
+    }
+
+    @GetMapping("/import")
+    public ResponseEntity<?> importData() throws IOException {
+
+        List<LegalCase> pr = legalCaseService.getAll().stream().toList();
+        if(!pr.isEmpty()){
+           return ResponseEntity.ok("Puna baza");
+        }
+
+        Resource[] resources = resourceResolver.getResources("classpath:cases/*.pdf");
+        List<DbEntity> ret = new ArrayList<>();
+
+        for(Resource resource : resources){
+            String filePath = resource.getURI().toString();
+            int lastSlashIndex = filePath.lastIndexOf('/');
+            int lastDotIndex = filePath.lastIndexOf('.');
+            String caseNmbr = filePath.substring(lastSlashIndex + 1, lastDotIndex);
+            DbEntity retVal = attributeExtractionService.attributeExtraction(caseNmbr);
+            ret.add(retVal);
+        }
+
+
+        return ResponseEntity.ok(ret);
     }
 
 }
