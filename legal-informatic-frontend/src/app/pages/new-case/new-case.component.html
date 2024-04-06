@@ -190,20 +190,6 @@
       </div>
       <div class="columns mt-5">
         <div class="column">
-          <mat-form-field appearance="outline">
-            <mat-label>Tekst presude</mat-label>
-            <textarea [(ngModel)]="legalCase.judgementMeta" matInput></textarea>
-          </mat-form-field>
-        </div>
-        <div class="column">
-          <mat-form-field appearance="outline">
-            <mat-label>Tekst obrazloženja</mat-label>
-            <textarea [(ngModel)]="legalCase.explanationMeta"  matInput></textarea>
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="columns mt-5">
-        <div class="column">
           <div class="column action-field">
             <mat-form-field appearance="outline">
               <mat-label>Prekršaj</mat-label>
@@ -290,7 +276,20 @@
 
       </div>
 
-
+      <div class="columns mt-5">
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Tekst presude</mat-label>
+            <textarea [(ngModel)]="legalCase.judgementMeta" matInput></textarea>
+          </mat-form-field>
+        </div>
+        <div class="column">
+          <mat-form-field appearance="outline">
+            <mat-label>Tekst obrazloženja</mat-label>
+            <textarea [(ngModel)]="legalCase.explanationMeta"  matInput></textarea>
+          </mat-form-field>
+        </div>
+      </div>
 
       <div
         class="stretch-width is-flex is-flex-direction-row is-justify-content-center mt-5"
