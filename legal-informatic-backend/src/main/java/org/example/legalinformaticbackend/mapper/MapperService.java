@@ -28,7 +28,6 @@ public class MapperService {
         legalCase.setCaseNumber(legalCaseDescription.getCaseNumber() != null ? legalCaseDescription.getCaseNumber() : "");
         legalCase.setCourt(legalCaseDescription.getCourt() != null ? legalCaseDescription.getCourt() : "");
         legalCase.setJudge(legalCaseDescription.getJudge() != null ? legalCaseDescription.getJudge() : "");
-        legalCase.setPlaintiff(legalCaseDescription.getPlaintiff() != null ? legalCaseDescription.getPlaintiff() : "");
         legalCase.setCourtReporter(legalCaseDescription.getCourtReporter() != null ? legalCaseDescription.getCourtReporter() : "");
         legalCase.setDefendant(legalCaseDescription.getDefendant() != null ? legalCaseDescription.getDefendant() : "");
         legalCase.setProtectedSurface(legalCaseDescription.getProtectedSurface() != null ? legalCaseDescription.getProtectedSurface().equals("true") : false);

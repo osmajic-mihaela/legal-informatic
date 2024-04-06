@@ -5,8 +5,8 @@
         xmlns:lc="http://informatika.ftn.uns.ac.rs/legal-case.rdf#">
     <lc:case rdf:about="http://informatika.ftn.uns.ac.rs/legal-case.rdf#case01">
 
-		<lc:defendant>Dragan Dragic</lc:defendant>
-		<lc:name>case K 55 2024</lc:name>
+		<lc:defendant>Stefan Stefanovic</lc:defendant>
+		<lc:name>case K 19/2024</lc:name>
 		<lc:deforestation>yes</lc:deforestation>
 		<lc:desolation>yes</lc:desolation>
 		<lc:prohibited_land>yes</lc:prohibited_land>

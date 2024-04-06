@@ -5,12 +5,6 @@
       <div class="columns">
         <div class="column">
           <mat-form-field appearance="outline">
-            <mat-label>Sud</mat-label>
-            <input matInput [(ngModel)]="legalCase.court"/>
-          </mat-form-field>
-        </div>
-        <div class="column">
-          <mat-form-field appearance="outline">
             <mat-label>Broj presude</mat-label>
             <input matInput [(ngModel)]="legalCase.caseNumber" />
           </mat-form-field>
@@ -19,22 +13,22 @@
       <div class="columns">
         <div class="column">
           <mat-form-field appearance="outline">
-            <mat-label>Sudija</mat-label>
-            <input matInput [(ngModel)]="legalCase.judge"/>
+            <mat-label>Sud</mat-label>
+            <input matInput [(ngModel)]="legalCase.court"/>
           </mat-form-field>
         </div>
         <div class="column">
           <mat-form-field appearance="outline">
-            <mat-label>Zapisnicar</mat-label>
-            <input matInput [(ngModel)]="legalCase.courtReporter" />
+            <mat-label>Sudija</mat-label>
+            <input matInput [(ngModel)]="legalCase.judge"/>
           </mat-form-field>
         </div>
       </div>
       <div class="columns">
         <div class="column">
           <mat-form-field appearance="outline">
-            <mat-label>Tužilac</mat-label>
-            <input matInput  [(ngModel)]="legalCase.plaintiff"/>
+            <mat-label>Zapisnicar</mat-label>
+            <input matInput [(ngModel)]="legalCase.courtReporter" />
           </mat-form-field>
         </div>
         <div class="column">

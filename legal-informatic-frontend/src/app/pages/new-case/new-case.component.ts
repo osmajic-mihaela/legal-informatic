@@ -77,7 +77,6 @@ export class NewCaseComponent implements OnInit {
         communitySentence: this.legalCase.communitySentence ?? '',
         conditionalSentence: this.legalCase.conditionalSentence ?? '',
         convicted: this.legalCase.convicted ?? 'false',
-        plaintiff: this.legalCase.plaintiff ?? '',
         courtReporter: this.legalCase.courtReporter ?? '',
         defendant: this.legalCase.defendant ?? '',
         financialDamage: this.legalCase.financialDamage?.toString() ?? '',
@@ -110,7 +109,6 @@ export class NewCaseComponent implements OnInit {
         caseNumber: this.legalCase.caseNumber ?? '',
         court: this.legalCase.court ?? '',
         judge: this.legalCase.judge ?? '',
-        plaintiff: this.legalCase.plaintiff ?? '',
         courtReporter: this.legalCase.courtReporter ?? '',
         defendant: this.legalCase.defendant ?? '',
         deforestation: this.legalCase.deforestation ?? false,
@@ -150,7 +148,6 @@ export class NewCaseComponent implements OnInit {
       this.legalCase.caseNumber=='' ||
       this.legalCase.court=='' ||
       this.legalCase.judge=='' ||
-      this.legalCase.plaintiff == '' ||
       this.legalCase.courtReporter=='' ||
       this.legalCase.defendant=='' ||
       this.legalCase.protectedSurface=='' ||
@@ -174,7 +171,6 @@ export class NewCaseComponent implements OnInit {
       this.legalCase.caseNumber=='' ||
       this.legalCase.court=='' ||
       this.legalCase.judge=='' ||
-      this.legalCase.plaintiff == '' ||
       this.legalCase.courtReporter=='' ||
       this.legalCase.defendant=='' ||
       this.legalCase.protectedSurface=='' ||

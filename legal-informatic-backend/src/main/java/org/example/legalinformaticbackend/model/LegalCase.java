@@ -26,8 +26,6 @@ public class LegalCase extends DbEntity implements CaseComponent {
     @Column(name = "judge")
     private String judge;
 
-    @Column(name = "plaintiff")
-    private String plaintiff;
     @Column(name = "court_reporter")
     private String courtReporter;
 
