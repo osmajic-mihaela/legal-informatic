@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { ILegalCase } from 'src/app/model/LegalCase';
 import { AkomaNtosoService } from 'src/app/service/AkomaNtosoService';
+import {LegalCaseService} from "../../service/LegalCaseService";
 
 @Component({
   selector: 'app-akoma-ntoso-cases',
@@ -20,14 +21,19 @@ export class AkomaNtosoCasesComponent {
   constructor(
     private akomaNtosoService: AkomaNtosoService,
     private sanitizer: DomSanitizer,
+    private  legalCaseService: LegalCaseService
   ) {}
 
   ngOnInit(): void {
-    this.akomaNtosoService.getCases().subscribe((data) => {
-      this.cases = data;
-      this.currentFile = this.cases[0];
-      this.refreshCaseFile();
+    this.legalCaseService.importData().subscribe((response) => {
+      console.log(response)
+      this.akomaNtosoService.getCases().subscribe((data) => {
+        this.cases = data;
+        this.currentFile = this.cases[0];
+        this.refreshCaseFile();
+      });
     });
+
   }
 
   refreshCaseFile() {

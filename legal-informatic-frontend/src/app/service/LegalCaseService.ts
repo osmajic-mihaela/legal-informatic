@@ -26,4 +26,7 @@ export class LegalCaseService {
       legalCase, {  responseType: 'text' as 'json' });
   }
 
+  importData(): Observable<any>{
+    return this.http.get<any>(this.apiHost + `/case/import`, {  responseType: 'text' as 'json' });
+  }
 }
